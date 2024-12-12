@@ -1,0 +1,58 @@
+@import "../../../../shared/scss/variables.scss";
+
+.hero-section {
+  height: 100vh;
+  position: relative;
+
+  .logo{
+    width: 100%;
+    max-width: 500px;
+  }
+
+  .left-column {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: $secondary-color;
+
+    .text {
+      width: fit-content;
+    }
+  }
+
+  .right-column {
+    position: relative;
+    width: 100%;
+
+    img {
+      object-fit: cover;
+    }
+  }
+
+  .to-matrix {
+    position: absolute;
+    left: 50%;
+    // bottom: 50%;
+    transform: translate(-50%, -50%);
+
+    @media (min-width: 768px) {
+      left: 50%;
+      bottom: 50px;
+      transform: translate(-50%, -50%);
+    }
+  }
+
+  .left-column,
+  .right-column {
+    height: 50%;
+  }
+
+  @media (min-width: 768px) {
+    .left-column,
+    .right-column {
+      width: 50%;
+      height: 100%;
+    }
+  }
+}

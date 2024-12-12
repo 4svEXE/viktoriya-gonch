@@ -1,0 +1,134 @@
+@use "./variables" as *;
+
+* {
+  font-family: $font-family-base;
+  position: relative;
+  z-index: 1;
+}
+
+h1 {
+  font-family: $font-family-headings;
+  font-size: 72px;
+  font-weight: 700;
+  line-height: 72px;
+  letter-spacing: -0.04em;
+  text-align: left;
+
+  @media (max-width: $media-tablet) {
+    display: inline;
+    font-size: 42px;
+    line-height: 42px;
+  }
+}
+
+h2 {
+  font-family: $font-family-headings;
+  font-size: 48px;
+  font-weight: 700;
+  line-height: 57.6px;
+  letter-spacing: -0.01em;
+  text-align: left;
+  // padding-top: 120px;
+  padding-bottom: 80px;
+
+  @media (max-width: $media-tablet) {
+    display: inline-block;
+    text-align: center;
+    font-size: 38px;
+
+    padding-bottom: 40px;
+    text-align: center;
+    width: 100%;
+  }
+
+  span {
+    font-family: $font-family-headings;
+    font-weight: 700;
+    line-height: 57.6px;
+    letter-spacing: -0.01em;
+    text-align: left;
+    color: $primary-color;
+  }
+}
+
+h3 {
+  font-family: $font-family-headings;
+  font-size: 42px;
+  font-weight: 600;
+  line-height: 36px;
+  text-align: left;
+  margin-bottom: 20px;
+
+  @media (max-width: $media-tablet) {
+    width: 100%;
+    text-align: center;
+    font-size: 32px;
+  }
+}
+
+h4 {
+  font-family: $font-family-headings;
+  font-size: 32px;
+  font-weight: 600;
+  line-height: 36px;
+  text-align: left;
+
+  @media (max-width: $media-tablet) {
+    font-size: 28px;
+    width: 100%;
+    text-align: center;
+  }
+}
+
+h6 {
+  font-weight: 600;
+  font-size: 20px;
+  line-height: 1.1;
+}
+
+p, li {
+  font-family: $font-family-body;
+  font-size: 20px;
+  font-weight: 400;
+  line-height: 36px;
+  letter-spacing: -0.02em;
+  text-align: left;
+
+  @media (max-width: $media-tablet) {
+    font-size: 20px;
+    line-height: 22px;
+  }
+
+  strong {
+    font-family: $font-family-body;
+    font-size: 24px;
+    font-weight: 400;
+    line-height: 36px;
+    text-align: left;
+    color: $primary-color;
+  }
+}
+
+li{
+  font-size: 18px;
+  margin-bottom: 8px;
+
+  @media (max-width: $media-tablet) {
+    font-size: 16px;
+    line-height: 18px;
+  }
+}
+
+h1, h2, h3, h4, h5, h6, p, li {
+  color: $text-color;
+
+  .dark & {
+    color: white;
+  }
+}
+
+.error-message {
+  color: red;
+  font-size: $font-size-small;
+  margin-top: $spacing-small;
+}

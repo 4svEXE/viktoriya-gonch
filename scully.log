@@ -1,0 +1,92 @@
+ Deprecation Notice:
+       ======================================================================
+         From now on, the plugin that is being used to render a route is
+         able to be changed by the user. You can do this by adding or
+         enabling the plugin your scully.viktoriya-gonch.config.ts
+         file. For your convenience, we loaded the Puppeteer plugin for you.
+
+         To disable this warning enable the plugin of your choice.
+         for Puppeteer please add:
+             import '@scullyio/scully-plugin-puppeteer';
+          to your scully.viktoriya-gonch.config.ts file.
+
+          When you get this warning while not using scully-plugin-puppeteer
+          you need to set the defaultRouteRenderer to the name of your plugin.
+          The defaultRouteRenderer is now set to 'routeRenderer'.
+       ======================================================================
+(You can skip this, or any future question by using the --noPrompt flag)
+
+We encountered a problem while reading the routes from your applications source.
+This might happen when there are lazy-loaded routes, that are not loaded,
+Or when there are paths we can not resolve statically.
+Check the routes in your app, rebuild and retry.
+(You can inspect the error by passing the --showGuessError flag
+
+When there are extraRoutes in your config, we will still try to render those.
+
+
+----------------------------------   To discover new routes in the angular app use "npx scully --scanRoutes"Using stored unhandled routes!.----------------------------------
+
+
+
+
+We encountered a problem while reading the routes from your applications source.
+This might happen when there are lazy-loaded routes, that are not loaded,
+Or when there are paths we can not resolve statically.
+Check the routes in your app, rebuild and retry.
+(You can inspect the error by passing the --showGuessError flag
+
+When there are extraRoutes in your config, we will still try to render those.
+
+
+----------------------------------Using stored unhandled routes!.   To discover new routes in the angular app use "npx scully --scanRoutes"----------------------------------
+
+
+
+No routes defined in ""
+----------------------------------Using stored unhandled routes!.   To discover new routes in the angular app use "npx scully --scanRoutes"----------------------------------
+
+
+
+No routes defined in ""
+
+We encountered a problem while reading the routes from your applications source.
+This might happen when there are lazy-loaded routes, that are not loaded,
+Or when there are paths we can not resolve statically.
+Check the routes in your app, rebuild and retry.
+(You can inspect the error by passing the --showGuessError flag
+
+When there are extraRoutes in your config, we will still try to render those.
+
+
+No routes defined in ""
+No routes defined in ""
+No routes defined in ""
+handleUnknownRoute: "/assets/review2.jpg", 404:""handleUnknownRoute: "/assets/review3.jpg", 404:""handleUnknownRoute: "/assets/review1.jpg", 404:""
+
+
+handleUnknownRoute: "/assets/review2.jpg", 404:""handleUnknownRoute: "/assets/review3.jpg", 404:""handleUnknownRoute: "/assets/review1.jpg", 404:""
+
+
+No routes defined in ""
+handleUnknownRoute: "/viktoriya-gonch/polyfills-FFHMD2TL.js", 404:""handleUnknownRoute: "/viktoriya-gonch/main-DD6DQB5X.js", 404:""handleUnknownRoute: "/viktoriya-gonch/styles-ZX6S2SOK.css", 404:""handleUnknownRoute: "/viktoriya-gonch/polyfills-FFHMD2TL.js", 404:""
+
+handleUnknownRoute: "/viktoriya-gonch/main-DD6DQB5X.js", 404:""handleUnknownRoute: "/viktoriya-gonch/styles-ZX6S2SOK.css", 404:""
+
+handleUnknownRoute: "/viktoriya-gonch/polyfills-FFHMD2TL.js", 404:""handleUnknownRoute: "/viktoriya-gonch/main-DD6DQB5X.js", 404:""
+
+handleUnknownRoute: "/viktoriya-gonch/styles-ZX6S2SOK.css", 404:""handleUnknownRoute: "/viktoriya-gonch/polyfills-FFHMD2TL.js", 404:""handleUnknownRoute: "/viktoriya-gonch/main-DD6DQB5X.js", 404:""
+
+handleUnknownRoute: "/viktoriya-gonch/styles-ZX6S2SOK.css", 404:""
+
+
+
+handleUnknownRoute: "/viktoriya-gonch/polyfills-FFHMD2TL.js", 404:""handleUnknownRoute: "/viktoriya-gonch/main-DD6DQB5X.js", 404:""handleUnknownRoute: "/viktoriya-gonch/styles-ZX6S2SOK.css", 404:""
+
+
+handleUnknownRoute: "/viktoriya-gonch/polyfills-FFHMD2TL.js", 404:""
+handleUnknownRoute: "/viktoriya-gonch/main-DD6DQB5X.js", 404:""handleUnknownRoute: "/viktoriya-gonch/styles-ZX6S2SOK.css", 404:""handleUnknownRoute: "/viktoriya-gonch/polyfills-FFHMD2TL.js", 404:""
+handleUnknownRoute: "/viktoriya-gonch/main-DD6DQB5X.js", 404:""
+handleUnknownRoute: "/viktoriya-gonch/styles-ZX6S2SOK.css", 404:""
+
+

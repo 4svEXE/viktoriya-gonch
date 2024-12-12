@@ -1,0 +1,142 @@
+<section class="container">
+  <div class="wrapper">
+    <h2>Зв'язатись зі мною</h2>
+
+    <div class="contacts-container flex-col md:flex-row gap-4">
+      <div class="side contacts box">
+        <h4>Контакти</h4>
+        <ul class="space-y-3 mt-8 w-[200px]">
+          <li>
+            <a
+              href="https://t.me/yourtelegram"
+              target="_blank"
+              class="link-button flex items-center text-gray-600 hover:text-blue-500"
+            >
+              <i class="fab fa-telegram-plane text-xl mr-3"></i> Telegram
+            </a>
+          </li>
+          <li>
+            <a
+              href="viber://chat?number=%2B123456789"
+              target="_blank"
+              class="link-button flex items-center text-gray-600 hover:text-purple-500"
+            >
+              <i class="fab fa-viber text-xl mr-3"></i> Viber
+            </a>
+          </li>
+          <li>
+            <a
+              href="https://www.instagram.com/yourprofile"
+              target="_blank"
+              class="link-button flex items-center text-gray-600 hover:text-pink-500"
+            >
+              <i class="fab fa-instagram text-xl mr-3"></i> Instagram
+            </a>
+          </li>
+          <li>
+            <a
+              href="tel:+123456789"
+              class="link-button flex items-center text-gray-600 hover:text-green-500"
+            >
+              <i class="fas fa-phone-alt text-xl mr-3"></i> +123456789
+            </a>
+          </li>
+        </ul>
+      </div>
+
+      <div class="side contact-form-container">
+        <div *ngIf="isSubmitted" class="success-message">
+          <h3>Повідомлення надіслано успішно!</h3>
+          <p>Ми зв'яжемося з вами найближчим часом.</p>
+        </div>
+
+        <form
+          *ngIf="!isSubmitted"
+          [formGroup]="contactForm"
+          (ngSubmit)="onSubmit()"
+          class="box"
+        >
+          <h4>Напишіть мені</h4>
+          <div class="form-group mt-8">
+            <label for="email">Email:</label>
+            <input
+              id="email"
+              formControlName="email"
+              type="email"
+              placeholder="Введіть ваш email"
+            />
+            <div
+              *ngIf="
+                contactForm.get('email')?.touched &&
+                contactForm.get('email')?.invalid
+              "
+              class="error"
+            >
+              Необхідно ввести правильний email.
+            </div>
+          </div>
+
+          <div class="form-group">
+            <label for="phone">Телефон:</label>
+            <input
+              id="phone"
+              formControlName="phone"
+              type="text"
+              placeholder="Введіть ваш номер телефону"
+            />
+            <div
+              *ngIf="
+                contactForm.get('phone')?.touched &&
+                contactForm.get('phone')?.invalid
+              "
+              class="error"
+            >
+              Необхідно ввести номер телефону.
+            </div>
+          </div>
+
+          <div class="form-group">
+            <label for="message">Повідомлення:</label>
+            <textarea
+              id="message"
+              formControlName="message"
+              rows="4"
+              placeholder="Введіть ваше повідомлення"
+            ></textarea>
+          </div>
+
+          <div class="flex items-center justify-center gap-2">
+            <input
+              id="privacyPolicy"
+              type="checkbox"
+              formControlName="privacyPolicy"
+              class="w-4 h-4"
+            />
+            <label for="privacyPolicy" class="text-[12px]">
+              Я погоджуюсь з політикою конфіденційності
+            </label>
+            <div
+              *ngIf="
+                contactForm.get('privacyPolicy')?.touched &&
+                contactForm.get('privacyPolicy')?.invalid
+              "
+              class="error"
+            >
+              Потрібно погодитись з політикою конфіденційності.
+            </div>
+          </div>
+
+          <div class="flex">
+            <button
+              type="submit"
+              class="primary-button m-auto mt-8"
+              [disabled]="contactForm.invalid"
+            >
+              Відправити
+            </button>
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+</section>

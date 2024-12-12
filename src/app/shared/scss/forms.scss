@@ -1,0 +1,57 @@
+@use 'variables' as *;
+
+@mixin form-group {
+  .form-group {
+    margin-bottom: $spacing-large;
+
+    label {
+      display: block;
+      font-size: $font-size-small;
+      color: $dark-gray;
+      margin-bottom: $spacing-small;
+    }
+
+    .form-control {
+      width: 100%;
+      padding: $spacing-small $spacing-medium;
+      border: 1px solid $border-color;
+      border-radius: $border-radius;
+      font-size: $font-size-base;
+      outline: none;
+
+      &:focus {
+        border-color: $primary-color;
+        box-shadow: 0 0 0 2px $focus-shadow-color;
+      }
+    }
+  }
+}
+
+@mixin keypad {
+  .keypad {
+    display: flex;
+    justify-content: space-between;
+    gap: $spacing-small;
+
+    button {
+      flex: 1;
+      padding: $spacing-medium;
+      font-size: $font-size-base;
+      background: $light-gray;
+      border: 1px solid $border-color;
+      border-radius: $border-radius;
+      color: $dark-gray;
+      cursor: pointer;
+      transition: background 0.2s ease;
+
+      &:hover {
+        background: $secondary-color;
+      }
+
+      &:disabled {
+        background: $light-gray;
+        cursor: not-allowed;
+      }
+    }
+  }
+}

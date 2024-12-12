@@ -1,0 +1,47 @@
+// Colors
+$primary-color: #26663B; // Зелений
+$primary-hover: lighten($primary-color, 10%);
+$primary-disabled: lighten($primary-color, 30%);
+
+$secondary-color: #E2D7CF; // Бежевий
+$secondary-hover: darken($secondary-color, 10%);
+$secondary-disabled: lighten($secondary-color, 30%);
+
+$text-color: #202020; // Чорний
+$button-text-color: #FCFCFC; // Білий
+$text-secondary-color: lighten($text-color, 20%);
+
+$light-gray: #F8F9FA;
+$dark-gray: #202020; // Чорний
+$border-color: #E2D7CF; // Бежевий
+
+// Borders and radius
+$border-radius: 20px;
+
+// Typography
+$font-family-headings: 'Playfair Display', serif; // Для заголовків
+$font-family-body: 'Jura', sans-serif; // Для основного тексту
+$font-family-base: 'Jura', sans-serif; // Основний шрифт
+$font-size-small: 0.875rem;
+$font-size-base: 1rem;
+
+// Spacing
+$spacing-small: 0.5rem;
+$spacing-medium: 1rem;
+$spacing-large: 1.5rem;
+
+// Focus and shadows
+$focus-shadow-color: rgba($primary-color, 0.25);
+
+// Media queries
+$media-desktop: 1535px;
+$media-laptop: 1025px;
+$media-netbook: 960px;
+$media-tablet: 832px;
+$media-tablet-small: 672px;
+$media-mobile: 480px;
+$media-mobile-small: 336px;
+
+// Fonts import
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Jura:wght@400&display=swap');

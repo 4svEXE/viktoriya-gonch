@@ -1,0 +1,28 @@
+<section class="container darker mx-auto px-4">
+  <div class="wrapper">
+    <h2>Відгуки</h2>
+    <owl-carousel-o [options]="customOptions">
+      <ng-template carouselSlide *ngFor="let i of [1, 2, 3, 4, 5, 6]">
+        <div class="p-4 border rounded-lg shadow-lg bg-white">
+          <img
+            src="./img/reviews/{{ i }}.jpg"
+            alt="Відгук 1"
+            class="review object-cover rounded mb-4"
+          />
+        </div>
+      </ng-template>
+    </owl-carousel-o>
+
+    <div class="flex w-full justify-center mt-20">
+      <a
+        href="https://www.instagram.com/stories/highlights/17993177705583601/"
+        target="_blank"
+        rel="noopener noreferrer"
+        class="link-button"
+        >
+        Більше відгуків в instagram
+        <i class="fab fa-instagram"></i>
+      </a>
+    </div>
+  </div>
+</section>
