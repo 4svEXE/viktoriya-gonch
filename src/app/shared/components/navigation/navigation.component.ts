@@ -14,12 +14,12 @@ export class NavigationComponent {
   navMainClass = 'flex gap-4 flex-wrap: wrap ';
 
   routes = [
-    { path: '/#старт', label: 'Старт' },
+    { path: '#старт', label: 'Старт' },
     { path: '#про-мене', label: 'про мене' },
     { path: '#про-матрицю-долі', label: 'Про матрицю долі' },
     { path: '#матриця-долі', label: 'Матриця долі' },
     { path: '#відгуки', label: 'Відгуки' },
-    { path: '#контакти', label: 'Зв"язатись' },
+    { path: '#контакти', label: `Зв'язатись` },
 
     // { path: 'ui-examples', label: 'ui-examples' },
 

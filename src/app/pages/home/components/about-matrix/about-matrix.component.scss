@@ -1,7 +1,15 @@
+@import '../../../../shared/scss/variables.scss';
+
 .matrix-container {
   display: grid;
   grid-template-columns: 1fr;
   gap: 1rem;
+  max-height: 100dvh;
+
+  // TODO винести логіку в враппери
+  @media (max-width: $media-tablet) {
+    max-height: fit-content;
+  }
 }
 
 .matrix-photo {
@@ -9,6 +17,7 @@
   display: flex;
   justify-content: center;
   align-items: center;
+  overflow: hidden;
 }
 
 .matrix-text {

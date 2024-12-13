@@ -4,31 +4,24 @@ import { OwlOptions } from 'ngx-owl-carousel-o';
 @Component({
   selector: 'app-carousel',
   templateUrl: './carousel.component.html',
-  styleUrls: ['./carousel.component.scss']
+  styleUrls: ['./carousel.component.scss'],
 })
 export class CarouselComponent {
+
   customOptions: OwlOptions = {
     loop: true,
+    nav: false,
+    dots: false,
     mouseDrag: false,
-    touchDrag: true,
+    touchDrag: false,
     pullDrag: false,
-    dots: true,
-    navSpeed: 700,
-    navText: ['', ''],
+    autoplay: true,
+    autoplayHoverPause: false,
+    autoplayTimeout: 10, // Низьке значення для плавного безперервного руху
+    smartSpeed: 1000, // Плавність руху
     responsive: {
-      0: {
-        items: 1
-      },
-      400: {
-        items: 2
-      },
-      740: {
-        items: 3
-      },
-      940: {
-        items: 4
-      }
+      0: { items: 1 },
     },
-    nav: true
-  }
+  };
+
 }

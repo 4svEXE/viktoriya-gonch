@@ -4,8 +4,8 @@ staticPort: 1668
 reloadPort: 2667
 hostName: localhost
 projectName: viktoriya-gonch
-homeFolder: C:\Users\4sv\Desktop\vіktorіya-gonch
-distFolder: ./dist/viktoriya-gonch/browser
-outDir: C:\Users\4sv\Desktop\vіktorіya-gonch\dist\static
+homeFolder: C:\Users\4sv\Desktop\viktoriya-gonch
+distFolder: ./dist/viktoriya-gonch
+outDir: C:\Users\4sv\Desktop\viktoriya-gonch\dist\static
 handle404: ''
 allowErrorCollect: true

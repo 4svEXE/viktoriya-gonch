@@ -62,3 +62,11 @@ section {
 
   font-size: 14px;
 }
+
+.screen-dvh{
+  // height: 90dvh;
+
+  @media (max-width: $media-tablet) {
+    height: auto;
+  }
+}

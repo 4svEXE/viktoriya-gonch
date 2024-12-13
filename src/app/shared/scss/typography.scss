@@ -88,15 +88,15 @@ h6 {
 
 p, li {
   font-family: $font-family-body;
-  font-size: 20px;
+  font-size: 16px;
   font-weight: 400;
   line-height: 36px;
   letter-spacing: -0.02em;
   text-align: left;
 
   @media (max-width: $media-tablet) {
-    font-size: 20px;
-    line-height: 22px;
+    font-size: 16px;
+    line-height: 18px;
   }
 
   strong {

@@ -1,7 +1,7 @@
 @use 'variables'as *;
 
 @mixin button-base {
-  display: inline-block;
+  // display: inline-block;
   font-family: $font-family-base;
   // font-family: $font-family-body;
   // font-family: $font-family-headings;
@@ -17,7 +17,12 @@
   cursor: pointer;
   transition: background-color 0.2s ease, box-shadow 0.2s ease;
   width: 100%;
-  max-width: 200px;
+  max-width: 260px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 3px;
 
   @media (max-width: $media-tablet) {
     padding: $spacing-small $spacing-medium;

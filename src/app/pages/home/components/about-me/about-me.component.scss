@@ -1,13 +1,24 @@
+@import '../../../../shared/scss/variables.scss';
+
 .about-container {
   display: grid;
   grid-template-columns: 1fr;
   gap: 1rem;
+  max-height: 90dvh;
+  margin: 0 5dvh;
+
+  @media (max-width: $media-tablet) {
+    max-height: fit-content;
+  }
 }
+// TODO винести логіку в враппери
 
 .about-photo {
   display: flex;
   justify-content: center;
   align-items: center;
+  overflow: hidden;
+  height: 100%;
 }
 
 .about-text {

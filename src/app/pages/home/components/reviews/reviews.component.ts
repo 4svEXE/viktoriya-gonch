@@ -8,7 +8,7 @@ import { OwlOptions, CarouselComponent } from 'ngx-owl-carousel-o';
   styleUrls: ['./reviews.component.scss'],
 })
 export class ReviewsComponent {
-  @ViewChild('owlCar') owlCar!: CarouselComponent;
+  // @ViewChild('owlCar') owlCar!: CarouselComponent;
 
   customOptions: OwlOptions = {
     loop: true,

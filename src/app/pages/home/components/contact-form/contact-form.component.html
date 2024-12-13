@@ -45,9 +45,16 @@
       </div>
 
       <div class="side contact-form-container">
-        <div *ngIf="isSubmitted" class="success-message">
+        <div *ngIf="isSubmitted" class="success-message box flex flex-col items-center gap-8">
           <h3>Повідомлення надіслано успішно!</h3>
-          <p>Ми зв'яжемося з вами найближчим часом.</p>
+
+          <p>Я зв'яжусь з вами найближчим часом.</p>
+
+          <p>Запрошую вас до свого інстаграму</p>
+
+          <a class="primary-button" href="https://www.instagram.com/viktorika7/" target="_blank">
+            Відкрити інстаграм <i class="fab fa-instagram text-xl mr-3"></i>
+          </a>
         </div>
 
         <form
