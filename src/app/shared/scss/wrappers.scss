@@ -36,10 +36,9 @@ section {
   padding: 32px;
   // border-radius: 20px;
 
-  // @media (min-width: $media-desktop) {
-  //   padding-top: 90px;
-  //   padding-bottom: 90px;
-  // }
+  @media (max-width: $media-tablet) {
+    padding: 16px 8px;
+  }
 
   // @media (max-width: $media-laptop) {
   //   padding-top: 70px;

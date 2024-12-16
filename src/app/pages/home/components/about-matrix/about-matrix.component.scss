@@ -4,11 +4,14 @@
   display: grid;
   grid-template-columns: 1fr;
   gap: 1rem;
-  max-height: 100dvh;
+  min-height: 70dvh;
+  margin: 5dvh 0;
+  margin-bottom: 5dvh;
 
   // TODO винести логіку в враппери
   @media (max-width: $media-tablet) {
     max-height: fit-content;
+    margin: 0;
   }
 }
 

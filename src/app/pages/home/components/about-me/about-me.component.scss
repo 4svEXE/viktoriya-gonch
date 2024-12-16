@@ -4,11 +4,13 @@
   display: grid;
   grid-template-columns: 1fr;
   gap: 1rem;
-  max-height: 90dvh;
-  margin: 0 5dvh;
+  max-height: 70dvh;
+  margin: 5dvh 0;
+  margin-bottom: 5dvh;
 
   @media (max-width: $media-tablet) {
     max-height: fit-content;
+    margin: 0;
   }
 }
 // TODO винести логіку в враппери
@@ -18,7 +20,11 @@
   justify-content: center;
   align-items: center;
   overflow: hidden;
-  height: 100%;
+  height: 70dvh;
+
+  @media (max-width: $media-tablet) {
+    height: 50dvh;
+  }
 }
 
 .about-text {
@@ -30,5 +36,16 @@
 @media (min-width: 1024px) {
   .about-container {
     grid-template-columns: 1fr 1fr;
+  }
+}
+
+.regalies{
+  max-width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+
+  li{
+    width: max-content;
   }
 }

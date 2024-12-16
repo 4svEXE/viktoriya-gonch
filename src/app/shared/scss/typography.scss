@@ -24,26 +24,27 @@ h1 {
 h2 {
   font-family: $font-family-headings;
   font-size: 48px;
-  font-weight: 700;
+  font-weight: 600;
   line-height: 57.6px;
   letter-spacing: -0.01em;
   text-align: left;
   // padding-top: 120px;
-  padding-bottom: 80px;
+  // padding-bottom: 80px;
+  padding-bottom: 40px;
 
   @media (max-width: $media-tablet) {
     display: inline-block;
     text-align: center;
     font-size: 38px;
 
-    padding-bottom: 40px;
+    padding-bottom: 20px;
     text-align: center;
     width: 100%;
   }
 
   span {
     font-family: $font-family-headings;
-    font-weight: 700;
+    font-weight: 600;
     line-height: 57.6px;
     letter-spacing: -0.01em;
     text-align: left;
@@ -54,7 +55,7 @@ h2 {
 h3 {
   font-family: $font-family-headings;
   font-size: 42px;
-  font-weight: 600;
+  font-weight: 500;
   line-height: 36px;
   text-align: left;
   margin-bottom: 20px;
@@ -62,7 +63,7 @@ h3 {
   @media (max-width: $media-tablet) {
     width: 100%;
     text-align: center;
-    font-size: 32px;
+    font-size: 30px;
   }
 }
 

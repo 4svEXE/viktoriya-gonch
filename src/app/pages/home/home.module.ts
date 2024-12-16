@@ -15,6 +15,7 @@ import { ReviewsComponent } from './components/reviews/reviews.component';
 import { ContactFormComponent } from './components/contact-form/contact-form.component';
 import { CarouselModule } from 'ngx-owl-carousel-o';
 import { CarouselComponent } from './components/carousel/carousel.component';
+import { CalendlyWidgetComponent } from './components/calendly-widget/calendly-widget.component';
 
 
 
@@ -30,7 +31,8 @@ import { CarouselComponent } from './components/carousel/carousel.component';
     EtapsComponent,
     ReviewsComponent,
     ContactFormComponent,
-    CarouselComponent
+    CarouselComponent,
+    CalendlyWidgetComponent
   ],
   imports: [
     CommonModule,

@@ -3,7 +3,7 @@
     <!-- Logo -->
     <div class="text-xl font-semibold">
       <a [routerLink]="['/routePath']">
-        <img src="./logo-short.svg" alt="Logo" class="h-14" />
+        <img src="assets/logo-short.svg" alt="Logo" class="h-14" />
       </a>
     </div>
 
@@ -27,7 +27,7 @@
   [class.active]="isMobileMenuOpen"
   (click)="toggleMobileMenu()"
 >
-  <img src="./logo.svg" alt="Logo" class="w-[200px]" />
+  <img src="assets/logo.svg" alt="Logo" class="w-[200px]" />
 
   <div class="close-button">
     <div [innerHTML]="svg['close']"></div>
