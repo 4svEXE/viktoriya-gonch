@@ -44,3 +44,6 @@ Thumbs.db
 
 #security
 */environments/
+.scully
+.angular
+.env
