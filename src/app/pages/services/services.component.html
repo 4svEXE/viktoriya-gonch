@@ -1,8 +1,0 @@
-<div *ngIf="!isAuthenticated">
-  <button (click)="getDataFromSheet()">getDataFromSheet with Google</button>
-</div>
-
-<div *ngIf="isAuthenticated">
-  <h2>Google Sheets Data</h2>
-  <pre>{{ sheetsData | json }}</pre>
-</div>

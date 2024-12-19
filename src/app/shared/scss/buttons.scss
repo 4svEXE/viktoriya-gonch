@@ -76,9 +76,16 @@
 
 .active-button {
   @include button-base;
-  @include button-variant($primary-hover, $primary-hover, $primary-disabled, $button-text-color);
+  @include button-variant(#cc0000, #f00, $primary-disabled, $button-text-color);
   border: 1px solid $button-text-color;
+
+  &.small {
+    padding: 12px 24px;
+    width: auto;
+    line-height: normal;
+  }
 }
+
 
 .link-button {
   font-family: $font-family-body;
@@ -86,6 +93,7 @@
   position: relative;
   font-weight: 400;
   font-size: 18px;
+  padding: 4px;
 
   color: $text-color;
 

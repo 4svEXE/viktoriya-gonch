@@ -10,3 +10,6 @@ ng g c --module=pages --standalone=false
 ng generate component components/input-form --module=home --standalone=false
 ng generate component components/result-display --module=home --standalone=false
 ng generate component components/health-chart --module=home --standalone=false
+
+
+ng generate component pifagor --module=pages --standalone=false

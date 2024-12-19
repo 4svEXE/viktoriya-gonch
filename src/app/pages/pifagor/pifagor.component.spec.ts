@@ -1,18 +1,18 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { FaqComponent } from './faq.component';
+import { PifagorComponent } from './pifagor.component';
 
-describe('FaqComponent', () => {
-  let component: FaqComponent;
-  let fixture: ComponentFixture<FaqComponent>;
+describe('PifagorComponent', () => {
+  let component: PifagorComponent;
+  let fixture: ComponentFixture<PifagorComponent>;
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [FaqComponent]
+      declarations: [PifagorComponent]
     })
     .compileComponents();
 
-    fixture = TestBed.createComponent(FaqComponent);
+    fixture = TestBed.createComponent(PifagorComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });

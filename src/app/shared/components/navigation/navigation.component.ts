@@ -11,23 +11,28 @@ import { RouterModule } from '@angular/router';
 })
 export class NavigationComponent {
   @Input() navClass = '';
-  navMainClass = 'flex gap-4 flex-wrap: wrap ';
+  navMainClass = ' flex items-center gap-8 ';
+
+  getNavClassList() {
+    return this.navClass ? this.navMainClass + this.navClass : this.navMainClass;
+  }
 
   routes = [
-    { path: '#старт', label: 'Старт' },
-    { path: '#про-мене', label: 'про мене' },
-    { path: '#про-матрицю-долі', label: 'Про матрицю долі' },
-    { path: '#матриця-долі', label: 'Матриця долі' },
-    { path: '#відгуки', label: 'Відгуки' },
-    { path: '#контакти', label: `Зв'язатись` },
+    // { path: '#старт', label: 'Старт' },
+    // { path: '#про-мене', label: 'про мене' },
+    // { path: '#про-матрицю-долі', label: 'Про матрицю долі' },
+    // { path: '#матриця-долі', label: 'Матриця долі' },
+    // { path: '#відгуки', label: 'Відгуки' },
+    // { path: '#запланувати-зустріч', label: 'Консультація' },
+    // { path: '#контакти', label: `Зв'язатись` },
 
-    // { path: 'ui-examples', label: 'ui-examples' },
 
-    // { path: 'home', label: 'Калькулятор' },
-    // { path: 'about', label: 'Варіанти консультацій' },
-    // { path: 'faq', label: 'Навчання' },
-    // { path: 'services', label: 'Про мене' },
-    // { path: 'contacts', label: 'Калькулятор сумісності' },
-    // { path: 'ui-examples', label: 'ui-examples' },
+    { path: 'ui-examples', label: 'ui-examples' },
+
+    { path: 'home', label: 'Матриця долі' },
+    { path: 'sumistnist', label: 'Калькулятор сумістності' },
+    { path: 'pifagor', label: 'Квадрат піфагора' },
+
+    { path: 'contacts', label: 'Контакти' },
   ];
 }

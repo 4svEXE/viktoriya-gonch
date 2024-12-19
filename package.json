@@ -9,7 +9,7 @@
     "seo:build": "ng build --configuration production && npx scully --scanRoutes --project viktoriya-gonch",
     "seo:serve": "npm run seo:build && npx scully serve --project viktoriya-gonch",
     "deploy": "npx angular-cli-ghpages --dir=dist/static",
-    "deploy:ssh": "node deploy.js",
+    "deploy:ftp": "node deploy.js",
     "test": "ng test"
   },
   "private": true,

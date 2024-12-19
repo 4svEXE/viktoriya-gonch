@@ -1,20 +1,14 @@
-<!-- <nav [ngClass]="navMainClass + navClass">
-  <a
-    *ngFor="let route of routes"
-    [routerLink]="route.path"
-    routerLinkActive="text-yellow-400"
-    class="link-button"
-  >
-    {{ route.label }}
-  </a>
-</nav> -->
+<div class="flex flex-col md:flex-row gap-4">
+  <nav [ngClass]="getNavClassList()">
+    <a
+      *ngFor="let route of routes"
+      [href]="route.path"
+      class="link-button"
+      [routerLink]="route.path" routerLinkActive="active"
+    >
+      {{ route.label }}
+    </a>
+  </nav>
 
-<nav [ngClass]="navMainClass + navClass">
-  <a
-    *ngFor="let route of routes"
-    [href]="route.path"
-    class="link-button"
-  >
-    {{ route.label }}
-  </a>
-</nav>
+  <button class="active-button small">Зв'язатись</button>
+</div>
