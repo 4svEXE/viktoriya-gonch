@@ -1,0 +1,50 @@
+@use 'variables' as *;
+
+.custom-accordion {
+  display: flex;
+  flex-direction: column;
+  gap: $spacing-small; // Використовуємо змінні
+
+  *{
+    border-color: $primary-color !important;
+
+    &::after{
+      border-color: $primary-color !important;
+    }
+  }
+}
+
+.custom-panel {
+  padding: $spacing-small;
+  margin: 4px;
+  border-radius: $border-radius;
+  background-color: #fff;
+  box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+  font-size: $font-size-base;
+  font-family: $font-family-body; // Використовуємо змінну шрифта
+}
+
+.custom-panel .mat-expansion-panel-header {
+  font-weight: bold;
+  font-size: $font-size-base;
+  padding: $spacing-small;
+  margin: 0;
+  font-family: $font-family-headings; // Використовуємо змінну шрифта для заголовка
+}
+
+.custom-panel .mat-expansion-panel-body {
+  font-size: $font-size-base;
+  padding: $spacing-medium;
+}
+
+.mat-expansion-panel.mat-expanded .mat-expansion-panel-header {
+  border-bottom: 1px solid $border-color; // Змінюється тільки при відкритій панелі
+}
+
+.mat-expansion-panel:not([class*=mat-elevation-z]) {
+  box-shadow: none;
+}
+
+.mat-expansion-panel.mat-expanded{
+  background-color: $light-gray;
+}

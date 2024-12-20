@@ -69,3 +69,12 @@ section {
     height: auto;
   }
 }
+
+.no-scroll {
+  &::-webkit-scrollbar {
+    display: none;
+  }
+
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}

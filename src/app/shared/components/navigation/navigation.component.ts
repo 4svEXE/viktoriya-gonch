@@ -29,7 +29,7 @@ export class NavigationComponent {
 
     { path: 'ui-examples', label: 'ui-examples' },
 
-    { path: 'home', label: 'Матриця долі' },
+    { path: '', label: 'Матриця долі' },
     { path: 'sumistnist', label: 'Калькулятор сумістності' },
     { path: 'pifagor', label: 'Квадрат піфагора' },
 
