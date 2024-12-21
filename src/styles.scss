@@ -3,7 +3,6 @@
 @tailwind utilities;
 
 @import 'ngx-owl-carousel-o/lib/styles/scss/owl.carousel';
-// @import 'ngx-owl-carousel-o/lib/styles/scss/owl.theme.default';
 
 @import "app/shared/scss/index";
 
@@ -12,6 +11,3 @@
     scroll-behavior: smooth;
   }
 }
-
-html, body { height: 100%; }
-body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }

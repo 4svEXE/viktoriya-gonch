@@ -1,29 +1,20 @@
 @import '../../../../shared/scss/variables.scss';
 
-.about-container {
-  display: grid;
-  grid-template-columns: 1fr;
-  gap: 1rem;
-  // max-height: 70dvh;
-  margin: 5dvh 0;
-  margin-bottom: 5dvh;
-
-  @media (max-width: $media-tablet) {
-    max-height: fit-content;
-    margin: 0;
-  }
-}
-// TODO винести логіку в враппери
-
 .about-photo {
   display: flex;
   justify-content: center;
   align-items: center;
   overflow: hidden;
-  // height: 70dvh;
 
   @media (max-width: $media-tablet) {
     height: 50dvh;
+  }
+
+  img {
+    width: 100%;
+    object-fit: cover;
+    border-radius: 0.5rem;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
   }
 }
 
@@ -31,21 +22,20 @@
   display: flex;
   flex-direction: column;
   justify-content: center;
+
+  padding: 1rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
 }
 
-@media (min-width: 1024px) {
-  .about-container {
-    grid-template-columns: 1fr 1fr;
-  }
-}
-
-.regalies{
+.regalies {
   max-width: 100%;
   display: flex;
   flex-wrap: wrap;
   gap: 8px;
 
-  li{
+  li {
     width: max-content;
   }
 }

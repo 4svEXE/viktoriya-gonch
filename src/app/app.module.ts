@@ -12,7 +12,7 @@ import { PagesModule } from './pages/pages.module';
 
 
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
-import { MatExpansionModule } from '@angular/material/expansion';
+// import { MatExpansionModule } from '@angular/material/expansion';
 import { CarouselModule } from 'ngx-owl-carousel-o';
 import { ToastrModule } from 'ngx-toastr';
 
@@ -32,7 +32,7 @@ import { provideAnimationsAsync } from '@angular/platform-browser/animations/asy
     PagesModule,
     ScullyLibModule,
     BrowserAnimationsModule,
-    MatExpansionModule ,
+    // MatExpansionModule ,
     ToastrModule.forRoot({
       positionClass: 'toast-bottom-right', // Налаштування позиції
       preventDuplicates: true,
@@ -40,9 +40,6 @@ import { provideAnimationsAsync } from '@angular/platform-browser/animations/asy
     HeaderComponent,
     FooterComponent,
     CarouselModule,
-
-
-
   ],
   bootstrap: [AppComponent],
   providers: [

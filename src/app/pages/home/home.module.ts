@@ -10,12 +10,12 @@ import { AboutMeComponent } from './components/about-me/about-me.component';
 import { StatisticComponent } from './components/statistic/statistic.component';
 import { AboutMatrixComponent } from './components/about-matrix/about-matrix.component';
 import { MyServicesComponent } from './components/my-services/my-services.component';
-import { EtapsComponent } from './components/etaps/etaps.component';
 import { ReviewsComponent } from './components/reviews/reviews.component';
 import { ContactFormComponent } from './components/contact-form/contact-form.component';
 import { CarouselModule } from 'ngx-owl-carousel-o';
 import { CarouselComponent } from './components/carousel/carousel.component';
 import { CalendlyWidgetComponent } from './components/calendly-widget/calendly-widget.component';
+import { MatExpansionModule } from '@angular/material/expansion';
 
 
 
@@ -28,7 +28,6 @@ import { CalendlyWidgetComponent } from './components/calendly-widget/calendly-w
     StatisticComponent,
     AboutMatrixComponent,
     MyServicesComponent,
-    EtapsComponent,
     ReviewsComponent,
     ContactFormComponent,
     CarouselComponent,
@@ -38,7 +37,8 @@ import { CalendlyWidgetComponent } from './components/calendly-widget/calendly-w
     CommonModule,
     NgxChartsModule,
     ReactiveFormsModule,
-    CarouselModule
+    CarouselModule,
+    MatExpansionModule
   ],
   exports: [
     HomeComponent,

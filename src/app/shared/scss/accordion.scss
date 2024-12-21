@@ -3,7 +3,7 @@
 .custom-accordion {
   display: flex;
   flex-direction: column;
-  gap: $spacing-small; // Використовуємо змінні
+  gap: $spacing-small;
 
   *{
     border-color: $primary-color !important;
@@ -21,7 +21,7 @@
   background-color: #fff;
   box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
   font-size: $font-size-base;
-  font-family: $font-family-body; // Використовуємо змінну шрифта
+  font-family: $font-family-body;
 }
 
 .custom-panel .mat-expansion-panel-header {
@@ -29,7 +29,7 @@
   font-size: $font-size-base;
   padding: $spacing-small;
   margin: 0;
-  font-family: $font-family-headings; // Використовуємо змінну шрифта для заголовка
+  font-family: $font-family-headings;
 }
 
 .custom-panel .mat-expansion-panel-body {
@@ -38,7 +38,7 @@
 }
 
 .mat-expansion-panel.mat-expanded .mat-expansion-panel-header {
-  border-bottom: 1px solid $border-color; // Змінюється тільки при відкритій панелі
+  border-bottom: 1px solid $border-color;
 }
 
 .mat-expansion-panel:not([class*=mat-elevation-z]) {

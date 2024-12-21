@@ -28,9 +28,8 @@ h2 {
   line-height: 57.6px;
   letter-spacing: -0.01em;
   text-align: left;
-  // padding-top: 120px;
-  // padding-bottom: 80px;
   padding-bottom: 40px;
+  text-decoration: underline;
 
   @media (max-width: $media-tablet) {
     display: inline-block;
@@ -133,3 +132,5 @@ h1, h2, h3, h4, h5, h6, p, li {
   font-size: $font-size-small;
   margin-top: $spacing-small;
 }
+
+

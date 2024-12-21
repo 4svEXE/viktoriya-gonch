@@ -1,20 +1,3 @@
-@import '../../../../shared/scss/variables.scss';
-
-.matrix-container {
-  display: grid;
-  grid-template-columns: 1fr;
-  gap: 1rem;
-  min-height: 70dvh;
-  margin: 5dvh 0;
-  margin-bottom: 5dvh;
-
-  // TODO винести логіку в враппери
-  @media (max-width: $media-tablet) {
-    max-height: fit-content;
-    margin: 0;
-  }
-}
-
 .matrix-photo {
   width: 100%;
   display: flex;
@@ -28,10 +11,4 @@
   display: flex;
   flex-direction: column;
   justify-content: center;
-}
-
-@media (min-width: 1024px) {
-  .matrix-container {
-    grid-template-columns: 1fr 1fr;
-  }
 }

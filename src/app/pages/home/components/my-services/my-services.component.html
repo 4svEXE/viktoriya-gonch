@@ -1,1 +1,39 @@
-<p>my-services works!</p>
+<section class="container">
+    <h2 class="w-full md:hidden block">Послуги</h2>
+
+    <div class="wrapper wrapper__grid">
+      <div class="about-photo">
+        <img src="assets/img/img_2.jpg" alt="Viktorie Honč" />
+      </div>
+
+      <div class="about-text">
+        <h2 class="w-full hidden md:block">Послуги</h2>
+
+        <!-- <div class="flex w-fit m-auto md:m-0 mb-5">
+          <ul class="">
+            <li>— ЕКСПЕРТ З МАТРИЦІ ДОЛІ</li>
+            <li>— ТЕТА ХІЛЕР</li>
+            <li>— НУМЕРОЛОГ</li>
+            <li>— ПСИХОСОМАТИКА</li>
+            <li>— АТМОЛОГІЯ</li>
+            <li>— РОЗСТАНОВКИ</li>
+          </ul>
+        </div> -->
+
+        <mat-accordion class="custom-accordion">
+          <mat-expansion-panel *ngFor="let service of services" class="custom-panel">
+            <mat-expansion-panel-header>
+              <mat-panel-title>
+                {{ service.title }} - {{ service.price }}
+              </mat-panel-title>
+            </mat-expansion-panel-header>
+            <p><strong>Що входить:</strong> {{ service.details.includes }}</p>
+            <p><strong>Тривалість:</strong> {{ service.details.duration }}</p>
+            <p><strong>Умови:</strong> {{ service.details.conditions || service.details.format }}</p>
+          </mat-expansion-panel>
+        </mat-accordion>
+
+
+      </div>
+    </div>
+  </section>
