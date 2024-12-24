@@ -7,7 +7,7 @@ import { SumistnistComponent } from './sumistnist/sumistnist.component';
 import { MatrixComponent } from './matrix/matrix.component';
 
 const routes: Routes = [
-  { path: '', component: HomeComponent },
+  { path: 'home', component: HomeComponent },
   { path: 'pifagor', component: PifagorComponent },
   { path: 'matrix', component: MatrixComponent },
   { path: 'sumistnist', component: SumistnistComponent },

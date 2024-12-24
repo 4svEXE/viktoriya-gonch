@@ -5,14 +5,16 @@
       class="link-button"
       routerLinkActive="active"
     >
-      <span class="cursor-pointer" [routerLink]="route.path">{{ route.label }}</span>
+      <span class="cursor-pointer" [routerLink]="route.path">{{
+        route.label
+      }}</span>
 
-      @if (route.path === ''){
+      @if (route.path === 'home'){
       <div class="relative">
-        <nav class="sub-navigation">
+        <nav class="sub-navigation cursor-pointer">
           <a
             *ngFor="let subRoute of homeNavRoutes"
-            [href]="subRoute.path"
+            (click)="scrollToFragment(subRoute.path)"
             class="link-button"
           >
             {{ subRoute.label }}

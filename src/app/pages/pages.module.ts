@@ -10,6 +10,7 @@ import { MatrixComponent } from './matrix/matrix.component';
 
 import { UiExamplesComponent } from './ui-examples/ui-examples.component';
 
+
 @NgModule({
   declarations: [UiExamplesComponent, PifagorComponent, SumistnistComponent, MatrixComponent],
   imports: [CommonModule, PagesRoutingModule, HomeModule, MatExpansionModule],
