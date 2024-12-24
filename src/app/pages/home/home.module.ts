@@ -16,6 +16,9 @@ import { CarouselModule } from 'ngx-owl-carousel-o';
 import { CarouselComponent } from './components/carousel/carousel.component';
 import { CalendlyWidgetComponent } from './components/calendly-widget/calendly-widget.component';
 import { MatExpansionModule } from '@angular/material/expansion';
+import { RouterModule } from '@angular/router';
+import { AboutSumistnistComponent } from './components/about-sumistnist/about-sumistnist.component';
+import { AboutPifagorComponent } from './components/about-pifagor/about-pifagor.component';
 
 
 
@@ -31,12 +34,15 @@ import { MatExpansionModule } from '@angular/material/expansion';
     ReviewsComponent,
     ContactFormComponent,
     CarouselComponent,
-    CalendlyWidgetComponent
+    CalendlyWidgetComponent,
+    AboutSumistnistComponent,
+    AboutPifagorComponent
   ],
   imports: [
     CommonModule,
     NgxChartsModule,
     ReactiveFormsModule,
+    RouterModule,
     CarouselModule,
     MatExpansionModule
   ],

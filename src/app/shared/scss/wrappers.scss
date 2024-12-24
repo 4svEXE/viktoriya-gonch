@@ -87,3 +87,29 @@ section {
   -ms-overflow-style: none;
   scrollbar-width: none;
 }
+
+.about-text {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+
+  padding: 1rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.matrix-photo {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+}
+
+.matrix-text {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
