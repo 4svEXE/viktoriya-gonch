@@ -10,12 +10,9 @@ import { AppComponent } from './app.component';
 import { routes } from './app.routes';
 import { PagesModule } from './pages/pages.module';
 
-
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
-// import { MatExpansionModule } from '@angular/material/expansion';
 import { CarouselModule } from 'ngx-owl-carousel-o';
 import { ToastrModule } from 'ngx-toastr';
-
 
 import { HeaderComponent } from './shared/layout/header/header.component';
 import { FooterComponent } from './shared/layout/footer/footer.component';
@@ -32,9 +29,8 @@ import { provideAnimationsAsync } from '@angular/platform-browser/animations/asy
     PagesModule,
     ScullyLibModule,
     BrowserAnimationsModule,
-    // MatExpansionModule ,
     ToastrModule.forRoot({
-      positionClass: 'toast-bottom-right', // Налаштування позиції
+      positionClass: 'toast-bottom-right',
       preventDuplicates: true,
     }),
     HeaderComponent,

@@ -2,13 +2,24 @@
   <nav [ngClass]="getNavClassList()">
     <a
       *ngFor="let route of routes"
-      [href]="route.path"
       class="link-button"
-      [routerLink]="route.path" routerLinkActive="active"
+      routerLinkActive="active"
     >
-      {{ route.label }}
+      <span class="cursor-pointer" [routerLink]="route.path">{{ route.label }}</span>
+
+      @if (route.path === ''){
+      <div class="relative">
+        <nav class="sub-navigation">
+          <a
+            *ngFor="let subRoute of homeNavRoutes"
+            [href]="subRoute.path"
+            class="link-button"
+          >
+            {{ subRoute.label }}
+          </a>
+        </nav>
+      </div>
+      }
     </a>
   </nav>
-
-  <button class="active-button small">Зв'язатись</button>
 </div>

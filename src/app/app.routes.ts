@@ -8,7 +8,7 @@ import { HomeComponent } from './pages/home/home.component';
 import { UiExamplesComponent } from './pages/ui-examples/ui-examples.component';
 
 export const routes: Routes = [
-  { path: '', component: HomeComponent },
+  // { path: '', component: HomeComponent },
   // { path: 'about', component: AboutComponent },
   // { path: 'faq', component: FaqComponent },
   // { path: 'services', component: ServicesComponent },
