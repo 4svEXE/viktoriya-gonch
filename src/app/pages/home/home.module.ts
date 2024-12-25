@@ -1,5 +1,6 @@
+import { ContactFormComponent } from './../../shared/components/contact-form/contact-form.component';
 
-import { NgModule, NO_ERRORS_SCHEMA } from '@angular/core';
+import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { HomeComponent } from './home.component';
 import { MatrixCalculatorComponent } from './components/matrix-calculator/matrix-calculator.component';
@@ -11,7 +12,7 @@ import { StatisticComponent } from './components/statistic/statistic.component';
 import { AboutMatrixComponent } from './components/about-matrix/about-matrix.component';
 import { MyServicesComponent } from './components/my-services/my-services.component';
 import { ReviewsComponent } from './components/reviews/reviews.component';
-import { ContactFormComponent } from './components/contact-form/contact-form.component';
+import { ContactsComponent } from './components/contacts/contact-form.component';
 import { CarouselModule } from 'ngx-owl-carousel-o';
 import { CarouselComponent } from './components/carousel/carousel.component';
 import { CalendlyWidgetComponent } from './components/calendly-widget/calendly-widget.component';
@@ -32,7 +33,7 @@ import { AboutPifagorComponent } from './components/about-pifagor/about-pifagor.
     AboutMatrixComponent,
     MyServicesComponent,
     ReviewsComponent,
-    ContactFormComponent,
+    ContactsComponent,
     CarouselComponent,
     CalendlyWidgetComponent,
     AboutSumistnistComponent,
@@ -44,7 +45,8 @@ import { AboutPifagorComponent } from './components/about-pifagor/about-pifagor.
     ReactiveFormsModule,
     RouterModule,
     CarouselModule,
-    MatExpansionModule
+    MatExpansionModule,
+    ContactFormComponent
   ],
   exports: [
     HomeComponent,

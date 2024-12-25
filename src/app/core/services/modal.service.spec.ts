@@ -1,13 +1,13 @@
 import { TestBed } from '@angular/core/testing';
 
-import { GoogleSheetsService } from './google-sheets.service';
+import { ModalService } from './modal.service';
 
-describe('GoogleSheetsService', () => {
-  let service: GoogleSheetsService;
+describe('ModalService', () => {
+  let service: ModalService;
 
   beforeEach(() => {
     TestBed.configureTestingModule({});
-    service = TestBed.inject(GoogleSheetsService);
+    service = TestBed.inject(ModalService);
   });
 
   it('should be created', () => {

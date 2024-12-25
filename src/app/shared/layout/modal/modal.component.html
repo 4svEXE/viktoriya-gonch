@@ -1,0 +1,19 @@
+@if (isModalOpen) {
+<div class="modal-wrapper" (click)="onBackdropClick($event)">
+  <div class="modal box">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h3>{{ title }}</h3>
+
+        <button class="close-button" (click)="closeModal()">
+          <i class="fas fa-times"></i>
+        </button>
+      </div>
+
+      <div class="modal-content">
+        <app-contact-form />
+      </div>
+    </div>
+  </div>
+</div>
+}

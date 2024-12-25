@@ -19,7 +19,7 @@
       </button>
     </div>
 
-    <button class="active-button small hidden md:block">Зв'язатись</button>
+    <button class="active-button small hidden md:block" (click)="openModal()">Зв'язатись</button>
   </div>
 
 
@@ -39,6 +39,9 @@
 
   <app-navigation navClass="flex-col justify-center" />
 
-  <button class="active-button small">Зв'язатись</button>
+  <button class="active-button small mt-4" (click)="openModal()">Зв'язатись</button>
 
 </div>
+
+
+<app-modal />

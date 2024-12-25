@@ -1,0 +1,21 @@
+.contact-form-container {
+  max-width: 500px;
+
+  .success-message {
+    text-align: center;
+
+    h3 {
+      color: green;
+    }
+  }
+
+}
+
+.contacts-container{
+  width: 100%;
+    display: flex;
+
+    .side{
+      flex: 1;
+    }
+}

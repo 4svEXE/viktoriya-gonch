@@ -1,12 +1,15 @@
 import { Component } from '@angular/core';
-import { FormBuilder, FormGroup, Validators } from '@angular/forms';
+import { FormBuilder, FormGroup, FormsModule, ReactiveFormsModule, Validators } from '@angular/forms';
 import { ToastrService } from 'ngx-toastr';
 import { HttpClient } from '@angular/common/http';
+import { CommonModule } from '@angular/common';
 
 @Component({
   selector: 'app-contact-form',
+  standalone: true,
+  imports: [CommonModule, FormsModule, ReactiveFormsModule ],
   templateUrl: './contact-form.component.html',
-  styleUrls: ['./contact-form.component.scss'],
+  styleUrl: './contact-form.component.scss'
 })
 export class ContactFormComponent {
   contactForm: FormGroup;

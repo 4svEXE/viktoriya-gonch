@@ -1,0 +1,103 @@
+<div class="contact-form-container">
+  <div
+    *ngIf="isSubmitted"
+    class="success-message box flex flex-col items-center gap-8"
+  >
+    <h3>Повідомлення надіслано успішно!</h3>
+    <p>Я зв'яжусь з вами найближчим часом.</p>
+    <p>Запрошую вас до свого інстаграму</p>
+    <a
+      class="primary-button"
+      href="https://www.instagram.com/viktorika7/"
+      target="_blank"
+    >
+      Відкрити інстаграм <i class="fab fa-instagram text-xl mr-3"></i>
+    </a>
+  </div>
+
+  <form
+    *ngIf="!isSubmitted"
+    [formGroup]="contactForm"
+    (ngSubmit)="onSubmit()"
+    class="box"
+  >
+    <h4>Напишіть мені</h4>
+    <div class="form-group mt-8">
+      <label for="email">Email:</label>
+      <input
+        id="email"
+        formControlName="email"
+        type="email"
+        placeholder="Введіть ваш email"
+      />
+      <div
+        *ngIf="
+          contactForm.get('email')?.touched && contactForm.get('email')?.invalid
+        "
+        class="error"
+      >
+        Необхідно ввести правильний email.
+      </div>
+    </div>
+
+    <div class="form-group">
+      <label for="phone">Телефон:</label>
+      <input
+        id="phone"
+        formControlName="phone"
+        type="text"
+        placeholder="Введіть ваш номер телефону"
+      />
+      <div
+        *ngIf="
+          contactForm.get('phone')?.touched && contactForm.get('phone')?.invalid
+        "
+        class="error"
+      >
+        Необхідно ввести номер телефону.
+      </div>
+    </div>
+
+    <div class="form-group">
+      <label for="message">Повідомлення:</label>
+      <textarea
+        id="message"
+        formControlName="message"
+        rows="4"
+        placeholder="Введіть ваше повідомлення"
+        resize="none"
+      ></textarea>
+    </div>
+
+    <div class="flex items-center justify-center gap-2">
+      <input
+        id="privacyPolicy"
+        type="checkbox"
+        formControlName="privacyPolicy"
+        class="w-4 h-4"
+      />
+      <label for="privacyPolicy" class="text-[12px]">
+        Я погоджуюсь з політикою конфіденційності
+      </label>
+      <div
+        *ngIf="
+          contactForm.get('privacyPolicy')?.touched &&
+          contactForm.get('privacyPolicy')?.invalid
+        "
+        class="error"
+      >
+        Потрібно погодитись з політикою конфіденційності.
+      </div>
+    </div>
+
+    <div class="flex">
+      <button
+        type="submit"
+        class="primary-button m-auto mt-8"
+        [disabled]="contactForm.invalid"
+      >
+        Відправити
+      </button>
+    </div>
+  </form>
+</div>

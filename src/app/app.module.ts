@@ -17,6 +17,7 @@ import { ToastrModule } from 'ngx-toastr';
 import { HeaderComponent } from './shared/layout/header/header.component';
 import { FooterComponent } from './shared/layout/footer/footer.component';
 import { provideAnimationsAsync } from '@angular/platform-browser/animations/async';
+import { ModalComponent } from './shared/layout/modal/modal.component';
 
 @NgModule({
   declarations: [AppComponent],
@@ -36,6 +37,7 @@ import { provideAnimationsAsync } from '@angular/platform-browser/animations/asy
     HeaderComponent,
     FooterComponent,
     CarouselModule,
+    ModalComponent
   ],
   bootstrap: [AppComponent],
   providers: [
