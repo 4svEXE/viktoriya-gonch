@@ -1,9 +1,7 @@
 <section class="container">
-    <h2 class="w-full md:hidden block">Послуги</h2>
+    <h2 class="w-full md:hidden block">Мої послуги</h2>
 
     <div class="wrapper wrapper__grid">
-
-
       <div class="about-text">
         <h2 class="w-full hidden md:block">Мої послуги</h2>
 
@@ -14,15 +12,15 @@
                 {{ service.title }} - {{ service.price }}
               </mat-panel-title>
             </mat-expansion-panel-header>
-            <p><strong>Що входить:</strong> {{ service.details.includes }}</p>
-            <p><strong>Тривалість:</strong> {{ service.details.duration }}</p>
-            <p><strong>Умови:</strong> {{ service.details.conditions || service.details.format }}</p>
+            <p><b>Що входить:</b> {{ service.details.includes }}</p>
+            <p><b>Тривалість:</b> {{ service.details.duration }}</p>
+            <p><b>Умови:</b> {{ service.details.conditions || service.details.format }}</p>
           </mat-expansion-panel>
         </mat-accordion>
       </div>
 
-      <div class="about-photo">
-        <img src="assets/img/img_2.jpg" alt="Viktorie Honč" />
+      <div class="about-photo hidden md:flex">
+        <img src="assets/img/services.jpg" class="" alt="Viktorie Honč - послуги" />
       </div>
     </div>
   </section>

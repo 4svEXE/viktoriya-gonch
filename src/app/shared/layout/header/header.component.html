@@ -1,4 +1,4 @@
-<header class="md:p-4 p-1 relative dark">
+<header class="lg:p-4 p-1 relative dark">
   <div class="container mx-auto flex justify-between items-center">
     <!-- Logo -->
     <div class="text-xl font-semibold">
@@ -8,18 +8,18 @@
     </div>
 
     <!-- Navigation -->
-    <nav class="hidden md:flex space-x-6">
+    <nav class="hidden lg:flex space-x-6">
       <app-navigation />
     </nav>
 
     <!-- Burger Icon for Mobile/Tablet -->
-    <div class="md:hidden" (click)="toggleMobileMenu()">
+    <div class="lg:hidden" (click)="toggleMobileMenu()">
       <button id="burger" class="text-white px-3">
         <div [innerHTML]="svg['mobile-menu']"></div>
       </button>
     </div>
 
-    <button class="active-button small hidden md:block" (click)="openModal()">Зв'язатись</button>
+    <button class="active-button small hidden lg:block" (click)="openModal()">Зв'язатись</button>
   </div>
 
 
@@ -27,7 +27,7 @@
 
 <!-- Mobile Navigation -->
 <div
-  class="mobile-menu-container md:hidden p-4"
+  class="mobile-menu-container lg:hidden p-4"
   [class.active]="isMobileMenuOpen"
   (click)="toggleMobileMenu()"
 >

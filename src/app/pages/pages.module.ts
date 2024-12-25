@@ -9,10 +9,25 @@ import { SumistnistComponent } from './sumistnist/sumistnist.component';
 import { MatrixComponent } from './matrix/matrix.component';
 
 import { UiExamplesComponent } from './ui-examples/ui-examples.component';
-
+import { IframeSectionComponent } from '../shared/components/iframe-section/iframe-section.component';
+import { MyServicesComponent } from "../shared/components/my-services/my-services.component";
+import { ContactsComponent } from '../shared/components/contacts/contact-form.component';
 
 @NgModule({
-  declarations: [UiExamplesComponent, PifagorComponent, SumistnistComponent, MatrixComponent],
-  imports: [CommonModule, PagesRoutingModule, HomeModule, MatExpansionModule],
+  declarations: [
+    UiExamplesComponent,
+    PifagorComponent,
+    SumistnistComponent,
+    MatrixComponent,
+  ],
+  imports: [
+    CommonModule,
+    PagesRoutingModule,
+    HomeModule,
+    MatExpansionModule,
+    IframeSectionComponent,
+    ContactsComponent,
+    MyServicesComponent
+],
 })
 export class PagesModule {}

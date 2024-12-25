@@ -1,16 +1,7 @@
-<section id="calculator" class="container no-scroll pt-24">
-  <h2 class="text-center">Квадрат піфагора</h2>
+<app-iframe-section
+  title="Квадрат піфагора"
+  iframeSrc="https://4sv-by.github.io/pifagor/"
+></app-iframe-section>
 
-  <div class="div-block-2">
-    <div class="embeded-iframe w-embed w-iframe">
-      <iframe
-        src="https://4sv-by.github.io/pifagor/"
-        frameborder="0"
-        style="overflow: hidden; width: 100%"
-        [height]="iframeHeight"
-        width="100%"
-      ></iframe>
-    </div>
-  </div>
-  @if(iframeHeight === '100vh') { Завантаження... }
-</section>
+<app-my-services />
+<app-contacts />
