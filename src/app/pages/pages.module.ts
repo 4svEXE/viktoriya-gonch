@@ -12,6 +12,7 @@ import { UiExamplesComponent } from './ui-examples/ui-examples.component';
 import { IframeSectionComponent } from '../shared/components/iframe-section/iframe-section.component';
 import { MyServicesComponent } from "../shared/components/my-services/my-services.component";
 import { ContactsComponent } from '../shared/components/contacts/contact-form.component';
+import { MeComponent } from './me/me.component';
 
 @NgModule({
   declarations: [
@@ -19,6 +20,7 @@ import { ContactsComponent } from '../shared/components/contacts/contact-form.co
     PifagorComponent,
     SumistnistComponent,
     MatrixComponent,
+    MeComponent,
   ],
   imports: [
     CommonModule,

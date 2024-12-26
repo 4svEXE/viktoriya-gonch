@@ -30,6 +30,7 @@ export class NavigationComponent {
     // { path: 'ui-examples', label: 'ui-examples' },
 
     { path: 'home', label: 'Головна' },
+    { path: 'me', label: 'Про мене' },
     { path: 'matrix', label: 'Матриця долі' },
     { path: 'sumistnist', label: 'Калькулятор сумістності' },
     { path: 'pifagor', label: 'Квадрат піфагора' },
