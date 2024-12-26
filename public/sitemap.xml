@@ -1,8 +1,28 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
-    <loc>https://www.viktoriehonc.com.ua/</loc>
+    <loc>https://www.viktoriehonc.com.ua/home</loc>
     <lastmod>2024-12-16</lastmod>
     <priority>1.0</priority>
+  </url>
+  <url>
+    <loc>https://www.viktoriehonc.com.ua/me</loc>
+    <lastmod>2024-12-16</lastmod>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://www.viktoriehonc.com.ua/pifagor</loc>
+    <lastmod>2024-12-16</lastmod>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://www.viktoriehonc.com.ua/matrix</loc>
+    <lastmod>2024-12-16</lastmod>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://www.viktoriehonc.com.ua/sumistnist</loc>
+    <lastmod>2024-12-16</lastmod>
+    <priority>0.7</priority>
   </url>
 </urlset>
