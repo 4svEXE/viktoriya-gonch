@@ -47,12 +47,21 @@
   }
 
   .primary-button{
-    width: max-content;
-    max-width: max-content;
+    width: none;
+    max-width: none;
     display: flex;
     gap: 8px;
     align-items: center;
     justify-content: center;
+  }
+
+  @media (min-width: 768px) {
+    .primary-button{
+
+
+      width: max-content;
+    max-width: max-content;
+    }
   }
 
   .left-column,

@@ -12,6 +12,7 @@ import { ContactFormComponent } from '../../components/contact-form/contact-form
 })
 export class ModalComponent {
   @Input() title = '';
+  modalData: any;
 
   isModalOpen:boolean = false;
 
@@ -21,6 +22,9 @@ export class ModalComponent {
     this.modalService.modalStatus$.subscribe((isOpen)=>{
       this.isModalOpen = isOpen
     })
+    this.modalService.data$.subscribe((data)=>{
+      this.modalData = data
+    })
   }
 
   closeModal() {
@@ -29,11 +33,11 @@ export class ModalComponent {
 
   onBackdropClick(event: MouseEvent): void {
     const target = event.target as HTMLElement;
-    
+
     // Закрити модальне вікно, якщо клік зроблено саме на фон (modal-wrapper)
     if (target.classList.contains('modal-wrapper')) {
       this.closeModal();
     }
   }
-  
+
 }

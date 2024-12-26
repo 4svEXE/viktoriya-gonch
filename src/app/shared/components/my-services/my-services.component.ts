@@ -1,6 +1,7 @@
 import { CommonModule } from '@angular/common';
 import { Component } from '@angular/core';
 import { MatExpansionModule } from '@angular/material/expansion';
+import { ModalService } from '../../../core/services/modal.service';
 
 @Component({
   selector: 'app-my-services',
@@ -10,6 +11,14 @@ import { MatExpansionModule } from '@angular/material/expansion';
   styleUrls: ['./my-services.component.scss']
 })
 export class MyServicesComponent {
+
+  constructor(private modalService: ModalService) {}
+
+  openModal(data: any) {
+    this.modalService.open();
+    this.modalService.setData(data);
+  }
+
   services = [
     {
       title: 'Глибинна VIP консультація по матриці долі',

@@ -1,19 +1,30 @@
-import { Component } from '@angular/core';
-import { FormBuilder, FormGroup, FormsModule, ReactiveFormsModule, Validators } from '@angular/forms';
+import { ChangeDetectorRef, Component, Input } from '@angular/core';
+import {
+  FormBuilder,
+  FormGroup,
+  FormsModule,
+  ReactiveFormsModule,
+  Validators,
+} from '@angular/forms';
 import { ToastrService } from 'ngx-toastr';
 import { HttpClient } from '@angular/common/http';
 import { CommonModule } from '@angular/common';
+import { ModalService } from '../../../core/services/modal.service';
+import { BehaviorSubject } from 'rxjs';
 
 @Component({
   selector: 'app-contact-form',
   standalone: true,
-  imports: [CommonModule, FormsModule, ReactiveFormsModule ],
+  imports: [CommonModule, FormsModule, ReactiveFormsModule],
   templateUrl: './contact-form.component.html',
-  styleUrl: './contact-form.component.scss'
+  styleUrl: './contact-form.component.scss',
 })
 export class ContactFormComponent {
-  contactForm: FormGroup;
+  contactForm!: FormGroup;
   isSubmitted = false;
+
+  addMessage = new BehaviorSubject<string>('Хочу ');
+  messageValue: string = '';
 
   private BOT_TOKEN = '8064054685:AAHkBHQCAQEMJm2F-Pp8HwJ0AWKuzBDkQO0';
   private CHAT_ID = '-1002238918828'; // Отримайте це через метод getUpdates
@@ -23,7 +34,9 @@ export class ContactFormComponent {
   constructor(
     private fb: FormBuilder,
     private toastr: ToastrService,
-    private http: HttpClient
+    private http: HttpClient,
+    private modalService: ModalService,
+    private cdr: ChangeDetectorRef
   ) {
     this.contactForm = this.fb.group({
       email: ['', [Validators.required, Validators.email]],
@@ -32,6 +45,23 @@ export class ContactFormComponent {
       privacyPolicy: [false, Validators.requiredTrue],
     });
   }
+
+  ngOnInit(): void {
+    // Підписка на дані з модалки
+    this.modalService.data$.subscribe((data) => {
+      if (data) {
+        const message = 'Я хочу ' + (data.title || 'замовити консультацію.');
+
+        // Оновлюємо BehaviorSubject
+        this.addMessage.next(message);
+
+        // Оновлюємо значення в контролі форми
+        this.contactForm.controls['message'].setValue(message);
+        console.log('Message set to form:', message);
+      }
+    });
+  }
+
 
   private canSendEmail(): boolean {
     const emailData = JSON.parse(
@@ -79,7 +109,7 @@ export class ContactFormComponent {
 
 📧 : ${formData.email}
 📞 : ${formData.phone}
-✉️ : ${formData.message}
+✉️ : ${this.addMessage + '/n' +formData.message}
     `;
 
     const url = `https://api.telegram.org/bot${this.BOT_TOKEN}/sendMessage`;
