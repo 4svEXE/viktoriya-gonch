@@ -12,21 +12,18 @@ import { ContactFormComponent } from '../../components/contact-form/contact-form
 })
 export class ModalComponent {
   @Input() title = '';
-  modalData: any;
+
 
   isModalOpen:boolean = false;
 
   constructor(public modalService: ModalService) {}
 
   ngOnInit() {
-    this.modalService.modalStatus$.subscribe((isOpen)=>{
-      this.isModalOpen = isOpen
-    })
-    this.modalService.data$.subscribe((data)=>{
-      this.modalData = data
-    })
+    this.modalService.modalStatus$.subscribe((isOpen) => {
+      this.isModalOpen = isOpen;
+    });
   }
-
+  
   closeModal() {
     this.modalService.close();
   }

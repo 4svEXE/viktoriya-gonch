@@ -1,9 +1,14 @@
-@if (isModalOpen) {
-<div class="modal-wrapper" (click)="onBackdropClick($event)">
+<div
+  class="modal-wrapper"
+  [class.active]="isModalOpen"
+  (click)="onBackdropClick($event)"
+>
   <div class="modal box">
     <div class="modal-content">
       <div class="modal-header">
-        @if(title) {<h3>{{ title }}</h3>}
+        @if(title) {
+        <h3>{{ title }}</h3>
+        }
 
         <ul class="flex justify-center items-center gap-3">
           <li>
@@ -12,7 +17,7 @@
               target="_blank"
               class="link-button flex items-center text-gray-600 hover:text-blue-500"
             >
-              <i class="fab fa-telegram-plane text-xl "></i>
+              <i class="fab fa-telegram-plane text-xl"></i>
             </a>
           </li>
           <li>
@@ -21,7 +26,7 @@
               target="_blank"
               class="link-button flex items-center text-gray-600 hover:text-pink-500"
             >
-              <i class="fab fa-instagram text-xl "></i>
+              <i class="fab fa-instagram text-xl"></i>
             </a>
           </li>
           <li>
@@ -29,7 +34,7 @@
               href="mailto:admin@viktoriehonc.com.ua"
               class="link-button flex items-center text-gray-600 hover:text-pink-500"
             >
-              <i class="fas fa-envelope text-xl "></i>
+              <i class="fas fa-envelope text-xl"></i>
             </a>
           </li>
           <li>
@@ -37,7 +42,7 @@
               href="tel:+420777557089"
               class="link-button flex items-center text-gray-600 hover:text-green-500"
             >
-              <i class="fas fa-phone-alt text-xl "></i> +420 777 557 089
+              <i class="fas fa-phone-alt text-xl"></i> +420 777 557 089
             </a>
           </li>
         </ul>
@@ -53,4 +58,3 @@
     </div>
   </div>
 </div>
-}

@@ -1,7 +1,7 @@
 .modal-wrapper {
   position: fixed;
   top: 0;
-  left: 0;
+  left: -100%;
   width: 100%;
   height: 100dvh;
   background-color: rgba(0, 0, 0, 0.3);
@@ -10,6 +10,11 @@
   align-items: center;
   z-index: 1000;
   backdrop-filter: blur(5px); /* Додає ефект розмиття фону */
+  transition: .3s;
+
+  &.active {
+    left: 0;
+  }
 }
 
 .modal {
