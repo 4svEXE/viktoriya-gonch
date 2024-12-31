@@ -4,7 +4,6 @@ import { RouterModule, Routes, ExtraOptions } from '@angular/router';
 import { UiExamplesComponent } from './pages/ui-examples/ui-examples.component';
 
 export const routes: Routes = [
-
   { path: 'ui-examples', component: UiExamplesComponent },
   { path: '', redirectTo: '/home', pathMatch: 'full' },
   { path: '**', redirectTo: '/home' },
