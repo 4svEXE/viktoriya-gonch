@@ -26,6 +26,8 @@
 </header>
 
 <!-- Mobile Navigation -->
+<!-- todo в окремий компонент -->
+
 <div
   class="mobile-menu-container lg:hidden p-4"
   [class.active]="isMobileMenuOpen"
@@ -33,15 +35,19 @@
 >
   <img src="assets/logo.svg" alt="Logo" class="w-full mt-[200px]" />
 
-  <app-social-links />
-
-  <button class="active-button small min-w-[100%]" (click)="openModal()">Зв'язатись</button>
-
   <div class="close-button">
     <div [innerHTML]="svg['close']"></div>
   </div>
 
+  <hr class="border-t-1 border-black mb-4 w-full">
+
   <app-navigation navClass="flex-col justify-center items-start " />
+
+  <hr class="border-t-1 border-black mt-4 w-full">
+
+  <app-social-links />
+
+  <button class="active-button small min-w-[100%]" (click)="openModal()">Зв'язатись</button>
 </div>
 
 
