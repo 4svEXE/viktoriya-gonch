@@ -97,6 +97,7 @@
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
 </head>
   <body class="mat-typography">
+
     <div class="pre-loader">
       <svg
         id="_Шар_1"
@@ -422,8 +423,6 @@
           transition: .3s;
           opacity: 1;
           z-index: 10000;
-
-
         }
         .pre-loader svg{
             width: 100%;
@@ -431,14 +430,12 @@
           }
         .pre-loader.done{
           opacity: 0;
-          /* top: -100%; */
           pointer-events: none;
         }
         @-webkit-keyframes animate-svg-fill-1 {
           0% {
             fill: transparent;
           }
-
           100% {
             fill: rgb(0, 0, 0);
           }
@@ -448,7 +445,6 @@
           0% {
             fill: transparent;
           }
-
           100% {
             fill: rgb(0, 0, 0);
           }
@@ -2249,6 +2245,7 @@
         }
       </style>
     </div>
+
     <app-root></app-root>
   </body>
 

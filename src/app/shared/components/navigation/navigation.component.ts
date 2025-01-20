@@ -2,6 +2,13 @@ import { CommonModule, ViewportScroller } from '@angular/common';
 import { Component, Input } from '@angular/core';
 import { RouterModule } from '@angular/router';
 
+interface Route {
+  path?: string;
+  label: string;
+  subMenu?: Route[];
+  subMenuRoutePrefix?: string;
+}
+
 @Component({
   selector: 'app-navigation',
   standalone: true,
@@ -12,7 +19,7 @@ import { RouterModule } from '@angular/router';
 export class NavigationComponent {
   @Input() isHomeNav = true;
   @Input() navClass = '';
-  navMainClass = ' flex items-center gap-8 ';
+  navMainClass = ' flex gap-8 ';
 
   constructor(private viewportScroller: ViewportScroller) {}
 
@@ -21,32 +28,40 @@ export class NavigationComponent {
   }
 
   getNavClassList() {
-    return this.navClass ? this.navMainClass + this.navClass : this.navMainClass;
+    return this.navClass
+      ? this.navMainClass + this.navClass
+      : this.navMainClass;
   }
 
-
-
-  routes = [
-    // { path: 'ui-examples', label: 'ui-examples' },
-
-    { path: 'home', label: 'Головна' },
+  routes: Route[] = [
+    {
+      path: 'home',
+      label: 'Головна',
+      subMenu: [
+        { path: 'старт', label: 'Старт' },
+        { path: 'про-мене', label: 'Про мене' },
+        { path: 'мої-послуги', label: 'Мої послуги' },
+        { path: 'про-матрицю-долі', label: 'Про матрицю долі' },
+        { path: 'про-сумістність', label: 'Про сумістність по матриці долі' },
+        { path: 'про-квадрат-піфагора', label: 'Про квадрат піфагора' },
+        { path: 'відгуки', label: 'Відгуки' },
+        { path: 'запланувати-зустріч', label: 'Консультація' },
+        { path: 'контакти', label: `Зв'язатись` },
+      ],
+      subMenuRoutePrefix: '/home#',
+    },
     { path: 'me', label: 'Про мене' },
-    { path: 'matrix', label: 'Матриця долі' },
-    { path: 'sumistnist', label: 'Калькулятор сумістності' },
+    {
+      label: 'Матриця долі',
+      subMenu: [
+        { path: 'matrix', label: 'Матриця долі' },
+        { path: 'sumistnist', label: 'Калькулятор сумістності' },
+        { path: 'мої-послуги', label: 'Мої послуги' },
+      ],
+    },
     { path: 'pifagor', label: 'Квадрат піфагора' },
 
+    // { path: 'ui-examples', label: 'ui-examples' },
     // { path: 'contacts', label: 'Контакти' },
   ];
-
-  homeNavRoutes = [
-    { path: 'старт', label: 'Старт' },
-    { path: 'про-мене', label: 'Про мене' },
-    { path: 'мої-послуги', label: 'Мої послуги' },
-    { path: 'про-матрицю-долі', label: 'Про матрицю долі' },
-    { path: 'про-сумістність', label: 'Про сумістність по матриці долі' },
-    { path: 'про-квадрат-піфагора', label: 'Про квадрат піфагора' },
-    { path: 'відгуки', label: 'Відгуки' },
-    { path: 'запланувати-зустріч', label: 'Консультація' },
-    { path: 'контакти', label: `Зв'язатись` },
-  ]
 }

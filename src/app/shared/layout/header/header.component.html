@@ -9,7 +9,7 @@
 
     <!-- Navigation -->
     <nav class="hidden lg:flex space-x-6">
-      <app-navigation />
+      <app-navigation avClass="items-center" />
     </nav>
 
     <!-- Burger Icon for Mobile/Tablet -->
@@ -33,14 +33,13 @@
 >
   <img src="assets/logo.svg" alt="Logo" class="w-[200px]" />
 
+  <button class="active-button small min-w-[100%]" (click)="openModal()">Зв'язатись</button>
+
   <div class="close-button">
     <div [innerHTML]="svg['close']"></div>
   </div>
 
-  <app-navigation navClass="flex-col justify-center" />
-
-  <button class="active-button small mt-4" (click)="openModal()">Зв'язатись</button>
-
+  <app-navigation navClass="flex-col justify-center items-start " />
 </div>
 
 

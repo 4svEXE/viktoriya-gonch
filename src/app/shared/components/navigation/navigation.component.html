@@ -5,20 +5,30 @@
       class="link-button"
       routerLinkActive="active"
     >
-      <span class="cursor-pointer" [routerLink]="route.path">{{
+      <b class="cursor-pointer" [routerLink]="route.path">{{
         route.label
-      }}</span>
+      }}</b>
 
-      @if (route.path === 'home'){
+      @if (route.subMenu){
       <div class="relative">
-        <nav class="sub-navigation cursor-pointer md:bg-black bg-slate-100">
+        <nav
+          class="sub-navigation md:bg-black relative md:absolute md:opacity-0 opacity-100"
+        >
+          @for (subRoute of route.subMenu; track $index) {
+            @if
+          (route.subMenuRoutePrefix) {
           <a
-            *ngFor="let subRoute of homeNavRoutes"
-            [href]="'/home#' + subRoute.path"
+            [href]="route.subMenuRoutePrefix + subRoute.path"
             class="link-button"
           >
             {{ subRoute.label }}
           </a>
+          } @else {
+          <a [routerLink]="subRoute.path" class="link-button">
+            {{ subRoute.label }}
+          </a>
+          }
+        }
         </nav>
       </div>
       }
