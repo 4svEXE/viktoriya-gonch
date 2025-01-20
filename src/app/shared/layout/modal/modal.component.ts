@@ -2,11 +2,12 @@ import { CommonModule } from '@angular/common';
 import { ModalService } from './../../../core/services/modal.service';
 import { Component, Input } from '@angular/core';
 import { ContactFormComponent } from '../../components/contact-form/contact-form.component';
+import { SocialLinksComponent } from '../../components/social-links/social-links.component';
 
 @Component({
   selector: 'app-modal',
   standalone: true,
-  imports: [CommonModule, ContactFormComponent],
+  imports: [CommonModule, ContactFormComponent, SocialLinksComponent],
   templateUrl: './modal.component.html',
   styleUrl: './modal.component.scss',
 })
@@ -23,7 +24,7 @@ export class ModalComponent {
       this.isModalOpen = isOpen;
     });
   }
-  
+
   closeModal() {
     this.modalService.close();
   }

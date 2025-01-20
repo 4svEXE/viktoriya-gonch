@@ -31,7 +31,9 @@
   [class.active]="isMobileMenuOpen"
   (click)="toggleMobileMenu()"
 >
-  <img src="assets/logo.svg" alt="Logo" class="w-[200px]" />
+  <img src="assets/logo.svg" alt="Logo" class="w-full mt-[200px]" />
+
+  <app-social-links />
 
   <button class="active-button small min-w-[100%]" (click)="openModal()">Зв'язатись</button>
 

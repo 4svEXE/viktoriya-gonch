@@ -5,11 +5,12 @@ import { NavigationComponent } from '../../components/navigation/navigation.comp
 import { SvgIconsInterface, SvgService } from '../../../core/services/svg.service';
 import { ModalComponent } from "../modal/modal.component";
 import { ModalService } from '../../../core/services/modal.service';
+import { SocialLinksComponent } from '../../components/social-links/social-links.component';
 
 @Component({
   selector: 'app-header',
   standalone: true,
-  imports: [CommonModule, NavigationComponent, RouterModule, ModalComponent],
+  imports: [CommonModule, NavigationComponent, RouterModule, ModalComponent, SocialLinksComponent],
   templateUrl: './header.component.html',
   styleUrl: './header.component.scss'
 })
