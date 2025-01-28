@@ -13,6 +13,10 @@ import { IframeSectionComponent } from '../shared/components/iframe-section/ifra
 import { MyServicesComponent } from "../shared/components/my-services/my-services.component";
 import { ContactsComponent } from '../shared/components/contacts/contact-form.component';
 import { MeComponent } from './me/me.component';
+import { LilaComponent } from './lila/lila.component';
+import { KidsMatrixComponent } from './kids-matrix/kids-matrix.component';
+import { NineWorldsComponent } from './nine-worlds/nine-worlds.component';
+import { PredictionComponent } from './prediction/prediction.component';
 
 @NgModule({
   declarations: [
@@ -21,6 +25,10 @@ import { MeComponent } from './me/me.component';
     SumistnistComponent,
     MatrixComponent,
     MeComponent,
+    LilaComponent,
+    KidsMatrixComponent,
+    NineWorldsComponent,
+    PredictionComponent,
   ],
   imports: [
     CommonModule,

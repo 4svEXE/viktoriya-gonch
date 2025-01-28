@@ -12,15 +12,29 @@
         >
           <mat-expansion-panel-header>
             <mat-panel-title>
-              {{ service.title }} - {{ service.price }}
+              <h5>{{ service.title }}</h5>
+              <strong>{{ service.price }}</strong>
             </mat-panel-title>
           </mat-expansion-panel-header>
 
           <div class="flex flex-col md:gap-1 gap-4">
-            <p><b>Що входить:</b> {{ service.details.includes }}</p>
-            <p><b>Тривалість:</b> {{ service.details.duration }}</p>
+            <h6>Що входить:</h6>
+            <p>{{ service.details.includes }}</p>
+            <div class="flex flex-col">
+              <h6>Теми які ми розберемо:</h6>
+
+              <ul>
+                <li *ngFor="let detail of service.details.additional">
+                  <strong>{{ detail.key }}</strong> {{ detail.value }}
+                </li>
+              </ul>
+            </div>
+
+            <h6>Тривалість:</h6>
+            <p>{{ service.details.duration }}</p>
+
+            <h6>Умови:</h6>
             <p>
-              <b>Умови:</b>
               {{ service.details.conditions || service.details.format }}
             </p>
 
@@ -37,6 +51,7 @@
       </mat-accordion>
     </div>
 
+    <!-- todo стилі з інлайну в шаред -->
     <div class="about-photo hidden md:flex">
       <img
         src="assets/img/services.jpg"

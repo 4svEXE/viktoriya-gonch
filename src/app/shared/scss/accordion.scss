@@ -53,3 +53,7 @@
 .mat-expansion-panel.mat-expanded{
   background-color: $light-gray;
 }
+
+.mat-expansion-panel-header-title{
+  justify-content: space-between;
+}

@@ -28,19 +28,23 @@ export const Routes: Route[] = [
     subMenu: [
       { path: 'matrix', label: 'Матриця долі' },
       { path: 'sumistnist', label: 'Калькулятор сумістності' },
-      { path: 'мої-послуги', label: 'Дитяча матриця долі' },
-      { path: 'мої-послуги', label: 'Прогнозування' },
+      { path: 'kids-matrix', label: 'Дитяча матриця долі' },
+      { path: 'prediction', label: 'Прогнозування' },
     ],
   },
   {
     label: 'Нумерологія',
     subMenu: [
       { path: 'pifagor', label: 'Квадрат піфагора' },
-      { path: 'pifagor', label: 'Гра Ліла' },
-      { path: 'pifagor', label: 'Гра 9 світів' },
     ],
   },
-
+  {
+    label: 'Трансформаційні ігри',
+    subMenu: [
+      { path: 'lila', label: 'Гра Ліла' },
+      { path: 'nine-worlds', label: 'Гра 9 світів' },
+    ],
+  },
   // { path: 'ui-examples', label: 'ui-examples' },
   // { path: 'contacts', label: 'Контакти' },
 ];
