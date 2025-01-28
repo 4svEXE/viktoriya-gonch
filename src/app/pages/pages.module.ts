@@ -18,6 +18,7 @@ import { NineWorldsComponent } from './nine-worlds/nine-worlds.component';
 import { PredictionComponent } from './prediction/prediction.component';
 import { MarqueeComponent } from '../shared/layout/marquee/marquee.component';
 import { CarouselModule } from 'ngx-owl-carousel-o';
+import { SectionGridComponent } from '../shared/layout/section-grid/section-grid.component';
 
 @NgModule({
   declarations: [
@@ -39,7 +40,8 @@ import { CarouselModule } from 'ngx-owl-carousel-o';
     ContactsComponent,
     MyServicesComponent,
     MarqueeComponent,
-    CarouselModule
+    CarouselModule,
+    SectionGridComponent
 ],
 })
 export class PagesModule {}

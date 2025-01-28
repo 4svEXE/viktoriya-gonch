@@ -1,73 +1,154 @@
-<section class="container">
-  <h2 class="w-full text-center pt-20">Гра Ліла</h2>
-  <div class="wrapper wrapper__grid">
-    <div class="about-phot">
-      <owl-carousel-o [options]="customOptions">
-        <ng-template carouselSlide>
-          <img
-            src="assets/img/lila/1.jpg"
-            style="
-              width: 100%;
-              max-width: 600px;
-              max-height: 600px;
-              object-position: bottom;
-              object-fit: cover;
-              border-radius: 0.5rem;
-              mix-blend-mode: multiply;
-            "
-            alt="Viktorie Honč"
-          />
-        </ng-template>
+<section class="container min-h-[100vh] pt-24">
+  <h2 class="text-center">Гра Ліла</h2>
 
-        <ng-template carouselSlide>
-          <img
-            src="assets/img/lila/2.jpg"
-            style="
-              width: 100%;
-              max-width: 600px;
-              max-height: 600px;
-              object-position: bottom;
-              object-fit: cover;
-              border-radius: 0.5rem;
-              mix-blend-mode: multiply;
-            "
-            alt="Viktorie Honč"
-          />
-        </ng-template>
-
-        <ng-template carouselSlide>
-          <img
-            src="assets/img/lila/3.jpg"
-            style="
-              width: 100%;
-              max-width: 600px;
-              max-height: 600px;
-              object-position: bottom;
-              object-fit: cover;
-              border-radius: 0.5rem;
-              mix-blend-mode: multiply;
-            "
-            alt="Viktorie Honč"
-          />
-        </ng-template>
-      </owl-carousel-o>
-    </div>
-
-    <div class="about-text gap-10">
-      <h3>Відчуй силу трансформації з грою «Ліла»!</h3>
-      <div class="flex w-fit m-auto md:m-0 mb-5">
-        <ul class="regalies flex flex-col">
+  <!-- Секція 1: Вступ -->
+  <section>
+    <app-section-grid
+      [images]="[{ src: 'assets/img/lila/1.jpg', alt: 'Фото 1' }]"
+      textPosition="left"
+    >
+      <div class="flex flex-col gap-10">
+        <h3>Відчуй силу трансформації з грою «Ліла»!</h3>
+        <ul class="regalies">
           <li>✨ Усвідомити свої справжні цілі.</li>
           <li>✨ Побачити, що блокує твій розвиток.</li>
           <li>✨ Знайти нові рішення та ресурси.</li>
         </ul>
+        <button
+          class="active-button small"
+          (click)="openModal('Я хочу записатись на гру Ліла')"
+        >
+          Записатись на гру
+        </button>
       </div>
+    </app-section-grid>
+  </section>
 
-      <button class="active-button small">Записатись</button>
-    </div>
-  </div>
+  <!-- Секція 2: Основні принципи гри -->
+  <section>
+    <app-section-grid
+      [images]="[{ src: 'assets/img/lila/3.jpg', alt: 'Фото 3' }]"
+      textPosition="right"
+    >
+      <div class="flex flex-col gap-10">
+        <h4>
+          Щоб зрозуміти призначення гри Ліла, вам слід ознайомитися з основними
+          принципами цієї гри:
+        </h4>
+
+        <ul class="principles">
+          <li>
+            Ігрове поле складається з <strong>72 квадратів (полів)</strong>,
+            кожен з яких відображає певний стан людської свідомості.
+          </li>
+          <li>
+            Гра починається і закінчується в полі
+            <strong>«космічної свідомості»</strong>, вишуканому світі.
+          </li>
+          <li>
+            Душа людини вирішує втілитися, щоб отримати новий досвід життя в
+            тілі.
+          </li>
+          <li>
+            Правильно створене завдання (<strong>мета, намір</strong>) створює
+            умови для народження душі.
+          </li>
+          <li>
+            Людина рухається ігровим полем, досліджуючи
+            <strong>концепції, ідеї та поняття</strong>.
+          </li>
+          <li>
+            Отримавши необхідний досвід і знайшовши відповіді, вона повертається
+            до поля <strong>«космічної свідомості»</strong>.
+          </li>
+        </ul>
+      </div>
+    </app-section-grid>
+  </section>
+
+  <!-- Секція 3: Духовна суть гри -->
+  <section>
+    <app-section-grid
+      [images]="[{ src: 'assets/img/lila/2.jpg', alt: 'Фото 2' }]"
+      textPosition="left"
+    >
+      <div class="flex flex-col gap-10">
+        <blockquote>
+          <p>
+            <strong>Бути духовним</strong> — не означає щось практикувати або
+            робити. Це означає бути в контакті зі своїм власним Духом. І весь
+            сенс гри Ліла полягає в тому, щоб з’єднатися з собою.
+          </p>
+        </blockquote>
+
+        <p>
+          <strong>Гра Ліла</strong> — це спосіб переконатися, що в моєму
+          власному житті все йде правильно, чи живу я так, як хочу, чи досягаю
+          цілей, заради яких прийшов сюди (втілився).
+        </p>
+      </div>
+    </app-section-grid>
+  </section>
+
+  <!-- Секція 4: Як Ліла допомагає -->
+  <section>
+    <app-section-grid
+      [images]="[{ src: 'assets/img/lila/4.jpg', alt: 'Фото 4' }]"
+      textPosition="right"
+    >
+      <div class="flex flex-col gap-10">
+        <h3>Як Ліла допомагає?</h3>
+        <p>
+          Якщо людина суперечить собі в будь-якому аспекті свого життя,
+          <strong>гра Ліла це показує</strong>. Коли людина бачить і розуміє
+          свої внутрішні протиріччя, вона отримує можливість виправити їх і
+          повернути своє життя в краще русло.
+        </p>
+
+        <p>
+          Ліла вчить жити в <strong>гармонії з собою</strong>, допомагає
+          розпізнавати моменти, коли людина суперечить своєму Духу. По суті, гра
+          Ліла — це
+          <strong>духовна практика, форма джнана-йоги (йоги знання)</strong>.
+        </p>
+      </div>
+    </app-section-grid>
+  </section>
+
+  <!-- Секція 5: Гра як інструмент -->
+  <section>
+    <app-section-grid
+      [images]="[{ src: 'assets/img/lila/5.jpg', alt: 'Фото 5' }]"
+      textPosition="left"
+    >
+      <div class="flex flex-col gap-10">
+        <h3>Гра Ліла як інструмент</h3>
+        <p>
+          Ліла — це спосіб, техніка, яка дозволяє людині повернутися на свій
+          шлях
+          <strong>без втручання, власними силами</strong>. Під час гри всередині
+          людини відбувається глибока внутрішня робота, яка може бути навіть
+          помітною зовні.
+        </p>
+
+        <p>
+          І коли <strong>«це» зроблено</strong> – гра закінчена. У цьому її
+          велика користь, цінність і сенс.
+        </p>
+
+        <button
+          class="active-button small"
+          (click)="openModal('Я хочу записатись на гру Ліла')"
+        >
+          Записатись на гру
+        </button>
+      </div>
+    </app-section-grid>
+  </section>
+
+
+
+  <app-my-services />
+
+  <app-contacts />
 </section>
-
-<app-my-services />
-
-<app-contacts />

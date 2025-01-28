@@ -47,12 +47,17 @@ export class ContactFormComponent {
     // Підписка на дані з модалки для отримання послуги
     this.modalService.data$.subscribe((data) => {
       if (data) {
-        const message = 'Мені потрібна послуга: ' + (data.title || 'консультація.');
+        let message = 'Мені потрібна послуга: ' + (data.title || 'консультація.');
+
+        if (typeof data === 'string') {
+          message = data;
+        }
 
         this.contactForm.controls['message'].setValue(message);
       }
     });
   }
+
 
 
   private canSendEmail(): boolean {

@@ -1,0 +1,24 @@
+<section class="container" [class.darker]="textPosition === 'right'">
+  <div
+    class="wrapper wrapper__grid"
+    [ngClass]="{ 'reverse-layout': textPosition === 'right' }"
+  >
+    <!-- Зображення -->
+    <div class="about-photo">
+      <owl-carousel-o [options]="mergedCarouselOptions">
+        <ng-template carouselSlide *ngFor="let image of images">
+          <img
+            [src]="image.src"
+            [alt]="image.alt"
+            class="carousel-image"
+          />
+        </ng-template>
+      </owl-carousel-o>
+    </div>
+
+     <!-- Текстовий контент -->
+     <div class="about-text">
+      <ng-content></ng-content>
+    </div>
+  </div>
+</section>

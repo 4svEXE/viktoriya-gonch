@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
-import { OwlOptions } from 'ngx-owl-carousel-o';
+import { ModalService } from '../../core/services/modal.service';
+
 
 @Component({
   selector: 'app-lila',
@@ -7,19 +8,11 @@ import { OwlOptions } from 'ngx-owl-carousel-o';
   styleUrl: './lila.component.scss',
 })
 export class LilaComponent {
-  customOptions: OwlOptions = {
-    loop: true,
-    margin: 10,
-    dots: true,
-    mouseDrag: false,
-    touchDrag: false,
-    pullDrag: true,
-    nav: false,
-    autoplay: true,
-    autoplayTimeout: 5000,
+ constructor(public modalService: ModalService) {
+  }
 
-    responsive: {
-      0: { items: 1 },
-    },
-  };
+  openModal(data: any) {
+    this.modalService.open();
+    this.modalService.setData(data);
+  }
 }

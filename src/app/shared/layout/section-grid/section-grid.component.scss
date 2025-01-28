@@ -1,0 +1,40 @@
+.wrapper__grid {
+  display: grid;
+  align-items: center;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 1rem;
+  min-height: 70dvh;
+  margin: 0;
+
+  &.reverse-layout {
+    grid-template-areas:
+      "text image";  /* Текст зліва, зображення справа */
+  }
+
+  &:not(.reverse-layout) {
+    grid-template-areas:
+      "image text"; /* Зображення зліва, текст справа */
+  }
+}
+
+.about-text {
+  grid-area: text;
+  padding: 1rem;
+}
+
+.about-photo {
+  grid-area: image;
+}
+
+.carousel-image {
+  width: 100%;
+  max-width: 600px;
+  max-height: auto;
+  object-fit: cover;
+  border-radius: 0.5rem;
+  mix-blend-mode: multiply;
+}
+
+h2 {
+  margin: 0;
+}
