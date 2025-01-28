@@ -1,23 +1,60 @@
-
 <section class="container">
   <h2 class="w-full text-center pt-20">Гра Ліла</h2>
   <div class="wrapper wrapper__grid">
-    <div class="about-photo">
-      <img src="assets/img/lila/1.jpg"
-      style="
-      width: 100%;
-      max-width: 600px;
-      max-height: 600px;
-      object-position: bottom;
-      object-fit: cover;
-      border-radius: 0.5rem;
-      mix-blend-mode: multiply;
-    "
-      alt="Viktorie Honč" />
+    <div class="about-phot">
+      <owl-carousel-o [options]="customOptions">
+        <ng-template carouselSlide>
+          <img
+            src="assets/img/lila/1.jpg"
+            style="
+              width: 100%;
+              max-width: 600px;
+              max-height: 600px;
+              object-position: bottom;
+              object-fit: cover;
+              border-radius: 0.5rem;
+              mix-blend-mode: multiply;
+            "
+            alt="Viktorie Honč"
+          />
+        </ng-template>
+
+        <ng-template carouselSlide>
+          <img
+            src="assets/img/lila/2.jpg"
+            style="
+              width: 100%;
+              max-width: 600px;
+              max-height: 600px;
+              object-position: bottom;
+              object-fit: cover;
+              border-radius: 0.5rem;
+              mix-blend-mode: multiply;
+            "
+            alt="Viktorie Honč"
+          />
+        </ng-template>
+
+        <ng-template carouselSlide>
+          <img
+            src="assets/img/lila/3.jpg"
+            style="
+              width: 100%;
+              max-width: 600px;
+              max-height: 600px;
+              object-position: bottom;
+              object-fit: cover;
+              border-radius: 0.5rem;
+              mix-blend-mode: multiply;
+            "
+            alt="Viktorie Honč"
+          />
+        </ng-template>
+      </owl-carousel-o>
     </div>
 
-    <div class="about-text">
-      <h3> Відчуй силу трансформації з грою «Ліла»!</h3>
+    <div class="about-text gap-10">
+      <h3>Відчуй силу трансформації з грою «Ліла»!</h3>
       <div class="flex w-fit m-auto md:m-0 mb-5">
         <ul class="regalies flex flex-col">
           <li>✨ Усвідомити свої справжні цілі.</li>
@@ -25,6 +62,8 @@
           <li>✨ Знайти нові рішення та ресурси.</li>
         </ul>
       </div>
+
+      <button class="active-button small">Записатись</button>
     </div>
   </div>
 </section>

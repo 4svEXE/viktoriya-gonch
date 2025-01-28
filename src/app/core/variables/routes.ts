@@ -45,6 +45,4 @@ export const Routes: Route[] = [
       { path: 'nine-worlds', label: 'Гра 9 світів' },
     ],
   },
-  // { path: 'ui-examples', label: 'ui-examples' },
-  // { path: 'contacts', label: 'Контакти' },
 ];

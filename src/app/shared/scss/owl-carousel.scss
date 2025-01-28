@@ -1,0 +1,28 @@
+@import 'variables';
+
+.owl-dots {
+  text-align: center;
+  margin-top: 12px;
+}
+/* Кожна крапка */
+.owl-dot {
+  display: inline-block;
+  width: 12px; /* Розмір */
+  height: 12px;
+  margin: 0 6px; /* Відстань між крапками */
+  background-color: $primary-disabled; /* Колір за замовчуванням */
+  border-radius: 50%; /* Робимо круглими */
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+/* Активна крапка */
+.owl-dot.active {
+  background-color: $primary-color; /* Колір активної крапки */
+  transform: scale(1.04); /* Збільшення */
+}
+
+/* Ефект при наведенні */
+.owl-dot:hover {
+  background-color: $primary-color; /* Колір на ховер */
+}

@@ -8,7 +8,6 @@ import { PifagorComponent } from './pifagor/pifagor.component';
 import { SumistnistComponent } from './sumistnist/sumistnist.component';
 import { MatrixComponent } from './matrix/matrix.component';
 
-import { UiExamplesComponent } from './ui-examples/ui-examples.component';
 import { IframeSectionComponent } from '../shared/components/iframe-section/iframe-section.component';
 import { MyServicesComponent } from "../shared/components/my-services/my-services.component";
 import { ContactsComponent } from '../shared/components/contacts/contact-form.component';
@@ -17,10 +16,11 @@ import { LilaComponent } from './lila/lila.component';
 import { KidsMatrixComponent } from './kids-matrix/kids-matrix.component';
 import { NineWorldsComponent } from './nine-worlds/nine-worlds.component';
 import { PredictionComponent } from './prediction/prediction.component';
+import { MarqueeComponent } from '../shared/layout/marquee/marquee.component';
+import { CarouselModule } from 'ngx-owl-carousel-o';
 
 @NgModule({
   declarations: [
-    UiExamplesComponent,
     PifagorComponent,
     SumistnistComponent,
     MatrixComponent,
@@ -37,7 +37,9 @@ import { PredictionComponent } from './prediction/prediction.component';
     MatExpansionModule,
     IframeSectionComponent,
     ContactsComponent,
-    MyServicesComponent
+    MyServicesComponent,
+    MarqueeComponent,
+    CarouselModule
 ],
 })
 export class PagesModule {}

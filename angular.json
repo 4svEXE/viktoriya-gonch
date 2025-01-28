@@ -30,9 +30,7 @@
                 "output": "/assets"
               }
             ],
-            "styles": [
-              "src/styles.scss"
-            ],
+            "styles": ["src/styles.scss"],
             "scripts": []
           },
           "configurations": {
@@ -71,10 +69,10 @@
           "builder": "@angular-devkit/build-angular:dev-server",
           "configurations": {
             "production": {
-              "browserTarget": "viktoriya-gonch:build:production"
+              "buildTarget": "viktoriya-gonch:build:production"
             },
             "development": {
-              "browserTarget": "viktoriya-gonch:build:development"
+              "buildTarget": "viktoriya-gonch:build:development"
             }
           },
           "defaultConfiguration": "development"
@@ -95,9 +93,7 @@
                 "output": "/assets"
               }
             ],
-            "styles": [
-              "src/styles.scss"
-            ],
+            "styles": ["src/styles.scss"],
             "scripts": []
           }
         }

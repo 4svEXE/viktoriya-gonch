@@ -1,18 +1,18 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { UiExamplesComponent } from './ui-examples.component';
+import { MarqueeComponent } from './marquee.component';
 
-describe('UiExamplesComponent', () => {
-  let component: UiExamplesComponent;
-  let fixture: ComponentFixture<UiExamplesComponent>;
+describe('MarqueeComponent', () => {
+  let component: MarqueeComponent;
+  let fixture: ComponentFixture<MarqueeComponent>;
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      imports: [UiExamplesComponent]
+      imports: [MarqueeComponent]
     })
     .compileComponents();
 
-    fixture = TestBed.createComponent(UiExamplesComponent);
+    fixture = TestBed.createComponent(MarqueeComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });

@@ -19,7 +19,7 @@ import { SocialLinksComponent } from '../../components/social-links/social-links
     NavigationComponent,
     RouterModule,
     ModalComponent,
-    SocialLinksComponent,
+    SocialLinksComponent
   ],
   templateUrl: './header.component.html',
   styleUrl: './header.component.scss',

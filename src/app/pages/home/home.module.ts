@@ -17,6 +17,7 @@ import { CalendlyWidgetComponent } from './components/calendly-widget/calendly-w
 import { RouterModule } from '@angular/router';
 import { AboutSumistnistComponent } from './components/about-sumistnist/about-sumistnist.component';
 import { AboutPifagorComponent } from './components/about-pifagor/about-pifagor.component';
+import { MarqueeComponent } from '../../shared/layout/marquee/marquee.component';
 
 
 
@@ -41,7 +42,8 @@ import { AboutPifagorComponent } from './components/about-pifagor/about-pifagor.
     RouterModule,
     CarouselModule,
     MyServicesComponent,
-    ContactsComponent
+    ContactsComponent,
+    MarqueeComponent
   ],
   exports: [
     HomeComponent,

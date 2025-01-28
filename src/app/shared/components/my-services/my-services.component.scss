@@ -1,16 +1,19 @@
 .my-services-button {
   display: block;
 }
-.custom-accordion{
-  h5{
+
+.custom-accordion {
+  h5 {
     font-weight: normal;
     margin-right: 16px;
   }
-  h6{
+
+  h6 {
     font-weight: normal;
     margin-right: 16px;
     text-decoration: underline;
   }
+
   strong {
     display: contents;
     font-weight: 700;
@@ -18,7 +21,7 @@
     text-decoration: underline;
   }
 
-  li{
+  li {
     line-height: normal;
     list-style-type: none;
     position: relative;
@@ -30,8 +33,17 @@
     position: absolute;
     left: 0;
     transform: translateY(30%);
-    color: #26663b ;
+    color: #26663b;
     font-size: 1rem;
   }
 }
 
+.my-services {
+  &.wrapper {
+    align-items: start;
+  }
+
+  .about-photo{
+    margin-top: 100px;
+  }
+}
