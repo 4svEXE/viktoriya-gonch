@@ -19,6 +19,8 @@ import { PredictionComponent } from './prediction/prediction.component';
 import { MarqueeComponent } from '../shared/layout/marquee/marquee.component';
 import { CarouselModule } from 'ngx-owl-carousel-o';
 import { SectionGridComponent } from '../shared/layout/section-grid/section-grid.component';
+import { ReviewsComponent } from '../shared/components/reviews/reviews.component';
+import { MyAllServicesComponent } from '../shared/components/my-all-services/my-all-services.component';
 
 @NgModule({
   declarations: [
@@ -41,7 +43,9 @@ import { SectionGridComponent } from '../shared/layout/section-grid/section-grid
     MyServicesComponent,
     MarqueeComponent,
     CarouselModule,
-    SectionGridComponent
+    SectionGridComponent,
+    ReviewsComponent,
+    MyAllServicesComponent
 ],
 })
 export class PagesModule {}

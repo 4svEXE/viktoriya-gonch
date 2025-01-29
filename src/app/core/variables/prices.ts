@@ -14,7 +14,7 @@ export interface Consultation {
 
 export interface ServicePrices {
   matrix: Consultation[];
-  tarot: Consultation[];
+  games: Consultation[];
   numerology: Consultation[];
 }
 
@@ -349,7 +349,7 @@ export const Prices: ServicePrices = {
       },
     },
   ],
-  tarot: [
+  games: [
     {
       title: 'Індивідуальна консультація по карті Таро',
       price: '70€',

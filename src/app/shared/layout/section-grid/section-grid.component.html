@@ -5,15 +5,15 @@
   >
     <!-- Зображення -->
     <div class="about-photo">
-      <owl-carousel-o [options]="mergedCarouselOptions">
-        <ng-template carouselSlide *ngFor="let image of images">
+      <!-- <owl-carousel-o [options]="mergedCarouselOptions">
+        <ng-template carouselSlide *ngFor="let image of images"> -->
           <img
-            [src]="image.src"
-            [alt]="image.alt"
+            [src]="images[0].src"
+            [alt]="images[0].alt"
             class="carousel-image"
           />
-        </ng-template>
-      </owl-carousel-o>
+        <!-- </ng-template>
+      </owl-carousel-o> -->
     </div>
 
      <!-- Текстовий контент -->

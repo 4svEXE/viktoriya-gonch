@@ -6,15 +6,25 @@
   min-height: 70dvh;
   margin: 0;
 
-  &.reverse-layout {
-    grid-template-areas:
-      "text image";  /* Текст зліва, зображення справа */
+  @media (max-width: 832px) {
+    grid-template-columns: 1fr;
+    display: flex;
+    flex-direction: column;
   }
 
-  &:not(.reverse-layout) {
-    grid-template-areas:
-      "image text"; /* Зображення зліва, текст справа */
+  @media (min-width: 832px) {
+    &.reverse-layout {
+      grid-template-areas: "text image";
+      /* Текст зліва, зображення справа */
+    }
+
+    &:not(.reverse-layout) {
+      grid-template-areas: "image text";
+      /* Зображення зліва, текст справа */
+    }
   }
+
+
 }
 
 .about-text {

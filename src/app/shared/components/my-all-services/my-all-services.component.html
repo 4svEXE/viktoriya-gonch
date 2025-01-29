@@ -1,0 +1,15 @@
+<div class="my-all-services">
+  <owl-carousel-o [options]="customOptions">
+    <ng-template carouselSlide>
+      <app-my-services [services]="matrixServices" title="Матриця долі"></app-my-services>
+    </ng-template>
+
+    <ng-template carouselSlide>
+      <app-my-services [services]="gamesServices" title="Трансформаційні ігри"></app-my-services>
+    </ng-template>
+
+    <ng-template carouselSlide>
+      <app-my-services [services]="numerologyServices" title="Нумерологія"></app-my-services>
+    </ng-template>
+  </owl-carousel-o>
+</div>

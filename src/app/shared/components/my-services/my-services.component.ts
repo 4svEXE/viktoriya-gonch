@@ -13,6 +13,8 @@ import { Consultation, Prices } from '../../../core/variables/prices';
 })
 export class MyServicesComponent {
   @Input() services: Consultation[] = Prices.matrix;
+  @Input() title: string = '';
+  @Input() imageSrc: string = 'assets/img/services.jpg';
 
   constructor(private modalService: ModalService) {}
 

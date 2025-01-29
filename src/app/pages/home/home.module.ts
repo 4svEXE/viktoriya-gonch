@@ -9,7 +9,7 @@ import { AboutMeComponent } from './components/about-me/about-me.component';
 import { StatisticComponent } from './components/statistic/statistic.component';
 import { AboutMatrixComponent } from './components/about-matrix/about-matrix.component';
 import { MyServicesComponent } from '../../shared/components/my-services/my-services.component';
-import { ReviewsComponent } from './components/reviews/reviews.component';
+import { ReviewsComponent } from '../../shared/components/reviews/reviews.component';
 import { ContactsComponent } from '../../shared/components/contacts/contact-form.component';
 import { CarouselModule } from 'ngx-owl-carousel-o';
 import { CarouselComponent } from './components/carousel/carousel.component';
@@ -18,8 +18,7 @@ import { RouterModule } from '@angular/router';
 import { AboutSumistnistComponent } from './components/about-sumistnist/about-sumistnist.component';
 import { AboutPifagorComponent } from './components/about-pifagor/about-pifagor.component';
 import { MarqueeComponent } from '../../shared/layout/marquee/marquee.component';
-
-
+import { MyAllServicesComponent } from '../../shared/components/my-all-services/my-all-services.component';
 
 @NgModule({
   declarations: [
@@ -29,7 +28,6 @@ import { MarqueeComponent } from '../../shared/layout/marquee/marquee.component'
     AboutMeComponent,
     StatisticComponent,
     AboutMatrixComponent,
-    ReviewsComponent,
     CarouselComponent,
     CalendlyWidgetComponent,
     AboutSumistnistComponent,
@@ -43,7 +41,9 @@ import { MarqueeComponent } from '../../shared/layout/marquee/marquee.component'
     CarouselModule,
     MyServicesComponent,
     ContactsComponent,
-    MarqueeComponent
+    MarqueeComponent,
+    ReviewsComponent,
+    MyAllServicesComponent
   ],
   exports: [
     HomeComponent,

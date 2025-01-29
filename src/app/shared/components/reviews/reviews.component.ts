@@ -1,14 +1,16 @@
 // Імпортуйте ElementRef, якщо потрібно
-import { Component, ViewChild, ElementRef } from '@angular/core';
-import { OwlOptions, CarouselComponent } from 'ngx-owl-carousel-o';
+import { CommonModule } from '@angular/common';
+import { Component } from '@angular/core';
+import { OwlOptions, CarouselModule } from 'ngx-owl-carousel-o';
 
 @Component({
   selector: 'app-reviews',
   templateUrl: './reviews.component.html',
   styleUrls: ['./reviews.component.scss'],
+  standalone: true,
+  imports: [CommonModule, CarouselModule]
 })
 export class ReviewsComponent {
-  // @ViewChild('owlCar') owlCar!: CarouselComponent;
 
   customOptions: OwlOptions = {
     loop: true,
