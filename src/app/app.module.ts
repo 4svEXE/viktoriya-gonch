@@ -18,6 +18,7 @@ import { HeaderComponent } from './shared/layout/header/header.component';
 import { FooterComponent } from './shared/layout/footer/footer.component';
 import { provideAnimationsAsync } from '@angular/platform-browser/animations/async';
 import { ModalComponent } from './shared/layout/modal/modal.component';
+import { StickyPanelComponent } from './shared/layout/sticky-panel/sticky-panel.component';
 
 @NgModule({
   declarations: [AppComponent],
@@ -37,7 +38,8 @@ import { ModalComponent } from './shared/layout/modal/modal.component';
     HeaderComponent,
     FooterComponent,
     CarouselModule,
-    ModalComponent
+    ModalComponent,
+    StickyPanelComponent
   ],
   bootstrap: [AppComponent],
   providers: [

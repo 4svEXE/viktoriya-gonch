@@ -1,0 +1,28 @@
+@import '../../../shared/scss/variables.scss';
+
+.sticky-panel {
+  position: fixed;
+  left: 0;
+  width: 100%;
+
+  color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  transition: .3s;
+  transform: translate(0%, 0%);
+
+  top: $header-lg-height;
+
+  @media (max-width: $media-netbook) {
+    top: $header-md-height;
+  }
+  @media (max-width: $media-tablet) {
+    top: $header-sm-height;
+  }
+}
+
+.hidden {
+  transform: translate(0%, -100%);
+}

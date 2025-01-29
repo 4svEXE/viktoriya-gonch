@@ -17,7 +17,6 @@ import { CalendlyWidgetComponent } from './components/calendly-widget/calendly-w
 import { RouterModule } from '@angular/router';
 import { AboutSumistnistComponent } from './components/about-sumistnist/about-sumistnist.component';
 import { AboutPifagorComponent } from './components/about-pifagor/about-pifagor.component';
-import { MarqueeComponent } from '../../shared/layout/marquee/marquee.component';
 import { MyAllServicesComponent } from '../../shared/components/my-all-services/my-all-services.component';
 
 @NgModule({
@@ -41,7 +40,6 @@ import { MyAllServicesComponent } from '../../shared/components/my-all-services/
     CarouselModule,
     MyServicesComponent,
     ContactsComponent,
-    MarqueeComponent,
     ReviewsComponent,
     MyAllServicesComponent
   ],

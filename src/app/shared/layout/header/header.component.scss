@@ -7,6 +7,21 @@ header {
   left: 0;
   top: 0;
   background-color: $dark-gray;
+  padding: 0;
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  height: $header-lg-height;
+
+  @media (max-width: $media-netbook) {
+    height: $header-md-height;
+  }
+
+  @media (max-width: $media-tablet) {
+    height: $header-sm-height;
+  }
 }
 
 .mobile-menu-container {
@@ -23,11 +38,9 @@ header {
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: center;
   gap: 20px;
 
   overflow: scroll;
-  padding-top: 100px;
 
   &.active {
     right: 0;
