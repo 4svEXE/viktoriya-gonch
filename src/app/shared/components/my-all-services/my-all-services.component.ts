@@ -20,7 +20,7 @@ export class MyAllServicesComponent {
   customOptions: OwlOptions = {
     loop: true,
     margin: 10,
-    dots: true,
+    dots: false,
     mouseDrag: false,
     touchDrag: false,
     pullDrag: false,
