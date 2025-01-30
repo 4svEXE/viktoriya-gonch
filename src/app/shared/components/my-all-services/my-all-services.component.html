@@ -1,15 +1,31 @@
-<div class="my-all-services">
-  <owl-carousel-o [options]="customOptions">
-    <ng-template carouselSlide>
-      <app-my-services [services]="matrixServices" title="Матриця долі"></app-my-services>
-    </ng-template>
+<section class="container">
+  <h2 class="w-full">Мої послуги</h2>
 
-    <ng-template carouselSlide>
-      <app-my-services [services]="gamesServices" title="Трансформаційні ігри"></app-my-services>
-    </ng-template>
+  <mat-tab-group>
+    <mat-tab>
+      <ng-template mat-tab-label> <h4>Матриця долі</h4> </ng-template>
+      <app-my-services
+        [services]="matrixServices"
+        title="Матриця долі"
+        imageSrc="assets/img/matrix.jpg"
+      ></app-my-services>
+    </mat-tab>
 
-    <ng-template carouselSlide>
-      <app-my-services [services]="numerologyServices" title="Нумерологія"></app-my-services>
-    </ng-template>
-  </owl-carousel-o>
-</div>
+    <mat-tab>
+      <ng-template mat-tab-label> <h4>Нумерологія</h4> </ng-template>
+      <app-my-services
+        [services]="numerologyServices"
+        title="Нумерологія"
+      ></app-my-services>
+    </mat-tab>
+
+    <mat-tab>
+      <ng-template mat-tab-label> <h4>Трансформаційні ігри</h4> </ng-template>
+      <app-my-services
+        [services]="gamesServices"
+        title="Трансформаційні ігри"
+        imageSrc="assets/img/lila/1.jpg"
+      ></app-my-services>
+    </mat-tab>
+  </mat-tab-group>
+</section>

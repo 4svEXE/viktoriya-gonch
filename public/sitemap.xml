@@ -2,27 +2,52 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
     <loc>https://www.viktoriehonc.com.ua/home</loc>
-    <lastmod>2024-12-16</lastmod>
+    <lastmod>2025-01-30</lastmod>
     <priority>1.0</priority>
   </url>
   <url>
     <loc>https://www.viktoriehonc.com.ua/me</loc>
-    <lastmod>2024-12-16</lastmod>
+    <lastmod>2025-01-30</lastmod>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://www.viktoriehonc.com.ua/pifagor</loc>
-    <lastmod>2024-12-16</lastmod>
+    <lastmod>2025-01-30</lastmod>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://www.viktoriehonc.com.ua/matrix</loc>
-    <lastmod>2024-12-16</lastmod>
+    <lastmod>2025-01-30</lastmod>
     <priority>0.7</priority>
   </url>
   <url>
     <loc>https://www.viktoriehonc.com.ua/sumistnist</loc>
-    <lastmod>2024-12-16</lastmod>
+    <lastmod>2025-01-30</lastmod>
     <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://www.viktoriehonc.com.ua/kids-matrix</loc>
+    <lastmod>2025-01-30</lastmod>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://www.viktoriehonc.com.ua/lila</loc>
+    <lastmod>2025-01-30</lastmod>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://www.viktoriehonc.com.ua/nine-worlds</loc>
+    <lastmod>2025-01-30</lastmod>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://www.viktoriehonc.com.ua/prediction</loc>
+    <lastmod>2025-01-30</lastmod>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://www.viktoriehonc.com.ua/</loc>
+    <lastmod>2025-01-30</lastmod>
+    <priority>1.0</priority>
   </url>
 </urlset>
