@@ -3,5 +3,34 @@
   iframeSrc="https://4svexe.github.io/destiny-calculator-kids/"
 ></app-iframe-section>
 
-<app-my-services />
+<section>
+  <app-section-grid
+    [images]="[{ src: 'assets/img/matrix.jpg', alt: 'Дитяча матриця долі' }]"
+    textPosition="right"
+  >
+    <div class="flex flex-col gap-10">
+      <h3>Розкрийте потенціал вашої дитини з дитячою матрицею долі</h3>
+  <p>
+    Дитяча матриця долі - це унікальний інструмент, який допоможе вам краще
+    зрозуміти вашу дитину, її таланти, здібності та призначення.
+    <strong>Без втручання</strong> ви зможете побачити її унікальний шлях та
+    створити умови для її гармонійного розвитку.
+  </p>
+
+  <p>
+    <strong>Зміни починаються з розуміння</strong>. Дитяча матриця долі сприяє
+    глибокому розумінню дитини, її потреб та особливостей.
+  </p>
+
+      <button
+    class="active-button small"
+    (click)="openModal('Я хочу замовити дитячу матрицю долі')"
+  >
+    Замовити матрицю
+  </button>
+    </div>
+  </app-section-grid>
+</section>
+
+<app-my-all-services />
 <app-contacts />

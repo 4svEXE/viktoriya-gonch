@@ -29,7 +29,7 @@ export const Routes: Route[] = [
       { path: 'matrix', label: 'Матриця долі' },
       { path: 'sumistnist', label: 'Калькулятор сумістності' },
       { path: 'kids-matrix', label: 'Дитяча матриця долі' },
-      { path: 'prediction', label: 'Прогнозування' },
+      // { path: 'prediction', label: 'Прогнозування' },
     ],
   },
   {
