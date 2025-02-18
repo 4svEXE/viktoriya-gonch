@@ -10,7 +10,7 @@
     "seo:serve": "npm run seo:build && npx scully serve --project viktoriya-gonch",
     "deploy": "npx angular-cli-ghpages --dir=dist/static",
     "deploy:ftp": "node deploy.js",
-    "test": "ng test"
+    "update": "npm run seo:build && npm run deploy:ftp"
   },
   "private": true,
   "dependencies": {

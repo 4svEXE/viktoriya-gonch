@@ -1,7 +1,7 @@
 <section class="container">
   <h2 class="w-full">Мої послуги</h2>
 
-  <mat-tab-group>
+  <mat-tab-group [selectedIndex]="activeTab">
     <mat-tab>
       <ng-template mat-tab-label> <h4>Матриця долі</h4> </ng-template>
       <app-my-services

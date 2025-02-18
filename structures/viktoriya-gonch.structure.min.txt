@@ -1,0 +1,220 @@
+📂 viktoriya-gonch
+📂 public
+│   📂 icons
+│   📂 img
+│   │   📂 lila
+│   │   📂 nine-worlds
+│   │   📂 reviews
+📂 scully
+📂 src
+│   📂 app
+│   │   📂 core
+│   │   │   📂 directives
+│   │   │   📂 interceptors
+│   │   │   📂 interfaces
+│   │   │   📂 services
+│   │   │   📂 variables
+│   │   📂 pages
+│   │   │   📂 home
+│   │   │   │   📂 components
+│   │   │   │   │   📂 about-matrix
+│   │   │   │   │   📂 about-me
+│   │   │   │   │   │   ├── about-me.component.html
+│   │   │   │   │   │   ├── about-me.component.scss
+│   │   │   │   │   │   ├── about-me.component.spec.ts
+│   │   │   │   │   │   └── about-me.component.ts
+│   │   │   │   │   📂 about-pifagor
+│   │   │   │   │   │   ├── about-pifagor.component.html
+│   │   │   │   │   │   ├── about-pifagor.component.scss
+│   │   │   │   │   │   ├── about-pifagor.component.spec.ts
+│   │   │   │   │   │   └── about-pifagor.component.ts
+│   │   │   │   │   📂 about-sumistnist
+│   │   │   │   │   │   ├── about-sumistnist.component.html
+│   │   │   │   │   │   ├── about-sumistnist.component.scss
+│   │   │   │   │   │   ├── about-sumistnist.component.spec.ts
+│   │   │   │   │   │   └── about-sumistnist.component.ts
+│   │   │   │   │   📂 calendly-widget
+│   │   │   │   │   │   ├── calendly-widget.component.html
+│   │   │   │   │   │   ├── calendly-widget.component.scss
+│   │   │   │   │   │   ├── calendly-widget.component.spec.ts
+│   │   │   │   │   │   └── calendly-widget.component.ts
+│   │   │   │   │   📂 carousel
+│   │   │   │   │   │   ├── carousel.component.html
+│   │   │   │   │   │   ├── carousel.component.scss
+│   │   │   │   │   │   ├── carousel.component.spec.ts
+│   │   │   │   │   │   └── carousel.component.ts
+│   │   │   │   │   📂 hiro
+│   │   │   │   │   │   ├── hiro.component.html
+│   │   │   │   │   │   ├── hiro.component.scss
+│   │   │   │   │   │   ├── hiro.component.spec.ts
+│   │   │   │   │   │   └── hiro.component.ts
+│   │   │   │   │   📂 matrix-calculator
+│   │   │   │   │   │   ├── matrix-calculator.component.html
+│   │   │   │   │   │   ├── matrix-calculator.component.scss
+│   │   │   │   │   │   ├── matrix-calculator.component.spec.ts
+│   │   │   │   │   │   └── matrix-calculator.component.ts
+│   │   │   │   │   📂 statistic
+│   │   │   │   │   ├── statistic.component.html
+│   │   │   │   │   ├── statistic.component.scss
+│   │   │   │   │   ├── statistic.component.spec.ts
+│   │   │   │   │   └── statistic.component.ts
+│   │   │   │   ├── home.component.html
+│   │   │   │   ├── home.component.scss
+│   │   │   │   ├── home.component.spec.ts
+│   │   │   │   ├── home.component.ts
+│   │   │   │   └── home.module.ts
+│   │   │   📂 kids-matrix
+│   │   │   │   ├── kids-matrix.component.html
+│   │   │   │   ├── kids-matrix.component.scss
+│   │   │   │   ├── kids-matrix.component.spec.ts
+│   │   │   │   └── kids-matrix.component.ts
+│   │   │   📂 lila
+│   │   │   │   ├── lila.component.html
+│   │   │   │   ├── lila.component.scss
+│   │   │   │   ├── lila.component.spec.ts
+│   │   │   │   └── lila.component.ts
+│   │   │   📂 matrix
+│   │   │   │   ├── matrix.component.html
+│   │   │   │   ├── matrix.component.scss
+│   │   │   │   ├── matrix.component.spec.ts
+│   │   │   │   └── matrix.component.ts
+│   │   │   📂 me
+│   │   │   │   ├── me.component.html
+│   │   │   │   ├── me.component.scss
+│   │   │   │   ├── me.component.spec.ts
+│   │   │   │   └── me.component.ts
+│   │   │   📂 nine-worlds
+│   │   │   │   ├── nine-worlds.component.html
+│   │   │   │   ├── nine-worlds.component.scss
+│   │   │   │   ├── nine-worlds.component.spec.ts
+│   │   │   │   └── nine-worlds.component.ts
+│   │   │   📂 pifagor
+│   │   │   │   ├── pifagor.component.html
+│   │   │   │   ├── pifagor.component.scss
+│   │   │   │   ├── pifagor.component.spec.ts
+│   │   │   │   └── pifagor.component.ts
+│   │   │   📂 prediction
+│   │   │   │   ├── prediction.component.html
+│   │   │   │   ├── prediction.component.scss
+│   │   │   │   ├── prediction.component.spec.ts
+│   │   │   │   └── prediction.component.ts
+│   │   │   📂 sumistnist
+│   │   │   │   ├── sumistnist.component.html
+│   │   │   │   ├── sumistnist.component.scss
+│   │   │   │   ├── sumistnist.component.spec.ts
+│   │   │   │   └── sumistnist.component.ts
+│   │   │   ├── pages-routing.module.ts
+│   │   │   └── pages.module.ts
+│   │   📂 shared
+│   │   │   📂 components
+│   │   │   │   📂 contact-form
+│   │   │   │   │   ├── contact-form.component.html
+│   │   │   │   │   ├── contact-form.component.scss
+│   │   │   │   │   ├── contact-form.component.spec.ts
+│   │   │   │   │   └── contact-form.component.ts
+│   │   │   │   📂 contacts
+│   │   │   │   │   ├── contact-form.component.html
+│   │   │   │   │   ├── contact-form.component.scss
+│   │   │   │   │   ├── contact-form.component.spec.ts
+│   │   │   │   │   └── contact-form.component.ts
+│   │   │   │   📂 iframe-section
+│   │   │   │   │   ├── iframe-section.component.html
+│   │   │   │   │   ├── iframe-section.component.scss
+│   │   │   │   │   ├── iframe-section.component.spec.ts
+│   │   │   │   │   └── iframe-section.component.ts
+│   │   │   │   📂 my-all-services
+│   │   │   │   │   ├── my-all-services.component.html
+│   │   │   │   │   ├── my-all-services.component.scss
+│   │   │   │   │   ├── my-all-services.component.spec.ts
+│   │   │   │   │   └── my-all-services.component.ts
+│   │   │   │   📂 my-services
+│   │   │   │   │   ├── my-services.component.html
+│   │   │   │   │   ├── my-services.component.scss
+│   │   │   │   │   ├── my-services.component.spec.ts
+│   │   │   │   │   └── my-services.component.ts
+│   │   │   │   📂 navigation
+│   │   │   │   │   ├── navigation.component.html
+│   │   │   │   │   ├── navigation.component.scss
+│   │   │   │   │   ├── navigation.component.spec.ts
+│   │   │   │   │   └── navigation.component.ts
+│   │   │   │   📂 reviews
+│   │   │   │   │   ├── reviews.component.html
+│   │   │   │   │   ├── reviews.component.scss
+│   │   │   │   │   ├── reviews.component.spec.ts
+│   │   │   │   │   └── reviews.component.ts
+│   │   │   │   📂 social-links
+│   │   │   │   ├── social-links.component.html
+│   │   │   │   ├── social-links.component.scss
+│   │   │   │   ├── social-links.component.spec.ts
+│   │   │   │   └── social-links.component.ts
+│   │   │   📂 layout
+│   │   │   │   📂 footer
+│   │   │   │   │   ├── footer.component.html
+│   │   │   │   │   ├── footer.component.scss
+│   │   │   │   │   ├── footer.component.spec.ts
+│   │   │   │   │   └── footer.component.ts
+│   │   │   │   📂 header
+│   │   │   │   │   ├── header.component.html
+│   │   │   │   │   ├── header.component.scss
+│   │   │   │   │   ├── header.component.spec.ts
+│   │   │   │   │   └── header.component.ts
+│   │   │   │   📂 marquee
+│   │   │   │   │   ├── marquee.component.html
+│   │   │   │   │   ├── marquee.component.scss
+│   │   │   │   │   ├── marquee.component.spec.ts
+│   │   │   │   │   └── marquee.component.ts
+│   │   │   │   📂 modal
+│   │   │   │   │   ├── modal.component.html
+│   │   │   │   │   ├── modal.component.scss
+│   │   │   │   │   ├── modal.component.spec.ts
+│   │   │   │   │   └── modal.component.ts
+│   │   │   │   📂 section-grid
+│   │   │   │   │   ├── section-grid.component.html
+│   │   │   │   │   ├── section-grid.component.scss
+│   │   │   │   │   ├── section-grid.component.spec.ts
+│   │   │   │   │   └── section-grid.component.ts
+│   │   │   │   📂 sticky-panel
+│   │   │   │   ├── sticky-panel.component.html
+│   │   │   │   ├── sticky-panel.component.scss
+│   │   │   │   ├── sticky-panel.component.spec.ts
+│   │   │   │   └── sticky-panel.component.ts
+│   │   │   📂 scss
+│   │   │   │   ├── _index.scss
+│   │   │   │   ├── accordion.scss
+│   │   │   │   ├── buttons.scss
+│   │   │   │   ├── forms.scss
+│   │   │   │   ├── owl-carousel.scss
+│   │   │   │   ├── typography.scss
+│   │   │   │   ├── variables.scss
+│   │   │   │   └── wrappers.scss
+│   │   │   📂 svg
+│   │   │   └── index.ts
+│   │   ├── app.component.html
+│   │   ├── app.component.scss
+│   │   ├── app.component.spec.ts
+│   │   ├── app.component.ts
+│   │   ├── app.config.ts
+│   │   ├── app.module.ts
+│   │   └── app.routes.ts
+│   📂 assets
+│   │   └── scully-routes.json
+│   📂 environments
+│   │   ├── environment.prod.ts
+│   │   └── environment.ts
+│   ├── index.html
+│   ├── main.ts
+│   └── styles.scss
+📂 structures
+├── .editorconfig
+├── .gitignore
+├── angular.json
+├── conspect.md
+├── deploy.js
+├── package-lock.json
+├── package.json
+├── README.md
+├── scully.viktoriya-gonch.config.ts
+├── tailwind.config.js
+├── tsconfig.app.json
+├── tsconfig.json
+└── tsconfig.spec.json
