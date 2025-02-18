@@ -4,6 +4,7 @@ import { Component, AfterViewInit } from '@angular/core';
   selector: 'app-calendly-widget',
   templateUrl: './calendly-widget.component.html',
   styleUrl: './calendly-widget.component.scss',
+  standalone: true
 })
 export class CalendlyWidgetComponent implements AfterViewInit {
 
