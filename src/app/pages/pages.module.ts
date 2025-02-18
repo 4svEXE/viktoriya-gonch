@@ -3,6 +3,7 @@ import { CommonModule } from '@angular/common';
 import { PagesRoutingModule } from './pages-routing.module';
 
 import { MatExpansionModule } from '@angular/material/expansion';
+import { CarouselModule } from 'ngx-owl-carousel-o';
 
 import { HomeModule } from './home/home.module';
 import { PifagorComponent } from './pifagor/pifagor.component';
@@ -18,7 +19,6 @@ import { KidsMatrixComponent } from './kids-matrix/kids-matrix.component';
 import { NineWorldsComponent } from './nine-worlds/nine-worlds.component';
 import { PredictionComponent } from './prediction/prediction.component';
 import { MarqueeComponent } from '../shared/layout/marquee/marquee.component';
-import { CarouselModule } from 'ngx-owl-carousel-o';
 import { SectionGridComponent } from '../shared/layout/section-grid/section-grid.component';
 import { ReviewsComponent } from '../shared/components/reviews/reviews.component';
 import { MyAllServicesComponent } from '../shared/components/my-all-services/my-all-services.component';

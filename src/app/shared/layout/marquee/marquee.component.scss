@@ -3,17 +3,13 @@
   overflow: hidden;
   background-color: #000;
   cursor: grab;
-  position: relative;
 }
 
 .marquee {
   display: flex;
   animation: marquee linear infinite;
-  animation-duration: 10s;
   animation-play-state: running;
-
-  position: absolute;
-  left: -50%;
+  margin-left: 50%;
 }
 
 .marquee-container:hover .marquee {
@@ -30,10 +26,10 @@
 
 @keyframes marquee {
   0% {
-    left: -50%;
+    margin-left: 100%;
   }
 
   100% {
-    left: -100%;
+    margin-left: -100%;
   }
 }

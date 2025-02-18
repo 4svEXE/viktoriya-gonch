@@ -11,7 +11,7 @@ import { OwlOptions, CarouselModule } from 'ngx-owl-carousel-o';
 })
 export class ReviewsComponent {
   customOptions: OwlOptions = {
-    loop: true,
+    loop: false,
     margin: 10,
     dots: false,
     mouseDrag: false,

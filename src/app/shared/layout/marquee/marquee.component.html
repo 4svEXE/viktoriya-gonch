@@ -1,13 +1,6 @@
 <div class="marquee-container">
-  <div
-    class="marquee"
-    [ngStyle]="{ 'animation-duration': splashes.length * 5 + 's' }"
-  >
-    <a
-      *ngFor="let splash of splashes; let index = index"
-      [routerLink]="splash.route"
-      class="link-button"
-    >
+  <div class="marquee" [ngStyle]="{'animation-duration': splashes.length * 15 + 's'}">
+    <a *ngFor="let splash of splashes; let index = index" [routerLink]="splash.route" class="link-button">
       {{ splash.text }}
     </a>
   </div>

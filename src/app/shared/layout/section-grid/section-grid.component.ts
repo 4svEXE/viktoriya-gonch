@@ -13,7 +13,7 @@ export class SectionGridComponent {
   @Input() images: { src: string; alt: string }[] = []; // Масив об'єктів з src та alt
   @Input() textPosition: 'left' | 'right' = 'right'; // Позиція тексту
   @Input() carouselOptions: OwlOptions = {
-    loop: true,
+    loop: false,
     dots: true,
     nav: false,
     autoplay: true,

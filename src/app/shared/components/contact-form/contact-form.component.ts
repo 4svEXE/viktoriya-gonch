@@ -6,7 +6,7 @@ import {
   ReactiveFormsModule,
   Validators,
 } from '@angular/forms';
-import { ToastrService } from 'ngx-toastr';
+// import { ToastrService } from 'ngx-toastr';
 import { HttpClient } from '@angular/common/http';
 import { CommonModule } from '@angular/common';
 import { ModalService } from '../../../core/services/modal.service';
@@ -30,7 +30,7 @@ export class ContactFormComponent {
 
   constructor(
     private fb: FormBuilder,
-    private toastr: ToastrService,
+    // private toastr: ToastrService,
     private http: HttpClient,
     private modalService: ModalService
   ) {
@@ -97,13 +97,15 @@ export class ContactFormComponent {
   onSubmit(): void {
     // Перевірка, чи форма коректно заповнена
     if (!this.contactForm.valid) {
-      this.toastr.error('Будь ласка, заповніть форму коректно.');
+      // this.toastr.error('Будь ласка, заповніть форму коректно.');
+      alert('Будь ласка, заповніть форму коректно.')
       return;
     }
 
     // Перевірка ліміту на відправку email
     if (!this.canSendEmail()) {
-      this.toastr.error('Ліміт на відправку повідомлень перевищено.');
+      // this.toastr.error('Ліміт на відправку повідомлень перевищено.');
+      alert('Ліміт на відправку повідомлень перевищено.')
       return;
     }
 
@@ -130,13 +132,16 @@ export class ContactFormComponent {
           this.updateEmailLimit();
           this.isSubmitted = true;
           this.contactForm.reset();
-          this.toastr.success('Повідомлення успішно надіслано!');
+          // this.toastr.success('Повідомлення успішно надіслано!');
+
+          alert('Повідомлення успішно надіслано!')
         },
         (error) => {
           // Виведення помилки, якщо не вдалося надіслати повідомлення
-          this.toastr.error(
-            'Не вдалося надіслати повідомлення. Спробуйте ще раз пізніше.'
-          );
+          // this.toastr.error(
+          //   'Не вдалося надіслати повідомлення. Спробуйте ще раз пізніше.'
+          // );
+          alert('Не вдалося надіслати повідомлення. Спробуйте ще раз пізніше.')
         }
       );
   }
