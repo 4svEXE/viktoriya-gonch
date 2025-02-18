@@ -999,45 +999,14 @@ class="h-[300px] md:h-[600px]"
   </div>
 </section>
 
-│   │   │   │   │   │   ├── about-matrix.component.scss
-│   │   │   │   │   │   
-
-│   │   │   │   │   │   ├── about-matrix.component.spec.ts
-│   │   │   │   │   │   import { ComponentFixture, TestBed } from '@angular/core/testing';
-
-import { AboutMatrixComponent } from './about-matrix.component';
-
-describe('AboutMatrixComponent', () => {
-  let component: AboutMatrixComponent;
-  let fixture: ComponentFixture<AboutMatrixComponent>;
-
-  beforeEach(async () => {
-await TestBed.configureTestingModule({
-  declarations: [AboutMatrixComponent]
-})
-.compileComponents();
-
-fixture = TestBed.createComponent(AboutMatrixComponent);
-component = fixture.componentInstance;
-fixture.detectChanges();
-  });
-
-  it('should create', () => {
-expect(component).toBeTruthy();
-  });
-});
-
 │   │   │   │   │   │   └── about-matrix.component.ts
 │   │   │   │   │   │   import { Component } from '@angular/core';
 
 @Component({
   selector: 'app-about-matrix',
   templateUrl: './about-matrix.component.html',
-  styleUrl: './about-matrix.component.scss'
 })
-export class AboutMatrixComponent {
-
-}
+export class AboutMatrixComponent {}
 
 │   │   │   │   │   📂 about-me
 │   │   │   │   │   │   ├── about-me.component.html
@@ -1101,57 +1070,14 @@ export class AboutMatrixComponent {
   </div>
 </section>
 
-│   │   │   │   │   │   ├── about-me.component.scss
-│   │   │   │   │   │   @import '../../../../shared/scss/variables.scss';
-
-
-.regalies {
-  max-width: 100%;
-  display: flex;
-  flex-direction: column;
-  gap: 8px;
-
-  li {
-width: max-content;
-  }
-}
-
-│   │   │   │   │   │   ├── about-me.component.spec.ts
-│   │   │   │   │   │   import { ComponentFixture, TestBed } from '@angular/core/testing';
-
-import { AboutMeComponent } from './about-me.component';
-
-describe('AboutMeComponent', () => {
-  let component: AboutMeComponent;
-  let fixture: ComponentFixture<AboutMeComponent>;
-
-  beforeEach(async () => {
-await TestBed.configureTestingModule({
-  declarations: [AboutMeComponent]
-})
-.compileComponents();
-
-fixture = TestBed.createComponent(AboutMeComponent);
-component = fixture.componentInstance;
-fixture.detectChanges();
-  });
-
-  it('should create', () => {
-expect(component).toBeTruthy();
-  });
-});
-
 │   │   │   │   │   │   └── about-me.component.ts
 │   │   │   │   │   │   import { Component } from '@angular/core';
 
 @Component({
   selector: 'app-about-me',
   templateUrl: './about-me.component.html',
-  styleUrl: './about-me.component.scss'
 })
-export class AboutMeComponent {
-
-}
+export class AboutMeComponent {}
 
 │   │   │   │   │   📂 about-pifagor
 │   │   │   │   │   │   ├── about-pifagor.component.html
@@ -1159,15 +1085,26 @@ export class AboutMeComponent {
   <div class="wrapper wrapper__grid">
 <div class="about-text col-span-1">
   <h2>Що таке Квадрат Піфагора?</h2>
+
   <ul class="list-disc pl-6 space-y-4">
 <li>
-  <strong>Квадрат Піфагора</strong> – це інструмент самопізнання, який базується на числових розрахунках. Він допомагає виявити ваші сильні та слабкі сторони, приховані таланти, а також дізнатися, як ваша дата народження впливає на різні аспекти життя.
+  <strong>Квадрат Піфагора</strong> – це інструмент самопізнання, який
+  базується на числових розрахунках. Він допомагає виявити ваші сильні
+  та слабкі сторони, приховані таланти, а також дізнатися, як ваша дата
+  народження впливає на різні аспекти життя.
 </li>
 <li>
-  <strong>Психоматриця</strong> містить інформацію про вашу вроджену енергію, творчі та розумові здібності, здоров’я, а також відношення до сім’ї, оточення, матеріальних і духовних цінностей. Це своєрідна карта вашої особистості, яка дозволяє зазирнути вглиб себе та зрозуміти, як покращити ті чи інші якості.
+  <strong>Психоматриця</strong> містить інформацію про вашу вроджену
+  енергію, творчі та розумові здібності, здоров’я, а також відношення до
+  сім’ї, оточення, матеріальних і духовних цінностей. Це своєрідна карта
+  вашої особистості, яка дозволяє зазирнути вглиб себе та зрозуміти, як
+  покращити ті чи інші якості.
 </li>
 <li>
-  Важливо зазначити, що дані в <strong>Квадраті Піфагора</strong> не є вироком. Більшість показників можна змінити, працюючи над собою. За допомогою спеціальних технік ви зможете "прокачати" слабкі сторони або оптимізувати енергетичні зони для досягнення гармонії.
+  Важливо зазначити, що дані в <strong>Квадраті Піфагора</strong> не є
+  вироком. Більшість показників можна змінити, працюючи над собою. За
+  допомогою спеціальних технік ви зможете "прокачати" слабкі сторони або
+  оптимізувати енергетичні зони для досягнення гармонії.
 </li>
   </ul>
 
@@ -1179,46 +1116,11 @@ export class AboutMeComponent {
   <img
 src="assets/img/піфагор.svg"
 alt="Psychomatrix"
-style="
-  /* width: 100%; */
-  max-width: 600px;
-  object-fit: cover;
-  border-radius: 0.5rem;
-  mix-blend-mode: multiply;
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-"
-class="h-[300px] md:h-[600px]"
+class="photo"
   />
 </div>
   </div>
 </section>
-
-│   │   │   │   │   │   ├── about-pifagor.component.scss
-│   │   │   │   │   │   
-│   │   │   │   │   │   ├── about-pifagor.component.spec.ts
-│   │   │   │   │   │   import { ComponentFixture, TestBed } from '@angular/core/testing';
-
-import { AboutPifagorComponent } from './about-pifagor.component';
-
-describe('AboutPifagorComponent', () => {
-  let component: AboutPifagorComponent;
-  let fixture: ComponentFixture<AboutPifagorComponent>;
-
-  beforeEach(async () => {
-await TestBed.configureTestingModule({
-  declarations: [AboutPifagorComponent]
-})
-.compileComponents();
-
-fixture = TestBed.createComponent(AboutPifagorComponent);
-component = fixture.componentInstance;
-fixture.detectChanges();
-  });
-
-  it('should create', () => {
-expect(component).toBeTruthy();
-  });
-});
 
 │   │   │   │   │   │   └── about-pifagor.component.ts
 │   │   │   │   │   │   import { Component } from '@angular/core';
@@ -1226,28 +1128,22 @@ expect(component).toBeTruthy();
 @Component({
   selector: 'app-about-pifagor',
   templateUrl: './about-pifagor.component.html',
-  styleUrl: './about-pifagor.component.scss'
 })
-export class AboutPifagorComponent {
-
-}
+export class AboutPifagorComponent {}
 
 │   │   │   │   │   📂 about-sumistnist
 │   │   │   │   │   │   ├── about-sumistnist.component.html
 │   │   │   │   │   │   <section class="container">
-  <h2 class="w-full md:hidden block">Сумісність за <br/> Матрицею Долі</h2>
+  <h2 class="w-full md:hidden block">
+Сумісність за <br />
+Матрицею Долі
+  </h2>
 
   <div class="wrapper wrapper__grid">
 <div class="about-photo">
   <img
 src="assets/img/парні матриці.svg"
-style="
-  /* width: 100%; */
-  max-width: 600px;
-  object-fit: cover;
-  border-radius: 0.5rem;
-  mix-blend-mode: multiply;
-"
+class="photo"
 alt="Viktorie Honč"
   />
 </div>
@@ -1282,44 +1178,14 @@ alt="Viktorie Honč"
   </div>
 </section>
 
-│   │   │   │   │   │   ├── about-sumistnist.component.scss
-│   │   │   │   │   │   
-│   │   │   │   │   │   ├── about-sumistnist.component.spec.ts
-│   │   │   │   │   │   import { ComponentFixture, TestBed } from '@angular/core/testing';
-
-import { AboutSumistnistComponent } from './about-sumistnist.component';
-
-describe('AboutSumistnistComponent', () => {
-  let component: AboutSumistnistComponent;
-  let fixture: ComponentFixture<AboutSumistnistComponent>;
-
-  beforeEach(async () => {
-await TestBed.configureTestingModule({
-  declarations: [AboutSumistnistComponent]
-})
-.compileComponents();
-
-fixture = TestBed.createComponent(AboutSumistnistComponent);
-component = fixture.componentInstance;
-fixture.detectChanges();
-  });
-
-  it('should create', () => {
-expect(component).toBeTruthy();
-  });
-});
-
 │   │   │   │   │   │   └── about-sumistnist.component.ts
 │   │   │   │   │   │   import { Component } from '@angular/core';
 
 @Component({
   selector: 'app-about-sumistnist',
   templateUrl: './about-sumistnist.component.html',
-  styleUrl: './about-sumistnist.component.scss'
 })
-export class AboutSumistnistComponent {
-
-}
+export class AboutSumistnistComponent {}
 
 │   │   │   │   │   📂 calendly-widget
 │   │   │   │   │   │   ├── calendly-widget.component.html
@@ -1383,99 +1249,8 @@ clearInterval(interval); // Зупиняємо інтервал після ін�
   }
 }
 
-│   │   │   │   │   📂 carousel
-│   │   │   │   │   │   ├── carousel.component.html
-│   │   │   │   │   │   <!-- <div class="container2 ">
-  <owl-carousel-o [options]="customOptions">
-<ng-template carouselSlide>
-  <div class="slide-content">ЕКСПЕРТ З МАТРИЦІ ДОЛІ</div>
-</ng-template>
-<ng-template carouselSlide>
-  <div class="slide-content">ТЕТА ХІЛЕР</div>
-</ng-template>
-<ng-template carouselSlide>
-  <div class="slide-content">НУМЕРОЛОГ</div>
-</ng-template>
-<ng-template carouselSlide>
-  <div class="slide-content">БЛОГЕР</div>
-</ng-template>
-  </owl-carousel-o>
-
-</div> -->
-
-│   │   │   │   │   │   ├── carousel.component.scss
-│   │   │   │   │   │   .slide-content{
-  width: 100%;
-  height: 100%;
-  background: #000;
-  color: blue;
-
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-
-.container2{
-  width: 100vw;
-  overflow: hidden;
-}
-
-│   │   │   │   │   │   ├── carousel.component.spec.ts
-│   │   │   │   │   │   import { ComponentFixture, TestBed } from '@angular/core/testing';
-
-import { CarouselComponent } from './carousel.component';
-
-describe('CarouselComponent', () => {
-  let component: CarouselComponent;
-  let fixture: ComponentFixture<CarouselComponent>;
-
-  beforeEach(async () => {
-await TestBed.configureTestingModule({
-  declarations: [CarouselComponent]
-})
-.compileComponents();
-
-fixture = TestBed.createComponent(CarouselComponent);
-component = fixture.componentInstance;
-fixture.detectChanges();
-  });
-
-  it('should create', () => {
-expect(component).toBeTruthy();
-  });
-});
-
-│   │   │   │   │   │   └── carousel.component.ts
-│   │   │   │   │   │   import { Component } from '@angular/core';
-import { OwlOptions } from 'ngx-owl-carousel-o';
-
-@Component({
-  selector: 'app-carousel',
-  templateUrl: './carousel.component.html',
-  styleUrls: ['./carousel.component.scss'],
-})
-export class CarouselComponent {
-
-  customOptions: OwlOptions = {
-loop: true,
-nav: false,
-dots: false,
-mouseDrag: false,
-touchDrag: false,
-pullDrag: false,
-autoplay: true,
-autoplayHoverPause: false,
-autoplayTimeout: 10, // Низьке значення для плавного безперервного руху
-smartSpeed: 1000, // Плавність руху
-responsive: {
-  0: { items: 1 },
-},
-  };
-
-}
-
-│   │   │   │   │   📂 hiro
-│   │   │   │   │   │   ├── hiro.component.html
+│   │   │   │   │   📂 hero
+│   │   │   │   │   │   ├── hero.component.html
 │   │   │   │   │   │   <section
   class="hero-section bg-cover bg-center relative flex flex-col md:flex-row"
 >
@@ -1500,7 +1275,7 @@ style="background-image: url('assets/img/img_1.jpg')"
 
 
 
-│   │   │   │   │   │   ├── hiro.component.scss
+│   │   │   │   │   │   ├── hero.component.scss
 │   │   │   │   │   │   @import "../../../../shared/scss/variables.scss";
 
 .hero-section {
@@ -1508,7 +1283,7 @@ style="background-image: url('assets/img/img_1.jpg')"
   position: relative;
   transition: .3s;
 
-  .logo{
+  .logo {
 width: 100%;
 max-width: 500px;
   }
@@ -1537,19 +1312,14 @@ img {
   .to-matrix {
 position: absolute;
 left: 50%;
+bottom: 50px;
+bottom: 0;
+width: 96%;
+margin: auto;
 transform: translate(-50%, -50%);
-
-// @media (min-width: 768px) {
-  left: 50%;
-  bottom: 50px;
-  bottom: 0;
-  width: 96%;
-  margin: auto;
-  transform: translate(-50%, -50%);
-// }
   }
 
-  .primary-button{
+  .primary-button {
 width: none;
 max-width: none;
 display: flex;
@@ -1559,11 +1329,9 @@ justify-content: center;
   }
 
   @media (min-width: 768px) {
-.primary-button{
-
-
+.primary-button {
   width: max-content;
-max-width: max-content;
+  max-width: max-content;
 }
   }
 
@@ -1574,6 +1342,7 @@ height: 100%;
   }
 
   @media (min-width: 768px) {
+
 .left-column,
 .right-column {
   width: 50%;
@@ -1582,46 +1351,19 @@ height: 100%;
   }
 }
 
-│   │   │   │   │   │   ├── hiro.component.spec.ts
-│   │   │   │   │   │   import { ComponentFixture, TestBed } from '@angular/core/testing';
-
-import { HiroComponent } from './hiro.component';
-
-describe('HiroComponent', () => {
-  let component: HiroComponent;
-  let fixture: ComponentFixture<HiroComponent>;
-
-  beforeEach(async () => {
-await TestBed.configureTestingModule({
-  declarations: [HiroComponent]
-})
-.compileComponents();
-
-fixture = TestBed.createComponent(HiroComponent);
-component = fixture.componentInstance;
-fixture.detectChanges();
-  });
-
-  it('should create', () => {
-expect(component).toBeTruthy();
-  });
-});
-
-│   │   │   │   │   │   └── hiro.component.ts
+│   │   │   │   │   │   └── hero.component.ts
 │   │   │   │   │   │   import { Component } from '@angular/core';
 
 @Component({
-  selector: 'app-hiro',
-  templateUrl: './hiro.component.html',
-  styleUrl: './hiro.component.scss'
+  selector: 'app-hero',
+  templateUrl: './hero.component.html',
+  styleUrl: './hero.component.scss',
 })
-export class HiroComponent {
-
-}
+export class HeroComponent {}
 
 │   │   │   │   │   📂 matrix-calculator
-│   │   │   │   │   │   ├── matrix-calculator.component.html
-│   │   │   │   │   │   <section id="calculator" class="container section-2">
+│   │   │   │   │   ├── matrix-calculator.component.html
+│   │   │   │   │   <section id="calculator" class="container section-2">
   <div class="border-line"></div>
   <div class="div-block-2">
 <div class="embeded-iframe w-embed w-iframe">
@@ -1636,44 +1378,12 @@ width="100%"
   </div>
 </section>
 
-│   │   │   │   │   │   ├── matrix-calculator.component.scss
-│   │   │   │   │   │   
-│   │   │   │   │   │   ├── matrix-calculator.component.spec.ts
-│   │   │   │   │   │   import { ComponentFixture, TestBed } from '@angular/core/testing';
-
-import { MatrixCalculatorComponent } from './matrix-calculator.component';
-
-describe('MatrixCalculatorComponent', () => {
-  let component: MatrixCalculatorComponent;
-  let fixture: ComponentFixture<MatrixCalculatorComponent>;
-
-  beforeEach(async () => {
-await TestBed.configureTestingModule({
-  declarations: [MatrixCalculatorComponent]
-})
-.compileComponents();
-
-fixture = TestBed.createComponent(MatrixCalculatorComponent);
-component = fixture.componentInstance;
-fixture.detectChanges();
-  });
-
-  it('should create', () => {
-expect(component).toBeTruthy();
-  });
-});
-
-│   │   │   │   │   │   └── matrix-calculator.component.ts
-│   │   │   │   │   │   import {
-  Component,
-  OnInit,
-  OnDestroy
-} from '@angular/core';
+│   │   │   │   │   └── matrix-calculator.component.ts
+│   │   │   │   │   import { Component, OnInit, OnDestroy } from '@angular/core';
 
 @Component({
   selector: 'app-matrix-calculator',
   templateUrl: './matrix-calculator.component.html',
-  styleUrls: ['./matrix-calculator.component.scss'],
 })
 export class MatrixCalculatorComponent implements OnInit, OnDestroy {
   iframeHeight: string = '100vh';
@@ -1700,52 +1410,9 @@ targetElement.scrollIntoView({ behavior: 'smooth' });
   }
 }
 
-│   │   │   │   │   📂 statistic
-│   │   │   │   │   ├── statistic.component.html
-│   │   │   │   │   <p>statistic works!</p>
-
-│   │   │   │   │   ├── statistic.component.scss
-│   │   │   │   │   
-│   │   │   │   │   ├── statistic.component.spec.ts
-│   │   │   │   │   import { ComponentFixture, TestBed } from '@angular/core/testing';
-
-import { StatisticComponent } from './statistic.component';
-
-describe('StatisticComponent', () => {
-  let component: StatisticComponent;
-  let fixture: ComponentFixture<StatisticComponent>;
-
-  beforeEach(async () => {
-await TestBed.configureTestingModule({
-  declarations: [StatisticComponent]
-})
-.compileComponents();
-
-fixture = TestBed.createComponent(StatisticComponent);
-component = fixture.componentInstance;
-fixture.detectChanges();
-  });
-
-  it('should create', () => {
-expect(component).toBeTruthy();
-  });
-});
-
-│   │   │   │   │   └── statistic.component.ts
-│   │   │   │   │   import { Component } from '@angular/core';
-
-@Component({
-  selector: 'app-statistic',
-  templateUrl: './statistic.component.html',
-  styleUrl: './statistic.component.scss'
-})
-export class StatisticComponent {
-
-}
-
 │   │   │   │   ├── home.component.html
 │   │   │   │   <div id="старт" >
-  <app-hiro />
+  <app-hero />
 </div>
 
 <div id="про-мене" class="scroll-mt-10 md:scroll-mt-20">
@@ -1755,7 +1422,6 @@ export class StatisticComponent {
 <div id="мої-послуги" class="scroll-mt-20">
   <app-my-all-services />
 </div>
-
 
 <div id="про-матрицю-долі" class="scroll-mt-10 md:scroll-mt-[8.25rem]">
   <app-about-matrix />
@@ -1781,45 +1447,14 @@ export class StatisticComponent {
   <app-contacts />
 </div>
 
-│   │   │   │   ├── home.component.scss
-│   │   │   │   
-│   │   │   │   ├── home.component.spec.ts
-│   │   │   │   import { ComponentFixture, TestBed } from '@angular/core/testing';
-
-import { HomeComponent } from './home.component';
-
-describe('HomeComponent', () => {
-  let component: HomeComponent;
-  let fixture: ComponentFixture<HomeComponent>;
-
-  beforeEach(async () => {
-await TestBed.configureTestingModule({
-  declarations: [HomeComponent]
-})
-.compileComponents();
-
-fixture = TestBed.createComponent(HomeComponent);
-component = fixture.componentInstance;
-fixture.detectChanges();
-  });
-
-  it('should create', () => {
-expect(component).toBeTruthy();
-  });
-});
-
 │   │   │   │   ├── home.component.ts
 │   │   │   │   import { Component } from '@angular/core';
-
 
 @Component({
   selector: 'app-home',
   templateUrl: './home.component.html',
-  styleUrl: './home.component.scss',
 })
-export class HomeComponent {
-
-}
+export class HomeComponent {}
 
 │   │   │   │   └── home.module.ts
 │   │   │   │   import { NgModule } from '@angular/core';
@@ -1828,15 +1463,13 @@ import { HomeComponent } from './home.component';
 import { MatrixCalculatorComponent } from './components/matrix-calculator/matrix-calculator.component';
 import { NgxChartsModule } from '@swimlane/ngx-charts';
 import { ReactiveFormsModule } from '@angular/forms';
-import { HiroComponent } from './components/hiro/hiro.component';
+import { HeroComponent } from './components/hero/hero.component';
 import { AboutMeComponent } from './components/about-me/about-me.component';
-import { StatisticComponent } from './components/statistic/statistic.component';
 import { AboutMatrixComponent } from './components/about-matrix/about-matrix.component';
 import { MyServicesComponent } from '../../shared/components/my-services/my-services.component';
 import { ReviewsComponent } from '../../shared/components/reviews/reviews.component';
 import { ContactsComponent } from '../../shared/components/contacts/contact-form.component';
 import { CarouselModule } from 'ngx-owl-carousel-o';
-import { CarouselComponent } from './components/carousel/carousel.component';
 import { CalendlyWidgetComponent } from './components/calendly-widget/calendly-widget.component';
 import { RouterModule } from '@angular/router';
 import { AboutSumistnistComponent } from './components/about-sumistnist/about-sumistnist.component';
@@ -1847,14 +1480,12 @@ import { MyAllServicesComponent } from '../../shared/components/my-all-services/
   declarations: [
 HomeComponent,
 MatrixCalculatorComponent,
-HiroComponent,
+HeroComponent,
 AboutMeComponent,
-StatisticComponent,
 AboutMatrixComponent,
-CarouselComponent,
 CalendlyWidgetComponent,
 AboutSumistnistComponent,
-AboutPifagorComponent
+AboutPifagorComponent,
   ],
   imports: [
 CommonModule,
@@ -1865,15 +1496,12 @@ CarouselModule,
 MyServicesComponent,
 ContactsComponent,
 ReviewsComponent,
-MyAllServicesComponent
+MyAllServicesComponent,
   ],
-  exports: [
-HomeComponent,
-MatrixCalculatorComponent
-  ],
-  schemas: []
+  exports: [HomeComponent, MatrixCalculatorComponent],
+  schemas: [],
 })
-export class HomeModule { }
+export class HomeModule {}
 
 │   │   │   📂 kids-matrix
 │   │   │   │   ├── kids-matrix.component.html
@@ -1897,8 +1525,8 @@ textPosition="right"
   </p>
 
   <p>
-<strong>Зміни починаються з розуміння</strong>. Дитяча матриця долі сприяє
-глибокому розумінню дитини, її потреб та особливостей.
+<strong>Зміни починаються з розуміння</strong>. Дитяча матриця долі
+сприяє глибокому розумінню дитини, її потреб та особливостей.
   </p>
 
   <button
@@ -1914,33 +1542,6 @@ class="active-button small"
 <app-my-all-services />
 <app-contacts />
 
-│   │   │   │   ├── kids-matrix.component.scss
-│   │   │   │   
-│   │   │   │   ├── kids-matrix.component.spec.ts
-│   │   │   │   import { ComponentFixture, TestBed } from '@angular/core/testing';
-
-import { KidsMatrixComponent } from './kids-matrix.component';
-
-describe('KidsMatrixComponent', () => {
-  let component: KidsMatrixComponent;
-  let fixture: ComponentFixture<KidsMatrixComponent>;
-
-  beforeEach(async () => {
-await TestBed.configureTestingModule({
-  declarations: [KidsMatrixComponent]
-})
-.compileComponents();
-
-fixture = TestBed.createComponent(KidsMatrixComponent);
-component = fixture.componentInstance;
-fixture.detectChanges();
-  });
-
-  it('should create', () => {
-expect(component).toBeTruthy();
-  });
-});
-
 │   │   │   │   └── kids-matrix.component.ts
 │   │   │   │   import { Component } from '@angular/core';
 import { ModalService } from '../../core/services/modal.service';
@@ -1948,7 +1549,6 @@ import { ModalService } from '../../core/services/modal.service';
 @Component({
   selector: 'app-kids-matrix',
   templateUrl: './kids-matrix.component.html',
-  styleUrl: './kids-matrix.component.scss',
 })
 export class KidsMatrixComponent {
   constructor(public modalService: ModalService) {}
@@ -2115,81 +1715,6 @@ class="active-button small"
 
 <app-contacts />
 
-│   │   │   │   ├── lila.component.scss
-│   │   │   │   /* Загальні стилі для списків */
-ul {
-  list-style-type: none;
-  padding-left: 0;
-  margin: 0;
-  font-family: 'Arial', sans-serif;
-}
-
-/* Стилі для елементів списку */
-ul li {
-  position: relative;
-  padding-left: 25px; /* Додаємо відступ зліва для маркера */
-  margin-bottom: 10px; /* Відстань між елементами списку */
-  font-size: 1rem; /* Розмір шрифту */
-  line-height: 1.5; /* Міжрядковий інтервал */
-  color: #333; /* Колір тексту */
-}
-
-// /* Додавання індикаторів до елементів списку */
-// ul.regalies li::before,
-// ul.principles li::before,
-// ul.benefits-list li::before{
-//   content: '-';
-//   // content: '★';
-//   position: absolute;
-//   left: 0;
-//   top: 50%;
-//   transform: translateY(-50%); /* Центрування */
-//   font-size: 1.2rem; /* Розмір символу */
-//   color: #F0A500; /* Колір маркера */
-// }
-
-// ul.regalies li::before{
-//   content: '-';
-// }
-/* Стиль для заголовків в списках */
-ul.regalies,
-ul.principles {
-  padding-left: 20px; /* Додаємо відступ зліва */
-}
-
-ul.regalies li {
-  font-style: italic; /* Курсив для списку regalies */
-}
-
-ul.principles li {
-  font-weight: bold; /* Жирний текст для списку principles */
-}
-
-│   │   │   │   ├── lila.component.spec.ts
-│   │   │   │   import { ComponentFixture, TestBed } from '@angular/core/testing';
-
-import { LilaComponent } from './lila.component';
-
-describe('LilaComponent', () => {
-  let component: LilaComponent;
-  let fixture: ComponentFixture<LilaComponent>;
-
-  beforeEach(async () => {
-await TestBed.configureTestingModule({
-  declarations: [LilaComponent]
-})
-.compileComponents();
-
-fixture = TestBed.createComponent(LilaComponent);
-component = fixture.componentInstance;
-fixture.detectChanges();
-  });
-
-  it('should create', () => {
-expect(component).toBeTruthy();
-  });
-});
-
 │   │   │   │   └── lila.component.ts
 │   │   │   │   import { Component } from '@angular/core';
 import { ModalService } from '../../core/services/modal.service';
@@ -2197,7 +1722,6 @@ import { ModalService } from '../../core/services/modal.service';
 @Component({
   selector: 'app-lila',
   templateUrl: './lila.component.html',
-  styleUrl: './lila.component.scss',
 })
 export class LilaComponent {
   constructor(public modalService: ModalService) {}
@@ -2218,33 +1742,6 @@ this.modalService.setData(data);
 <app-my-services [services]="matrixServices" />
 <app-contacts />
 
-│   │   │   │   ├── matrix.component.scss
-│   │   │   │   
-│   │   │   │   ├── matrix.component.spec.ts
-│   │   │   │   import { ComponentFixture, TestBed } from '@angular/core/testing';
-
-import { MatrixComponent } from './matrix.component';
-
-describe('MatrixComponent', () => {
-  let component: MatrixComponent;
-  let fixture: ComponentFixture<MatrixComponent>;
-
-  beforeEach(async () => {
-await TestBed.configureTestingModule({
-  imports: [MatrixComponent]
-})
-.compileComponents();
-
-fixture = TestBed.createComponent(MatrixComponent);
-component = fixture.componentInstance;
-fixture.detectChanges();
-  });
-
-  it('should create', () => {
-expect(component).toBeTruthy();
-  });
-});
-
 │   │   │   │   └── matrix.component.ts
 │   │   │   │   import { Component } from '@angular/core';
 import { Prices } from '../../core/variables/prices';
@@ -2252,30 +1749,18 @@ import { Prices } from '../../core/variables/prices';
 @Component({
   selector: 'app-matrix',
   templateUrl: './matrix.component.html',
-  styleUrl: './matrix.component.scss',
 })
 export class MatrixComponent {
-  matrixServices = Prices.matrix
+  matrixServices = Prices.matrix;
 }
 
 │   │   │   📂 me
 │   │   │   │   ├── me.component.html
-│   │   │   │   
-<section class="container">
+│   │   │   │   <section class="container">
   <h2 class="w-full text-center pt-20">Про мене</h2>
   <div class="wrapper wrapper__grid">
 <div class="about-photo">
-  <img src="assets/img/img_2.jpg"
-  style="
-  width: 100%;
-  max-width: 600px;
-  max-height: 600px;
-  object-position: bottom;
-  object-fit: cover;
-  border-radius: 0.5rem;
-  mix-blend-mode: multiply;
-"
-  alt="Viktorie Honč" />
+  <img src="assets/img/img_2.jpg" class="photo" alt="Viktorie Honč" />
 </div>
 
 <div class="about-text">
@@ -2291,7 +1776,7 @@ export class MatrixComponent {
 </ul>
   </div>
 
-  <ul style="padding-left: 1.5rem; list-style-type: disc; color: #4a4a4a">
+  <ul>
 <li>
   Я займаюся нумерологією, допомагаючи людям краще зрозуміти себе та
   знайти гармонію у житті через вивчення чисел. Також я практикую
@@ -2319,63 +1804,47 @@ export class MatrixComponent {
 
 <app-contacts />
 
-│   │   │   │   ├── me.component.scss
-│   │   │   │   
-│   │   │   │   ├── me.component.spec.ts
-│   │   │   │   import { ComponentFixture, TestBed } from '@angular/core/testing';
-
-import { MeComponent } from './me.component';
-
-describe('MeComponent', () => {
-  let component: MeComponent;
-  let fixture: ComponentFixture<MeComponent>;
-
-  beforeEach(async () => {
-await TestBed.configureTestingModule({
-  declarations: [MeComponent]
-})
-.compileComponents();
-
-fixture = TestBed.createComponent(MeComponent);
-component = fixture.componentInstance;
-fixture.detectChanges();
-  });
-
-  it('should create', () => {
-expect(component).toBeTruthy();
-  });
-});
-
 │   │   │   │   └── me.component.ts
 │   │   │   │   import { Component } from '@angular/core';
 
 @Component({
   selector: 'app-me',
   templateUrl: './me.component.html',
-  styleUrl: './me.component.scss'
 })
-export class MeComponent {
-
-}
+export class MeComponent {}
 
 │   │   │   📂 nine-worlds
 │   │   │   │   ├── nine-worlds.component.html
 │   │   │   │   <section class="container min-h-[100vh] pt-24">
-  <h2 class="text-center">Гра «9 Світів»: Подорож до Себе через Глибоке Усвідомлення</h2>
+  <h2 class="text-center">
+Гра «9 Світів»: Подорож до Себе через Глибоке Усвідомлення
+  </h2>
 
   <!-- Секція 1: Вступ -->
   <section>
 <app-section-grid
-  [images]="[{ src: 'assets/img/nine-worlds/4.jpg', alt: 'Записатись на гру 9 світів' }]"
+  [images]="[
+{
+  src: 'assets/img/nine-worlds/4.jpg',
+  alt: 'Записатись на гру 9 світів'
+}
+  ]"
   textPosition="left"
 >
   <div class="flex flex-col gap-10">
 <h3>Що таке «9 Світів»?</h3>
 <p>
-  «9 Світів» – це не просто гра, а трансформаційний шлях, який допоможе вам знайти відповіді на найглибші питання, розкрити свій потенціал та побачити життя з нової перспективи. Вона заснована на давніх знаннях, символах та енергіях, які взаємодіють із вашою підсвідомістю, допомагаючи усвідомити приховані процеси у вашому житті.
+  «9 Світів» – це не просто гра, а трансформаційний шлях, який допоможе
+  вам знайти відповіді на найглибші питання, розкрити свій потенціал та
+  побачити життя з нової перспективи. Вона заснована на давніх знаннях,
+  символах та енергіях, які взаємодіють із вашою підсвідомістю,
+  допомагаючи усвідомити приховані процеси у вашому житті.
 </p>
 <p>
-  Ця гра – справжній ключ до розуміння себе, своїх страхів, бажань і можливостей. Вона дозволяє пройти через 9 рівнів пізнання, кожен з яких відкриває нові грані вашої душі та допомагає побачити, що саме заважає вам рухатися вперед.
+  Ця гра – справжній ключ до розуміння себе, своїх страхів, бажань і
+  можливостей. Вона дозволяє пройти через 9 рівнів пізнання, кожен з
+  яких відкриває нові грані вашої душі та допомагає побачити, що саме
+  заважає вам рухатися вперед.
 </p>
 <button
   class="active-button small"
@@ -2390,17 +1859,36 @@ export class MeComponent {
   <!-- Секція 2: Глибоке самопізнання -->
   <section>
 <app-section-grid
-  [images]="[{ src: 'assets/img/nine-worlds/2.jpg', alt: '9 світів Ліберець' }]"
+  [images]="[
+{ src: 'assets/img/nine-worlds/2.jpg', alt: '9 світів Ліберець' }
+  ]"
   textPosition="right"
 >
   <div class="flex flex-col gap-10">
 <h4>Що ви отримаєте під час гри?</h4>
 <ul>
-  <li><strong>Глибоке самопізнання:</strong> ви усвідомите свої справжні бажання, мотиви та підсвідомі установки.</li>
-  <li><strong>Розкриття внутрішніх блоків:</strong> гра допоможе виявити страхи, переконання та емоційні затискачі, які обмежують вас.</li>
-  <li><strong>Прорив у важливій сфері життя:</strong> незалежно від того, чи це стосунки, кар’єра, фінанси або духовний шлях, ви отримаєте чітке розуміння та напрямок руху.</li>
-  <li><strong>Відповіді на ключові питання:</strong> гра працює як дзеркало вашої душі, показуючи те, що ви не помічали, але що впливає на вас.</li>
-  <li><strong>Потужне емоційне перезавантаження:</strong> після гри ви відчуєте легкість, ясність і внутрішню гармонію.</li>
+  <li>
+<strong>Глибоке самопізнання:</strong> ви усвідомите свої справжні
+бажання, мотиви та підсвідомі установки.
+  </li>
+  <li>
+<strong>Розкриття внутрішніх блоків:</strong> гра допоможе виявити
+страхи, переконання та емоційні затискачі, які обмежують вас.
+  </li>
+  <li>
+<strong>Прорив у важливій сфері життя:</strong> незалежно від того,
+чи це стосунки, кар’єра, фінанси або духовний шлях, ви отримаєте
+чітке розуміння та напрямок руху.
+  </li>
+  <li>
+<strong>Відповіді на ключові питання:</strong> гра працює як
+дзеркало вашої душі, показуючи те, що ви не помічали, але що впливає
+на вас.
+  </li>
+  <li>
+<strong>Потужне емоційне перезавантаження:</strong> після гри ви
+відчуєте легкість, ясність і внутрішню гармонію.
+  </li>
 </ul>
   </div>
 </app-section-grid>
@@ -2415,7 +1903,11 @@ export class MeComponent {
   <div class="flex flex-col gap-10">
 <h3>Одна гра замінює 10 походів до психолога</h3>
 <p>
-  Якщо ви відчуваєте, що загрузли в ситуації, шукаєте рішення, але не можете знайти його – ця гра стане вашим провідником. Завдяки потужним інсайтам, які ви отримаєте, вона може замінити місяці роботи з психологом, допомагаючи швидше побачити істину та знайти потрібні відповіді.
+  Якщо ви відчуваєте, що загрузли в ситуації, шукаєте рішення, але не
+  можете знайти його – ця гра стане вашим провідником. Завдяки потужним
+  інсайтам, які ви отримаєте, вона може замінити місяці роботи з
+  психологом, допомагаючи швидше побачити істину та знайти потрібні
+  відповіді.
 </p>
   </div>
 </app-section-grid>
@@ -2424,16 +1916,21 @@ export class MeComponent {
   <!-- Секція 4: Універсальність гри -->
   <section>
 <app-section-grid
-  [images]="[{ src: 'assets/img/nine-worlds/1.jpg', alt: 'Трансформаційні ігри' }]"
+  [images]="[
+{ src: 'assets/img/nine-worlds/1.jpg', alt: 'Трансформаційні ігри' }
+  ]"
   textPosition="right"
 >
   <div class="flex flex-col gap-10">
 <h3>Як проходить гра в онлайні?</h3>
 <p>
-  Гра проходить у комфортному онлайн-форматі під моїм чутливим веденням. Ви отримаєте не лише глибокий розбір своїх запитів, але й практичні рекомендації, які допоможуть вам змінити життя на краще.
+  Гра проходить у комфортному онлайн-форматі під моїм чутливим веденням.
+  Ви отримаєте не лише глибокий розбір своїх запитів, але й практичні
+  рекомендації, які допоможуть вам змінити життя на краще.
 </p>
 <p>
-  «9 Світів» – це магія трансформації, яка відкриває нові горизонти. Дозвольте собі цю подорож і будьте готові побачити світ по-новому!
+  «9 Світів» – це магія трансформації, яка відкриває нові горизонти.
+  Дозвольте собі цю подорож і будьте готові побачити світ по-новому!
 </p>
   </div>
 </app-section-grid>
@@ -2446,33 +1943,6 @@ export class MeComponent {
   <app-contacts />
 </section>
 
-│   │   │   │   ├── nine-worlds.component.scss
-│   │   │   │   
-│   │   │   │   ├── nine-worlds.component.spec.ts
-│   │   │   │   import { ComponentFixture, TestBed } from '@angular/core/testing';
-
-import { NineWorldsComponent } from './nine-worlds.component';
-
-describe('NineWorldsComponent', () => {
-  let component: NineWorldsComponent;
-  let fixture: ComponentFixture<NineWorldsComponent>;
-
-  beforeEach(async () => {
-await TestBed.configureTestingModule({
-  declarations: [NineWorldsComponent]
-})
-.compileComponents();
-
-fixture = TestBed.createComponent(NineWorldsComponent);
-component = fixture.componentInstance;
-fixture.detectChanges();
-  });
-
-  it('should create', () => {
-expect(component).toBeTruthy();
-  });
-});
-
 │   │   │   │   └── nine-worlds.component.ts
 │   │   │   │   import { Component } from '@angular/core';
 import { ModalService } from '../../core/services/modal.service';
@@ -2480,7 +1950,6 @@ import { ModalService } from '../../core/services/modal.service';
 @Component({
   selector: 'app-nine-worlds',
   templateUrl: './nine-worlds.component.html',
-  styleUrl: './nine-worlds.component.scss'
 })
 export class NineWorldsComponent {
   constructor(public modalService: ModalService) {}
@@ -2501,61 +1970,22 @@ this.modalService.setData(data);
 <app-my-all-services />
 <app-contacts />
 
-│   │   │   │   ├── pifagor.component.scss
-│   │   │   │   
-│   │   │   │   ├── pifagor.component.spec.ts
-│   │   │   │   import { ComponentFixture, TestBed } from '@angular/core/testing';
-
-import { PifagorComponent } from './pifagor.component';
-
-describe('PifagorComponent', () => {
-  let component: PifagorComponent;
-  let fixture: ComponentFixture<PifagorComponent>;
-
-  beforeEach(async () => {
-await TestBed.configureTestingModule({
-  declarations: [PifagorComponent]
-})
-.compileComponents();
-
-fixture = TestBed.createComponent(PifagorComponent);
-component = fixture.componentInstance;
-fixture.detectChanges();
-  });
-
-  it('should create', () => {
-expect(component).toBeTruthy();
-  });
-});
-
 │   │   │   │   └── pifagor.component.ts
 │   │   │   │   import { Component } from '@angular/core';
 
 @Component({
   selector: 'app-pifagor',
   templateUrl: './pifagor.component.html',
-  styleUrl: './pifagor.component.scss',
 })
 export class PifagorComponent {}
 
 │   │   │   📂 prediction
 │   │   │   │   ├── prediction.component.html
-│   │   │   │   
-<section class="container">
+│   │   │   │   <section class="container">
   <h2 class="w-full text-center pt-20">Про мене</h2>
   <div class="wrapper wrapper__grid">
 <div class="about-photo">
-  <img src="assets/img/img_2.jpg"
-  style="
-  width: 100%;
-  max-width: 600px;
-  max-height: 600px;
-  object-position: bottom;
-  object-fit: cover;
-  border-radius: 0.5rem;
-  mix-blend-mode: multiply;
-"
-  alt="Viktorie Honč" />
+  <img src="assets/img/img_2.jpg" class="photo" alt="Viktorie Honč" />
 </div>
 
 <div class="about-text">
@@ -2599,44 +2029,14 @@ export class PifagorComponent {}
 
 <app-contacts />
 
-│   │   │   │   ├── prediction.component.scss
-│   │   │   │   
-│   │   │   │   ├── prediction.component.spec.ts
-│   │   │   │   import { ComponentFixture, TestBed } from '@angular/core/testing';
-
-import { PredictionComponent } from './prediction.component';
-
-describe('PredictionComponent', () => {
-  let component: PredictionComponent;
-  let fixture: ComponentFixture<PredictionComponent>;
-
-  beforeEach(async () => {
-await TestBed.configureTestingModule({
-  declarations: [PredictionComponent]
-})
-.compileComponents();
-
-fixture = TestBed.createComponent(PredictionComponent);
-component = fixture.componentInstance;
-fixture.detectChanges();
-  });
-
-  it('should create', () => {
-expect(component).toBeTruthy();
-  });
-});
-
 │   │   │   │   └── prediction.component.ts
 │   │   │   │   import { Component } from '@angular/core';
 
 @Component({
   selector: 'app-prediction',
   templateUrl: './prediction.component.html',
-  styleUrl: './prediction.component.scss'
 })
-export class PredictionComponent {
-
-}
+export class PredictionComponent {}
 
 │   │   │   📂 sumistnist
 │   │   │   │   ├── sumistnist.component.html
@@ -2648,41 +2048,12 @@ export class PredictionComponent {
 <app-my-all-services />
 <app-contacts />
 
-│   │   │   │   ├── sumistnist.component.scss
-│   │   │   │   
-
-│   │   │   │   ├── sumistnist.component.spec.ts
-│   │   │   │   import { ComponentFixture, TestBed } from '@angular/core/testing';
-
-import { SumistnistComponent } from './sumistnist.component';
-
-describe('SumistnistComponent', () => {
-  let component: SumistnistComponent;
-  let fixture: ComponentFixture<SumistnistComponent>;
-
-  beforeEach(async () => {
-await TestBed.configureTestingModule({
-  declarations: [SumistnistComponent]
-})
-.compileComponents();
-
-fixture = TestBed.createComponent(SumistnistComponent);
-component = fixture.componentInstance;
-fixture.detectChanges();
-  });
-
-  it('should create', () => {
-expect(component).toBeTruthy();
-  });
-});
-
 │   │   │   │   └── sumistnist.component.ts
 │   │   │   │   import { Component } from '@angular/core';
 
 @Component({
   selector: 'app-sumistnist',
   templateUrl: './sumistnist.component.html',
-  styleUrl: './sumistnist.component.scss',
 })
 export class SumistnistComponent {}
 
@@ -2723,6 +2094,7 @@ export class PagesRoutingModule { }
 │   │   │   import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { PagesRoutingModule } from './pages-routing.module';
+
 import { MatExpansionModule } from '@angular/material/expansion';
 
 import { HomeModule } from './home/home.module';
@@ -2745,6 +2117,20 @@ import { ReviewsComponent } from '../shared/components/reviews/reviews.component
 import { MyAllServicesComponent } from '../shared/components/my-all-services/my-all-services.component';
 
 @NgModule({
+  imports: [
+CommonModule,
+PagesRoutingModule,
+HomeModule,
+MatExpansionModule,
+IframeSectionComponent, // ✅ Standalone
+ContactsComponent, // ✅ Standalone
+MyServicesComponent, // ✅ Standalone
+MarqueeComponent, // ✅ Standalone
+CarouselModule,
+SectionGridComponent, // ✅ Standalone
+ReviewsComponent, // ✅ Standalone
+MyAllServicesComponent // ✅ Standalone
+  ],
   declarations: [
 PifagorComponent,
 SumistnistComponent,
@@ -2754,23 +2140,10 @@ LilaComponent,
 KidsMatrixComponent,
 NineWorldsComponent,
 PredictionComponent,
-  ],
-  imports: [
-CommonModule,
-PagesRoutingModule,
-HomeModule,
-MatExpansionModule,
-IframeSectionComponent,
-ContactsComponent,
-MyServicesComponent,
-MarqueeComponent,
-CarouselModule,
-SectionGridComponent,
-ReviewsComponent,
-MyAllServicesComponent
-],
+  ]
 })
 export class PagesModule {}
+
 
 │   │   📂 shared
 │   │   │   📂 components
@@ -2880,33 +2253,6 @@ class="primary-button m-auto mt-8"
   </form>
 </div>
 
-│   │   │   │   │   ├── contact-form.component.scss
-│   │   │   │   │   
-│   │   │   │   │   ├── contact-form.component.spec.ts
-│   │   │   │   │   import { ComponentFixture, TestBed } from '@angular/core/testing';
-
-import { ContactFormComponent } from './contact-form.component';
-
-describe('ContactFormComponent', () => {
-  let component: ContactFormComponent;
-  let fixture: ComponentFixture<ContactFormComponent>;
-
-  beforeEach(async () => {
-await TestBed.configureTestingModule({
-  imports: [ContactFormComponent]
-})
-.compileComponents();
-
-fixture = TestBed.createComponent(ContactFormComponent);
-component = fixture.componentInstance;
-fixture.detectChanges();
-  });
-
-  it('should create', () => {
-expect(component).toBeTruthy();
-  });
-});
-
 │   │   │   │   │   └── contact-form.component.ts
 │   │   │   │   │   import { Component } from '@angular/core';
 import {
@@ -2926,16 +2272,15 @@ import { ModalService } from '../../../core/services/modal.service';
   standalone: true,
   imports: [CommonModule, FormsModule, ReactiveFormsModule],
   templateUrl: './contact-form.component.html',
-  styleUrl: './contact-form.component.scss',
 })
 export class ContactFormComponent {
+  // Я в курсі що цей код поганий с;
   contactForm!: FormGroup;
   isSubmitted = false;
-
-  messageValue: string = '';
+  messageValue: string = ''; // Значення повідомлення
 
   private BOT_TOKEN = '8064054685:AAHkBHQCAQEMJm2F-Pp8HwJ0AWKuzBDkQO0';
-  private CHAT_ID = '-1002238918828'; // Отримайте це через метод getUpdates
+  private CHAT_ID = '-1002238918828';
   private EMAIL_LIMIT_KEY = 'emailSendLimit';
   private EMAIL_LIMIT_MAX = 5;
 
@@ -2943,39 +2288,42 @@ export class ContactFormComponent {
 private fb: FormBuilder,
 private toastr: ToastrService,
 private http: HttpClient,
-private modalService: ModalService,
+private modalService: ModalService
   ) {
+// Ініціалізація форми з валідацією
 this.contactForm = this.fb.group({
-  email: ['', [Validators.required, Validators.email]],
-  phone: ['', Validators.required],
-  message: [''],
-  privacyPolicy: [false, Validators.requiredTrue],
+  email: ['', [Validators.required, Validators.email]], // Поле email з валідацією
+  phone: ['', Validators.required], // Поле телефон з валідацією
+  message: [''], // Опційне поле для повідомлення
+  privacyPolicy: [false, Validators.requiredTrue], // Поле для згоди з політикою конфіденційності
 });
   }
 
   ngOnInit(): void {
-// Підписка на дані з модалки для отримання послуги
+// Підписка на дані з модалки для автоматичного заповнення поля повідомлення
 this.modalService.data$.subscribe((data) => {
   if (data) {
-let message = 'Мені потрібна послуга: ' + (data.title || 'консультація.');
+let message =
+  'Мені потрібна послуга: ' + (data.title || 'консультація.');
 
 if (typeof data === 'string') {
   message = data;
 }
 
+// Встановлення значення для поля повідомлення
 this.contactForm.controls['message'].setValue(message);
   }
 });
   }
 
-
-
+  // Перевірка, чи можна відправити email на основі ліміту в localStorage
   private canSendEmail(): boolean {
 const emailData = JSON.parse(
   localStorage.getItem(this.EMAIL_LIMIT_KEY) || '{}'
 );
 const today = new Date().toLocaleDateString();
 
+// Якщо ліміт для поточного дня перевищений, повертаємо false
 if (emailData.date === today) {
   return emailData.count < this.EMAIL_LIMIT_MAX;
 }
@@ -2983,6 +2331,7 @@ if (emailData.date === today) {
 return true;
   }
 
+  // Оновлення ліміту відправки email у localStorage
   private updateEmailLimit(): void {
 const emailData = JSON.parse(
   localStorage.getItem(this.EMAIL_LIMIT_KEY) || '{}'
@@ -2996,15 +2345,19 @@ if (emailData.date === today) {
   emailData.count = 1;
 }
 
+// Збереження оновлених даних у localStorage
 localStorage.setItem(this.EMAIL_LIMIT_KEY, JSON.stringify(emailData));
   }
 
+  // Обробка події відправки форми
   onSubmit(): void {
+// Перевірка, чи форма коректно заповнена
 if (!this.contactForm.valid) {
   this.toastr.error('Будь ласка, заповніть форму коректно.');
   return;
 }
 
+// Перевірка ліміту на відправку email
 if (!this.canSendEmail()) {
   this.toastr.error('Ліміт на відправку повідомлень перевищено.');
   return;
@@ -3021,6 +2374,7 @@ const message = `
 
 const url = `https://api.telegram.org/bot${this.BOT_TOKEN}/sendMessage`;
 
+// Відправка повідомлення через HTTP POST запит до Telegram API
 this.http
   .post(url, {
 chat_id: this.CHAT_ID,
@@ -3028,12 +2382,14 @@ text: message,
   })
   .subscribe(
 () => {
+  // Оновлення ліміту на відправку та скидання форми при успішній відправці
   this.updateEmailLimit();
   this.isSubmitted = true;
   this.contactForm.reset();
   this.toastr.success('Повідомлення успішно надіслано!');
 },
 (error) => {
+  // Виведення помилки, якщо не вдалося надіслати повідомлення
   this.toastr.error(
 'Не вдалося надіслати повідомлення. Спробуйте ще раз пізніше.'
   );
@@ -3157,31 +2513,6 @@ font-size: 21px;
   }
 }
 
-│   │   │   │   │   ├── contact-form.component.spec.ts
-│   │   │   │   │   import { ComponentFixture, TestBed } from '@angular/core/testing';
-
-import { ContactFormComponent } from './contact-form.component';
-
-describe('ContactFormComponent', () => {
-  let component: ContactFormComponent;
-  let fixture: ComponentFixture<ContactFormComponent>;
-
-  beforeEach(async () => {
-await TestBed.configureTestingModule({
-  declarations: [ContactFormComponent]
-})
-.compileComponents();
-
-fixture = TestBed.createComponent(ContactFormComponent);
-component = fixture.componentInstance;
-fixture.detectChanges();
-  });
-
-  it('should create', () => {
-expect(component).toBeTruthy();
-  });
-});
-
 │   │   │   │   │   └── contact-form.component.ts
 │   │   │   │   │   import { Component } from '@angular/core';
 import { ContactFormComponent } from '../contact-form/contact-form.component';
@@ -3216,33 +2547,6 @@ width="100%"
   </div>
 </section>
 
-│   │   │   │   │   ├── iframe-section.component.scss
-│   │   │   │   │   
-│   │   │   │   │   ├── iframe-section.component.spec.ts
-│   │   │   │   │   import { ComponentFixture, TestBed } from '@angular/core/testing';
-
-import { IframeSectionComponent } from './iframe-section.component';
-
-describe('IframeSectionComponent', () => {
-  let component: IframeSectionComponent;
-  let fixture: ComponentFixture<IframeSectionComponent>;
-
-  beforeEach(async () => {
-await TestBed.configureTestingModule({
-  imports: [IframeSectionComponent]
-})
-.compileComponents();
-
-fixture = TestBed.createComponent(IframeSectionComponent);
-component = fixture.componentInstance;
-fixture.detectChanges();
-  });
-
-  it('should create', () => {
-expect(component).toBeTruthy();
-  });
-});
-
 │   │   │   │   │   └── iframe-section.component.ts
 │   │   │   │   │   import { ModalService } from './../../../core/services/modal.service';
 import { CommonModule } from '@angular/common';
@@ -3254,7 +2558,6 @@ import { DomSanitizer, SafeResourceUrl } from '@angular/platform-browser';
   standalone: true,
   imports: [CommonModule],
   templateUrl: './iframe-section.component.html',
-  styleUrl: './iframe-section.component.scss',
 })
 export class IframeSectionComponent implements OnInit, OnDestroy {
   @Input() title: string = '';
@@ -3332,31 +2635,6 @@ imageSrc="assets/img/lila/1.jpg"
   z-index: 999 !important;
 }
 
-│   │   │   │   │   ├── my-all-services.component.spec.ts
-│   │   │   │   │   import { ComponentFixture, TestBed } from '@angular/core/testing';
-
-import { MyAllServicesComponent } from './my-all-services.component';
-
-describe('MyAllServicesComponent', () => {
-  let component: MyAllServicesComponent;
-  let fixture: ComponentFixture<MyAllServicesComponent>;
-
-  beforeEach(async () => {
-await TestBed.configureTestingModule({
-  imports: [MyAllServicesComponent]
-})
-.compileComponents();
-
-fixture = TestBed.createComponent(MyAllServicesComponent);
-component = fixture.componentInstance;
-fixture.detectChanges();
-  });
-
-  it('should create', () => {
-expect(component).toBeTruthy();
-  });
-});
-
 │   │   │   │   │   └── my-all-services.component.ts
 │   │   │   │   │   import { Component, Input } from '@angular/core';
 import { CommonModule } from '@angular/common';
@@ -3382,8 +2660,6 @@ export class MyAllServicesComponent {
 │   │   │   │   │   ├── my-services.component.html
 │   │   │   │   │   <div class="wrapper wrapper__grid my-services">
   <div class="about-text">
-<!-- <h3>{{ title }}</h3> -->
-
 <mat-accordion class="custom-accordion">
   <mat-expansion-panel
 *ngFor="let service of services"
@@ -3432,17 +2708,7 @@ class="custom-panel"
 
   <!-- todo стилі з інлайну в шаред -->
   <div class="about-photo hidden md:flex">
-<img
-  [src]="imageSrc"
-  style="
-width: 100%;
-max-width: 600px;
-object-fit: cover;
-border-radius: 0.5rem;
-mix-blend-mode: multiply;
-  "
-  [alt]="'Viktorie Honč - ' + title"
-/>
+<img [src]="imageSrc" [alt]="'Вікторія Гонч - ' + title" class="photo" />
   </div>
 </div>
 
@@ -3486,41 +2752,6 @@ font-size: 1rem;
   }
 }
 
-// .my-services {
-//   &.wrapper {
-// align-items: start;
-//   }
-
-//   .about-photo{
-// margin-top: 100px;
-//   }
-// }
-
-│   │   │   │   │   ├── my-services.component.spec.ts
-│   │   │   │   │   import { ComponentFixture, TestBed } from '@angular/core/testing';
-
-import { MyServicesComponent } from './my-services.component';
-
-describe('MyServicesComponent', () => {
-  let component: MyServicesComponent;
-  let fixture: ComponentFixture<MyServicesComponent>;
-
-  beforeEach(async () => {
-await TestBed.configureTestingModule({
-  declarations: [MyServicesComponent]
-})
-.compileComponents();
-
-fixture = TestBed.createComponent(MyServicesComponent);
-component = fixture.componentInstance;
-fixture.detectChanges();
-  });
-
-  it('should create', () => {
-expect(component).toBeTruthy();
-  });
-});
-
 │   │   │   │   │   └── my-services.component.ts
 │   │   │   │   │   import { CommonModule } from '@angular/common';
 import { Component, Input } from '@angular/core';
@@ -3557,17 +2788,14 @@ this.modalService.setData(data);
   class="link-button"
   routerLinkActive="active"
 >
-  <b class="cursor-pointer" [routerLink]="route.path">{{
-route.label
-  }}</b>
+  <b class="cursor-pointer" [routerLink]="route.path">{{ route.label }}</b>
 
   @if (route.subMenu){
   <div class="relative">
 <nav
   class="sub-navigation md:bg-black relative md:absolute md:opacity-0 opacity-100"
 >
-  @for (subRoute of route.subMenu; track $index) {
-@if
+  @for (subRoute of route.subMenu; track $index) { @if
   (route.subMenuRoutePrefix) {
   <a
 [href]="route.subMenuRoutePrefix + subRoute.path"
@@ -3579,60 +2807,13 @@ class="link-button"
   <a [routerLink]="subRoute.path" class="link-button">
 {{ subRoute.label }}
   </a>
-  }
-}
+  } }
 </nav>
   </div>
   }
 </a>
   </nav>
 </div>
-
-│   │   │   │   │   ├── navigation.component.scss
-│   │   │   │   │   .sub-navigation {
-  display: flex;
-  flex-direction: column;
-  gap: 8px;
-  padding: 8px;
-  width: max-content;
-  top: 3px;
-  pointer-events: none;
-  transition: .3s;
-  border-top: 1px solid #fff;
-  cursor: pointer;
-}
-
-.link-button {
-  &:hover .sub-navigation {
-pointer-events: all;
-opacity: 1;
-  }
-}
-
-│   │   │   │   │   ├── navigation.component.spec.ts
-│   │   │   │   │   import { ComponentFixture, TestBed } from '@angular/core/testing';
-
-import { NavigationComponent } from './navigation.component';
-
-describe('NavigationComponent', () => {
-  let component: NavigationComponent;
-  let fixture: ComponentFixture<NavigationComponent>;
-
-  beforeEach(async () => {
-await TestBed.configureTestingModule({
-  imports: [NavigationComponent]
-})
-.compileComponents();
-
-fixture = TestBed.createComponent(NavigationComponent);
-component = fixture.componentInstance;
-fixture.detectChanges();
-  });
-
-  it('should create', () => {
-expect(component).toBeTruthy();
-  });
-});
 
 │   │   │   │   │   └── navigation.component.ts
 │   │   │   │   │   import { CommonModule, ViewportScroller } from '@angular/common';
@@ -3645,7 +2826,6 @@ import { Route, Routes } from '../../../core/variables/routes';
   standalone: true,
   imports: [CommonModule, RouterModule],
   templateUrl: './navigation.component.html',
-  styleUrls: ['./navigation.component.scss'],
 })
 export class NavigationComponent {
   @Input() isHomeNav = true;
@@ -3678,7 +2858,7 @@ return this.navClass
   <img
 src="assets/img/reviews/{{ i }}.jpg"
 alt="Відгук 1"
-class="review object-cover rounded mb-4"
+class="w-full object-cover rounded mb-4"
   />
 </div>
   </ng-template>
@@ -3698,41 +2878,6 @@ class="link-button"
   </div>
 </section>
 
-│   │   │   │   │   ├── reviews.component.scss
-│   │   │   │   │   .owl-carousel .owl-nav {
-  display: flex;
-  justify-content: space-between;
-}
-
-.review{
-  width: 100%;
-}
-
-│   │   │   │   │   ├── reviews.component.spec.ts
-│   │   │   │   │   import { ComponentFixture, TestBed } from '@angular/core/testing';
-
-import { ReviewsComponent } from './reviews.component';
-
-describe('ReviewsComponent', () => {
-  let component: ReviewsComponent;
-  let fixture: ComponentFixture<ReviewsComponent>;
-
-  beforeEach(async () => {
-await TestBed.configureTestingModule({
-  declarations: [ReviewsComponent]
-})
-.compileComponents();
-
-fixture = TestBed.createComponent(ReviewsComponent);
-component = fixture.componentInstance;
-fixture.detectChanges();
-  });
-
-  it('should create', () => {
-expect(component).toBeTruthy();
-  });
-});
-
 │   │   │   │   │   └── reviews.component.ts
 │   │   │   │   │   // Імпортуйте ElementRef, якщо потрібно
 import { CommonModule } from '@angular/common';
@@ -3742,12 +2887,10 @@ import { OwlOptions, CarouselModule } from 'ngx-owl-carousel-o';
 @Component({
   selector: 'app-reviews',
   templateUrl: './reviews.component.html',
-  styleUrls: ['./reviews.component.scss'],
   standalone: true,
-  imports: [CommonModule, CarouselModule]
+  imports: [CommonModule, CarouselModule],
 })
 export class ReviewsComponent {
-
   customOptions: OwlOptions = {
 loop: true,
 margin: 10,
@@ -3758,7 +2901,7 @@ pullDrag: false,
 nav: true,
 navText: [
   '<i class="fas fa-chevron-left custom-nav-icon"></i>',
-  '<i class="fas fa-chevron-right custom-nav-icon"></i>'
+  '<i class="fas fa-chevron-right custom-nav-icon"></i>',
 ],
 responsive: {
   0: { items: 1 },
@@ -3768,7 +2911,6 @@ responsive: {
   1600: { items: 6 },
 },
   };
-
 }
 
 │   │   │   │   📂 social-links
@@ -3822,33 +2964,6 @@ responsive: {
   </li>
 </ul>
 
-│   │   │   │   ├── social-links.component.scss
-│   │   │   │   
-│   │   │   │   ├── social-links.component.spec.ts
-│   │   │   │   import { ComponentFixture, TestBed } from '@angular/core/testing';
-
-import { SocialLinksComponent } from './social-links.component';
-
-describe('SocialLinksComponent', () => {
-  let component: SocialLinksComponent;
-  let fixture: ComponentFixture<SocialLinksComponent>;
-
-  beforeEach(async () => {
-await TestBed.configureTestingModule({
-  imports: [SocialLinksComponent]
-})
-.compileComponents();
-
-fixture = TestBed.createComponent(SocialLinksComponent);
-component = fixture.componentInstance;
-fixture.detectChanges();
-  });
-
-  it('should create', () => {
-expect(component).toBeTruthy();
-  });
-});
-
 │   │   │   │   └── social-links.component.ts
 │   │   │   │   import { Component } from '@angular/core';
 
@@ -3857,11 +2972,8 @@ expect(component).toBeTruthy();
   standalone: true,
   imports: [],
   templateUrl: './social-links.component.html',
-  styleUrl: './social-links.component.scss'
 })
-export class SocialLinksComponent {
-
-}
+export class SocialLinksComponent {}
 
 │   │   │   📂 layout
 │   │   │   │   📂 footer
@@ -3888,31 +3000,6 @@ footer {
   background-color: $dark-gray;
 }
 
-│   │   │   │   │   ├── footer.component.spec.ts
-│   │   │   │   │   import { ComponentFixture, TestBed } from '@angular/core/testing';
-
-import { FooterComponent } from './footer.component';
-
-describe('FooterComponent', () => {
-  let component: FooterComponent;
-  let fixture: ComponentFixture<FooterComponent>;
-
-  beforeEach(async () => {
-await TestBed.configureTestingModule({
-  imports: [FooterComponent]
-})
-.compileComponents();
-
-fixture = TestBed.createComponent(FooterComponent);
-component = fixture.componentInstance;
-fixture.detectChanges();
-  });
-
-  it('should create', () => {
-expect(component).toBeTruthy();
-  });
-});
-
 │   │   │   │   │   └── footer.component.ts
 │   │   │   │   │   import { Component } from '@angular/core';
 import { NavigationComponent } from '../../components/navigation/navigation.component';
@@ -3922,11 +3009,9 @@ import { NavigationComponent } from '../../components/navigation/navigation.comp
   standalone: true,
   imports: [NavigationComponent],
   templateUrl: './footer.component.html',
-  styleUrl: './footer.component.scss'
+  styleUrl: './footer.component.scss',
 })
-export class FooterComponent {
-
-}
+export class FooterComponent {}
 
 │   │   │   │   📂 header
 │   │   │   │   │   ├── header.component.html
@@ -3947,7 +3032,12 @@ export class FooterComponent {
 <!-- Burger Icon for Mobile/Tablet -->
 <div class="lg:hidden" (click)="toggleMobileMenu()">
   <button id="burger" class="text-white px-3">
-<div [innerHTML]="svg['mobile-menu']"></div>
+<svg class="w-10 h-10" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+  <path fill-rule="evenodd" d="M3 5a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM3 10a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM3 15a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1z" clip-rule="evenodd"></path>
+</svg>
+<svg class="hidden w-6 h-6" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+  <path fill-rule="evenodd" d="M4.293 4.293a1 1 0 011.414 0L10 8.586l4.293-4.293a1 1 0 111.414 1.414L11.414 10l4.293 4.293a1 1 0 01-1.414 1.414L10 11.414l-4.293 4.293a1 1 0 01-1.414-1.414L8.586 10 4.293 5.707a1 1 0 010-1.414z" clip-rule="evenodd"></path>
+</svg>
   </button>
 </div>
 
@@ -3955,32 +3045,13 @@ export class FooterComponent {
   </div>
 </header>
 
-<!-- Mobile Navigation -->
-<!-- todo в окремий компонент -->
-
 <div
   class="mobile-menu-container lg:hidden p-4"
   [class.active]="isMobileMenuOpen"
   (click)="toggleMobileMenu()"
 >
-  <img src="assets/logo.svg" alt="Logo" class="w-full" />
-
-  <div class="close-button">
-<div [innerHTML]="svg['close']"></div>
-  </div>
-
-  <hr class="border-t-1 border-black mb-4 w-full">
-
-  <app-navigation navClass="flex-col justify-center items-start " />
-
-  <hr class="border-t-1 border-black mt-4 w-full">
-
-  <app-social-links />
-
-  <button class="active-button small min-w-[100%]" (click)="openModal()">Зв'язатись</button>
+  <app-mobile-menu />
 </div>
-
-
 
 <app-modal />
 
@@ -4070,15 +3141,10 @@ expect(component).toBeTruthy();
 import { CommonModule } from '@angular/common';
 import { Component } from '@angular/core';
 import { NavigationComponent } from '../../components/navigation/navigation.component';
-import {
-  SvgIconsInterface,
-  SvgService,
-} from '../../../core/services/svg.service';
 import { ModalComponent } from '../modal/modal.component';
 import { ModalService } from '../../../core/services/modal.service';
-import { SocialLinksComponent } from '../../components/social-links/social-links.component';
+import { MobileMenuComponent } from '../mobile-menu/mobile-menu.component';
 
-// todo випилити свг сервіс
 @Component({
   selector: 'app-header',
   standalone: true,
@@ -4087,18 +3153,15 @@ CommonModule,
 NavigationComponent,
 RouterModule,
 ModalComponent,
-SocialLinksComponent
+MobileMenuComponent
   ],
   templateUrl: './header.component.html',
   styleUrl: './header.component.scss',
 })
 export class HeaderComponent {
   isMobileMenuOpen = false;
-  svg!: SvgIconsInterface;
 
-  constructor(private SVG: SvgService, public modalService: ModalService) {
-this.svg = this.SVG.loadSvg();
-  }
+  constructor(private modalService: ModalService) {}
 
   toggleMobileMenu() {
 this.isMobileMenuOpen = !this.isMobileMenuOpen;
@@ -4111,48 +3174,60 @@ this.modalService.open();
 
 │   │   │   │   📂 marquee
 │   │   │   │   │   ├── marquee.component.html
-│   │   │   │   │   <marquee >
-  @for (splash of splashes; track $index) {
-<a [routerLink]="splash.route" class="link-button">{{splash.text}} </ a>
-  }
-</marquee>
+│   │   │   │   │   <div class="marquee-container">
+  <div
+class="marquee"
+[ngStyle]="{ 'animation-duration': splashes.length * 5 + 's' }"
+  >
+<a
+  *ngFor="let splash of splashes; let index = index"
+  [routerLink]="splash.route"
+  class="link-button"
+>
+  {{ splash.text }}
+</a>
+  </div>
+</div>
 
 │   │   │   │   │   ├── marquee.component.scss
-│   │   │   │   │   marquee {
+│   │   │   │   │   .marquee-container {
   width: 100%;
+  overflow: hidden;
   padding: 12px;
   background-color: #000;
-
-  a{
-color: #fff;
-margin-right: 180px;
-  }
+  cursor: grab;
 }
 
-│   │   │   │   │   ├── marquee.component.spec.ts
-│   │   │   │   │   import { ComponentFixture, TestBed } from '@angular/core/testing';
+.marquee {
+  display: flex;
+  animation: marquee linear infinite;
+  animation-duration: 10s;
+  animation-play-state: running;
+  transform: translateX(-100%);
 
-import { MarqueeComponent } from './marquee.component';
+}
 
-describe('MarqueeComponent', () => {
-  let component: MarqueeComponent;
-  let fixture: ComponentFixture<MarqueeComponent>;
+.marquee-container:hover .marquee {
+  animation-play-state: paused;
+}
 
-  beforeEach(async () => {
-await TestBed.configureTestingModule({
-  imports: [MarqueeComponent]
-})
-.compileComponents();
+.link-button {
+  padding: 0 20px;
+  white-space: nowrap;
+  text-decoration: none;
+  color: #fff;
+  margin-right: 180px;
+}
 
-fixture = TestBed.createComponent(MarqueeComponent);
-component = fixture.componentInstance;
-fixture.detectChanges();
-  });
+@keyframes marquee {
+  0% {
+transform: translateX(100%);
+  }
 
-  it('should create', () => {
-expect(component).toBeTruthy();
-  });
-});
+  100% {
+transform: translateX(-100%);
+  }
+}
 
 │   │   │   │   │   └── marquee.component.ts
 │   │   │   │   │   import { CommonModule } from '@angular/common';
@@ -4344,6 +3419,79 @@ export class MarqueeComponent {
 
 }
 
+│   │   │   │   📂 mobile-menu
+│   │   │   │   │   ├── mobile-menu.component.html
+│   │   │   │   │   <img src="assets/logo.svg" alt="Logo" class="w-full" />
+
+<div class="close-button">
+  <div>
+<svg class="w-10 h-10" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+  <path fill-rule="evenodd" d="M4.293 4.293a1 1 0 011.414 0L10 8.586l4.293-4.293a1 1 0 111.414 1.414L11.414 10l4.293 4.293a1 1 0 01-1.414 1.414L10 11.414l-4.293 4.293a1 1 0 01-1.414-1.414L8.586 10 4.293 5.707a1 1 0 010-1.414z" clip
+  rule="evenodd"></path>
+  </svg>
+  </div>
+</div>
+
+<hr class="border-t-1 border-black mb-4 w-full" />
+
+<app-navigation navClass="flex-col justify-center items-start " />
+
+<hr class="border-t-1 border-black mt-4 w-full" />
+
+<app-social-links />
+
+<button class="active-button small min-w-[100%]" (click)="openModal()">
+  Зв'язатись
+</button>
+
+│   │   │   │   │   ├── mobile-menu.component.scss
+│   │   │   │   │   
+│   │   │   │   │   ├── mobile-menu.component.spec.ts
+│   │   │   │   │   import { ComponentFixture, TestBed } from '@angular/core/testing';
+
+import { MobileMenuComponent } from './mobile-menu.component';
+
+describe('MobileMenuComponent', () => {
+  let component: MobileMenuComponent;
+  let fixture: ComponentFixture<MobileMenuComponent>;
+
+  beforeEach(async () => {
+await TestBed.configureTestingModule({
+  imports: [MobileMenuComponent]
+})
+.compileComponents();
+
+fixture = TestBed.createComponent(MobileMenuComponent);
+component = fixture.componentInstance;
+fixture.detectChanges();
+  });
+
+  it('should create', () => {
+expect(component).toBeTruthy();
+  });
+});
+
+│   │   │   │   │   └── mobile-menu.component.ts
+│   │   │   │   │   import { Component } from '@angular/core';
+import { NavigationComponent } from '../../components/navigation/navigation.component';
+import { SocialLinksComponent } from '../../components/social-links/social-links.component';
+import { ModalService } from '../../../core/services/modal.service';
+
+@Component({
+  selector: 'app-mobile-menu',
+  standalone: true,
+  imports: [NavigationComponent, SocialLinksComponent],
+  templateUrl: './mobile-menu.component.html',
+  styleUrl: './mobile-menu.component.scss',
+})
+export class MobileMenuComponent {
+  constructor(private modalService: ModalService) {}
+
+  openModal() {
+this.modalService.open();
+  }
+}
+
 │   │   │   │   📂 modal
 │   │   │   │   │   ├── modal.component.html
 │   │   │   │   │   <div
@@ -4447,31 +3595,6 @@ opacity: 1;
   }
 }
 
-│   │   │   │   │   ├── modal.component.spec.ts
-│   │   │   │   │   import { ComponentFixture, TestBed } from '@angular/core/testing';
-
-import { ModalComponent } from './modal.component';
-
-describe('ModalComponent', () => {
-  let component: ModalComponent;
-  let fixture: ComponentFixture<ModalComponent>;
-
-  beforeEach(async () => {
-await TestBed.configureTestingModule({
-  imports: [ModalComponent]
-})
-.compileComponents();
-
-fixture = TestBed.createComponent(ModalComponent);
-component = fixture.componentInstance;
-fixture.detectChanges();
-  });
-
-  it('should create', () => {
-expect(component).toBeTruthy();
-  });
-});
-
 │   │   │   │   │   └── modal.component.ts
 │   │   │   │   │   import { CommonModule } from '@angular/common';
 import { ModalService } from './../../../core/services/modal.service';
@@ -4489,8 +3612,7 @@ import { SocialLinksComponent } from '../../components/social-links/social-links
 export class ModalComponent {
   @Input() title = '';
 
-
-  isModalOpen:boolean = false;
+  isModalOpen: boolean = false;
 
   constructor(public modalService: ModalService) {}
 
@@ -4512,7 +3634,6 @@ if (target.classList.contains('modal-wrapper')) {
   this.closeModal();
 }
   }
-
 }
 
 │   │   │   │   📂 section-grid
@@ -4524,19 +3645,11 @@ class="wrapper wrapper__grid"
   >
 <!-- Зображення -->
 <div class="about-photo">
-  <!-- <owl-carousel-o [options]="mergedCarouselOptions">
-<ng-template carouselSlide *ngFor="let image of images"> -->
-  <img
-[src]="images[0].src"
-[alt]="images[0].alt"
-class="carousel-image"
-  />
-<!-- </ng-template>
-  </owl-carousel-o> -->
+  <img [src]="images[0].src" [alt]="images[0].alt" class="carousel-image" />
 </div>
 
- <!-- Текстовий контент -->
- <div class="about-text">
+<!-- Текстовий контент -->
+<div class="about-text">
   <ng-content></ng-content>
 </div>
   </div>
@@ -4548,12 +3661,7 @@ class="carousel-image"
   align-items: center;
   grid-template-columns: repeat(2, minmax(0, 1fr));
   gap: 1rem;
-
-
-  // min-height: 70dvh;
   height: 70vh;
-
-
   margin: 0;
 
   @media (max-width: 832px) {
@@ -4574,15 +3682,12 @@ height: fit-content;
   /* Зображення зліва, текст справа */
 }
   }
-
-
 }
 
 .about-text {
   grid-area: text;
   padding: 1rem;
 }
-
 
 .carousel-image {
   width: 100%;
@@ -4591,10 +3696,6 @@ height: fit-content;
   object-fit: cover;
   border-radius: 0.5rem;
   mix-blend-mode: multiply;
-}
-
-h2 {
-  margin: 0;
 }
 
 │   │   │   │   │   ├── section-grid.component.spec.ts
@@ -4694,31 +3795,6 @@ top: $header-sm-height;
 .hidden {
   transform: translate(0%, -100%);
 }
-
-│   │   │   │   ├── sticky-panel.component.spec.ts
-│   │   │   │   import { ComponentFixture, TestBed } from '@angular/core/testing';
-
-import { StickyPanelComponent } from './sticky-panel.component';
-
-describe('StickyPanelComponent', () => {
-  let component: StickyPanelComponent;
-  let fixture: ComponentFixture<StickyPanelComponent>;
-
-  beforeEach(async () => {
-await TestBed.configureTestingModule({
-  imports: [StickyPanelComponent]
-})
-.compileComponents();
-
-fixture = TestBed.createComponent(StickyPanelComponent);
-component = fixture.componentInstance;
-fixture.detectChanges();
-  });
-
-  it('should create', () => {
-expect(component).toBeTruthy();
-  });
-});
 
 │   │   │   │   └── sticky-panel.component.ts
 │   │   │   │   import { Component, HostListener } from '@angular/core';
@@ -5043,6 +4119,26 @@ transform: translateX(100%);
   }
 }
 
+.sub-navigation {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  padding: 8px;
+  width: max-content;
+  top: 3px;
+  pointer-events: none;
+  transition: .3s;
+  border-top: 1px solid #fff;
+  cursor: pointer;
+}
+
+.link-button {
+  &:hover .sub-navigation {
+pointer-events: all;
+opacity: 1;
+  }
+}
+
 │   │   │   │   ├── forms.scss
 │   │   │   │   @use 'variables'as *;
 
@@ -5120,6 +4216,27 @@ font-size: 0.875rem;
 /* Ефект при наведенні */
 .owl-dot:hover {
   background-color: $primary-color; /* Колір на ховер */
+}
+
+.owl-carousel .owl-nav {
+  display: flex;
+  justify-content: space-between;
+}
+
+│   │   │   │   ├── shared.scss
+│   │   │   │   @import 'variables';
+
+.photo {
+  max-width: 600px;
+  object-fit: cover;
+  border-radius: 0.5rem;
+  mix-blend-mode: multiply;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  height: 300px;
+
+  @media (max-width: $media-tablet) {
+height: 600px;
+  }
 }
 
 │   │   │   │   ├── typography.scss
@@ -5262,6 +4379,27 @@ color: white;
 }
 
 
+/* Загальні стилі для списків */
+ul {
+  list-style-type: none;
+  padding-left: 0;
+  margin: 0;
+  font-family: 'Arial', sans-serif;
+}
+
+/* Стилі для елементів списку */
+ul li {
+  position: relative;
+  padding-left: 25px; /* Додаємо відступ зліва для маркера */
+  margin-bottom: 10px; /* Відстань між елементами списку */
+  font-size: 1rem; /* Розмір шрифту */
+  line-height: 1.5; /* Міжрядковий інтервал */
+  color: #333; /* Колір тексту */
+}
+
+h2 {
+  margin: 0;
+}
 
 │   │   │   │   ├── variables.scss
 │   │   │   │   // Colors
@@ -5364,9 +4502,6 @@ align-items: center;
 grid-template-columns: repeat(2, minmax(0, 1fr));
 gap: 1rem;
 
-// min-height: 70dvh;
-// margin: 5dvh 0;
-
 min-height: 70vh;
 margin: 5vh 0;
 
@@ -5462,6 +4597,22 @@ height: 50vh;
   img {
 width: 100%;
 object-fit: cover;
+  }
+}
+
+
+
+
+
+
+.regalies {
+  max-width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+
+  li {
+width: max-content;
   }
 }
 
@@ -6774,189 +5925,57 @@ scroll-behavior: smooth;
 }
 
 📂 structures
-│   └── viktoriya-gonch.structure.min.txt
+│   ├── viktoriya-gonch.structure.min.txt
 │   📂 viktoriya-gonch
 📂 public
 │   📂 icons
-│   │   ├── Group 201.svg
-│   │   ├── Union-braun.svg
-│   │   └── Union.svg
 │   📂 img
 │   │   📂 lila
-│   │   │   ├── 1.jpg
-│   │   │   ├── 2.jpg
-│   │   │   ├── 3.jpg
-│   │   │   ├── 4.jpg
-│   │   │   ├── 5.jpg
-│   │   │   └── 6.png
 │   │   📂 nine-worlds
-│   │   │   ├── 1.jpg
-│   │   │   ├── 2.jpg
-│   │   │   ├── 3.jpg
-│   │   │   └── 4.jpg
 │   │   📂 reviews
-│   │   │   ├── 1.jpg
-│   │   │   ├── 2.jpg
-│   │   │   ├── 3.jpg
-│   │   │   ├── 4.jpg
-│   │   │   ├── 5.jpg
-│   │   │   └── 6.jpg
-│   │   ├── about_me.jpg
-│   │   ├── img_1.jpg
-│   │   ├── img_2.jpg
-│   │   ├── matrix.jpg
-│   │   ├── services.jpg
-│   │   ├── sumistnist.jpg
-│   │   ├── матриця.svg
-│   │   ├── парні матриці.svg
-│   │   └── піфагор.svg
-│   ├── favicon.ico
-│   ├── favicon.png
-│   ├── favicon.svg
-│   ├── logo-short.svg
-│   ├── logo-white.svg
-│   ├── logo.svg
-│   ├── Robots.txt
-│   └── sitemap.xml
 📂 scully
-│   ├── plugins.js
-│   ├── plugins.js.map
-│   ├── plugins.ts
-│   └── tsconfig.json
 📂 src
 │   📂 app
 │   │   📂 core
 │   │   │   📂 directives
-│   │   │   │   └── control-value-accessor.directive.ts
 │   │   │   📂 interceptors
-│   │   │   │   └── jwt.interceptor.ts
 │   │   │   📂 interfaces
-│   │   │   │   └── index.ts
 │   │   │   📂 services
-│   │   │   │   ├── modal.service.spec.ts
-│   │   │   │   ├── modal.service.ts
-│   │   │   │   └── svg.service.ts
 │   │   │   📂 variables
-│   │   │   ├── customFormsErrors.ts
-│   │   │   ├── prices.ts
-│   │   │   └── routes.ts
 │   │   📂 pages
 │   │   │   📂 home
 │   │   │   │   📂 components
 │   │   │   │   │   📂 about-matrix
-│   │   │   │   │   │   ├── about-matrix.component.html
-│   │   │   │   │   │   ├── about-matrix.component.scss
-│   │   │   │   │   │   ├── about-matrix.component.spec.ts
-│   │   │   │   │   │   └── about-matrix.component.ts
 │   │   │   │   │   📂 about-me
-│   │   │   │   │   │   ├── about-me.component.html
-│   │   │   │   │   │   ├── about-me.component.scss
-│   │   │   │   │   │   ├── about-me.component.spec.ts
-│   │   │   │   │   │   └── about-me.component.ts
 │   │   │   │   │   📂 about-pifagor
-│   │   │   │   │   │   ├── about-pifagor.component.html
-│   │   │   │   │   │   ├── about-pifagor.component.scss
-│   │   │   │   │   │   ├── about-pifagor.component.spec.ts
-│   │   │   │   │   │   └── about-pifagor.component.ts
 │   │   │   │   │   📂 about-sumistnist
-│   │   │   │   │   │   ├── about-sumistnist.component.html
-│   │   │   │   │   │   ├── about-sumistnist.component.scss
-│   │   │   │   │   │   ├── about-sumistnist.component.spec.ts
-│   │   │   │   │   │   └── about-sumistnist.component.ts
 │   │   │   │   │   📂 calendly-widget
 │   │   │   │   │   │   ├── calendly-widget.component.html
 │   │   │   │   │   │   ├── calendly-widget.component.scss
 │   │   │   │   │   │   ├── calendly-widget.component.spec.ts
 │   │   │   │   │   │   └── calendly-widget.component.ts
-│   │   │   │   │   📂 carousel
-│   │   │   │   │   │   ├── carousel.component.html
-│   │   │   │   │   │   ├── carousel.component.scss
-│   │   │   │   │   │   ├── carousel.component.spec.ts
-│   │   │   │   │   │   └── carousel.component.ts
 │   │   │   │   │   📂 hiro
-│   │   │   │   │   │   ├── hiro.component.html
 │   │   │   │   │   │   ├── hiro.component.scss
-│   │   │   │   │   │   ├── hiro.component.spec.ts
-│   │   │   │   │   │   └── hiro.component.ts
 │   │   │   │   │   📂 matrix-calculator
-│   │   │   │   │   │   ├── matrix-calculator.component.html
-│   │   │   │   │   │   ├── matrix-calculator.component.scss
-│   │   │   │   │   │   ├── matrix-calculator.component.spec.ts
-│   │   │   │   │   │   └── matrix-calculator.component.ts
-│   │   │   │   │   📂 statistic
-│   │   │   │   │   ├── statistic.component.html
-│   │   │   │   │   ├── statistic.component.scss
-│   │   │   │   │   ├── statistic.component.spec.ts
-│   │   │   │   │   └── statistic.component.ts
-│   │   │   │   ├── home.component.html
-│   │   │   │   ├── home.component.scss
-│   │   │   │   ├── home.component.spec.ts
-│   │   │   │   ├── home.component.ts
-│   │   │   │   └── home.module.ts
+│   │   │   │   └── home.module.ts -- todo  переробити в стендалоун?
 │   │   │   📂 kids-matrix
-│   │   │   │   ├── kids-matrix.component.html
-│   │   │   │   ├── kids-matrix.component.scss
-│   │   │   │   ├── kids-matrix.component.spec.ts
-│   │   │   │   └── kids-matrix.component.ts
 │   │   │   📂 lila
-│   │   │   │   ├── lila.component.html
-│   │   │   │   ├── lila.component.scss
-│   │   │   │   ├── lila.component.spec.ts
-│   │   │   │   └── lila.component.ts
 │   │   │   📂 matrix
-│   │   │   │   ├── matrix.component.html
-│   │   │   │   ├── matrix.component.scss
-│   │   │   │   ├── matrix.component.spec.ts
-│   │   │   │   └── matrix.component.ts
 │   │   │   📂 me
-│   │   │   │   ├── me.component.html
-│   │   │   │   ├── me.component.scss
-│   │   │   │   ├── me.component.spec.ts
-│   │   │   │   └── me.component.ts
 │   │   │   📂 nine-worlds
-│   │   │   │   ├── nine-worlds.component.html
-│   │   │   │   ├── nine-worlds.component.scss
-│   │   │   │   ├── nine-worlds.component.spec.ts
-│   │   │   │   └── nine-worlds.component.ts
 │   │   │   📂 pifagor
-│   │   │   │   ├── pifagor.component.html
-│   │   │   │   ├── pifagor.component.scss
-│   │   │   │   ├── pifagor.component.spec.ts
-│   │   │   │   └── pifagor.component.ts
 │   │   │   📂 prediction
-│   │   │   │   ├── prediction.component.html
-│   │   │   │   ├── prediction.component.scss
-│   │   │   │   ├── prediction.component.spec.ts
-│   │   │   │   └── prediction.component.ts
 │   │   │   📂 sumistnist
-│   │   │   │   ├── sumistnist.component.html
-│   │   │   │   ├── sumistnist.component.scss
-│   │   │   │   ├── sumistnist.component.spec.ts
-│   │   │   │   └── sumistnist.component.ts
 │   │   │   ├── pages-routing.module.ts
 │   │   │   └── pages.module.ts
 │   │   📂 shared
 │   │   │   📂 components
 │   │   │   │   📂 contact-form
-│   │   │   │   │   ├── contact-form.component.html
-│   │   │   │   │   ├── contact-form.component.scss
-│   │   │   │   │   ├── contact-form.component.spec.ts
-│   │   │   │   │   └── contact-form.component.ts
 │   │   │   │   📂 contacts
-│   │   │   │   │   ├── contact-form.component.html
 │   │   │   │   │   ├── contact-form.component.scss
-│   │   │   │   │   ├── contact-form.component.spec.ts
-│   │   │   │   │   └── contact-form.component.ts
 │   │   │   │   📂 iframe-section
-│   │   │   │   │   ├── iframe-section.component.html
-│   │   │   │   │   ├── iframe-section.component.scss
-│   │   │   │   │   ├── iframe-section.component.spec.ts
-│   │   │   │   │   └── iframe-section.component.ts
 │   │   │   │   📂 my-all-services
-│   │   │   │   │   ├── my-all-services.component.html
 │   │   │   │   │   ├── my-all-services.component.scss
-│   │   │   │   │   ├── my-all-services.component.spec.ts
-│   │   │   │   │   └── my-all-services.component.ts
 │   │   │   │   📂 my-services
 │   │   │   │   │   ├── my-services.component.html
 │   │   │   │   │   ├── my-services.component.scss
@@ -7049,6 +6068,1598 @@ scroll-behavior: smooth;
 ├── tsconfig.json
 └── tsconfig.spec.json
 
+│   └── viktoriya-gonch.structure.txt
+│   📂 viktoriya-gonch
+📂 public
+│   📂 icons
+│   │   ├── Group 201.svg
+│   │   ├── Union-braun.svg
+│   │   └── Union.svg
+│   📂 img
+│   │   📂 lila
+│   │   │   ├── 1.jpg
+│   │   │   ├── 2.jpg
+│   │   │   ├── 3.jpg
+│   │   │   ├── 4.jpg
+│   │   │   ├── 5.jpg
+│   │   │   └── 6.png
+│   │   📂 nine-worlds
+│   │   │   ├── 1.jpg
+│   │   │   ├── 2.jpg
+│   │   │   ├── 3.jpg
+│   │   │   └── 4.jpg
+│   │   📂 reviews
+│   │   │   ├── 1.jpg
+│   │   │   ├── 2.jpg
+│   │   │   ├── 3.jpg
+│   │   │   ├── 4.jpg
+│   │   │   ├── 5.jpg
+│   │   │   └── 6.jpg
+│   │   ├── about_me.jpg
+│   │   ├── img_1.jpg
+│   │   ├── img_2.jpg
+│   │   ├── matrix.jpg
+│   │   ├── services.jpg
+│   │   ├── sumistnist.jpg
+│   │   ├── матриця.svg
+│   │   ├── парні матриці.svg
+│   │   └── піфагор.svg
+│   ├── favicon.ico
+│   ├── favicon.png
+│   ├── favicon.svg
+│   ├── logo-short.svg
+│   ├── logo-white.svg
+│   ├── logo.svg
+│   ├── Robots.txt
+│   User-agent: *
+Allow: /
+
+Sitemap: https://www.viktoriehonc.com.ua/sitemap.xml
+
+│   └── sitemap.xml
+│   <?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+  <url>
+<loc>https://www.viktoriehonc.com.ua/home</loc>
+<lastmod>2025-02-17</lastmod>
+<priority>1.0</priority>
+  </url>
+  <url>
+<loc>https://www.viktoriehonc.com.ua/me</loc>
+<lastmod>2025-02-17</lastmod>
+<priority>0.8</priority>
+  </url>
+  <url>
+<loc>https://www.viktoriehonc.com.ua/pifagor</loc>
+<lastmod>2025-02-17</lastmod>
+<priority>0.8</priority>
+  </url>
+  <url>
+<loc>https://www.viktoriehonc.com.ua/matrix</loc>
+<lastmod>2025-02-17</lastmod>
+<priority>0.7</priority>
+  </url>
+  <url>
+<loc>https://www.viktoriehonc.com.ua/sumistnist</loc>
+<lastmod>2025-02-17</lastmod>
+<priority>0.7</priority>
+  </url>
+  <url>
+<loc>https://www.viktoriehonc.com.ua/kids-matrix</loc>
+<lastmod>2025-02-17</lastmod>
+<priority>0.6</priority>
+  </url>
+  <url>
+<loc>https://www.viktoriehonc.com.ua/lila</loc>
+<lastmod>2025-02-17</lastmod>
+<priority>0.6</priority>
+  </url>
+  <url>
+<loc>https://www.viktoriehonc.com.ua/nine-worlds</loc>
+<lastmod>2025-02-17</lastmod>
+<priority>0.6</priority>
+  </url>
+  <url>
+<loc>https://www.viktoriehonc.com.ua/prediction</loc>
+<lastmod>2025-02-17</lastmod>
+<priority>0.6</priority>
+  </url>
+  <url>
+<loc>https://www.viktoriehonc.com.ua/</loc>
+<lastmod>2025-02-17</lastmod>
+<priority>1.0</priority>
+  </url>
+</urlset>
+
+📂 scully
+│   ├── plugins.js
+│   "use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.myPlugin = void 0;
+const scully_1 = require("@scullyio/scully");
+exports.myPlugin = 'myPlugin';
+const myFunctionPlugin = async (html) => {
+return html;
+};
+const validator = async () => [];
+(0, scully_1.registerPlugin)('render', exports.myPlugin, myFunctionPlugin, validator);
+//# sourceMappingURL=plugins.js.map
+│   ├── plugins.js.map
+│   {"version":3,"file":"plugins.js","sourceRoot":"","sources":["plugins.ts"],"names":[],"mappings":";;;AAAA,6CAAmE;AAEtD,QAAA,QAAQ,GAAG,UAAU,CAAC;AAEnC,MAAM,gBAAgB,GAAG,KAAK,EAAE,IAAY,EAAmB,EAAE;IAC/D,OAAO,IAAI,CAAC;AACd,CAAC,CAAC;AAEF,MAAM,SAAS,GAAG,KAAK,IAAI,EAAE,CAAC,EAAE,CAAC;AAEjC,IAAA,uBAAc,EAAC,QAAQ,EAAE,gBAAQ,EAAE,gBAAgB,EAAE,SAAS,CAAC,CAAC"}
+│   ├── plugins.ts
+│   import { registerPlugin, getPluginConfig } from '@scullyio/scully';
+
+export const myPlugin = 'myPlugin';
+
+const myFunctionPlugin = async (html: string): Promise<string> => {
+  return html;
+};
+
+const validator = async () => [];
+
+registerPlugin('render', myPlugin, myFunctionPlugin, validator);
+
+│   └── tsconfig.json
+│   {
+  "compileOnSave": false,
+  "compilerOptions": {
+"esModuleInterop": true,
+"importHelpers": false,
+"lib": ["ES2019", "dom"],
+"module": "commonjs",
+"moduleResolution": "node",
+"sourceMap": true,
+"target": "es2018",
+"types": ["node"],
+"skipLibCheck": true,
+"skipDefaultLibCheck": true,
+"typeRoots": ["../node_modules/@types"],
+"allowSyntheticDefaultImports": true
+  },
+  "exclude": ["./**/*spec.ts"]
+}
+
+📂 src
+│   📂 app
+│   │   📂 core
+│   │   │   📂 directives
+│   │   │   │   └── control-value-accessor.directive.ts
+│   │   │   │   import { Inject, Injector } from '@angular/core';
+import {
+  FormControl,
+  FormControlDirective,
+  FormControlName,
+  FormGroupDirective,
+  NgControl,
+  Validators,
+} from '@angular/forms';
+import { Subject, distinctUntilChanged, startWith, takeUntil, tap } from 'rxjs';
+import { Directive } from '@angular/core';
+
+@Directive({
+  selector: '[appControlValueAccessor]',
+})
+export class ControlValueAccessor<T> implements ControlValueAccessor<T> {
+  control!: FormControl | undefined;
+  isRequired = false;
+
+  private _isDisabled = false;
+  private _destroy$ = new Subject<void>();
+  private _onTouched!: () => T;
+
+  constructor(@Inject(Injector) private injector: Injector) {}
+
+  ngOnInit() {
+this.setFormControl();
+this.isRequired = this.control?.hasValidator(Validators.required) ?? false;
+  }
+
+  setFormControl() {
+try {
+  const formControl = this.injector.get(NgControl);
+
+  switch (formControl.constructor) {
+case FormControlName:
+  this.control = this.injector
+.get(FormGroupDirective)
+.getControl(formControl as FormControlName);
+  break;
+default:
+  this.control = (formControl as FormControlDirective)
+.form as FormControl;
+  break;
+  }
+} catch (err) {
+  this.control = new FormControl();
+  console.error(err);
+}
+  }
+
+  writeValue(value: T): void {
+this.control
+  ? this.control.setValue(value)
+  : (this.control = new FormControl(value));
+  }
+
+  registerOnChange(fn: (val: T | null) => T): void {
+this.control?.valueChanges
+  .pipe(
+takeUntil(this._destroy$),
+startWith(this.control.value),
+distinctUntilChanged(),
+tap((val) => fn(val))
+  )
+  .subscribe(() => this.control?.markAsUntouched());
+  }
+
+  registerOnTouched(fn: () => T): void {
+this._onTouched = fn;
+  }
+
+  setDisabledState(isDisabled: boolean): void {
+this._isDisabled = isDisabled;
+  }
+}
+
+│   │   │   📂 interceptors
+│   │   │   │   └── jwt.interceptor.ts
+│   │   │   │   import { JWT_NAME } from '../services/authentication.service';
+import { Injectable } from '@angular/core';
+import {
+  HttpRequest,
+  HttpHandler,
+  HttpEvent,
+  HttpInterceptor,
+} from '@angular/common/http';
+import { Observable } from 'rxjs';
+
+
+@Injectable()
+export class JwtInterceptor implements HttpInterceptor {
+  constructor() {}
+
+  intercept(
+request: HttpRequest<unknown>,
+next: HttpHandler
+  ): Observable<HttpEvent<unknown>> {
+const token = localStorage.getItem(JWT_NAME);
+
+// If a token exists, add it to the Authorization header
+if (token) {
+  // Clone the request and add the Authorization header with the token
+  const clonedReq = request.clone({
+headers: request.headers.set('Authorization', 'Bearer ' + token),
+  });
+
+  return next.handle(clonedReq);
+}
+
+return next.handle(request);
+  }
+}
+
+│   │   │   📂 interfaces
+│   │   │   │   └── index.ts
+│   │   │   │   export interface Review {
+  username: string;
+  publicationDate: string;
+  content: string;
+  rating: number;
+}
+
+│   │   │   📂 services
+│   │   │   │   ├── modal.service.spec.ts
+│   │   │   │   import { TestBed } from '@angular/core/testing';
+
+import { ModalService } from './modal.service';
+
+describe('ModalService', () => {
+  let service: ModalService;
+
+  beforeEach(() => {
+TestBed.configureTestingModule({});
+service = TestBed.inject(ModalService);
+  });
+
+  it('should be created', () => {
+expect(service).toBeTruthy();
+  });
+});
+
+│   │   │   │   ├── modal.service.ts
+│   │   │   │   import { Injectable } from '@angular/core';
+import { BehaviorSubject, Observable } from 'rxjs';
+
+@Injectable({
+  providedIn: 'root',
+})
+export class ModalService {
+  private modalOpenSubject = new BehaviorSubject<boolean>(false);
+  private modalDataSubject = new BehaviorSubject<any>(null);
+
+  get modalStatus$(): Observable<boolean> {
+return this.modalOpenSubject.asObservable();
+  }
+
+  get data$(): Observable<any> {
+return this.modalDataSubject.asObservable();
+  }
+
+  close() {
+this.modalOpenSubject.next(false);
+  }
+
+  open() {
+this.modalOpenSubject.next(true);
+  }
+
+  setData(data: any) {
+this.modalDataSubject.next(data);
+  }
+}
+
+│   │   │   │   └── svg.service.ts
+│   │   │   │   import { Injectable, inject } from '@angular/core';
+import { DomSanitizer, SafeHtml } from '@angular/platform-browser';
+import { svgIcons } from '../../shared/svg';
+
+@Injectable({
+  providedIn: 'root',
+})
+export class SvgService {
+  private sanitizer = inject(DomSanitizer);
+
+  loadSvg(): SvgIconsInterface {
+const safeSvgCodes: SvgIconsInterface = {};
+
+Object.keys(svgIcons).forEach((key) => {
+  safeSvgCodes[key] = this.sanitizer.bypassSecurityTrustHtml(svgIcons[key]);
+});
+
+return safeSvgCodes;
+  }
+}
+
+export interface SvgIconsInterface {
+  [key: string]: SafeHtml;
+}
+
+│   │   │   📂 variables
+│   │   │   ├── customFormsErrors.ts
+│   │   │   export const ErrorMessages: Record<string, string> = {
+  required: 'This field is required',
+  maxlength: 'Maximum length exceeded',
+  minlength: 'Minimum length not met',
+  pattern: 'Invalid pattern',
+  email: 'Invalid email format',
+  unique: 'Value must be unique',
+};
+
+export const CustomErrorMessages: Record<string, string> = {
+  required: "Це поле обов'язкове. ",
+  maxlength: 'Maximum length exceeded',
+  minlength: 'Minimum length not met',
+  pattern: 'Invalid pattern',
+  email: 'Invalid email format',
+  unique: 'Value must be unique',
+};
+
+│   │   │   ├── prices.ts
+│   │   │   export interface ConsultationDetails {
+  includes: string;
+  additional?: { key: string; value: string }[]; // Масив об'єктів {key, value}
+  duration?: string; // Необов'язкове, бо не у всіх є тривалість
+  conditions?: string; // Необов'язкове, бо не у всіх є умови
+  format?: string; // Необов'язкове, бо не у всіх є формат
+}
+
+export interface Consultation {
+  title: string;
+  price: string; // Може бути пустим, якщо ціна індивідуальна
+  details: ConsultationDetails;
+}
+
+export interface ServicePrices {
+  matrix: Consultation[];
+  games: Consultation[];
+  numerology: Consultation[];
+}
+
+export const Prices: ServicePrices = {
+  matrix: [
+{
+  title: 'Глибинна VIP консультація по матриці долі',
+  price: '150€',
+  details: {
+includes: 'Карта здоровʼя та аналіз чакральної системи',
+additional: [
+  {
+key: 'Особисті якості',
+value:
+  ' ( Характер, сильні і слабкі сторони, звідки ви можете черпати енергію, ресурс, місця сили, в чому Ваша супер сила ) Аналіз Особистості.',
+  },
+  {
+key: 'Повний опис талантів',
+value: 'від Бога і Рода.',
+  },
+  {
+key: 'Призначення ',
+value: '(особисте, соціальне, духовне).',
+  },
+  {
+key: 'Фінансовий канал.',
+value:
+  'Ви дізнаєтесь, де ховається справжній потік фінансів, щоб заробляти гроші легко та із задоволенням. Активація грошового потоку. Список найуспішніших професій.',
+  },
+  {
+key: 'Карма минулого життя',
+value: ', які кармічні задачі стоять перед Вами в цьому житті.',
+  },
+  {
+key: 'Додаткові програми',
+value: ', які впливають на Вашу долю та на які сфери життя.',
+  },
+  {
+key: 'Канал відносин:',
+value:
+  ' Як створити гармонічні відносини, ідеальний партнер для Вас, сексуальність.',
+  },
+  {
+key: 'Родові програми, ',
+value: ', відносини з батьками / дітьми.',
+  },
+  {
+key: "Рекомендації по здоров'ю",
+value: '(карта здоров’я по чакральній системі).',
+  },
+  {
+key: 'Керівництво по життю',
+value: '',
+  },
+  {
+key: 'Особистий бренд: ',
+value: 'самовираження в блозі (коротко).',
+  },
+  {
+key: 'Відео-консультація Zoom ',
+value: '1 – 1,5 години.',
+  },
+],
+duration: '1,5 - 2 години',
+conditions: 'Умови проведення вказуються індивідуально',
+  },
+},
+{
+  title: 'Індивідуальна консультація по матриці долі Express',
+  price: '70€',
+  details: {
+includes: 'Що входить в консультацію уточнюється під час запису',
+additional: [
+  {
+key: 'Особисті якості',
+value: '( Характер, сильні і слабкі сторони) Аналіз Особистості.',
+  },
+  {
+key: 'Таланти',
+value: 'Повний опис талантів від Бога і Рода.',
+  },
+  {
+key: 'Призначення',
+value: '(особисте, соціальне, духовне - коротко)',
+  },
+  {
+key: 'Фінансовий канал',
+value:
+  'Ви дізнаєтесь, де ховається справжній потік фінансів, щоб заробляти гроші легко та із задоволенням.',
+  },
+  {
+key: 'Карма',
+value:
+  'Карма минулого життя, які кармічні задачі стоять перед Вами в цьому житті.',
+  },
+  {
+key: 'Додаткові програми',
+value: 'Додаткові програми, які впливають на Вашу долю.',
+  },
+  {
+key: 'Канал відносин',
+value:
+  'Як створити гармонічні відносини, ідеальний партнер для Вас, сексуальність.',
+  },
+  {
+key: 'Родові програми',
+value: 'Відносини з батьками / дітьми.',
+  },
+  {
+key: 'Керівництво по життю',
+value: '',
+  },
+],
+duration: '45 хв',
+conditions: 'Умови проведення вказуються індивідуально',
+  },
+},
+{
+  title: 'Консультація по матриці сумісності пари або партнерів',
+  price: '80€',
+  details: {
+includes: 'Що входить в консультацію уточнюється під час запису',
+additional: [
+  {
+key: 'У позитиві сценарію пари',
+value: `
+  - Для чого зустрілися
+  - Як проявляється пара
+  - Що важливо для фінансового благополуччя і щасливих стосунків
+`,
+  },
+  {
+key: 'У негативному сценарію пари',
+value: `
+  - Проблеми і труднощі
+  - Якщо пара не виконує те, для чого зустрілася
+`,
+  },
+  {
+key: 'Зона комфорту пари',
+value: `
+  - Зона комфорту в стосунках
+  - Взаємини партнерів
+`,
+  },
+  {
+key: 'Рекомендації для пари',
+value: `
+  - Завдання пари для "притирання" у стосунках
+  - Завдання пари для успішної реалізації в соціумі
+  - Ресурс пари
+`,
+  },
+],
+duration: '1 година',
+conditions: 'Умови проведення вказуються індивідуально',
+  },
+},
+{
+  title: 'Індивідуальна консультація по дитячій матриці долі',
+  price: '35€',
+  details: {
+includes: 'Що входить в консультацію уточнюється під час запису',
+additional: [
+  {
+key: 'Сильні сторони і таланти дитини',
+value: '',
+  },
+  {
+key: 'Тривожні дзвіночки в поведінці',
+value: 'Які варто зауважити.',
+  },
+  {
+key: 'Підхід до дитини',
+value:
+  'Як знайти підхід до вашої дитини і налагодити комунікацію (Мислення дитини).',
+  },
+  {
+key: 'Гуртки для розвитку',
+value: 'Підберемо гуртки, які розкриють дитину.',
+  },
+  {
+key: 'Вибір професії',
+value: 'Підберемо професію, яка приноситиме задоволення і гроші.',
+  },
+  {
+key: 'Уроки для батьків',
+value: 'Які уроки ваша дитина принесла у ваше життя.',
+  },
+  {
+key: 'Страхи і блоки',
+value: 'Страхи і блоки на підсвідомості.',
+  },
+],
+duration: '45 хв',
+conditions: 'Умови проведення вказуються індивідуально',
+  },
+},
+{
+  title: 'Експрес-консультація по дитячій матриці долі',
+  price: '30€',
+  details: {
+includes: 'Короткий аналіз основних сильних сторін і рекомендацій.',
+additional: [
+  {
+key: 'Сильні сторони',
+value: 'Основні таланти дитини.',
+  },
+  {
+key: 'Поведінка',
+value: 'Короткий аналіз поведінкових патернів.',
+  },
+  {
+key: 'Рекомендації',
+value: 'Основні поради для виховання і розвитку.',
+  },
+],
+duration: '30 хвилин',
+conditions: 'Консультація доступна як онлайн, так і офлайн.',
+  },
+},
+{
+  title: 'Індивідуальна консультація: Страхи і блоки дитини',
+  price: '40€',
+  details: {
+includes: 'Аналіз підсвідомих страхів та рекомендації по їх подоланню.',
+additional: [
+  {
+key: 'Страхи',
+value: 'Виявлення блоків на підсвідомості.',
+  },
+  {
+key: 'Батьківські уроки',
+value: 'Що ваша дитина може навчити вас як батьків.',
+  },
+],
+duration: '45 хвилин',
+conditions:
+  'Консультація може бути проведена лише в індивідуальному порядку.',
+  },
+},
+{
+  title: 'Глибинна фінансова консультація “Де мої гроші”',
+  price: '100€',
+  details: {
+includes:
+  'Консультація допомагає знайти причини фінансових блоків та відкриває нові можливості для фінансового зростання.',
+additional: [
+  {
+key: 'Фінансовий канал',
+value:
+  'Аналіз фінансового потоку та виявлення джерел його блокування.',
+  },
+  {
+key: 'Причини обмежень',
+value:
+  'Дослідження кармічних програм або підсвідомих переконань, які впливають на фінансову стабільність.',
+  },
+  {
+key: 'Можливості зростання',
+value:
+  'Індивідуальні рекомендації щодо напрямків розвитку та оптимальних шляхів для отримання доходу.',
+  },
+  {
+key: 'Особисті таланти',
+value:
+  'Які ваші сильні сторони можна використати для легшого заробітку.',
+  },
+  {
+key: 'Фінансова стратегія',
+value: 'Побудова плану для залучення більшого потоку грошей.',
+  },
+],
+duration: '1 година',
+conditions:
+  'Умови проведення вказуються індивідуально залежно від клієнта.',
+  },
+},
+{
+  title: 'Прогноз на період (дата, місяць, квартал, рік)',
+  price: '',
+  details: {
+includes:
+  'Прогноз допоможе зрозуміти основні тенденції періоду та підготуватись до можливих викликів і можливостей. Вартість розраховується індивідуально залежно від обраного періоду.',
+additional: [
+  {
+key: 'Енергетичний потенціал',
+value:
+  'Які енергії будуть домінувати у вашому житті в обраний період.',
+  },
+  {
+key: 'Сфери життя',
+value:
+  'Прогноз для основних сфер: робота, фінанси, відносини, здоровʼя.',
+  },
+  {
+key: 'Важливі події',
+value: 'Рекомендації щодо дій у сприятливі та несприятливі дати.',
+  },
+  {
+key: 'Фінансові перспективи',
+value: 'Прогноз для стабільності та зростання доходів.',
+  },
+  {
+key: 'Рекомендації',
+value:
+  'Практичні поради щодо використання можливостей періоду на вашу користь.',
+  },
+],
+format:
+  'Консультація проводиться онлайн або офлайн, залежно від домовленості.',
+  },
+},
+{
+  title: 'Екстрений прогноз на подію (дата, день)',
+  price: '20€',
+  details: {
+includes:
+  'Швидкий аналіз важливої події з урахуванням енергій дня та впливу зовнішніх факторів.',
+additional: [
+  {
+key: 'Аналіз події',
+value: 'Визначення потенціалу успіху та ризиків для обраної дати.',
+  },
+  {
+key: 'Сприятливий час',
+value: 'Рекомендація оптимального часу для дії або початку події.',
+  },
+  {
+key: 'Енергетичний фон',
+value:
+  'Аналіз впливу дня на вашу енергію та загальний результат події.',
+  },
+  {
+key: 'Рекомендації',
+value:
+  'Конкретні поради для покращення результатів запланованого заходу.',
+  },
+],
+format:
+  'Формат проведення уточнюється індивідуально: онлайн або офлайн.',
+  },
+},
+  ],
+  games: [
+{
+  title: '«Ліла»- Індивідуальна гра',
+  price: '200$',
+  details: {
+includes: 'Персоналізована гра відповідно до запиту',
+additional: [
+
+  {
+key: 'Глибоке усвідомлення себе',
+value:
+  'Розуміння того, що відбувається у вашому житті та що це спричиняє.',
+  },
+  {
+key: 'Відповіді на важливі питання',
+value:
+  'Знайдете рішення та побачите істинні причини своїх труднощів.',
+  },
+  {
+key: 'Підказки для дій',
+value:
+  'Гра покаже вам напрямок руху та конкретні кроки для досягнення бажаного.',
+  },
+  {
+key: 'Енергія та натхнення',
+value:
+  'Після гри відчуєте внутрішню силу, розуміння та легкість у прийнятті рішень.',
+  },
+],
+duration: '2 години',
+conditions: 'Індивідуальне налаштування під потреби учасника.',
+  },
+},
+{
+  title: '«Ліла»- Групова гра',
+  price: '100$',
+  details: {
+includes: 'Гра в групі, розрахована на кількох учасників (2-10 осіб)',
+additional: [
+  {
+key: 'Групова взаємодія',
+value:
+  'Інтерактивний процес із обміну досвідом та підсвідомих підказок.',
+  },
+  {
+key: 'Емоційне перезавантаження',
+value:
+  'Після гри учасники відчувають гармонію та легкість у прийнятті рішень.',
+  },
+],
+duration: '2-4 години',
+conditions: 'Формат гри узгоджується індивідуально',
+  },
+},
+{
+  title: '«9 Світів»- Індивідуальна гра',
+  price: '250$',
+  details: {
+includes: 'Трансформаційний шлях через 9 рівнів пізнання',
+additional: [
+  {
+key: 'Глибоке самопізнання',
+value:
+  'Ви усвідомите свої справжні бажання, мотиви та підсвідомі установки.',
+  },
+  {
+key: 'Розкриття внутрішніх блоків',
+value:
+  'Виявлення страхів, переконань та емоційних затискачів, які обмежують вас.',
+  },
+  {
+key: 'Прорив у важливій сфері життя',
+value:
+  "Отримаєте чітке розуміння та напрямок руху щодо стосунків, кар'єри, фінансів або духовного шляху.",
+  },
+  {
+key: 'Відповіді на ключові питання',
+value:
+  'Гра працює як дзеркало вашої душі, розкриваючи те, що впливає на вас.',
+  },
+  {
+key: 'Емоційне перезавантаження',
+value:
+  'Після гри ви відчуєте легкість, ясність і внутрішню гармонію.',
+  },
+],
+duration: '2-3 години',
+conditions: 'Формат гри узгоджується індивідуально',
+  },
+},
+{
+  title: '«9 Світів»- Групова гра',
+  price: '150$',
+  details: {
+includes: 'Групова гра з глибоким трансформаційним процесом (2-8 осіб)',
+additional: [
+  {
+key: 'Групова динаміка',
+value:
+  'Колективна робота дозволяє відкрити нові перспективи через взаємодію з іншими учасниками.',
+  },
+  {
+key: 'Гармонія та ясність',
+value:
+  'Гра дає можливість відчути ясність, гармонію та нові можливості в житті.',
+  },
+],
+duration: '3-4 години',
+conditions: 'Формат гри узгоджується індивідуально',
+  },
+},
+  ],
+  numerology: [
+{
+  title: 'Глибока нумерологічна консультація',
+  price: '150$',
+  details: {
+includes: 'Комплексний аналіз вашої дати народження',
+additional: [
+  {
+key: 'Число свідомості',
+value: 'Основна енергія, що визначає характер та сильні сторони.',
+  },
+  {
+key: 'Місія життя',
+value: 'Ваше головне призначення та як його реалізувати.',
+  },
+  {
+key: 'Ідеальна професія',
+value: 'Сфера, у якій ви знайдете своє покликання.',
+  },
+  {
+key: 'Грошовий код',
+value: 'Як правильно взаємодіяти з фінансами для достатку.',
+  },
+  {
+key: 'Ключ до гармонійних стосунків',
+value: 'Як будувати здорові відносини та уникати помилок.',
+  },
+  {
+key: 'Ресурси та джерела енергії',
+value: 'Що вас наповнює, а що виснажує.',
+  },
+  {
+key: 'Кармічні задачі',
+value: 'Уроки, які потрібно засвоїти в цьому житті.',
+  },
+  {
+key: 'Сумісність з іншими',
+value: 'Як гармонійно взаємодіяти з людьми.',
+  },
+  {
+key: 'Прогноз на рік',
+value: 'Сприятливі періоди та важливі події.',
+  },
+],
+duration: '2 години',
+conditions:
+  'Консультація проходить онлайн. Ви отримуєте персональний розбір та рекомендації.',
+  },
+},
+  ],
+};
+
+│   │   │   └── routes.ts
+│   │   │   export interface Route {
+  path?: string;
+  label: string;
+  subMenu?: Route[];
+  subMenuRoutePrefix?: string;
+}
+
+export const Routes: Route[] = [
+  {
+path: 'home',
+label: 'Головна',
+subMenu: [
+  { path: 'старт', label: 'Старт' },
+  { path: 'про-мене', label: 'Про мене' },
+  { path: 'мої-послуги', label: 'Мої послуги' },
+  { path: 'про-матрицю-долі', label: 'Про матрицю долі' },
+  { path: 'про-сумістність', label: 'Про сумістність по матриці долі' },
+  { path: 'про-квадрат-піфагора', label: 'Про квадрат піфагора' },
+  { path: 'відгуки', label: 'Відгуки' },
+  { path: 'запланувати-зустріч', label: 'Консультація' },
+  { path: 'контакти', label: `Зв'язатись` },
+],
+subMenuRoutePrefix: '/home#',
+  },
+  { path: 'me', label: 'Про мене' },
+  {
+label: 'Матриця долі',
+subMenu: [
+  { path: 'matrix', label: 'Матриця долі' },
+  { path: 'sumistnist', label: 'Калькулятор сумістності' },
+  { path: 'kids-matrix', label: 'Дитяча матриця долі' },
+  // { path: 'prediction', label: 'Прогнозування' },
+],
+  },
+  {
+label: 'Нумерологія',
+subMenu: [
+  { path: 'pifagor', label: 'Квадрат піфагора' },
+],
+  },
+  {
+label: 'Трансформаційні ігри',
+subMenu: [
+  { path: 'lila', label: 'Гра Ліла' },
+  { path: 'nine-worlds', label: 'Гра 9 світів' },
+],
+  },
+];
+
+│   │   📂 pages
+│   │   │   📂 home
+│   │   │   │   📂 components
+│   │   │   │   │   📂 about-matrix
+│   │   │   │   │   │   ├── about-matrix.component.html
+│   │   │   │   │   │   <section class="matrix-section container darker">
+  <div class="wrapper wrapper__grid">
+<div class="matrix-text col-span-1">
+  <h2>Що таке <br/> Матриця Долі?</h2>
+
+  <ul class="list-disc pl-6 space-y-4">
+<li>
+  <strong>Матриця долі</strong> – це система самопізнання, яка заснована на певних
+  розрахунках і дозволяє глибоко зрозуміти свою сутність. Важливо
+  підкреслити, що цей метод не має нічого спільного з ворожіннями чи
+  передбаченнями. Він дає нам можливість заглянути вглиб себе, відкриваючи
+  ті ресурси та якості, які можуть допомогти нам у житті.
+</li>
+<li>
+  Згідно з філософією методу, кожна людина – це безсмертна душа, яка
+  приходить на землю з життя в життя, щоб самовдосконалюватися та
+  виконувати свої унікальні завдання. <strong>Матриця долі</strong> – це інструмент, що
+  допомагає краще зрозуміти себе, розкрити свій потенціал і визначити, в
+  якому напрямку варто рухатися.
+</li>
+  </ul>
+
+  <a class="primary-button to-matrix2 mt-5" routerLink="/matrix">
+Розрахувати свою матрицю <b><i class="fas fa-arrow-right"></i></b>
+  </a>
+
+</div>
+<div class="matrix-photo col-span-1">
+  <img
+src="assets/img/матриця.svg"
+alt="Matrix of Destiny"
+style="
+  /* width: 100%; */
+  max-width: 600px;
+  object-fit: cover;
+  border-radius: 0.5rem;
+  mix-blend-mode: multiply;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+"
+class="h-[300px] md:h-[600px]"
+  />
+</div>
+  </div>
+</section>
+
+│   │   │   │   │   │   ├── about-matrix.component.scss
+│   │   │   │   │   │   
+
+│   │   │   │   │   │   ├── about-matrix.component.spec.ts
+│   │   │   │   │   │   import { ComponentFixture, TestBed } from '@angular/core/testing';
+
+import { AboutMatrixComponent } from './about-matrix.component';
+
+describe('AboutMatrixComponent', () => {
+  let component: AboutMatrixComponent;
+  let fixture: ComponentFixture<AboutMatrixComponent>;
+
+  beforeEach(async () => {
+await TestBed.configureTestingModule({
+  declarations: [AboutMatrixComponent]
+})
+.compileComponents();
+
+fixture = TestBed.createComponent(AboutMatrixComponent);
+component = fixture.componentInstance;
+fixture.detectChanges();
+  });
+
+  it('should create', () => {
+expect(component).toBeTruthy();
+  });
+});
+
+│   │   │   │   │   │   └── about-matrix.component.ts
+│   │   │   │   │   │   import { Component } from '@angular/core';
+
+@Component({
+  selector: 'app-about-matrix',
+  templateUrl: './about-matrix.component.html',
+  styleUrl: './about-matrix.component.scss'
+})
+export class AboutMatrixComponent {
+
+}
+
+│   │   │   │   │   📂 about-me
+│   │   │   │   │   │   ├── about-me.component.html
+│   │   │   │   │   │   <section class="container">
+  <h2 class="w-full md:hidden block">Про мене</h2>
+
+  <div class="wrapper wrapper__grid">
+<div class="about-photo">
+  <img src="assets/img/img_2.jpg"
+  style="
+  /* width: 100%; */
+  max-width: 600px;
+  max-height: 600px;
+  object-position: bottom;
+  object-fit: cover;
+  border-radius: 0.5rem;
+  mix-blend-mode: multiply;
+"
+  alt="Viktorie Honč" />
+</div>
+
+<div class="about-text">
+  <h2 class="w-full hidden md:block">Про мене</h2>
+  <h3>Я - ВІКТОРІЯ ГОНЧ</h3>
+  <div class="flex w-fit m-auto md:m-0 mb-5">
+<ul class="regalies">
+  <li>— ЕКСПЕРТ З МАТРИЦІ ДОЛІ</li>
+  <li>— ТЕТА ХІЛЕР</li>
+  <li>— НУМЕРОЛОГ</li>
+  <li>— ЕКСПЕРТ З ПСИХОСОМАТИКИ</li>
+  <li>— АТМОЛОГ</li>
+  <li>— АТМА ХІЛЕР</li>
+</ul>
+  </div>
+
+  <!-- <ul style="padding-left: 1.5rem; list-style-type: disc; color: #4a4a4a">
+<li>
+  Я займаюся нумерологією, допомагаючи людям краще зрозуміти себе та
+  знайти гармонію у житті через вивчення чисел. Також я практикую
+  тета-хілінг, що дозволяє мені допомагати іншим звільнятися від
+  обмежень і відкривати свій внутрішній потенціал.
+</li>
+<li>
+  Ще однією з моїх практик є робота з “матрицею долі”, де я допомагаю
+  людям знайти їх життєве призначення, а також аксес-бари, що дозволяють
+  очистити розум і тіло від накопиченого стресу та негативу.
+</li>
+
+<li>
+  Окрім цього, я веду трансформаційну гру “9 світів”, яка допомагає
+  учасникам відкрити нові горизонти свідомості та подолати внутрішні
+  перешкоди на шляху до своїх цілей. Записуйся на особисту консультацiю
+  в директ
+</li>
+  </ul> -->
+
+  <a class="primary-button mt-5" routerLink="/me">
+Більше про мене <b><i class="fas fa-arrow-right"></i></b>
+  </a>
+</div>
+  </div>
+</section>
+
+│   │   │   │   │   │   ├── about-me.component.scss
+│   │   │   │   │   │   @import '../../../../shared/scss/variables.scss';
+
+
+.regalies {
+  max-width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+
+  li {
+width: max-content;
+  }
+}
+
+│   │   │   │   │   │   ├── about-me.component.spec.ts
+│   │   │   │   │   │   import { ComponentFixture, TestBed } from '@angular/core/testing';
+
+import { AboutMeComponent } from './about-me.component';
+
+describe('AboutMeComponent', () => {
+  let component: AboutMeComponent;
+  let fixture: ComponentFixture<AboutMeComponent>;
+
+  beforeEach(async () => {
+await TestBed.configureTestingModule({
+  declarations: [AboutMeComponent]
+})
+.compileComponents();
+
+fixture = TestBed.createComponent(AboutMeComponent);
+component = fixture.componentInstance;
+fixture.detectChanges();
+  });
+
+  it('should create', () => {
+expect(component).toBeTruthy();
+  });
+});
+
+│   │   │   │   │   │   └── about-me.component.ts
+│   │   │   │   │   │   import { Component } from '@angular/core';
+
+@Component({
+  selector: 'app-about-me',
+  templateUrl: './about-me.component.html',
+  styleUrl: './about-me.component.scss'
+})
+export class AboutMeComponent {
+
+}
+
+│   │   │   │   │   📂 about-pifagor
+│   │   │   │   │   │   ├── about-pifagor.component.html
+│   │   │   │   │   │   <section class="matrix-section container darker">
+  <div class="wrapper wrapper__grid">
+<div class="about-text col-span-1">
+  <h2>Що таке Квадрат Піфагора?</h2>
+  <ul class="list-disc pl-6 space-y-4">
+<li>
+  <strong>Квадрат Піфагора</strong> – це інструмент самопізнання, який базується на числових розрахунках. Він допомагає виявити ваші сильні та слабкі сторони, приховані таланти, а також дізнатися, як ваша дата народження впливає на різні аспекти життя.
+</li>
+<li>
+  <strong>Психоматриця</strong> містить інформацію про вашу вроджену енергію, творчі та розумові здібності, здоров’я, а також відношення до сім’ї, оточення, матеріальних і духовних цінностей. Це своєрідна карта вашої особистості, яка дозволяє зазирнути вглиб себе та зрозуміти, як покращити ті чи інші якості.
+</li>
+<li>
+  Важливо зазначити, що дані в <strong>Квадраті Піфагора</strong> не є вироком. Більшість показників можна змінити, працюючи над собою. За допомогою спеціальних технік ви зможете "прокачати" слабкі сторони або оптимізувати енергетичні зони для досягнення гармонії.
+</li>
+  </ul>
+
+  <a class="primary-button mt-5" routerLink="/pifagor">
+Мій квадрат Піфагора <b><i class="fas fa-arrow-right"></i></b>
+  </a>
+</div>
+<div class="matrix-photo col-span-1">
+  <img
+src="assets/img/піфагор.svg"
+alt="Psychomatrix"
+style="
+  /* width: 100%; */
+  max-width: 600px;
+  object-fit: cover;
+  border-radius: 0.5rem;
+  mix-blend-mode: multiply;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+"
+class="h-[300px] md:h-[600px]"
+  />
+</div>
+  </div>
+</section>
+
+│   │   │   │   │   │   ├── about-pifagor.component.scss
+│   │   │   │   │   │   
+│   │   │   │   │   │   ├── about-pifagor.component.spec.ts
+│   │   │   │   │   │   import { ComponentFixture, TestBed } from '@angular/core/testing';
+
+import { AboutPifagorComponent } from './about-pifagor.component';
+
+describe('AboutPifagorComponent', () => {
+  let component: AboutPifagorComponent;
+  let fixture: ComponentFixture<AboutPifagorComponent>;
+
+  beforeEach(async () => {
+await TestBed.configureTestingModule({
+  declarations: [AboutPifagorComponent]
+})
+.compileComponents();
+
+fixture = TestBed.createComponent(AboutPifagorComponent);
+component = fixture.componentInstance;
+fixture.detectChanges();
+  });
+
+  it('should create', () => {
+expect(component).toBeTruthy();
+  });
+});
+
+│   │   │   │   │   │   └── about-pifagor.component.ts
+│   │   │   │   │   │   import { Component } from '@angular/core';
+
+@Component({
+  selector: 'app-about-pifagor',
+  templateUrl: './about-pifagor.component.html',
+  styleUrl: './about-pifagor.component.scss'
+})
+export class AboutPifagorComponent {
+
+}
+
+│   │   │   │   │   📂 about-sumistnist
+│   │   │   │   │   │   ├── about-sumistnist.component.html
+│   │   │   │   │   │   <section class="container">
+  <h2 class="w-full md:hidden block">Сумісність за <br/> Матрицею Долі</h2>
+
+  <div class="wrapper wrapper__grid">
+<div class="about-photo">
+  <img
+src="assets/img/парні матриці.svg"
+style="
+  /* width: 100%; */
+  max-width: 600px;
+  object-fit: cover;
+  border-radius: 0.5rem;
+  mix-blend-mode: multiply;
+"
+alt="Viktorie Honč"
+  />
+</div>
+
+<div class="about-text">
+  <h2 class="w-full hidden md:block">Сумісність за матрицею долі</h2>
+
+  <ul style="padding-left: 1.5rem; list-style-type: disc; color: #4a4a4a">
+<li>
+  Матриця сумісності поєднує в собі нумерологію та Таро, спираючись на
+  22 старших аркани Таро і розрахунок дати народження партнерів. Цей
+  метод дозволяє побачити повну картину стосунків та з високою точністю
+  оцінити їхню перспективу.
+</li>
+<li>
+  Сумісність за матрицею долі допомагає визначити, чи є ваш партнер тією
+  людиною, з якою ви зможете побудувати щасливе майбутнє, або ж це лише
+  тимчасовий супутник, стосунки з яким не принесуть гармонії.
+</li>
+<li>
+  Розрахунок сумісності здійснюється за датами народження обох
+  партнерів, а для глибшого аналізу враховується також місце народження.
+  Зіставлення двох матриць показує, наскільки ваші енергії гармоніюють і
+  які аспекти стосунків потребують уваги.
+</li>
+  </ul>
+
+  <a class="primary-button to-matrix2 mt-5" routerLink="/sumistnist">
+Розрахувати сумісність <b><i class="fas fa-arrow-right"></i></b>
+  </a>
+</div>
+  </div>
+</section>
+
+│   │   │   │   │   │   ├── about-sumistnist.component.scss
+│   │   │   │   │   │   
+│   │   │   │   │   │   ├── about-sumistnist.component.spec.ts
+│   │   │   │   │   │   import { ComponentFixture, TestBed } from '@angular/core/testing';
+
+import { AboutSumistnistComponent } from './about-sumistnist.component';
+
+describe('AboutSumistnistComponent', () => {
+  let component: AboutSumistnistComponent;
+  let fixture: ComponentFixture<AboutSumistnistComponent>;
+
+  beforeEach(async () => {
+await TestBed.configureTestingModule({
+  declarations: [AboutSumistnistComponent]
+})
+.compileComponents();
+
+fixture = TestBed.createComponent(AboutSumistnistComponent);
+component = fixture.componentInstance;
+fixture.detectChanges();
+  });
+
+  it('should create', () => {
+expect(component).toBeTruthy();
+  });
+});
+
+│   │   │   │   │   │   └── about-sumistnist.component.ts
+│   │   │   │   │   │   import { Component } from '@angular/core';
+
+@Component({
+  selector: 'app-about-sumistnist',
+  templateUrl: './about-sumistnist.component.html',
+  styleUrl: './about-sumistnist.component.scss'
+})
+export class AboutSumistnistComponent {
+
+}
+
+│   │   │   │   │   📂 calendly-widget
+│   │   │   │   │   │   ├── calendly-widget.component.html
+│   │   │   │   │   │   <section id="calendly-widget" class="container section">
+  <div class="wrapper">
+<h2>Запланувати зустріч</h2>
+<div id="calendly-scheduler" class="h-[100vh]"></div>
+  </div>
+</section>
+
+│   │   │   │   │   │   ├── calendly-widget.component.scss
+│   │   │   │   │   │   
+│   │   │   │   │   │   ├── calendly-widget.component.spec.ts
+│   │   │   │   │   │   import { ComponentFixture, TestBed } from '@angular/core/testing';
+
+import { CalendlyWidgetComponent } from './calendly-widget.component';
+
+describe('CalendlyWidgetComponent', () => {
+  let component: CalendlyWidgetComponent;
+  let fixture: ComponentFixture<CalendlyWidgetComponent>;
+
+  beforeEach(async () => {
+await TestBed.configureTestingModule({
+  declarations: [CalendlyWidgetComponent]
+})
+.compileComponents();
+
+fixture = TestBed.createComponent(CalendlyWidgetComponent);
+component = fixture.componentInstance;
+fixture.detectChanges();
+  });
+
+  it('should create', () => {
+expect(component).toBeTruthy();
+  });
+});
+
+│   │   │   │   │   │   └── calendly-widget.component.ts
+│   │   │   │   │   │   import { Component, AfterViewInit } from '@angular/core';
+
+@Component({
+  selector: 'app-calendly-widget',
+  templateUrl: './calendly-widget.component.html',
+  styleUrl: './calendly-widget.component.scss',
+})
+export class CalendlyWidgetComponent implements AfterViewInit {
+
+  ngAfterViewInit() {
+const interval = setInterval(() => {
+  const Calendly = (window as any).Calendly;
+  if (Calendly && Calendly.initInlineWidget) {
+Calendly.initInlineWidget({
+  url: 'https://calendly.com/anastasiia_coach',
+  parentElement: document.getElementById('calendly-scheduler'),
+  prefill: {},
+  utm: {},
+});
+clearInterval(interval); // Зупиняємо інтервал після ініціалізації
+  }
+}, 100); // Перевіряємо кожні 100 мс
+  }
+}
+
+│   │   │   │   │   📂 carousel
+│   │   │   │   │   │   ├── carousel.component.html
+│   │   │   │   │   │   <!-- <div class="container2 ">
+  <owl-carousel-o [options]="customOptions">
+<ng-template carouselSlide>
+  <div class="slide-content">ЕКСПЕРТ З МАТРИЦІ ДОЛІ</div>
+</ng-template>
+<ng-template carouselSlide>
+  <div class="slide-content">ТЕТА ХІЛЕР</div>
+</ng-template>
+<ng-template carouselSlide>
+  <div class="slide-content">НУМЕРОЛОГ</div>
+</ng-template>
+<ng-template carouselSlide>
+  <div class="slide-content">БЛОГЕР</div>
+</ng-template>
+  </owl-carousel-o>
+
+</div> -->
+
+│   │   │   │   │   │   ├── carousel.component.scss
+│   │   │   │   │   │   .slide-content{
+  width: 100%;
+  height: 100%;
+  background: #000;
+  color: blue;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.container2{
+  width: 100vw;
+  overflow: hidden;
+}
+
+│   │   │   │   │   │   ├── carousel.component.spec.ts
+│   │   │   │   │   │   import { ComponentFixture, TestBed } from '@angular/core/testing';
+
+import { CarouselComponent } from './carousel.component';
+
+describe('CarouselComponent', () => {
+  let component: CarouselComponent;
+  let fixture: ComponentFixture<CarouselComponent>;
+
+  beforeEach(async () => {
+await TestBed.configureTestingModule({
+  declarations: [CarouselComponent]
+})
+.compileComponents();
+
+fixture = TestBed.createComponent(CarouselComponent);
+component = fixture.componentInstance;
+fixture.detectChanges();
+  });
+
+  it('should create', () => {
+expect(component).toBeTruthy();
+  });
+});
+
+│   │   │   │   │   │   └── carousel.component.ts
+│   │   │   │   │   │   import { Component } from '@angular/core';
+import { OwlOptions } from 'ngx-owl-carousel-o';
+
+@Component({
+  selector: 'app-carousel',
+  templateUrl: './carousel.component.html',
+  styleUrls: ['./carousel.component.scss'],
+})
+export class CarouselComponent {
+
+  customOptions: OwlOptions = {
+loop: true,
+nav: false,
+dots: false,
+mouseDrag: false,
+touchDrag: false,
+pullDrag: false,
+autoplay: true,
+autoplayHoverPause: false,
+autoplayTimeout: 10, // Низьке значення для плавного безперервного руху
+smartSpeed: 1000, // Плавність руху
+responsive: {
+  0: { items: 1 },
+},
+  };
+
+}
+
+│   │   │   │   │   📂 hiro
+│   │   │   │   │   │   ├── hiro.component.html
+│   │   │   │   │   │   <section
+  class="hero-section bg-cover bg-center relative flex flex-col md:flex-row"
+>
+  <div class="left-column flex items-center justify-center">
+<img width="20px" src="assets/logo.svg" alt="Фото" class="logo" />
+  </div>
+
+  <div
+class="right-column flex-col justify-center p-8 bg-cover bg-no-repeat hidden md:flex"
+style="background-image: url('assets/img/img_1.jpg')"
+  ></div>
+
+  <div class="flex flex-col gap-4 to-matrix justify-center items-center" >
+<a class="primary-button w-full" href="/home#про-матрицю-долі">
+  Розрахувати матрицю <b><i class="fas fa-chevron-down"></i></b>
+</a>
+<a class="primary-button w-full" href="/home#контакти">
+  Записатись на консультацію <b><i class="fas fa-calendar-days"></i></b>
+</a>
+  </div>
+</section>
+
+
+
+│   │   │   │   │   │   ├── hiro.component.scss
+│   │   │   │   │   │   @import "../../../../shared/scss/variables.scss";
+
+.hero-section {
+  height: 100dvh;
+  position: relative;
+  transition: .3s;
+
+  .logo{
+width: 100%;
+max-width: 500px;
+  }
+
+  .left-column {
+width: 100%;
+display: flex;
+justify-content: center;
+align-items: center;
+background-color: $secondary-color;
+
+.text {
+  width: fit-content;
+}
+  }
+
+  .right-column {
+position: relative;
+width: 100%;
+
+img {
+  object-fit: cover;
+}
+  }
+
+  .to-matrix {
+position: absolute;
+left: 50%;
+transform: translate(-50%, -50%);
+
+// @media (min-width: 768px) {
+  left: 50%;
+  bottom: 50px;
+  bottom: 0;
+  width: 96%;
+  margin: auto;
+  transform: translate(-50%, -50%);
+// }
+  }
+
+  .primary-button{
+width: none;
+max-width: none;
+display: flex;
+gap: 8px;
+align-items: center;
+justify-content: center;
+  }
+
+  @media (min-width: 768px) {
+.primary-button{
+
+
+  width: max-content;
+max-width: max-content;
+}
+  }
+
+  .left-column,
+  .right-column {
+width: 100%;
+height: 100%;
+  }
+
+  @media (min-width: 768px) {
+.left-column,
+.right-column {
+  width: 50%;
+  height: 100%;
+}
+  }
+}
+
+│   │   │   │   │   │   ├── hiro.component.spec.ts
+│   │   │   │   │   │   import { ComponentFixture, TestBed } from '@angular/core/testing';
+
+import { HiroComponent } from './hiro.component';
+
+describe('HiroComponent', () => {
+  let component:
 ├── .editorconfig
 # Editor configuration, see https://editorconfig.org
 root = true

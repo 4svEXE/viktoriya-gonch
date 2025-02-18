@@ -5,17 +5,14 @@
       class="link-button"
       routerLinkActive="active"
     >
-      <b class="cursor-pointer" [routerLink]="route.path">{{
-        route.label
-      }}</b>
+      <b class="cursor-pointer" [routerLink]="route.path">{{ route.label }}</b>
 
       @if (route.subMenu){
       <div class="relative">
         <nav
           class="sub-navigation md:bg-black relative md:absolute md:opacity-0 opacity-100"
         >
-          @for (subRoute of route.subMenu; track $index) {
-            @if
+          @for (subRoute of route.subMenu; track $index) { @if
           (route.subMenuRoutePrefix) {
           <a
             [href]="route.subMenuRoutePrefix + subRoute.path"
@@ -27,8 +24,7 @@
           <a [routerLink]="subRoute.path" class="link-button">
             {{ subRoute.label }}
           </a>
-          }
-        }
+          } }
         </nav>
       </div>
       }

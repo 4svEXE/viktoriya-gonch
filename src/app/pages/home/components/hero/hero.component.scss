@@ -5,7 +5,7 @@
   position: relative;
   transition: .3s;
 
-  .logo{
+  .logo {
     width: 100%;
     max-width: 500px;
   }
@@ -34,19 +34,14 @@
   .to-matrix {
     position: absolute;
     left: 50%;
+    bottom: 50px;
+    bottom: 0;
+    width: 96%;
+    margin: auto;
     transform: translate(-50%, -50%);
-
-    // @media (min-width: 768px) {
-      left: 50%;
-      bottom: 50px;
-      bottom: 0;
-      width: 96%;
-      margin: auto;
-      transform: translate(-50%, -50%);
-    // }
   }
 
-  .primary-button{
+  .primary-button {
     width: none;
     max-width: none;
     display: flex;
@@ -56,11 +51,9 @@
   }
 
   @media (min-width: 768px) {
-    .primary-button{
-
-
+    .primary-button {
       width: max-content;
-    max-width: max-content;
+      max-width: max-content;
     }
   }
 
@@ -71,6 +64,7 @@
   }
 
   @media (min-width: 768px) {
+
     .left-column,
     .right-column {
       width: 50%;

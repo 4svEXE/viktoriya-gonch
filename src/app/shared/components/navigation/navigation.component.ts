@@ -8,7 +8,6 @@ import { Route, Routes } from '../../../core/variables/routes';
   standalone: true,
   imports: [CommonModule, RouterModule],
   templateUrl: './navigation.component.html',
-  styleUrls: ['./navigation.component.scss'],
 })
 export class NavigationComponent {
   @Input() isHomeNav = true;

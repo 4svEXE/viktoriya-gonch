@@ -1,6 +1,7 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { PagesRoutingModule } from './pages-routing.module';
+
 import { MatExpansionModule } from '@angular/material/expansion';
 
 import { HomeModule } from './home/home.module';
@@ -23,6 +24,20 @@ import { ReviewsComponent } from '../shared/components/reviews/reviews.component
 import { MyAllServicesComponent } from '../shared/components/my-all-services/my-all-services.component';
 
 @NgModule({
+  imports: [
+    CommonModule,
+    PagesRoutingModule,
+    HomeModule,
+    MatExpansionModule,
+    IframeSectionComponent, // ✅ Standalone
+    ContactsComponent, // ✅ Standalone
+    MyServicesComponent, // ✅ Standalone
+    MarqueeComponent, // ✅ Standalone
+    CarouselModule,
+    SectionGridComponent, // ✅ Standalone
+    ReviewsComponent, // ✅ Standalone
+    MyAllServicesComponent // ✅ Standalone
+  ],
   declarations: [
     PifagorComponent,
     SumistnistComponent,
@@ -32,20 +47,7 @@ import { MyAllServicesComponent } from '../shared/components/my-all-services/my-
     KidsMatrixComponent,
     NineWorldsComponent,
     PredictionComponent,
-  ],
-  imports: [
-    CommonModule,
-    PagesRoutingModule,
-    HomeModule,
-    MatExpansionModule,
-    IframeSectionComponent,
-    ContactsComponent,
-    MyServicesComponent,
-    MarqueeComponent,
-    CarouselModule,
-    SectionGridComponent,
-    ReviewsComponent,
-    MyAllServicesComponent
-],
+  ]
 })
 export class PagesModule {}
+

@@ -14,8 +14,7 @@ import { SocialLinksComponent } from '../../components/social-links/social-links
 export class ModalComponent {
   @Input() title = '';
 
-
-  isModalOpen:boolean = false;
+  isModalOpen: boolean = false;
 
   constructor(public modalService: ModalService) {}
 
@@ -37,5 +36,4 @@ export class ModalComponent {
       this.closeModal();
     }
   }
-
 }

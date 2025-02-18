@@ -3,12 +3,7 @@
   align-items: center;
   grid-template-columns: repeat(2, minmax(0, 1fr));
   gap: 1rem;
-
-
-  // min-height: 70dvh;
   height: 70vh;
-
-
   margin: 0;
 
   @media (max-width: 832px) {
@@ -29,15 +24,12 @@
       /* Зображення зліва, текст справа */
     }
   }
-
-
 }
 
 .about-text {
   grid-area: text;
   padding: 1rem;
 }
-
 
 .carousel-image {
   width: 100%;
@@ -46,8 +38,4 @@
   object-fit: cover;
   border-radius: 0.5rem;
   mix-blend-mode: multiply;
-}
-
-h2 {
-  margin: 0;
 }

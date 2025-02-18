@@ -6,8 +6,6 @@ import { NavigationComponent } from '../../components/navigation/navigation.comp
   standalone: true,
   imports: [NavigationComponent],
   templateUrl: './footer.component.html',
-  styleUrl: './footer.component.scss'
+  styleUrl: './footer.component.scss',
 })
-export class FooterComponent {
-
-}
+export class FooterComponent {}

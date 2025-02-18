@@ -1,10 +1,39 @@
-marquee {
+.marquee-container {
   width: 100%;
-  padding: 12px;
+  overflow: hidden;
   background-color: #000;
+  cursor: grab;
+  position: relative;
+}
 
-  a{
-    color: #fff;
-    margin-right: 180px;
+.marquee {
+  display: flex;
+  animation: marquee linear infinite;
+  animation-duration: 10s;
+  animation-play-state: running;
+
+  position: absolute;
+  left: -50%;
+}
+
+.marquee-container:hover .marquee {
+  animation-play-state: paused;
+}
+
+.link-button {
+  padding: 0 20px;
+  white-space: nowrap;
+  text-decoration: none;
+  color: #fff;
+  margin-right: 180px;
+}
+
+@keyframes marquee {
+  0% {
+    left: -50%;
+  }
+
+  100% {
+    left: -100%;
   }
 }

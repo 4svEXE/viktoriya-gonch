@@ -1,7 +1,5 @@
 <div class="wrapper wrapper__grid my-services">
   <div class="about-text">
-    <!-- <h3>{{ title }}</h3> -->
-
     <mat-accordion class="custom-accordion">
       <mat-expansion-panel
         *ngFor="let service of services"
@@ -50,16 +48,6 @@
 
   <!-- todo стилі з інлайну в шаред -->
   <div class="about-photo hidden md:flex">
-    <img
-      [src]="imageSrc"
-      style="
-        width: 100%;
-        max-width: 600px;
-        object-fit: cover;
-        border-radius: 0.5rem;
-        mix-blend-mode: multiply;
-      "
-      [alt]="'Viktorie Honč - ' + title"
-    />
+    <img [src]="imageSrc" [alt]="'Вікторія Гонч - ' + title" class="photo" />
   </div>
 </div>

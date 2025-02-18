@@ -26,3 +26,8 @@
 .owl-dot:hover {
   background-color: $primary-color; /* Колір на ховер */
 }
+
+.owl-carousel .owl-nav {
+  display: flex;
+  justify-content: space-between;
+}

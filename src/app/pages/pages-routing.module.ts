@@ -1,27 +1,17 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 
-import { HomeComponent } from './home/home.component';
-import { PifagorComponent } from './pifagor/pifagor.component';
-import { SumistnistComponent } from './sumistnist/sumistnist.component';
-import { MatrixComponent } from './matrix/matrix.component';
-import { MeComponent } from './me/me.component';
-import { KidsMatrixComponent } from './kids-matrix/kids-matrix.component';
-import { LilaComponent } from './lila/lila.component';
-import { NineWorldsComponent } from './nine-worlds/nine-worlds.component';
-import { PredictionComponent } from './prediction/prediction.component';
-
+// Використовуємо loadComponent для лейзі-лоадінгу стендалоун компонентів
 const routes: Routes = [
-  { path: 'home', component: HomeComponent },
-  { path: 'me', component: MeComponent },
-  { path: 'pifagor', component: PifagorComponent },
-  { path: 'matrix', component: MatrixComponent },
-  { path: 'sumistnist', component: SumistnistComponent },
-
-  { path: 'kids-matrix', component: KidsMatrixComponent },
-  { path: 'lila', component: LilaComponent },
-  { path: 'nine-worlds', component: NineWorldsComponent },
-  { path: 'prediction', component: PredictionComponent },
+  { path: 'home', loadComponent: () => import('./home/home.component').then(m => m.HomeComponent) },
+  { path: 'me', loadComponent: () => import('./me/me.component').then(m => m.MeComponent) },
+  { path: 'pifagor', loadComponent: () => import('./pifagor/pifagor.component').then(m => m.PifagorComponent) },
+  { path: 'matrix', loadComponent: () => import('./matrix/matrix.component').then(m => m.MatrixComponent) },
+  { path: 'sumistnist', loadComponent: () => import('./sumistnist/sumistnist.component').then(m => m.SumistnistComponent) },
+  { path: 'kids-matrix', loadComponent: () => import('./kids-matrix/kids-matrix.component').then(m => m.KidsMatrixComponent) },
+  { path: 'lila', loadComponent: () => import('./lila/lila.component').then(m => m.LilaComponent) },
+  { path: 'nine-worlds', loadComponent: () => import('./nine-worlds/nine-worlds.component').then(m => m.NineWorldsComponent) },
+  { path: 'prediction', loadComponent: () => import('./prediction/prediction.component').then(m => m.PredictionComponent) },
 ];
 
 @NgModule({

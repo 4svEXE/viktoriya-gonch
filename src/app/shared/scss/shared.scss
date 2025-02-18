@@ -1,0 +1,14 @@
+@import 'variables';
+
+.photo {
+  max-width: 600px;
+  object-fit: cover;
+  border-radius: 0.5rem;
+  mix-blend-mode: multiply;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  height: 300px;
+
+  @media (max-width: $media-tablet) {
+    height: 600px;
+  }
+}

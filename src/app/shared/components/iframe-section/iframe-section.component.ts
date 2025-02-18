@@ -8,7 +8,6 @@ import { DomSanitizer, SafeResourceUrl } from '@angular/platform-browser';
   standalone: true,
   imports: [CommonModule],
   templateUrl: './iframe-section.component.html',
-  styleUrl: './iframe-section.component.scss',
 })
 export class IframeSectionComponent implements OnInit, OnDestroy {
   @Input() title: string = '';

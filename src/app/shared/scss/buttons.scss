@@ -209,3 +209,23 @@ transition: .3s;
     transform: translateX(100%);
   }
 }
+
+.sub-navigation {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  padding: 8px;
+  width: max-content;
+  top: 3px;
+  pointer-events: none;
+  transition: .3s;
+  border-top: 1px solid #fff;
+  cursor: pointer;
+}
+
+.link-button {
+  &:hover .sub-navigation {
+    pointer-events: all;
+    opacity: 1;
+  }
+}

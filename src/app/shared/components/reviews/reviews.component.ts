@@ -6,12 +6,10 @@ import { OwlOptions, CarouselModule } from 'ngx-owl-carousel-o';
 @Component({
   selector: 'app-reviews',
   templateUrl: './reviews.component.html',
-  styleUrls: ['./reviews.component.scss'],
   standalone: true,
-  imports: [CommonModule, CarouselModule]
+  imports: [CommonModule, CarouselModule],
 })
 export class ReviewsComponent {
-
   customOptions: OwlOptions = {
     loop: true,
     margin: 10,
@@ -22,7 +20,7 @@ export class ReviewsComponent {
     nav: true,
     navText: [
       '<i class="fas fa-chevron-left custom-nav-icon"></i>',
-      '<i class="fas fa-chevron-right custom-nav-icon"></i>'
+      '<i class="fas fa-chevron-right custom-nav-icon"></i>',
     ],
     responsive: {
       0: { items: 1 },
@@ -32,5 +30,4 @@ export class ReviewsComponent {
       1600: { items: 6 },
     },
   };
-
 }
