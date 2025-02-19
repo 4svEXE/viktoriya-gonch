@@ -1,31 +1,35 @@
-<div id="старт">
-  <ng-container *ngComponentOutlet="heroComponent"></ng-container>
+<div id="старт" >
+  <app-hero />
 </div>
 
 <div id="про-мене" class="scroll-mt-10 md:scroll-mt-20">
-  <ng-container *ngComponentOutlet="aboutMeComponent"></ng-container>
+  <app-about-me />
 </div>
 
 <div id="мої-послуги" class="scroll-mt-20">
-  <ng-container *ngComponentOutlet="myAllServicesComponent"></ng-container>
+  <app-my-all-services />
 </div>
 
 <div id="про-матрицю-долі" class="scroll-mt-10 md:scroll-mt-[8.25rem]">
-  <ng-container *ngComponentOutlet="aboutMatrixComponent"></ng-container>
+  <app-about-matrix />
 </div>
 
 <div id="про-сумістність" class="scroll-mt-10 md:scroll-mt-[8.25rem]">
-  <ng-container *ngComponentOutlet="aboutSumistnistComponent"></ng-container>
+  <app-about-sumistnist />
 </div>
 
 <div id="про-квадрат-піфагора" class="scroll-mt-10 md:scroll-mt-[8.25rem]">
-  <ng-container *ngComponentOutlet="aboutPifagorComponent"></ng-container>
+  <app-about-pifagor />
+</div>
+
+<div id="запланувати-зустріч" class="scroll-mt-10 md:scroll-mt-20">
+  <!-- <app-calendly-widget /> -->
 </div>
 
 <div id="відгуки" class="scroll-mt-10 md:scroll-mt-24">
-  <ng-container *ngComponentOutlet="reviewsComponent"></ng-container>
+  <app-reviews />
 </div>
 
 <div id="контакти" class="scroll-mt-10 md:scroll-mt-20">
-  <ng-container *ngComponentOutlet="contactsComponent"></ng-container>
+  <app-contacts />
 </div>

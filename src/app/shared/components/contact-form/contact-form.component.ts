@@ -58,6 +58,8 @@ export class ContactFormComponent {
         this.contactForm.controls['message'].setValue(message);
       }
     });
+
+    // todo відписка
   }
 
   // Перевірка, чи можна відправити email на основі ліміту в localStorage

@@ -21,5 +21,7 @@ export class MyServicesComponent {
   openModal(data: any) {
     this.modalService.open();
     this.modalService.setData(data);
+
+    console.log('dsta :>> ', data);
   }
 }

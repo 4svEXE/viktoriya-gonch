@@ -1,13 +1,14 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { RouterModule } from '@angular/router';
+import { CarouselModule } from 'ngx-owl-carousel-o';
 import { NgxChartsModule } from '@swimlane/ngx-charts';
 import { ReactiveFormsModule } from '@angular/forms';
-import { MyServicesComponent } from '../../shared/components/my-services/my-services.component';
-import { ReviewsComponent } from '../../shared/components/reviews/reviews.component';
-import { ContactsComponent } from '../../shared/components/contacts/contact-form.component';
-import { CarouselModule } from 'ngx-owl-carousel-o';
-import { MyAllServicesComponent } from '../../shared/components/my-all-services/my-all-services.component';
+
+// import { MyServicesComponent } from '../../shared/components/my-services/my-services.component';
+// import { ReviewsComponent } from '../../shared/components/reviews/reviews.component';
+// import { ContactsComponent } from '../../shared/components/contacts/contact-form.component';
+// import { MyAllServicesComponent } from '../../shared/components/my-all-services/my-all-services.component';
 
 // import { HomeComponent } from './home.component';
 // import { HeroComponent } from './components/hero/hero.component';
@@ -20,7 +21,6 @@ import { MyAllServicesComponent } from '../../shared/components/my-all-services/
 @NgModule({
   declarations: [
     // HomeComponent,
-    // HeroComponent,
     // AboutMeComponent,
     // AboutMatrixComponent,
     // CalendlyWidgetComponent,
@@ -33,10 +33,13 @@ import { MyAllServicesComponent } from '../../shared/components/my-all-services/
     ReactiveFormsModule,
     RouterModule,
     CarouselModule,
-    MyServicesComponent,
-    ContactsComponent,
-    ReviewsComponent,
-    MyAllServicesComponent,
+
+    // MyServicesComponent,
+    // ContactsComponent,
+    // ReviewsComponent,
+    // MyAllServicesComponent,
+
+    // HeroComponent,
   ],
   exports: [],
   schemas: [],

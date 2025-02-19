@@ -1,18 +1,28 @@
 import { Component } from '@angular/core';
+import { HeroComponent } from './components/hero/hero.component';
+import { AboutMeComponent } from './components/about-me/about-me.component';
+import { MyAllServicesComponent } from '../../shared/components/my-all-services/my-all-services.component';
+import { AboutMatrixComponent } from './components/about-matrix/about-matrix.component';
+import { AboutSumistnistComponent } from './components/about-sumistnist/about-sumistnist.component';
+import { AboutPifagorComponent } from './components/about-pifagor/about-pifagor.component';
+import { CalendlyWidgetComponent } from './components/calendly-widget/calendly-widget.component';
+import { ReviewsComponent } from '../../shared/components/reviews/reviews.component';
+import { ContactsComponent } from '../../shared/components/contacts/contact-form.component';
 
 @Component({
   selector: 'app-home',
   standalone: true,
-  imports: [],
+  imports: [
+    HeroComponent,
+    AboutMeComponent,
+    MyAllServicesComponent,
+    AboutMatrixComponent,
+    AboutSumistnistComponent,
+    AboutPifagorComponent,
+    // CalendlyWidgetComponent,
+    ReviewsComponent,
+    ContactsComponent,
+  ],
   templateUrl: './home.component.html',
 })
-export class HomeComponent {
-  heroComponent = import('./components/hero/hero.component').then(m => m.HeroComponent);
-  aboutMeComponent = import('./components/about-me/about-me.component').then(m => m.AboutMeComponent);
-  aboutMatrixComponent = import('./components/about-matrix/about-matrix.component').then(m => m.AboutMatrixComponent);
-  aboutSumistnistComponent = import('./components/about-sumistnist/about-sumistnist.component').then(m => m.AboutSumistnistComponent);
-  aboutPifagorComponent = import('./components/about-pifagor/about-pifagor.component').then(m => m.AboutPifagorComponent);
-  myAllServicesComponent = import('../../shared/components/my-all-services/my-all-services.component').then(m => m.MyAllServicesComponent);
-  reviewsComponent = import('../../shared/components/reviews/reviews.component').then(m => m.ReviewsComponent);
-  contactsComponent = import('../../shared/components/contacts/contact-form.component').then(m => m.ContactsComponent);
-}
+export class HomeComponent {}
