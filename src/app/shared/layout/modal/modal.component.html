@@ -3,23 +3,65 @@
   [class.active]="isModalOpen"
   (click)="onBackdropClick($event)"
 >
-  <div class="modal box">
+  <div class="modal">
     <div class="modal-content">
       <div class="modal-header">
-        @if(title) {
-        <h3>{{ title }}</h3>
-        }
+        <h3 *ngIf="title">{{ title }}</h3>
 
-        <app-social-links />
+        <app-social-links></app-social-links>
 
         <button class="close-button" (click)="closeModal()">
           <i class="fas fa-times"></i>
         </button>
       </div>
 
-      <div class="modal-content">
-        <!-- <app-contact-form /> -->
+      <hr />
 
+      <div class="modal-body">
+        <!-- Перевірка на наявність даних: -->
+        <div *ngIf="service; else contact_form">
+          <div class="service-info">
+            <div class="w-full">
+              <h4 class="m-auto">{{ service.title }}</h4>
+            </div>
+
+            <div class="details">
+              <p>
+                <strong>Включає:</strong><br />
+                {{ service.details.includes }}
+              </p>
+              <div class="additional-info">
+                <p><strong>Розберемо такі теми:</strong></p>
+                <ul>
+                  <li
+                    *ngFor="let item of service.details.additional"
+                    class="additional-item"
+                  >
+                    {{ item.key }}
+                  </li>
+                </ul>
+              </div>
+              <p><strong>Тривалість:</strong> {{ service.details.duration }}</p>
+              <p>
+                <strong>Умови:</strong> <br />
+                {{ service.details.conditions }}
+              </p>
+            </div>
+            <div class="flex">
+              <a
+                class="active-button small m-auto"
+                [href]="service.paymentLink"
+                target="_blank"
+                >Замовити і оплатити</a
+              >
+            </div>
+          </div>
+        </div>
+
+        <!-- Альтернатива, коли даних нема -->
+        <ng-template #contact_form>
+          <app-contact-form />
+        </ng-template>
       </div>
     </div>
   </div>

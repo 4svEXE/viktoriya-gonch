@@ -139,20 +139,30 @@ h1, h2, h3, h4, h5, h6, p, li {
 
 /* Загальні стилі для списків */
 ul {
-  list-style-type: none;
-  padding-left: 0;
-  margin: 0;
-  font-family: 'Arial', sans-serif;
+  // padding-left: 0;
+  // margin: 0;
+  // font-family: 'Arial', sans-serif;
+  list-style-type: circle;
+
+  .link-button{
+    list-style-type: none;
+  }
 }
 
 /* Стилі для елементів списку */
 ul li {
-  position: relative;
-  padding-left: 25px; /* Додаємо відступ зліва для маркера */
-  margin-bottom: 10px; /* Відстань між елементами списку */
+  // position: relative;
+  // padding-left: 25px; /* Додаємо відступ зліва для маркера */
+  // margin-bottom: 10px; /* Відстань між елементами списку */
+
+  margin-left: 18px;
   font-size: 1rem; /* Розмір шрифту */
   line-height: 1.5; /* Міжрядковий інтервал */
   color: #333; /* Колір тексту */
+
+  .link-button{
+    margin-left: inherit;
+  }
 }
 
 h2 {

@@ -14,7 +14,6 @@ import { ReactiveFormsModule } from '@angular/forms';
 // import { HeroComponent } from './components/hero/hero.component';
 // import { AboutMeComponent } from './components/about-me/about-me.component';
 // import { AboutMatrixComponent } from './components/about-matrix/about-matrix.component';
-// import { CalendlyWidgetComponent } from './components/calendly-widget/calendly-widget.component';
 // import { AboutSumistnistComponent } from './components/about-sumistnist/about-sumistnist.component';
 // import { AboutPifagorComponent } from './components/about-pifagor/about-pifagor.component';
 
@@ -23,7 +22,6 @@ import { ReactiveFormsModule } from '@angular/forms';
     // HomeComponent,
     // AboutMeComponent,
     // AboutMatrixComponent,
-    // CalendlyWidgetComponent,
     // AboutSumistnistComponent,
     // AboutPifagorComponent,
   ],

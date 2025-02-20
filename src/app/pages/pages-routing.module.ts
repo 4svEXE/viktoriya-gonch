@@ -10,6 +10,7 @@ import { RouterModule, Routes } from '@angular/router';
 // import { PredictionComponent } from './prediction/prediction.component';
 // import { LilaComponent } from './lila/lila.component';
 import { NineWorldsComponent } from './nine-worlds/nine-worlds.component';
+import { CalendlyComponent } from './calendly/calendly.component';
 
 const routes: Routes = [
   // { path: 'home', component: HomeComponent },
@@ -21,6 +22,8 @@ const routes: Routes = [
   // { path: 'prediction', component: PredictionComponent },
   // { path: 'lila', component: LilaComponent },
   { path: 'nine-worlds', component: NineWorldsComponent },
+  { path: 'calendly/:service', component: CalendlyComponent },
+
 ];
 
 @NgModule({

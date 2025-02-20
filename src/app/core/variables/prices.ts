@@ -19,6 +19,42 @@ export interface ServicePrices {
   numerology: Consultation[];
 }
 
+export const localizedTitles = {
+  "deep_vip_consultation_on_the_matrix_of_fate": "Глибинна VIP консультація по матриці долі",
+  "individual_consultation_on_the_matrix_of_fate_express": "Індивідуальна консультація по матриці долі Express",
+  "consultation_on_the_matrix_of_pair_compatibility": "Консультація по матриці сумісності пари або партнерів",
+  "individual_consultation_on_the_child_matrix_of_fate": "Індивідуальна консультація по дитячій матриці долі",
+  "express_consultation_on_the_child_matrix_of_fate": "Експрес-консультація по дитячій матриці долі",
+  "individual_consultation_on_the_child_fears_and_blocks": "Індивідуальна консультація: Страхи і блоки дитини",
+  "deep_financial_consultation_where_are_my_money": "Глибинна фінансова консультація: Де мої гроші?",
+  "forecast_for_the_period": "Прогноз на період",
+  "emergency_forecast_for_the_event": "Терміновий прогноз на подію",
+  "lila_individual_game": "Ліла - індивідуальна гра",
+  "lila_group_game": "Ліла - групова гра",
+  "9_worlds_individual_game": "9 світів - індивідуальна гра",
+  "9_worlds_group_game": "9 світів - групова гра",
+  "deep_numerology_consultation": "Глибинна нумерологічна консультація"
+};
+export type localizedTitlesType = typeof localizedTitles;
+
+const paymentUrl = 'https://book.stripe.com/'
+const stripeServiceId = {
+  "deep_vip_consultation_on_the_matrix_of_fate": 'test_3csfZV8Cm5argZG289',
+  // "individual_consultation_on_the_matrix_of_fate_express",
+  // "consultation_on_the_matrix_of_pair_compatibility",
+  // "individual_consultation_on_the_child_matrix_of_fate",
+  // "express_consultation_on_the_child_matrix_of_fate",
+  // "individual_consultation_on_the_child_fears_and_blocks",
+  // "deep_financial_consultation_where_are_my_money",
+  // "forecast_for_the_period",
+  // "emergency_forecast_for_the_event",
+  // "lila_individual_game",
+  // "lila_group_game",
+  // "9_worlds_individual_game",
+  // "9_worlds_group_game",
+  // "deep_numerology_consultation"
+}
+
 export const Prices: ServicePrices = {
   matrix: [
     {
@@ -70,7 +106,7 @@ export const Prices: ServicePrices = {
         duration: '1,5 - 2 години',
         conditions: 'Умови проведення вказуються індивідуально',
       },
-      paymentLink: 'https://paymentlink1.com',
+      paymentLink: paymentUrl + stripeServiceId.deep_vip_consultation_on_the_matrix_of_fate,
     },
     {
       title: 'Індивідуальна консультація по матриці долі Express',
@@ -112,7 +148,7 @@ export const Prices: ServicePrices = {
         duration: '45 хв',
         conditions: 'Умови проведення вказуються індивідуально',
       },
-      paymentLink: 'https://paymentlink2.com',
+      paymentLink: paymentUrl + stripeServiceId.deep_vip_consultation_on_the_matrix_of_fate,
     },
     {
       title: 'Консультація по матриці сумісності пари або партнерів',
@@ -140,7 +176,7 @@ export const Prices: ServicePrices = {
         duration: '1 година',
         conditions: 'Умови проведення вказуються індивідуально',
       },
-      paymentLink: 'https://paymentlink3.com',
+      paymentLink: paymentUrl + stripeServiceId.deep_vip_consultation_on_the_matrix_of_fate,
     },
     {
       title: 'Індивідуальна консультація по дитячій матриці долі',
@@ -175,7 +211,7 @@ export const Prices: ServicePrices = {
         duration: '45 хв',
         conditions: 'Умови проведення вказуються індивідуально',
       },
-      paymentLink: 'https://paymentlink4.com',
+      paymentLink: paymentUrl + stripeServiceId.deep_vip_consultation_on_the_matrix_of_fate,
     },
     {
       title: 'Експрес-консультація по дитячій матриці долі',
@@ -193,7 +229,7 @@ export const Prices: ServicePrices = {
         duration: '30 хвилин',
         conditions: 'Консультація доступна як онлайн, так і офлайн.',
       },
-      paymentLink: 'https://paymentlink5.com',
+      paymentLink: paymentUrl + stripeServiceId.deep_vip_consultation_on_the_matrix_of_fate,
     },
     {
       title: 'Індивідуальна консультація: Страхи і блоки дитини',
@@ -211,7 +247,112 @@ export const Prices: ServicePrices = {
         conditions:
           'Консультація може бути проведена лише в індивідуальному порядку.',
       },
-      paymentLink: 'https://paymentlink6.com',
+      paymentLink: paymentUrl + stripeServiceId.deep_vip_consultation_on_the_matrix_of_fate,
+    },
+    {
+      title: 'Глибинна фінансова консультація “Де мої гроші”',
+      price: '100€',
+      details: {
+        includes:
+          'Консультація допомагає знайти причини фінансових блоків та відкриває нові можливості для фінансового зростання.',
+        additional: [
+          {
+            key: 'Фінансовий канал',
+            value:
+              'Аналіз фінансового потоку та виявлення джерел його блокування.',
+          },
+          {
+            key: 'Причини обмежень',
+            value:
+              'Дослідження кармічних програм або підсвідомих переконань, які впливають на фінансову стабільність.',
+          },
+          {
+            key: 'Можливості зростання',
+            value:
+              'Індивідуальні рекомендації щодо напрямків розвитку та оптимальних шляхів для отримання доходу.',
+          },
+          {
+            key: 'Особисті таланти',
+            value:
+              'Які ваші сильні сторони можна використати для легшого заробітку.',
+          },
+          {
+            key: 'Фінансова стратегія',
+            value: 'Побудова плану для залучення більшого потоку грошей.',
+          },
+        ],
+        duration: '1 година',
+        conditions:
+          'Умови проведення вказуються індивідуально залежно від клієнта.',
+      },
+      paymentLink: paymentUrl + stripeServiceId.deep_vip_consultation_on_the_matrix_of_fate,
+    },
+    {
+      title: 'Прогноз на період (дата, місяць, квартал, рік)',
+      price: '',
+      details: {
+        includes:
+          'Прогноз допоможе зрозуміти основні тенденції періоду та підготуватись до можливих викликів і можливостей. Вартість розраховується індивідуально залежно від обраного періоду.',
+        additional: [
+          {
+            key: 'Енергетичний потенціал',
+            value:
+              'Які енергії будуть домінувати у вашому житті в обраний період.',
+          },
+          {
+            key: 'Сфери життя',
+            value:
+              'Прогноз для основних сфер: робота, фінанси, відносини, здоровʼя.',
+          },
+          {
+            key: 'Важливі події',
+            value: 'Рекомендації щодо дій у сприятливі та несприятливі дати.',
+          },
+          {
+            key: 'Фінансові перспективи',
+            value: 'Прогноз для стабільності та зростання доходів.',
+          },
+          {
+            key: 'Рекомендації',
+            value:
+              'Практичні поради щодо використання можливостей періоду на вашу користь.',
+          },
+        ],
+        format:
+          'Консультація проводиться онлайн або офлайн, залежно від домовленості.',
+      },
+      paymentLink: paymentUrl + stripeServiceId.deep_vip_consultation_on_the_matrix_of_fate,
+    },
+    {
+      title: 'Екстрений прогноз на подію (дата, день)',
+      price: '20€',
+      details: {
+        includes:
+          'Швидкий аналіз важливої події з урахуванням енергій дня та впливу зовнішніх факторів.',
+        additional: [
+          {
+            key: 'Аналіз події',
+            value: 'Визначення потенціалу успіху та ризиків для обраної дати.',
+          },
+          {
+            key: 'Сприятливий час',
+            value: 'Рекомендація оптимального часу для дії або початку події.',
+          },
+          {
+            key: 'Енергетичний фон',
+            value:
+              'Аналіз впливу дня на вашу енергію та загальний результат події.',
+          },
+          {
+            key: 'Рекомендації',
+            value:
+              'Конкретні поради для покращення результатів запланованого заходу.',
+          },
+        ],
+        format:
+          'Формат проведення уточнюється індивідуально: онлайн або офлайн.',
+      },
+      paymentLink: paymentUrl + stripeServiceId.deep_vip_consultation_on_the_matrix_of_fate,
     },
   ],
   games: [
@@ -245,7 +386,7 @@ export const Prices: ServicePrices = {
         duration: '2 години',
         conditions: 'Індивідуальне налаштування під потреби учасника.',
       },
-      paymentLink: 'https://paymentlink2.com',
+      paymentLink: paymentUrl + stripeServiceId.deep_vip_consultation_on_the_matrix_of_fate,
     },
     {
       title: '«Ліла»- Групова гра',
@@ -304,7 +445,7 @@ export const Prices: ServicePrices = {
         duration: '2-3 години',
         conditions: 'Формат гри узгоджується індивідуально',
       },
-      paymentLink: 'https://paymentlink2.com',
+      paymentLink: paymentUrl + stripeServiceId.deep_vip_consultation_on_the_matrix_of_fate,
     },
     {
       title: '«9 Світів»- Групова гра',
@@ -326,7 +467,7 @@ export const Prices: ServicePrices = {
         duration: '3-4 години',
         conditions: 'Формат гри узгоджується індивідуально',
       },
-      paymentLink: 'https://paymentlink2.com',
+      paymentLink: paymentUrl + stripeServiceId.deep_vip_consultation_on_the_matrix_of_fate,
     },
   ],
   numerology: [
@@ -377,7 +518,7 @@ export const Prices: ServicePrices = {
         conditions:
           'Консультація проходить онлайн. Ви отримуєте персональний розбір та рекомендації.',
       },
-      paymentLink: 'https://paymentlink2.com',
+      paymentLink: paymentUrl + stripeServiceId.deep_vip_consultation_on_the_matrix_of_fate,
     },
   ],
 };

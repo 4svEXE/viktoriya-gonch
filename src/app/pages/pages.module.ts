@@ -37,7 +37,8 @@ import { NineWorldsComponent} from './nine-worlds/nine-worlds.component';
     ContactsComponent, // ✅ Standalone
     SectionGridComponent, // ✅ Standalone
     ReviewsComponent, // ✅ Standalone
-    MyAllServicesComponent // ✅ Standalone
+    MyAllServicesComponent,
+
     // ?MyServicesComponent, //
     // ?MarqueeComponent, //
 

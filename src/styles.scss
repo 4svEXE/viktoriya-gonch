@@ -4,10 +4,16 @@
 
 @import 'ngx-owl-carousel-o/lib/styles/scss/owl.carousel';
 
-@import "app/shared/scss/index";
+@import "./app/shared/scss/index" ;
 
 @layer base {
   html {
     scroll-behavior: smooth;
   }
 }
+
+// Fonts import
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400&display=swap');
+@import 'node_modules/@fortawesome/fontawesome-free/css/all.min.css';
+
+// @import url('https://fonts.googleapis.com/css2?family=Jura:wght@400&display=swap');

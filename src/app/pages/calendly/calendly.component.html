@@ -1,0 +1,24 @@
+<section class="container section">
+  <div class="wrapper flex flex-col items-center mt-20">
+    <h2 *ngIf="!isServiceBooked">Запланувати зустріч</h2>
+
+    <div *ngIf="!isServiceBooked" id="calendly-widget" class="w-full">
+      <div id="calendly-scheduler" class="h-[100vh] w-full"></div>
+    </div>
+
+    <div *ngIf="isServiceBooked" class="box m-auto max-w-[420px] text-center">
+      <h3>Успіх!</h3>
+      <p>Ви успішно запланували зустріч на: <br> <strong>{{ getServiceTitle() }}</strong></p>
+
+      <div class="succes-box mt-4">
+        <img src="./assets/icons/succes.svg" alt="Успішно" class="mx-auto">
+      </div>
+
+      <div class="flex flex-col justify-center items-center gap-4 mt-5">
+        <a class="primary-button small" routerLink="/home">На головну</a>
+        <a class="outline-button small" href="https://www.instagram.com/viktoriehonc" target="_blank">Інстаграм Вікторії Гонч</a>
+        <button class="link-button" (click)="clearBooking()">Відмінити</button>
+      </div>
+    </div>
+  </div>
+</section>

@@ -23,7 +23,6 @@ $header-lg-height: 70px;
 $header-md-height: 60px;
 $header-sm-height: 50px;
 
-
 // Typography
 $font-family-headings: 'Playfair Display', serif; // Для заголовків
 $font-family-body: 'Jura', sans-serif; // Для основного тексту
@@ -48,9 +47,3 @@ $media-tablet: 832px;
 $media-tablet-small: 672px;
 $media-mobile: 480px;
 $media-mobile-small: 336px;
-
-// Fonts import
-@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400&display=swap');
-@import 'node_modules/@fortawesome/fontawesome-free/css/all.min.css';
-
-// @import url('https://fonts.googleapis.com/css2?family=Jura:wght@400&display=swap');
