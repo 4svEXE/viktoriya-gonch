@@ -122,27 +122,23 @@ section {
   justify-content: center;
   align-items: center;
   overflow: hidden;
-  // max-height: 600px;
-
   width: 100%;
   height: -webkit-fill-available;
   border-radius: 12px;
-  // box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-
-  @media (max-width: $media-tablet) {
-    // height: 50dvh;
-    height: 50vh;
-  }
 
   img {
     width: 100%;
     object-fit: cover;
   }
+
+  @media (max-width: $media-tablet) {
+    img {
+      width: auto;
+      height: 300px;
+      object-fit: cover;
+    }
+  }
 }
-
-
-
-
 
 
 .regalies {
@@ -153,5 +149,13 @@ section {
 
   li {
     width: max-content;
+  }
+}
+
+
+ul {
+
+  &.regalies {
+    list-style-type: none;
   }
 }

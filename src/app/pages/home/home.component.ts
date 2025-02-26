@@ -5,9 +5,10 @@ import { MyAllServicesComponent } from '../../shared/components/my-all-services/
 import { AboutMatrixComponent } from './components/about-matrix/about-matrix.component';
 import { AboutSumistnistComponent } from './components/about-sumistnist/about-sumistnist.component';
 import { AboutPifagorComponent } from './components/about-pifagor/about-pifagor.component';
-import { CalendlyWidgetComponent } from './components/calendly-widget/calendly-widget.component';
 import { ReviewsComponent } from '../../shared/components/reviews/reviews.component';
 import { ContactsComponent } from '../../shared/components/contacts/contact-form.component';
+import { CalendlyWidgetComponent } from './components/calendly-widget/calendly-widget.component';
+
 
 @Component({
   selector: 'app-home',
@@ -19,9 +20,9 @@ import { ContactsComponent } from '../../shared/components/contacts/contact-form
     AboutMatrixComponent,
     AboutSumistnistComponent,
     AboutPifagorComponent,
-    // CalendlyWidgetComponent,
     ReviewsComponent,
     ContactsComponent,
+    CalendlyWidgetComponent
   ],
   templateUrl: './home.component.html',
 })

@@ -5,6 +5,6 @@ import { Component } from '@angular/core';
   standalone: true,
   imports: [],
   templateUrl: './social-links.component.html',
-  styles: ['.social-links{list-style-type: none; li{margin-left: auto;}}']
+  styles: ['.social-links{list-style-type: none; li{margin: auto;}}']
 })
 export class SocialLinksComponent {}

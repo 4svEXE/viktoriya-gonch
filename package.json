@@ -4,7 +4,7 @@
   "scripts": {
     "ng": "ng",
     "start": "ng serve",
-    "build": "ng build",
+    "build": "ng build --profile",
     "watch": "ng build --watch --configuration development",
     "seo:build": "ng build --configuration production && npx scully --scanRoutes --project viktoriya-gonch",
     "seo:serve": "npm run seo:build && npx scully serve --project viktoriya-gonch",

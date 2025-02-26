@@ -24,7 +24,7 @@ export class CalendlyComponent implements AfterViewInit {
   ngOnInit() {
     this.route.params.subscribe((params) => {
       this.serviceType = params['service'] || '';
-      this.isServiceBooked = !!localStorage.getItem('bookedService_' + this.serviceType);
+      this.isServiceBooked = !localStorage.getItem('bookedService_' + this.serviceType);
     });
   }
 
