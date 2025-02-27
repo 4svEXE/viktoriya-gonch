@@ -1,38 +1,3 @@
 .my-services-button {
   display: block;
 }
-
-.custom-accordion {
-  h5 {
-    margin-right: 16px;
-  }
-
-  h6 {
-    font-weight: normal;
-    margin-right: 16px;
-    text-decoration: underline;
-  }
-
-  strong {
-    display: contents;
-    font-weight: 700;
-    font-size: 24px;
-    text-decoration: underline;
-  }
-
-  li {
-    line-height: normal;
-    list-style-type: none;
-    position: relative;
-    padding-left: 1.5rem;
-  }
-
-  li::before {
-    content: '➤';
-    position: absolute;
-    left: 0;
-    transform: translateY(30%);
-    color: #26663b;
-    font-size: 1rem;
-  }
-}

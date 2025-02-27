@@ -18,6 +18,47 @@
   }
 }
 
+.custom-accordion {
+  h5 {
+    margin-right: 16px;
+    font-weight: 600;
+    color: #26663b;
+  }
+
+  h6 {
+    font-weight: normal;
+    margin-right: 16px;
+    text-decoration: underline;
+  }
+
+  strong {
+    display: contents;
+    font-weight: 700;
+    // font-size: 24px;
+    // text-decoration: underline;
+  }
+
+  li {
+    line-height: normal;
+    list-style-type: none;
+    position: relative;
+    padding-left: 1.5rem;
+    margin-top: 4px;
+
+    &::before {
+      content: '—';
+      position: absolute;
+      left: 0;
+      top: -5px;
+      transform: translateY(30%);
+      color: #26663b;
+      font-size: 1rem;
+    }
+  }
+
+}
+
+
 .custom-panel {
   padding: $spacing-small;
   margin: 4px;

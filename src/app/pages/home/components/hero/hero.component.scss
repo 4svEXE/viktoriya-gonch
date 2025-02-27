@@ -4,6 +4,7 @@
   height: 100dvh;
   position: relative;
   transition: .3s;
+  padding-top: 70px;
 
   .logo {
     width: 100%;
@@ -51,6 +52,8 @@
   }
 
   @media (min-width: 768px) {
+    padding-top: 50px;
+
     .primary-button {
       width: max-content;
       max-width: max-content;
