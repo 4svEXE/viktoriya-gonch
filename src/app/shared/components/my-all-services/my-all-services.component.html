@@ -1,9 +1,12 @@
 <section class="container">
   <h2 class="w-full">Мої послуги</h2>
 
-  <mat-tab-group [selectedIndex]="activeTab">
+  <mat-tab-group
+    [selectedIndex]="activeTab"
+    (selectedIndexChange)="onTabChange($event)"
+  >
     <mat-tab>
-      <ng-template mat-tab-label> <h4>Матриця долі</h4> </ng-template>
+      <ng-template mat-tab-label><h4>Матриця долі</h4></ng-template>
       <app-my-services
         [services]="matrixServices"
         title="Матриця долі"
@@ -12,7 +15,7 @@
     </mat-tab>
 
     <mat-tab>
-      <ng-template mat-tab-label> <h4>Нумерологія</h4> </ng-template>
+      <ng-template mat-tab-label><h4>Нумерологія</h4></ng-template>
       <app-my-services
         [services]="numerologyServices"
         title="Нумерологія"
@@ -20,7 +23,7 @@
     </mat-tab>
 
     <mat-tab>
-      <ng-template mat-tab-label> <h4>Трансформаційні ігри</h4> </ng-template>
+      <ng-template mat-tab-label><h4>Трансформаційні ігри</h4></ng-template>
       <app-my-services
         [services]="gamesServices"
         title="Трансформаційні ігри"

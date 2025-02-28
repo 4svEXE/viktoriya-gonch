@@ -1,10 +1,14 @@
-@import "../../../../shared/scss/variables.scss";
+// @import "../../../../shared/scss/variables.scss";
 
 .hero-section {
   height: 100dvh;
   position: relative;
   transition: .3s;
   padding-top: 70px;
+
+  @media (max-width: 768px) {
+    padding-top: 50px; // header height
+  }
 
   .logo {
     width: 100%;
@@ -16,7 +20,7 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    background-color: $secondary-color;
+    background-color: #E2D7CF;
 
     .text {
       width: fit-content;
@@ -52,8 +56,6 @@
   }
 
   @media (min-width: 768px) {
-    padding-top: 50px;
-
     .primary-button {
       width: max-content;
       max-width: max-content;
@@ -67,7 +69,6 @@
   }
 
   @media (min-width: 768px) {
-
     .left-column,
     .right-column {
       width: 50%;

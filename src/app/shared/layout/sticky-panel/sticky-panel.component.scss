@@ -1,4 +1,4 @@
-@import '../../../shared/scss/variables.scss';
+// @import '../../../shared/scss/variables.scss';
 
 .sticky-panel {
   position: fixed;
@@ -13,13 +13,10 @@
   transition: .3s;
   transform: translate(0%, 0%);
 
-  top: $header-lg-height;
+  top: 70px;
 
-  @media (max-width: $media-netbook) {
-    top: $header-md-height;
-  }
-  @media (max-width: $media-tablet) {
-    top: $header-sm-height;
+  @media (max-width: 960px) {
+    top: 50px;
   }
 }
 

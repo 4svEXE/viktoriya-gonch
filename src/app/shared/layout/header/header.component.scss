@@ -1,33 +1,28 @@
-@import '../../../shared/scss/variables.scss';
+// @import '../../../shared/scss/variables.scss';
 
 header {
   box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.2);
   position: fixed;
   width: 100%;
+  height: 70px;
   left: 0;
   top: 0;
-  background-color: $dark-gray;
+  background-color: #202020;
   padding: 0;
 
   display: flex;
   align-items: center;
   justify-content: space-between;
 
-  height: $header-lg-height;
-
-  @media (max-width: $media-netbook) {
-    height: $header-md-height;
-  }
-
-  @media (max-width: $media-tablet) {
-    height: $header-sm-height;
+  @media (max-width: 960px) {
+    height: 50px;
   }
 }
 
 .mobile-menu-container {
   width: 100%;
   height: 100vh;
-  background-color: rgba($secondary-color, .95);
+  background-color: rgba(#E2D7CF, .95);
   backdrop-filter: blur(5px);
   position: fixed;
   z-index: 100;
@@ -45,6 +40,4 @@ header {
   &.active {
     right: 0;
   }
-
-
 }

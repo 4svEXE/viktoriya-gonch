@@ -22,7 +22,7 @@ import { CalendlyWidgetComponent } from './components/calendly-widget/calendly-w
     AboutPifagorComponent,
     ReviewsComponent,
     ContactsComponent,
-    CalendlyWidgetComponent
+    CalendlyWidgetComponent,
   ],
   templateUrl: './home.component.html',
 })

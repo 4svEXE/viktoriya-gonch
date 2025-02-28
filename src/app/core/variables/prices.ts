@@ -37,22 +37,23 @@ export const localizedTitles = {
 };
 export type localizedTitlesType = typeof localizedTitles;
 
-const paymentUrl = 'https://book.stripe.com/'
+// const paymentUrl = 'https://book.stripe.com/'
+const paymentUrl = ''
 const stripeServiceId = {
-  "deep_vip_consultation_on_the_matrix_of_fate": 'test_3csfZV8Cm5argZG289',
-  // "individual_consultation_on_the_matrix_of_fate_express",
-  // "consultation_on_the_matrix_of_pair_compatibility",
-  // "individual_consultation_on_the_child_matrix_of_fate",
-  // "express_consultation_on_the_child_matrix_of_fate",
-  // "individual_consultation_on_the_child_fears_and_blocks",
-  // "deep_financial_consultation_where_are_my_money",
-  // "forecast_for_the_period",
-  // "emergency_forecast_for_the_event",
-  // "lila_individual_game",
-  // "lila_group_game",
-  // "9_worlds_individual_game",
-  // "9_worlds_group_game",
-  // "deep_numerology_consultation"
+  "deep_vip_consultation_on_the_matrix_of_fate": 'https://app.simplymeet.me/viktorie-honch/viktorie-honc-120-1740747132659',
+  "individual_consultation_on_the_matrix_of_fate_express": 'https://app.simplymeet.me/viktorie-honch/1740747816',
+  "consultation_on_the_matrix_of_pair_compatibility": 'https://app.simplymeet.me/viktorie-honch/konsultatsiya-po-matrixi-sumisnosti-pary-abo-partneriv',
+  "individual_consultation_on_the_child_matrix_of_fate": 'https://app.simplymeet.me/viktorie-honch/1740748369',
+  "express_consultation_on_the_child_matrix_of_fate": 'https://app.simplymeet.me/viktorie-honch/1740748495',
+  "individual_consultation_on_the_child_fears_and_blocks": 'https://app.simplymeet.me/viktorie-honch/1740748537',
+  "deep_financial_consultation_where_are_my_money": 'https://app.simplymeet.me/viktorie-honch/1740748570',
+  "forecast_for_the_period": 'https://app.simplymeet.me/viktorie-honch/1740748663',
+  "emergency_forecast_for_the_event": 'https://app.simplymeet.me/viktorie-honch/1740748728',
+  "lila_individual_game": 'https://app.simplymeet.me/viktorie-honch/1740748943',
+  "lila_group_game": 'https://app.simplymeet.me/viktorie-honch/1740749043',
+  "_9_worlds_individual_game": 'https://app.simplymeet.me/viktorie-honch/1740749125',
+  "_9_worlds_group_game": 'https://app.simplymeet.me/viktorie-honch/1740749195',
+  "deep_numerology_consultation": 'https://app.simplymeet.me/viktorie-honch/1740748848',
 }
 
 export const Prices: ServicePrices = {
@@ -112,7 +113,7 @@ export const Prices: ServicePrices = {
       title: 'Індивідуальна консультація по матриці долі Express',
       price: '70€',
       details: {
-        includes: 'Що входить в консультацію уточнюється під час запису',
+        includes: 'Аналіз особистості по персональній матриці долі',
         additional: [
           {
             key: 'Особисті якості',
@@ -148,13 +149,13 @@ export const Prices: ServicePrices = {
         duration: '45 хв',
         conditions: 'Умови проведення вказуються індивідуально',
       },
-      paymentLink: paymentUrl + stripeServiceId.deep_vip_consultation_on_the_matrix_of_fate,
+      paymentLink: paymentUrl + stripeServiceId.individual_consultation_on_the_matrix_of_fate_express,
     },
     {
       title: 'Консультація по матриці сумісності пари або партнерів',
       price: '80€',
       details: {
-        includes: 'Що входить в консультацію уточнюється під час запису',
+        includes: 'Глибокий аналіз вашої пари: від призначення зустрічі до гармонії у стосунках, фінансового благополуччя та успішної реалізації в соціумі.',
         additional: [
           {
             key: 'У позитиві сценарію пари',
@@ -176,7 +177,7 @@ export const Prices: ServicePrices = {
         duration: '1 година',
         conditions: 'Умови проведення вказуються індивідуально',
       },
-      paymentLink: paymentUrl + stripeServiceId.deep_vip_consultation_on_the_matrix_of_fate,
+      paymentLink: paymentUrl + stripeServiceId.consultation_on_the_matrix_of_pair_compatibility,
     },
     {
       title: 'Індивідуальна консультація по дитячій матриці долі',
@@ -211,13 +212,13 @@ export const Prices: ServicePrices = {
         duration: '45 хв',
         conditions: 'Умови проведення вказуються індивідуально',
       },
-      paymentLink: paymentUrl + stripeServiceId.deep_vip_consultation_on_the_matrix_of_fate,
+      paymentLink: paymentUrl + stripeServiceId.individual_consultation_on_the_child_matrix_of_fate,
     },
     {
       title: 'Експрес-консультація по дитячій матриці долі',
       price: '30€',
       details: {
-        includes: 'Короткий аналіз основних сильних сторін і рекомендацій.',
+        includes: 'Допоможемо розкрити таланти вашої дитини, знайти до неї підхід, обрати гуртки та професію, а також зрозуміти її страхи і ваші батьківські уроки.',
         additional: [
           { key: 'Сильні сторони', value: 'Основні таланти дитини.' },
           { key: 'Поведінка', value: 'Короткий аналіз поведінкових патернів.' },
@@ -229,7 +230,7 @@ export const Prices: ServicePrices = {
         duration: '30 хвилин',
         conditions: 'Консультація доступна як онлайн, так і офлайн.',
       },
-      paymentLink: paymentUrl + stripeServiceId.deep_vip_consultation_on_the_matrix_of_fate,
+      paymentLink: paymentUrl + stripeServiceId.express_consultation_on_the_child_matrix_of_fate,
     },
     {
       title: 'Індивідуальна консультація: Страхи і блоки дитини',
@@ -247,7 +248,7 @@ export const Prices: ServicePrices = {
         conditions:
           'Консультація може бути проведена лише в індивідуальному порядку.',
       },
-      paymentLink: paymentUrl + stripeServiceId.deep_vip_consultation_on_the_matrix_of_fate,
+      paymentLink: paymentUrl + stripeServiceId.individual_consultation_on_the_child_fears_and_blocks,
     },
     {
       title: 'Глибинна фінансова консультація “Де мої гроші”',
@@ -285,7 +286,7 @@ export const Prices: ServicePrices = {
         conditions:
           'Умови проведення вказуються індивідуально залежно від клієнта.',
       },
-      paymentLink: paymentUrl + stripeServiceId.deep_vip_consultation_on_the_matrix_of_fate,
+      paymentLink: paymentUrl + stripeServiceId.deep_financial_consultation_where_are_my_money,
     },
     {
       title: 'Прогноз на період (дата, місяць, квартал, рік)',
@@ -321,7 +322,7 @@ export const Prices: ServicePrices = {
         format:
           'Консультація проводиться онлайн або офлайн, залежно від домовленості.',
       },
-      paymentLink: paymentUrl + stripeServiceId.deep_vip_consultation_on_the_matrix_of_fate,
+      paymentLink: paymentUrl + stripeServiceId.forecast_for_the_period,
     },
     {
       title: 'Екстрений прогноз на подію (дата, день)',
@@ -349,10 +350,11 @@ export const Prices: ServicePrices = {
               'Конкретні поради для покращення результатів запланованого заходу.',
           },
         ],
+        duration: '30 хвилинн',
         format:
           'Формат проведення уточнюється індивідуально: онлайн або офлайн.',
       },
-      paymentLink: paymentUrl + stripeServiceId.deep_vip_consultation_on_the_matrix_of_fate,
+      paymentLink: paymentUrl + stripeServiceId.emergency_forecast_for_the_event,
     },
   ],
   games: [
@@ -386,7 +388,7 @@ export const Prices: ServicePrices = {
         duration: '2 години',
         conditions: 'Індивідуальне налаштування під потреби учасника.',
       },
-      paymentLink: paymentUrl + stripeServiceId.deep_vip_consultation_on_the_matrix_of_fate,
+      paymentLink: paymentUrl + stripeServiceId.lila_individual_game,
     },
     {
       title: '«Ліла»- Групова гра',
@@ -408,7 +410,7 @@ export const Prices: ServicePrices = {
         duration: '2-4 години',
         conditions: 'Формат гри узгоджується індивідуально',
       },
-      paymentLink: 'https://paymentlink2.com',
+      paymentLink:  paymentUrl + stripeServiceId.lila_group_game,
     },
     {
       title: '«9 Світів»- Індивідуальна гра',
@@ -445,7 +447,7 @@ export const Prices: ServicePrices = {
         duration: '2-3 години',
         conditions: 'Формат гри узгоджується індивідуально',
       },
-      paymentLink: paymentUrl + stripeServiceId.deep_vip_consultation_on_the_matrix_of_fate,
+      paymentLink: paymentUrl + stripeServiceId._9_worlds_individual_game,
     },
     {
       title: '«9 Світів»- Групова гра',
@@ -467,7 +469,7 @@ export const Prices: ServicePrices = {
         duration: '3-4 години',
         conditions: 'Формат гри узгоджується індивідуально',
       },
-      paymentLink: paymentUrl + stripeServiceId.deep_vip_consultation_on_the_matrix_of_fate,
+      paymentLink: paymentUrl + stripeServiceId._9_worlds_group_game,
     },
   ],
   numerology: [
@@ -518,7 +520,7 @@ export const Prices: ServicePrices = {
         conditions:
           'Консультація проходить онлайн. Ви отримуєте персональний розбір та рекомендації.',
       },
-      paymentLink: paymentUrl + stripeServiceId.deep_vip_consultation_on_the_matrix_of_fate,
+      paymentLink: paymentUrl + stripeServiceId.deep_numerology_consultation,
     },
   ],
 };

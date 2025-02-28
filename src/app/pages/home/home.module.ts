@@ -1,6 +1,6 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { RouterModule } from '@angular/router';
+import { RouterLink, RouterModule } from '@angular/router';
 import { CarouselModule } from 'ngx-owl-carousel-o';
 import { NgxChartsModule } from '@swimlane/ngx-charts';
 import { ReactiveFormsModule } from '@angular/forms';
@@ -30,6 +30,7 @@ import { ReactiveFormsModule } from '@angular/forms';
     NgxChartsModule,
     ReactiveFormsModule,
     RouterModule,
+    RouterLink,
     CarouselModule,
 
     // MyServicesComponent,
