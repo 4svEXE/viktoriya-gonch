@@ -14,7 +14,7 @@
   cursor: pointer;
   transition: background-color 0.2s ease, box-shadow 0.2s ease;
   width: 100%;
-  max-width: 260px;
+  max-width: 340px;
 
   // display: flex;
   align-items: center;
@@ -236,6 +236,6 @@
 
 .close-button{
   position: absolute;
-  top: 20px;
-  right: 20px;
+  top: 1px;
+  right: 1px;
 }

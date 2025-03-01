@@ -70,12 +70,23 @@
         <span> не знайдеш у буденному житті.</span>
       </p>
 
-      <button
-        class="active-button small mt-8"
-        (click)="openModal('Я хочу записатись на Лілу!')"
-      >
-        Я хочу записатись на "Лілу"!
-      </button>
+      <div class="flex w-full gap-3 md:flex-row flex-col mt-3">
+        <a
+          class="active-button small"
+          [href]="serviceUrl.lila_individual_game"
+          target="_blank"
+        >
+        З аписатись на індивідуальну гру
+        </a>
+        <a
+          class="active-button small"
+          [href]="serviceUrl.lila_group_game"
+          target="_blank"
+        >
+          Записатись на групову гру
+        </a>
+      </div>
+
     </app-section-grid>
   </div>
 </section>
@@ -136,12 +147,22 @@
         <li>Побачити, що блокує твій розвиток.</li>
         <li>Знайти нові рішення та ресурси для змін.</li>
       </ul>
-      <button
-        class="active-button small"
-        (click)="openModal('Я хочу записатись на гру Ліла')"
-      >
-        Записатись на гру
-      </button>
+      <div class="flex w-full gap-3 md:flex-row flex-col mt-3">
+        <a
+          class="active-button small"
+          [href]="serviceUrl.lila_individual_game"
+          target="_blank"
+        >
+        З аписатись на індивідуальну гру
+        </a>
+        <a
+          class="active-button small"
+          [href]="serviceUrl.lila_group_game"
+          target="_blank"
+        >
+          Записатись на групову гру
+        </a>
+      </div>
     </div>
   </app-section-grid>
 </section>

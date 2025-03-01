@@ -4,6 +4,7 @@
   <mat-tab-group
     [selectedIndex]="activeTab"
     (selectedIndexChange)="onTabChange($event)"
+    class="hidden md:block"
   >
     <mat-tab>
       <ng-template mat-tab-label><h4>Матриця долі</h4></ng-template>
@@ -15,10 +16,11 @@
     </mat-tab>
 
     <mat-tab>
-      <ng-template mat-tab-label><h4>Нумерологія</h4></ng-template>
+      <ng-template mat-tab-label><h4>Дитяча матриця долі</h4></ng-template>
       <app-my-services
-        [services]="numerologyServices"
-        title="Нумерологія"
+        [services]="matrixKidsServices"
+        title="Дитяча матриця долі"
+        imageSrc="assets/img/matrix.jpg"
       ></app-my-services>
     </mat-tab>
 
@@ -30,5 +32,53 @@
         imageSrc="assets/img/lila/1.jpg"
       ></app-my-services>
     </mat-tab>
+
+    <mat-tab>
+      <ng-template mat-tab-label><h4>Нумерологія</h4></ng-template>
+      <app-my-services
+        [services]="numerologyServices"
+        title="Нумерологія"
+      ></app-my-services>
+    </mat-tab>
   </mat-tab-group>
+
+  <owl-carousel-o [options]="customOptions" class="block md:hidden">
+    <ng-template carouselSlide>
+      <h4>Матриця долі</h4>
+      <app-my-services
+        [services]="matrixServices"
+        title="Матриця долі"
+        imageSrc="assets/img/matrix.jpg"
+      ></app-my-services>
+    </ng-template>
+
+    <ng-template carouselSlide>
+      <ng-template mat-tab-label><h4>Дитяча матриця долі</h4></ng-template>
+      <app-my-services
+        [services]="matrixKidsServices"
+        title="Дитяча матриця долі"
+        imageSrc="assets/img/matrix.jpg"
+      ></app-my-services>
+    </ng-template>
+
+    <ng-template carouselSlide>
+      <h4>Трансформаційні ігри</h4>
+
+      <app-my-services
+        [services]="gamesServices"
+        title="Трансформаційні ігри"
+        imageSrc="assets/img/lila/1.jpg"
+      ></app-my-services>
+    </ng-template>
+
+    <ng-template carouselSlide>
+      <h4>Нумерологія</h4>
+      <app-my-services
+        [services]="numerologyServices"
+        title="Нумерологія"
+      ></app-my-services>
+    </ng-template>
+
+
+  </owl-carousel-o>
 </section>

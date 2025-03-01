@@ -29,12 +29,22 @@
           яких відкриває нові грані вашої душі та допомагає побачити, що саме
           заважає вам рухатися вперед.
         </p>
-        <button
-          class="active-button small"
-          (click)="openModal('Я хочу записатись на гру 9 Світів')"
-        >
-          Записатись на гру
-        </button>
+        <div class="flex w-full gap-3 md:flex-row flex-col mt-3">
+          <a
+            class="active-button small"
+            [href]="serviceUrl._9_worlds_individual_game"
+            target="_blank"
+          >
+            Записатись на індивідуальну гру
+          </a>
+          <a
+            class="active-button small"
+            [href]="serviceUrl._9_worlds_group_game"
+            target="_blank"
+          >
+            Записатись на групову гру
+          </a>
+        </div>
       </div>
     </app-section-grid>
   </section>
@@ -116,12 +126,29 @@
           Дозвольте собі цю подорож і будьте готові побачити світ по-новому!
         </p>
       </div>
+
+      <div class="flex w-full gap-3 md:flex-row flex-col mt-3">
+        <a
+          class="active-button small"
+          [href]="serviceUrl._9_worlds_individual_game"
+          target="_blank"
+        >
+          Записатись на індивідуальну гру
+        </a>
+        <a
+          class="active-button small"
+          [href]="serviceUrl._9_worlds_group_game"
+          target="_blank"
+        >
+          Записатись на групову гру
+        </a>
+      </div>
     </app-section-grid>
   </section>
 
-  <app-reviews />
-
   <app-my-all-services [activeTab]="2" />
+
+  <app-reviews />
 
   <app-contacts />
 </section>

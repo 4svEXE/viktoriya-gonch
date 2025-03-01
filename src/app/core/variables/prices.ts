@@ -17,6 +17,7 @@ export interface ServicePrices {
   matrix: Consultation[];
   games: Consultation[];
   numerology: Consultation[];
+  matrix_kids: Consultation[];
 }
 
 export const localizedTitles = {
@@ -39,7 +40,7 @@ export type localizedTitlesType = typeof localizedTitles;
 
 // const paymentUrl = 'https://book.stripe.com/'
 const paymentUrl = ''
-const stripeServiceId = {
+export const stripeServiceId = {
   "deep_vip_consultation_on_the_matrix_of_fate": 'https://app.simplymeet.me/viktorie-honch/viktorie-honc-120-1740747132659',
   "individual_consultation_on_the_matrix_of_fate_express": 'https://app.simplymeet.me/viktorie-honch/1740747816',
   "consultation_on_the_matrix_of_pair_compatibility": 'https://app.simplymeet.me/viktorie-honch/konsultatsiya-po-matrixi-sumisnosti-pary-abo-partneriv',
@@ -57,6 +58,79 @@ const stripeServiceId = {
 }
 
 export const Prices: ServicePrices = {
+  matrix_kids:[
+    {
+      title: 'Індивідуальна консультація по дитячій матриці долі',
+      price: '35€',
+      details: {
+        includes: 'Що входить в консультацію уточнюється під час запису',
+        additional: [
+          { key: 'Сильні сторони і таланти дитини', value: '' },
+          {
+            key: 'Тривожні дзвіночки в поведінці',
+            value: 'Які варто зауважити.',
+          },
+          {
+            key: 'Підхід до дитини',
+            value:
+              'Як знайти підхід до вашої дитини і налагодити комунікацію (Мислення дитини).',
+          },
+          {
+            key: 'Гуртки для розвитку',
+            value: 'Підберемо гуртки, які розкриють дитину.',
+          },
+          {
+            key: 'Вибір професії',
+            value: 'Підберемо професію, яка приноситиме задоволення і гроші.',
+          },
+          {
+            key: 'Уроки для батьків',
+            value: 'Які уроки ваша дитина принесла у ваше життя.',
+          },
+          { key: 'Страхи і блоки', value: 'Страхи і блоки на підсвідомості.' },
+        ],
+        duration: '45 хв',
+        conditions: 'Умови проведення вказуються індивідуально',
+      },
+      paymentLink: paymentUrl + stripeServiceId.individual_consultation_on_the_child_matrix_of_fate,
+    },
+    {
+      title: 'Експрес-консультація по дитячій матриці долі',
+      price: '30€',
+      details: {
+        includes: 'Допоможемо розкрити таланти вашої дитини, знайти до неї підхід, обрати гуртки та професію, а також зрозуміти її страхи і ваші батьківські уроки.',
+        additional: [
+          { key: 'Сильні сторони', value: 'Основні таланти дитини.' },
+          { key: 'Поведінка', value: 'Короткий аналіз поведінкових патернів.' },
+          {
+            key: 'Рекомендації',
+            value: 'Основні поради для виховання і розвитку.',
+          },
+        ],
+        duration: '30 хвилин',
+        conditions: 'Консультація доступна як онлайн, так і офлайн.',
+      },
+      paymentLink: paymentUrl + stripeServiceId.express_consultation_on_the_child_matrix_of_fate,
+    },
+    {
+      title: 'Індивідуальна консультація: Страхи і блоки дитини',
+      price: '40€',
+      details: {
+        includes: 'Аналіз підсвідомих страхів та рекомендації по їх подоланню.',
+        additional: [
+          { key: 'Страхи', value: 'Виявлення блоків на підсвідомості.' },
+          {
+            key: 'Батьківські уроки',
+            value: 'Що ваша дитина може навчити вас як батьків.',
+          },
+        ],
+        duration: '45 хвилин',
+        conditions:
+          'Консультація може бути проведена лише в індивідуальному порядку.',
+      },
+      paymentLink: paymentUrl + stripeServiceId.individual_consultation_on_the_child_fears_and_blocks,
+    },
+  ],
   matrix: [
     {
       title: 'Глибинна VIP консультація по матриці долі',
@@ -179,77 +253,7 @@ export const Prices: ServicePrices = {
       },
       paymentLink: paymentUrl + stripeServiceId.consultation_on_the_matrix_of_pair_compatibility,
     },
-    {
-      title: 'Індивідуальна консультація по дитячій матриці долі',
-      price: '35€',
-      details: {
-        includes: 'Що входить в консультацію уточнюється під час запису',
-        additional: [
-          { key: 'Сильні сторони і таланти дитини', value: '' },
-          {
-            key: 'Тривожні дзвіночки в поведінці',
-            value: 'Які варто зауважити.',
-          },
-          {
-            key: 'Підхід до дитини',
-            value:
-              'Як знайти підхід до вашої дитини і налагодити комунікацію (Мислення дитини).',
-          },
-          {
-            key: 'Гуртки для розвитку',
-            value: 'Підберемо гуртки, які розкриють дитину.',
-          },
-          {
-            key: 'Вибір професії',
-            value: 'Підберемо професію, яка приноситиме задоволення і гроші.',
-          },
-          {
-            key: 'Уроки для батьків',
-            value: 'Які уроки ваша дитина принесла у ваше життя.',
-          },
-          { key: 'Страхи і блоки', value: 'Страхи і блоки на підсвідомості.' },
-        ],
-        duration: '45 хв',
-        conditions: 'Умови проведення вказуються індивідуально',
-      },
-      paymentLink: paymentUrl + stripeServiceId.individual_consultation_on_the_child_matrix_of_fate,
-    },
-    {
-      title: 'Експрес-консультація по дитячій матриці долі',
-      price: '30€',
-      details: {
-        includes: 'Допоможемо розкрити таланти вашої дитини, знайти до неї підхід, обрати гуртки та професію, а також зрозуміти її страхи і ваші батьківські уроки.',
-        additional: [
-          { key: 'Сильні сторони', value: 'Основні таланти дитини.' },
-          { key: 'Поведінка', value: 'Короткий аналіз поведінкових патернів.' },
-          {
-            key: 'Рекомендації',
-            value: 'Основні поради для виховання і розвитку.',
-          },
-        ],
-        duration: '30 хвилин',
-        conditions: 'Консультація доступна як онлайн, так і офлайн.',
-      },
-      paymentLink: paymentUrl + stripeServiceId.express_consultation_on_the_child_matrix_of_fate,
-    },
-    {
-      title: 'Індивідуальна консультація: Страхи і блоки дитини',
-      price: '40€',
-      details: {
-        includes: 'Аналіз підсвідомих страхів та рекомендації по їх подоланню.',
-        additional: [
-          { key: 'Страхи', value: 'Виявлення блоків на підсвідомості.' },
-          {
-            key: 'Батьківські уроки',
-            value: 'Що ваша дитина може навчити вас як батьків.',
-          },
-        ],
-        duration: '45 хвилин',
-        conditions:
-          'Консультація може бути проведена лише в індивідуальному порядку.',
-      },
-      paymentLink: paymentUrl + stripeServiceId.individual_consultation_on_the_child_fears_and_blocks,
-    },
+
     {
       title: 'Глибинна фінансова консультація “Де мої гроші”',
       price: '100€',

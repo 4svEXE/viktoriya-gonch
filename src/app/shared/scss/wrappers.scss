@@ -72,6 +72,12 @@ section {
   background-color: #fff;
   box-shadow: $box-shadow;
   font-size: 14px;
+
+  &.md_no-shadow {
+    @media (max-width: 768px) {
+      box-shadow: none;
+    }
+  }
 }
 
 .screen-dvh {

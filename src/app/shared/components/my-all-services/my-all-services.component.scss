@@ -5,3 +5,13 @@
 ::ng-deep  .mat-mdc-tab-body-active{
   z-index: 999 !important;
 }
+
+.hidden {
+  display: none;
+}
+@media (min-width: 768px) {
+  .md\:block {
+      display: block;
+  }
+}
+

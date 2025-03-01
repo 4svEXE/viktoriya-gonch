@@ -24,11 +24,11 @@ export const Routes: Route[] = [
   },
   { path: 'me', label: 'Про мене' },
   {
-    label: 'Матриця долі',
+    label: 'Матриці долі',
     subMenu: [
-      { path: 'matrix', label: 'Матриця долі' },
-      { path: 'sumistnist', label: 'Калькулятор сумістності' },
+      { path: 'matrix', label: 'Персональна атриця долі' },
       { path: 'kids-matrix', label: 'Дитяча матриця долі' },
+      { path: 'sumistnist', label: 'Матриця сумістності пари' },
       // { path: 'prediction', label: 'Прогнозування' },
     ],
   },

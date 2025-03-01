@@ -1,13 +1,31 @@
-.calendly-button {
-  background-color: #0069ff;
-  color: #ffffff;
-  padding: 10px 20px;
-  border: none;
-  border-radius: 5px;
-  font-size: 16px;
-  cursor: pointer;
-}
 
-.calendly-button:hover {
-  background-color: #0051cc;
+.button-section{
+  .circle-button {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+    border: 10px solid #26663b;
+    font-size: 20px;
+    animation: rotateText 8s linear infinite;
+  }
+
+  #circle {
+    fill: none;
+    stroke-width: 8px;
+    stroke: url(#grad);
+  }
+
+  #textPath {
+    fill: none;
+  }
+
+  @keyframes rotateText {
+    from {
+      transform: rotate(0deg);
+    }
+    to {
+      transform: rotate(360deg);
+    }
+  }
 }
