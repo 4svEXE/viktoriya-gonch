@@ -6,5 +6,13 @@ export const config: ScullyConfig = {
   projectName: 'viktoriya-gonch',
   distFolder: './dist/viktoriya-gonch',
   outDir: './dist/static',
-  defaultPostRenderers: []
+  defaultPostRenderers: [],
+  puppeteerLaunchOptions: {
+    timeout: 60000 // 60 секунд замість 30
+  },
+  routes: {
+    '/bali': {
+      type: 'ignored'
+    }
+  }
 };

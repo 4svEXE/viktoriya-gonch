@@ -3,6 +3,25 @@ import { CommonModule } from '@angular/common';
 import { Component, Input, OnInit, OnDestroy } from '@angular/core';
 import { DomSanitizer, SafeResourceUrl } from '@angular/platform-browser';
 
+
+// додати на сайт айфрейму
+// <script>
+//   function sendHeight() {
+//     const height = document.documentElement.scrollHeight;
+//     window.parent.postMessage({ type: 'iframeHeight', height }, '*');
+//   }
+
+//   // Відправляти висоту після завантаження
+//   window.addEventListener('load', sendHeight);
+
+//   // Відправляти висоту при зміні розміру контенту
+//   const observer = new ResizeObserver(sendHeight);
+//   observer.observe(document.body);
+// </script>
+
+
+
+
 @Component({
   selector: 'app-iframe-section',
   standalone: true,

@@ -11,6 +11,7 @@ import { PredictionComponent } from './prediction/prediction.component';
 import { LilaComponent } from './lila/lila.component';
 import { NineWorldsComponent } from './nine-worlds/nine-worlds.component';
 import { CalendlyComponent } from './calendly/calendly.component';
+import { BaliComponent } from './bali/bali.component';
 
 const routes: Routes = [
   { path: 'home', component: HomeComponent },
@@ -23,6 +24,7 @@ const routes: Routes = [
   { path: 'lila', component: LilaComponent },
   { path: 'nine-worlds', component: NineWorldsComponent },
   { path: 'calendly/:service', component: CalendlyComponent },
+  { path: 'bali', component: BaliComponent },
 
 ];
 

@@ -25,6 +25,7 @@ import { LilaComponent } from './lila/lila.component';
 import { KidsMatrixComponent } from './kids-matrix/kids-matrix.component';
 import { PredictionComponent } from './prediction/prediction.component';
 import { NineWorldsComponent} from './nine-worlds/nine-worlds.component';
+import { BaliComponent } from './bali/bali.component';
 
 @NgModule({
   imports: [
@@ -51,7 +52,8 @@ import { NineWorldsComponent} from './nine-worlds/nine-worlds.component';
     KidsMatrixComponent,
     PredictionComponent,
     LilaComponent,
-    NineWorldsComponent
+    NineWorldsComponent,
+    BaliComponent
   ]
 })
 export class PagesModule {}

@@ -1,0 +1,25 @@
+<!-- <app-iframe-section
+  title=""
+  iframeSrc="https://4svexe.github.io/bali/home"
+></app-iframe-section> -->
+
+
+<section class="container no-scroll min-h-[100vh]">
+  <div class="div-block-2">
+    <div class="embeded-iframe w-embed w-iframe">
+      <iframe
+        [src]="sanitizedIframeSrc"
+        frameborder="0"
+        style="overflow: hidden; width: 100%"
+        [height]="iframeHeight"
+        width="100%"
+      ></iframe>
+    </div>
+  </div>
+  <div class="w-full flex justify-center" *ngIf="iframeHeight === '100vh'">
+    Завантаження...
+  </div>
+</section>
+
+<app-my-all-services />
+<app-contacts />

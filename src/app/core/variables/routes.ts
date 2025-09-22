@@ -23,19 +23,21 @@ export const Routes: Route[] = [
     // subMenuRoutePrefix: '/home#',
   },
   { path: 'me', label: 'Про мене' },
+  // { path: 'bali', label: 'Ретрит на Балі' },
   {
     label: 'Матриці долі',
     subMenu: [
-      { path: 'matrix', label: 'Персональна атриця долі' },
+      { path: 'matrix', label: 'Персональна матриця долі' },
       { path: 'kids-matrix', label: 'Дитяча матриця долі' },
       { path: 'sumistnist', label: 'Матриця сумістності пари' },
       // { path: 'prediction', label: 'Прогнозування' },
     ],
   },
   {
-    label: 'Нумерологія',
+    label: 'Сюцай',
     subMenu: [
       { path: 'pifagor', label: 'Квадрат піфагора' },
+      { path: 'pifagor', label: 'Персональний календар на рік' },
     ],
   },
   {
