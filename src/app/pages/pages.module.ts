@@ -12,8 +12,6 @@ import { SectionGridComponent } from '../shared/layout/section-grid/section-grid
 import { ContactsComponent } from '../shared/components/contacts/contact-form.component';
 import { ReviewsComponent } from '../shared/components/reviews/reviews.component';
 import { MyAllServicesComponent } from '../shared/components/my-all-services/my-all-services.component';
-// import { MyServicesComponent } from "../shared/components/my-services/my-services.component";
-// import { MarqueeComponent } from '../shared/layout/marquee/marquee.component';
 
 
 import { HomeModule } from './home/home.module';
@@ -39,10 +37,6 @@ import { BaliComponent } from './bali/bali.component';
     SectionGridComponent, // ✅ Standalone
     ReviewsComponent, // ✅ Standalone
     MyAllServicesComponent,
-
-    // ?MyServicesComponent, //
-    // ?MarqueeComponent, //
-
   ],
   declarations: [
     PifagorComponent,
