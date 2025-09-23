@@ -5,50 +5,23 @@ import { PagesRoutingModule } from './pages-routing.module';
 import { MatExpansionModule } from '@angular/material/expansion';
 import { CarouselModule } from 'ngx-owl-carousel-o';
 
-
-
 import { IframeSectionComponent } from '../shared/components/iframe-section/iframe-section.component';
 import { SectionGridComponent } from '../shared/layout/section-grid/section-grid.component';
 import { ContactsComponent } from '../shared/components/contacts/contact-form.component';
 import { ReviewsComponent } from '../shared/components/reviews/reviews.component';
 import { MyAllServicesComponent } from '../shared/components/my-all-services/my-all-services.component';
 
-
-import { HomeModule } from './home/home.module';
-import { PifagorComponent } from './pifagor/pifagor.component';
-import { SumistnistComponent } from './sumistnist/sumistnist.component';
-import { MatrixComponent } from './matrix/matrix.component';
-import { MeComponent } from './me/me.component';
-import { LilaComponent } from './lila/lila.component';
-import { KidsMatrixComponent } from './kids-matrix/kids-matrix.component';
-import { PredictionComponent } from './prediction/prediction.component';
-import { NineWorldsComponent} from './nine-worlds/nine-worlds.component';
-import { BaliComponent } from './bali/bali.component';
-
 @NgModule({
   imports: [
-    HomeModule,
     CommonModule,
     PagesRoutingModule,
     CarouselModule,
     MatExpansionModule,
-    IframeSectionComponent, // ✅ Standalone
-    ContactsComponent, // ✅ Standalone
-    SectionGridComponent, // ✅ Standalone
-    ReviewsComponent, // ✅ Standalone
+    IframeSectionComponent, //  Standalone
+    ContactsComponent,       //  Standalone
+    SectionGridComponent,    //  Standalone
+    ReviewsComponent,        //  Standalone
     MyAllServicesComponent,
-  ],
-  declarations: [
-    PifagorComponent,
-    SumistnistComponent,
-    MatrixComponent,
-    MeComponent,
-    KidsMatrixComponent,
-    PredictionComponent,
-    LilaComponent,
-    NineWorldsComponent,
-    BaliComponent
   ]
 })
 export class PagesModule {}
-

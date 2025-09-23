@@ -1,31 +1,54 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 
-import { HomeComponent } from './home/home.component';
-import { MeComponent } from './me/me.component';
-import { PifagorComponent } from './pifagor/pifagor.component';
-import { MatrixComponent } from './matrix/matrix.component';
-import { SumistnistComponent } from './sumistnist/sumistnist.component';
-import { KidsMatrixComponent } from './kids-matrix/kids-matrix.component';
-import { PredictionComponent } from './prediction/prediction.component';
-import { LilaComponent } from './lila/lila.component';
-import { NineWorldsComponent } from './nine-worlds/nine-worlds.component';
-import { CalendlyComponent } from './calendly/calendly.component';
-import { BaliComponent } from './bali/bali.component';
-
 const routes: Routes = [
-  { path: 'home', component: HomeComponent },
-  { path: 'me', component: MeComponent },
-  { path: 'pifagor', component: PifagorComponent },
-  { path: 'matrix', component: MatrixComponent },
-  { path: 'sumistnist', component: SumistnistComponent },
-  { path: 'kids-matrix', component: KidsMatrixComponent },
-  { path: 'prediction', component: PredictionComponent },
-  { path: 'lila', component: LilaComponent },
-  { path: 'nine-worlds', component: NineWorldsComponent },
-  { path: 'calendly/:service', component: CalendlyComponent },
-  { path: 'bali', component: BaliComponent },
-
+  {
+    path: 'home',
+    loadComponent: () => import('./home/home.component').then(m => m.HomeComponent)
+  },
+  {
+    path: 'me',
+    loadChildren: () => import('./me/me.module').then(m => m.MeModule)
+  },
+  {
+    path: 'pifagor',
+    loadChildren: () => import('./pifagor/pifagor.module').then(m => m.PifagorModule)
+  },
+  {
+    path: 'matrix',
+    loadChildren: () => import('./matrix/matrix.module').then(m => m.MatrixModule)
+  },
+  {
+    path: 'sumistnist',
+    loadChildren: () => import('./sumistnist/sumistnist.module').then(m => m.SumistnistModule)
+  },
+  {
+    path: 'kids-matrix',
+    loadChildren: () => import('./kids-matrix/kids-matrix.module').then(m => m.KidsMatrixModule)
+  },
+  {
+    path: 'lila',
+    loadChildren: () => import('./lila/lila.module').then(m => m.LilaModule)
+  },
+  {
+    path: 'nine-worlds',
+    loadChildren: () => import('./nine-worlds/nine-worlds.module').then(m => m.NineWorldsModule)
+  },
+  {
+    path: 'calendly/:service',
+    loadChildren: () => import('./calendly/calendly.module').then(m => m.CalendlyModule)
+  },
+  {
+    path: 'bali',
+    loadChildren: () => import('./bali/bali.module').then(m => m.BaliModule)
+  },
+  {
+    path: 'about-year-calendar',
+    loadChildren: () => import('./about-year-calendar/about-year-calendar.module')
+      .then(m => m.AboutYearCalendarModule)
+  }
+  ,
+  { path: '**', redirectTo: 'home' } // fallback
 ];
 
 @NgModule({

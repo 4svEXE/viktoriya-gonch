@@ -1,0 +1,38 @@
+<div class="calculator mt-20">
+  <h1>Калькулятор Сюцай</h1>
+
+  <section id="results" *ngIf="name && birthdate">
+    <h2>Результати для {{ name }}</h2>
+    <p><strong>Email:</strong> {{ email }}</p>
+    <p><strong>Дата народження:</strong> {{ birthdate }}</p>
+    <p><strong>Число свідомості:</strong> {{ conscious }}</p>
+    <p><strong>Місія:</strong> {{ mission }}</p>
+    <p><strong>Особистий рік:</strong> {{ personalYear }}</p>
+    <hr />
+    <h3>Розбір імені (латиницею)</h3>
+    <p><strong>Число імені:</strong> {{ finalDigit }}</p>
+    <hr />
+  </section>
+
+  <section *ngIf="calendar.length">
+  <h2>Річний календар</h2>
+  <div class="calendar" *ngFor="let month of calendar">
+    <table>
+      <tr>
+        <th>День</th>
+        <th>{{ month.month }}</th>
+        <th *ngFor="let day of month.days" [ngClass]="day.cls">{{ day.val }}</th>
+      </tr>
+      <tr>
+        <td>Загальний</td>
+        <td *ngFor="let day of month.general" [ngClass]="day.cls">{{ day.val }}</td>
+      </tr>
+      <tr>
+        <td>Особистий</td>
+        <td *ngFor="let day of month.personal" [ngClass]="day.cls">{{ day.val }}</td>
+      </tr>
+    </table>
+  </div>
+</section>
+
+</div>

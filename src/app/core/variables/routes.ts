@@ -12,19 +12,12 @@ export const Routes: Route[] = [
   },
   { path: 'me', label: 'Про мене' },
   // { path: 'bali', label: 'Ретрит на Балі' },
-  {
-    label: 'Матриці долі',
-    subMenu: [
-      { path: 'matrix', label: 'Персональна матриця долі' },
-      { path: 'kids-matrix', label: 'Дитяча матриця долі' },
-      { path: 'sumistnist', label: 'Матриця сумістності пари' },
-    ],
-  },
+
   {
     label: 'Сюцай',
     subMenu: [
       { path: 'pifagor', label: 'Квадрат сюцай' },
-      { path: 'pifagor', label: 'Персональний календар на рік' },
+      { path: 'about-year-calendar', label: 'Персональний календар на рік' },
     ],
   },
   {
@@ -32,6 +25,14 @@ export const Routes: Route[] = [
     subMenu: [
       { path: 'lila', label: 'Гра Ліла' },
       { path: 'nine-worlds', label: 'Гра 9 світів' },
+    ],
+  },
+  {
+    label: 'Матриці долі',
+    subMenu: [
+      { path: 'matrix', label: 'Персональна матриця долі' },
+      { path: 'kids-matrix', label: 'Дитяча матриця долі' },
+      { path: 'sumistnist', label: 'Матриця сумістності пари' },
     ],
   },
 ];

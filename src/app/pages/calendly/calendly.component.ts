@@ -2,12 +2,12 @@ import { localizedTitles } from './../../core/variables/prices';
 import { TelegramService } from './../../core/services/telegram.service';
 import { Component, AfterViewInit } from '@angular/core';
 import { ActivatedRoute, RouterLink } from '@angular/router';
-import { CommonModule } from '@angular/common';
+// import { CommonModule } from '@angular/common';
 
 @Component({
   selector: 'app-calendly',
-  standalone: true,
-  imports: [CommonModule, RouterLink],
+  // standalone: true,
+  // imports: [CommonModule, RouterLink],
   templateUrl: './calendly.component.html',
   styleUrl: './calendly.component.scss',
 })
