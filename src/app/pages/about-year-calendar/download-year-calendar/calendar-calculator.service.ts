@@ -66,36 +66,67 @@ export class CalendarCalculatorService {
     this.months.forEach((monthName, mIndex) => {
       const monthNo = mIndex + 1;
       const daysInMonth = new Date(year, monthNo, 0).getDate();
+      const firstDay = new Date(year, mIndex, 1).getDay(); // 0 = Нд
+      const offset = firstDay === 0 ? 6 : firstDay - 1;   // щоб тиждень починався з Пн
       const period = this.monthPeriods[mIndex];
 
-      const days: { val: number, cls: string }[] = [];
-      const general: { val: number, cls: string }[] = [];
-      const personal: { val: number, cls: string }[] = [];
+      const weeks: any[][] = [];
+      let week: any[] = new Array(offset).fill(null);
+      let monthInfo: any[] = []
 
       for (let d = 1; d <= daysInMonth; d++) {
         // --- Дні місяця ---
         const clsDay = this.getMonthCellClass(d, d, period);
-        days.push({ val: d, cls: clsDay });
 
-        // --- Загальний рядок ---
+        // --- Загальний ---
         const valGen = ((monthNo + d - 2) % 9) + 1;
         const clsGen = this.getCellClass(d, valGen, period);
-        general.push({ val: valGen, cls: clsGen });
 
-        // --- Особистий рядок ---
+        // --- Особистий ---
         const valPers = this.reduceToOneDigit(birthDay + monthNo + d);
         const clsPers = this.getCellClass(d, valPers, period);
-        personal.push({ val: valPers, cls: clsPers });
+
+        if (d === 1) {
+          monthInfo.push({
+            val: d,
+            cls: clsDay,
+            general: valGen,
+            generalCls: clsGen,
+            personal: valPers,
+            personalCls: clsPers
+          });
+        } else {
+          week.push({
+            val: d - 1,
+            cls: clsDay,
+            general: valGen,
+            generalCls: clsGen,
+            personal: valPers,
+            personalCls: clsPers
+          });
+
+          if (week.length === 7) {
+            weeks.push(week);
+            week = [];
+          }
+        }
+      }
+
+      if (week.length > 0) {
+        while (week.length < 7) {
+          week.push(null);
+        }
+        weeks.push(week);
       }
 
       calendar.push({
-        month: monthName,
-        days,
-        general,
-        personal
+        name: monthName,
+        monthInfo: monthInfo,
+        weeks
       });
     });
 
     return calendar;
   }
+
 }

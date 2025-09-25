@@ -1,132 +1,146 @@
-body {
-  font-family: Arial, sans-serif;
-  background: #f4f4f4;
-  margin: 0;
-  padding: 0;
-  color: #333;
-}
+@import '../../../shared/scss/variables.scss';
 
-header {
-  background: #222;
-  color: #fff;
-  padding: 20px;
-  text-align: center;
-}
-
+// Sections / cards
 section {
-  margin: 20px auto;
-  padding: 20px;
-  background: white;
+  margin: $spacing-large auto;
+  padding: $spacing-large;
+  background: #fff;
   width: 80%;
   max-width: 800px;
-  border-radius: 8px;
-  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  border-radius: $border-radius;
+  box-shadow: $box-shadow;
 }
 
+// Buttons
 button {
-  margin-top: 10px;
-  padding: 10px 20px;
+  margin-top: $spacing-small;
+  padding: $spacing-small $spacing-medium;
   border: none;
-  background: #444;
-  color: white;
-  border-radius: 5px;
+  background: $primary-color;
+  color: $button-text-color;
+  border-radius: $border-radius;
   cursor: pointer;
+  font-family: $font-family-base;
+  transition: background 0.3s ease;
+
+  &:hover {
+    background: $primary-hover;
+  }
+
+  &:disabled {
+    background: $primary-disabled;
+    cursor: not-allowed;
+  }
 }
 
-button:hover {
-  background: #666;
-}
-
-table {
-  width: 100%;
-  border-collapse: collapse;
-  margin-top: 15px;
-}
-
-th,
-td {
-  border: 1px solid #ddd;
-  padding: 8px;
-  text-align: center;
-}
-
-th {
-  background: #444;
-  color: white;
-}
-
-
-
-/* --- */
+// Tables
 table {
   border-collapse: collapse;
-  width: 100%;
-  margin-bottom: 30px;
-}
-
-th,
-td {
-  border: 1px solid #555;
-  padding: 4px;
-  text-align: center;
-}
-
-th {
-  background: #eee;
-}
-
-.month-row {
-  background: #f0f0f0;
-  font-weight: bold;
-}
-
-body {
-  font-family: Arial, sans-serif;
-  padding: 16px;
-  background: #fff;
-}
-
-table {
-  border-collapse: collapse;
-  margin: 20px 0;
+  margin: $spacing-medium 0;
   width: 100%;
   max-width: 1000px;
+  font-size: $font-size-small;
 }
 
 th,
 td {
-  border: 1px solid #ccc;
-  padding: 6px 8px;
+  border: 1px solid $border-color;
+  padding: $spacing-small;
   text-align: center;
 }
 
 th {
-  background: #0e0808;
+  background: $secondary-color;
+  color: $text-color;
   font-weight: 600;
 }
 
 td.label {
   text-align: left;
   font-weight: bold;
-  background: #f9f9f9;
+  background: lighten($secondary-color, 15%);
   width: 120px;
 }
 
+// Calendar day states
 .good {
-  background: #8bc34a;
-  color: #fff;
+  background: lighten($primary-color, 20%);
+  color: $button-text-color;
 }
 
 .bad {
-  background: #f44336;
+  background: #f44336; // можеш винести у змінні, якщо треба
   color: #fff;
 }
 
 .neutral {
-  background: #e0e0e0;
-  color: #000;
+  background: $secondary-color;
+  color: $text-color;
 }
 
+// Controls
 .controls label {
-  margin-right: 12px;
+  margin-right: $spacing-medium;
 }
+
+
+.calendar {
+  margin-bottom: $spacing-large;
+
+  .month-title {
+    text-align: center;
+    font-family: $font-family-headings;
+    font-size: 1.5rem;
+    margin-bottom: $spacing-small;
+  }
+
+  table {
+    width: 100%;
+    border-collapse: collapse;
+
+    th,
+    td {
+      border: 1px solid $border-color;
+      width: 14.28%;
+      // height: 80px;
+      vertical-align: top;
+      padding: 4px;
+      font-size: $font-size-small;
+    }
+
+    th {
+      background: $secondary-color;
+      font-weight: bold;
+    }
+
+    .day-num {
+      font-weight: bold;
+      text-align: right;
+    }
+
+    .day-info {
+      font-size: 0.7rem;
+      text-align: left;
+      display: flex;
+      flex-wrap: wrap;
+      cursor: pointer;
+
+      small {
+        width: 100%;
+        display: block;
+        border: 1px solid wheat;
+        padding: 12px;
+      }
+    }
+  }
+}
+
+section{
+  margin: 16px auto;
+  width: 99%;
+}
+
+h1{
+  display: block;
+}
+
