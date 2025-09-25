@@ -50,8 +50,8 @@ td {
 }
 
 th {
-  background: $secondary-color;
-  color: $text-color;
+  background: #202020;
+  color: white;
   font-weight: 600;
 }
 
@@ -63,20 +63,31 @@ td.label {
 }
 
 // Calendar day states
+.good-period {
+  background: #9aa348; // ніжний зелений (успіх, позитив)
+  color: #000000; // темно-зелений для контрасту
+}
+
+.bad-period {
+  background: #9508c0; // пастельний червоний (але не агресивний)
+  color: #ffffff; // темно-червоний для тексту
+}
+
 .good {
-  background: lighten($primary-color, 20%);
-  color: $button-text-color;
+  background: #4eff54; // ніжний зелений (успіх, позитив)
+  color: #256029; // темно-зелений для контрасту
 }
 
 .bad {
-  background: #f44336; // можеш винести у змінні, якщо треба
-  color: #fff;
+  background: #f70019; // пастельний червоний (але не агресивний)
+  color: #fff; // темно-червоний для тексту
 }
 
 .neutral {
-  background: $secondary-color;
-  color: $text-color;
+  background: #ffeded; // світло-сірий (нейтральний)
+  color: #424242; // темно-сірий текст
 }
+
 
 // Controls
 .controls label {
@@ -103,6 +114,7 @@ td.label {
       border: 1px solid $border-color;
       width: 14.28%;
       // height: 80px;
+
       vertical-align: top;
       padding: 4px;
       font-size: $font-size-small;
@@ -111,6 +123,8 @@ td.label {
     th {
       background: $secondary-color;
       font-weight: bold;
+      background: #202020;
+      color: white;
     }
 
     .day-num {
@@ -135,12 +149,26 @@ td.label {
   }
 }
 
-section{
+section {
   margin: 16px auto;
   width: 99%;
 }
 
-h1{
+h1 {
   display: block;
 }
 
+table {
+  display: block;
+  width: 100%;
+  overflow-x: auto;
+  -webkit-overflow-scrolling: touch;
+}
+
+table thead,
+table tbody,
+table tr {
+  display: table;
+  width: 100%;
+  table-layout: fixed;
+}

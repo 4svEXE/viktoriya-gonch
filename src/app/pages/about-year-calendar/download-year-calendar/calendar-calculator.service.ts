@@ -42,8 +42,8 @@ export class CalendarCalculatorService {
 
   /** Визначає клас клітинки */
   getCellClass(dayNumber: number, value: number, period?: any): string {
-    dayNumber--; // щоб відповідало JS-коду
-    if (dayNumber === 9 || dayNumber === 19 || dayNumber === 29) return 'bad';
+    dayNumber-2;
+    if (dayNumber === 11 || dayNumber === 21 || dayNumber === 31) return 'bad';
     if ([3, 6, 8].includes(value)) return 'good';
     return 'neutral';
   }
@@ -51,7 +51,7 @@ export class CalendarCalculatorService {
 
   /** Визначає клас клітинки */
   getMonthCellClass(dayNumber: number, value: number, period?: any): string {
-    dayNumber--; // щоб відповідало JS-коду
+    dayNumber-=2;
     if (period) {
       if (period.bad && dayNumber + 1 >= period.bad[0] && dayNumber + 1 <= period.bad[1]) return 'bad';
       if (period.good && dayNumber + 1 >= period.good[0] && dayNumber + 1 <= period.good[1]) return 'good';
@@ -74,8 +74,8 @@ export class CalendarCalculatorService {
       let week: any[] = new Array(offset).fill(null);
       let monthInfo: any[] = []
 
-      for (let d = 1; d <= daysInMonth; d++) {
-        // --- Дні місяця ---
+      for (let d = 1; d <= daysInMonth +1; d++) {
+        // --- Дні місяця (періоди)---
         const clsDay = this.getMonthCellClass(d, d, period);
 
         // --- Загальний ---
