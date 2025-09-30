@@ -39,8 +39,10 @@ export class DownloadYearCalendarComponent implements OnInit {
     this.route.queryParams.subscribe(params => {
       this.name = params['name'] || 'Ivan';
       this.email = params['email'] || '4sv';
-      this.birthdate = params['birthdate'] || '24.01.1997';
+      this.birthdate = params['birthdate'] || '1997-01-24';
       this.year = +params['year'] || new Date().getFullYear();
+
+      console.log('object :>> ', this.name, this.birthdate);
 
       if (this.name && this.birthdate && this.year) {
         this.calculateAll();
@@ -49,7 +51,7 @@ export class DownloadYearCalendarComponent implements OnInit {
   }
 
   calculateAll() {
-    const [birthD, birthM, birthY] = this.birthdate.split('.').map(Number);
+    const [birthY, birthD, birthM ] = this.birthdate.split('-').map(Number);
 
     const consciousNum = this.yearCalc.calculateConscious(birthD);
     const missionNum = this.yearCalc.calculateMission(birthD, birthM, birthY);
