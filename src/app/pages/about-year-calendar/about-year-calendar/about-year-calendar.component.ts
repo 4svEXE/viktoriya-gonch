@@ -37,4 +37,11 @@ export class AboutYearCalendarComponent {
       this.form.markAllAsTouched(); // щоб підсвітити помилки
     }
   }
+
+  scrollDownload() {
+    const el = document.getElementById('download');
+    if (el) {
+      el.scrollIntoView({ behavior: 'smooth', block: 'center' });
+    }
+  }
 }

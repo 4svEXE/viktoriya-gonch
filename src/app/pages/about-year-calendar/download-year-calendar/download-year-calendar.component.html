@@ -1,5 +1,5 @@
-<div class="calculator mt-20">
-  <h1 class="text-center">Ваш персональний каренар Сюцай на {{year}} рік</h1>
+<div class="calculator mt-20" id="calendar-container">
+  <h1 class="text-center">Ваш персональний каренар Сюцай на {{ year }} рік</h1>
 
   <h2 class="results-title text-center">Результати для {{ name }}</h2>
 
@@ -341,7 +341,11 @@
       </table>
     </div>
 
-    <div class="calendar" *ngFor="let month of calendar">
+    <div
+      class="calendar"
+      *ngFor="let month of calendar; let i = index"
+      [id]="'month-' + i"
+    >
       <h3 class="month-title- text-center">{{ month.name }}</h3>
       <div class="day-info w-full text-center">
         <small [className]="month.monthInfo[0].generalCls"
@@ -380,4 +384,30 @@
       </table>
     </div>
   </section>
+
+  <section class="w-full flex items-center">
+    <a
+      class="primary-button"
+      href="https://docs.google.com/forms/d/e/1FAIpQLSee_7tGKTMW34LiBBvmq9yfS2V3ko-FI_dpwWs-DzUPLNDC_Q/viewform?usp=header"
+      >Залишити відгук \ скаргу \ пропозицію</a
+    >
+  </section>
+
+  <button class="scroll-today primary-button" (click)="scrollToCurrentMonth()">
+    <img
+      style="transform: scale(2)"
+      src="assets/icons/today.svg"
+      alt="Прогорнути до сьогодні"
+      class="mx-auto rounded-xl shadow-2xl transition hover:scale-[1.02] duration-300"
+    />
+  </button>
+
+  <button class="download-pdf primary-button" (click)="downloadPDF()">
+    <img
+      style="transform: scale(2)"
+      src="assets/icons/download.svg"
+      alt="Скачати в pdf"
+      class="mx-auto rounded-xl shadow-2xl transition hover:scale-[1.02] duration-300"
+    />
+  </button>
 </div>
