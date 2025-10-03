@@ -1,0 +1,16 @@
+.carousel-img {
+  border-radius: 12px;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
+  transform: rotateZ(5deg) rotateY(5deg) scale(0.9);
+  transition: transform 0.3s ease;
+  height: 620px;
+}
+
+::ng-deep .owl-item {
+  &.active {
+    .carousel-img {
+      transform: rotateZ(-5deg) rotateY(-5deg) scale(0.7);
+      box-shadow: -7px 12px 30px 30px #00000061;
+    }
+  }
+}

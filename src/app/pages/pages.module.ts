@@ -10,6 +10,7 @@ import { SectionGridComponent } from '../shared/layout/section-grid/section-grid
 import { ContactsComponent } from '../shared/components/contacts/contact-form.component';
 import { ReviewsComponent } from '../shared/components/reviews/reviews.component';
 import { MyAllServicesComponent } from '../shared/components/my-all-services/my-all-services.component';
+import { PresentationsModule } from './presentations/presentations.module';
 
 @NgModule({
   imports: [
@@ -22,6 +23,7 @@ import { MyAllServicesComponent } from '../shared/components/my-all-services/my-
     SectionGridComponent,    //  Standalone
     ReviewsComponent,        //  Standalone
     MyAllServicesComponent,
+    PresentationsModule
   ]
 })
 export class PagesModule {}

@@ -2,6 +2,8 @@ import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
 import { CalendarCalculatorService } from './calendar-calculator.service';
 import { YearCalculatorService } from './year-calculator.service';
+import { MatSnackBar } from '@angular/material/snack-bar';
+import { ToastService } from '../toast.service';
 
 // 👇 додаємо глобальну змінну для html2pdf
 declare var html2pdf: any;
@@ -35,7 +37,8 @@ export class DownloadYearCalendarComponent implements OnInit {
   constructor(
     private route: ActivatedRoute,
     private calendarCalc: CalendarCalculatorService,
-    private yearCalc: YearCalculatorService
+    private yearCalc: YearCalculatorService,
+    private toast: ToastService
   ) { }
 
   ngOnInit() {
@@ -61,39 +64,48 @@ export class DownloadYearCalendarComponent implements OnInit {
 
     this.conscious = { num: consciousNum, ...this.yearCalc.consciousMeanings[consciousNum] };
     this.mission = { num: missionNum, ...this.yearCalc.missionMeanings[missionNum] };
-    this.personalYear = { num: personalYearNum, ...this.yearCalc.meanings[personalYearNum] };
+    this.personalYear = { num: personalYearNum, ...this.yearCalc.personalYearMeanings[personalYearNum] };
     this.finalDigit = { num: finalDigitNum, ...this.yearCalc.meanings[finalDigitNum] };
 
     this.calendar = this.calendarCalc.generateCalendar(birthD, birthM, this.year);
   }
 
   scrollToCurrentMonth() {
+
+
     const today = new Date();
     const currentMonthIndex = today.getMonth();
     const el = document.getElementById('month-' + currentMonthIndex);
     if (el) {
       el.scrollIntoView({ behavior: 'smooth', block: 'center' });
     }
+
   }
 
+  showToast(msg: string) {
+    this.toast.show(msg, 10000);
+  }
+
+
   downloadPDF() {
-    console.log('downloadPDF')
+    this.showToast('підготовка до скачування!')
+
     const element = document.getElementById('calendar-container'); // 👈 обгортка всієї сторінки/блоку
-    if (!element)  {
-      console.log('downloadPDF - err no file')
+    if (!element) {
+      this.showToast('Помилка cкачування!')
       return;
     }
     setTimeout(() => {
-    const opt = {
-      margin:       0.5,
-      filename:     `Сюцай-календар-${this.name}-${this.year}.pdf`,
-      image:        { type: 'jpeg', quality: 0.98 },
-      html2canvas:  { scale: 3, useCORS: true, logging: true, backgroundColor: '#ffffff' },
-      jsPDF:        { unit: 'in', format: 'a4', orientation: 'portrait' }
-    };
+      const opt = {
+        margin: 0.5,
+        filename: `Сюцай-календар-${this.name}-${this.year}.pdf`,
+        image: { type: 'jpeg', quality: 0.98 },
+        html2canvas: { scale: 3, useCORS: true, logging: true, backgroundColor: '#ffffff' },
+        jsPDF: { unit: 'in', format: 'a4', orientation: 'portrait' }
+      };
 
-    html2pdf().from(element).set(opt).save();
-     console.log('try downloadPDF')
-  }, 300);
+      html2pdf().from(element).set(opt).save();
+      this.showToast('✅ Скачування почалось! за кілька секунд файл збережеться на Ваш пристрій')
+    }, 10000);
   }
 }

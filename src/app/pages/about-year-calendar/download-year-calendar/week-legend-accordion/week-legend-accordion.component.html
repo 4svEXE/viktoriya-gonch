@@ -1,0 +1,30 @@
+<div class="week-legend-container">
+  <h3 class="text-center text-lg font-semibold mb-4">Пам’ятка по днях тижня</h3>
+
+  <mat-accordion multi>
+    <mat-expansion-panel *ngFor="let item of weekLegend; index as i">
+      <mat-expansion-panel-header class="custom-header">
+        <mat-panel-title class="day-title">
+          <div class="flex flex-col">
+            <div class="flex w-full justify-center p-2">{{ item.day }}</div>
+            <small class="flex w-full justify-center p-2">
+              {{ item.recommendation | slice : 0 : 50 }}...
+            </small>
+          </div>
+        </mat-panel-title>
+
+      </mat-expansion-panel-header>
+
+      <div class="panel-content">
+        <h4>Рекомендація</h4>
+        <p>{{ item.recommendation }}</p>
+
+        <h4 class="mt-3">Що слід робити</h4>
+        <p>{{ item.shouldDo }}</p>
+
+        <h4 class="mt-3">Чого не слід робити</h4>
+        <p>{{ item.shouldNotDo }}</p>
+      </div>
+    </mat-expansion-panel>
+  </mat-accordion>
+</div>

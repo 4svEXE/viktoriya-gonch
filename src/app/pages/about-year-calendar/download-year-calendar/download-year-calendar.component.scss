@@ -195,3 +195,13 @@ table tr {
 .scroll-today {
   bottom: 80px; // 50 + 20 + 10
 }
+
+/* Розрив сторінки після кожного місяця */
+.month-page {
+  page-break-after: always;
+  break-after: page;
+}
+
+.month-page:last-child {
+  page-break-after: auto;
+}

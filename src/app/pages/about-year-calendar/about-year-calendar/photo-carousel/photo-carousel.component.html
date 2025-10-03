@@ -1,0 +1,13 @@
+<div class="max-w-5xl w-full my-1">
+  <owl-carousel-o [options]="carouselOptions">
+    <ng-container *ngFor="let image of images">
+      <ng-template carouselSlide>
+        <img
+          [src]="image.src"
+          [alt]="image.alt"
+          class="carousel-img w-full object-cover rounded-xl shadow-md"
+        />
+      </ng-template>
+    </ng-container>
+  </owl-carousel-o>
+</div>

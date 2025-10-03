@@ -1,0 +1,28 @@
+.week-legend-container {
+  margin: 1.5rem auto;
+}
+
+mat-expansion-panel {
+  margin-bottom: 0.5rem;
+}
+
+mat-panel-title {
+  font-weight: 600;
+}
+
+mat-panel-description {
+  color: rgba(0,0,0,0.6);
+  font-size: 0.9rem;
+}
+
+.panel-content h4 {
+  margin: 0.5rem 0 0.25rem;
+  font-size: 0.95rem;
+  font-weight: 600;
+}
+
+.panel-content p {
+  margin: 0 0 0.75rem;
+  line-height: 1.45;
+}
+

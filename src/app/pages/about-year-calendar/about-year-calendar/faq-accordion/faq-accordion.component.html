@@ -1,0 +1,19 @@
+<section id="faq" class="py-20 bg-gray-50">
+  <div class="container mx-auto max-w-3xl px-4">
+    <h2 class="text-4xl font-bold mb-12 text-center text-gray-900">Поширені питання</h2>
+
+    <mat-accordion class="space-y-4">
+      <mat-expansion-panel *ngFor="let faq of faqs" class="faq-panel">
+        <mat-expansion-panel-header>
+          <mat-panel-title class="faq-question">
+            {{ faq.question }}
+          </mat-panel-title>
+        </mat-expansion-panel-header>
+
+        <div class="faq-answer">
+          {{ faq.answer }}
+        </div>
+      </mat-expansion-panel>
+    </mat-accordion>
+  </div>
+</section>

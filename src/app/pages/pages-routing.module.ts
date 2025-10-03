@@ -1,5 +1,6 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
+import { PresentationsModule } from './presentations/presentations.module';
 
 const routes: Routes = [
   {
@@ -46,8 +47,11 @@ const routes: Routes = [
     path: 'about-year-calendar',
     loadChildren: () => import('./about-year-calendar/about-year-calendar.module')
       .then(m => m.AboutYearCalendarModule)
-  }
-  ,
+  },
+  {
+    path: 'presentation',
+    component: PresentationsModule // або модуль без lazy load
+  },
   { path: '**', redirectTo: 'home' } // fallback
 ];
 

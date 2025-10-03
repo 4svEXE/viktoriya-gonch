@@ -4,7 +4,7 @@
 
 @import 'ngx-owl-carousel-o/lib/styles/scss/owl.carousel';
 
-@import "./app/shared/scss/index" ;
+@import "./app/shared/scss/index";
 
 @layer base {
   html {
@@ -17,3 +17,30 @@
 @import 'node_modules/@fortawesome/fontawesome-free/css/all.min.css';
 
 // @import url('https://fonts.googleapis.com/css2?family=Jura:wght@400&display=swap');
+/* Переконаємося, що snack-bar завжди поверх всіх елементів */
+.cdk-overlay-container {
+  // z-index: 9999 !important;
+  width: 100%;
+  height: 100vh;
+  position: fixed;
+  top: 0;
+  left: 0;
+  padding-top: 50px;
+  // background: #f00;
+}
+
+/* Стиль для SnackBar повідомлень */
+.mat-snack-bar-container {
+  background-color: #333;       /* Темний фон */
+  color: #fff;                  /* Білий текст */
+  font-size: 16px;
+  border-radius: 8px;           /* Круглі краї */
+  padding: 16px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.3);
+}
+
+/* Кнопка закриття */
+.mat-simple-snackbar-action {
+  color: #ffeb3b;               /* Жовта кнопка "Закрити" */
+  font-weight: bold;
+}

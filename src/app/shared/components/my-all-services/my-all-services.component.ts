@@ -43,7 +43,7 @@ export class MyAllServicesComponent {
       margin: 10,
       dots: true,
       mouseDrag: false,
-      touchDrag: true,
+      touchDrag: false,
       pullDrag: true,
       nav: true,
       navText: [

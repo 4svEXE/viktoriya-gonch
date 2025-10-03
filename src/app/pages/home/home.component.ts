@@ -8,6 +8,9 @@ import { AboutPifagorComponent } from './components/about-pifagor/about-pifagor.
 import { ReviewsComponent } from '../../shared/components/reviews/reviews.component';
 import { ContactsComponent } from '../../shared/components/contacts/contact-form.component';
 import { CalendlyWidgetComponent } from './components/calendly-widget/calendly-widget.component';
+import { NewsPopupComponent } from "./components/news-popup/news-popup.component";
+import { AboutCalendarComponent } from './components/about-calendar/about-calendar.component';
+
 
 
 @Component({
@@ -23,7 +26,9 @@ import { CalendlyWidgetComponent } from './components/calendly-widget/calendly-w
     ReviewsComponent,
     ContactsComponent,
     CalendlyWidgetComponent,
-  ],
+    NewsPopupComponent,
+    AboutCalendarComponent
+],
   templateUrl: './home.component.html',
 })
 export class HomeComponent {}

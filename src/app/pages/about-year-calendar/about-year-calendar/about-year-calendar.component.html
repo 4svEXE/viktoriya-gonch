@@ -1,123 +1,123 @@
 <!-- HERO -->
 <section
   id="hero"
-  class="relative overflow-hidden bg-gradient-to-r from-green-700 to-emerald-600 text-white"
+  class="relative overflow-hidden bg-gradient-to-br from-green-700 to-emerald-500 text-white"
 >
-  <div class="container dark mx-auto max-w-5xl px-4 py-24 text-center">
+  <div class="container dark mx-auto max-w-5xl px-0 pt-24 text-center">
     <h1 class="text-5xl md:text-6xl font-extrabold mb-6 leading-tight">
-      Персональний річний календар <span class="text-yellow-300">СЮЦАЙ</span>
+      Персональний річний календар <span class="text-yellow-300 bold h1-span">СЮЦАЙ</span>
     </h1>
-    <p class="text-lg md:text-xl mb-8 text-green-100 max-w-2xl mx-auto">
-      Ваш ключ до продуктивного року без хаосу: прогноз сприятливих днів,
-      енергетичні рекомендації та поради для рішень.
-    </p>
-    <a
-      (click)="scrollDownload()"
-      class="inline-block bg-yellow-400 hover:bg-yellow-500 text-black font-semibold py-4 px-8 rounded-xl shadow-lg transition"
-    >
-      Отримати календар
-    </a>
+
+    <div class="pt-1">
+      <app-photo-carousel />
+    </div>
+
+    <div class="cta-box">
+      <p class="text-center text-sm mb-4">
+        Ваш ключ до продуктивного року без хаосу: прогноз сприятливих днів,
+        енергетичні рекомендації та поради для рішень.
+      </p>
+      <a
+        (click)="scrollDownload()"
+        class="inline-block bg-yellow-400 hover:bg-yellow-500 text-black font-semibold py-4 px-8 rounded-xl shadow-lg transition"
+      >
+        Отримати календар
+      </a>
+    </div>
   </div>
 </section>
 
-<img
-  style="transform: scale(2)"
-  src="assets/icons/today.svg"
+<!-- <img
+  src="assets/img/calendar/1.jpg"
   alt="Прогорнути до сьогодні"
   class="mx-auto rounded-xl shadow-2xl transition hover:scale-[1.02] duration-300"
-/>
-
-<!-- PAIN & SOLUTION -->
-<section id="pain" class="bg-gray-50 py-20">
-  <div class="container mx-auto max-w-5xl px-4 text-center">
-    <h2 class="text-4xl font-bold mb-12">Чи бувало?</h2>
-    <div class="grid gap-8 md:grid-cols-3 text-left">
-      <div class="p-6 bg-white rounded-xl shadow hover:shadow-lg transition">
-        <h3 class="font-semibold text-lg mb-2">Втрачені можливості</h3>
-        <p class="text-gray-600 text-sm">
-          Не використовуєте періоди високої енергії — час іде дарма. Знати
-          періоди місяця та дні коли сам Всесвіт йде вам на зустріч і спонукає
-          до благополучча це неймовірна сила.
-        </p>
-      </div>
-      <div class="p-6 bg-white rounded-xl shadow hover:shadow-lg transition">
-        <h3 class="font-semibold text-lg mb-2">Стрес і сумніви</h3>
-        <p class="text-gray-600 text-sm">
-          Важливі рішення приймаються наосліп — страждають фінанси та стосунки.
-          Важливі дати можна і треба планувати!
-        </p>
-      </div>
-      <div class="p-6 bg-white rounded-xl shadow hover:shadow-lg transition">
-        <h3 class="font-semibold text-lg mb-2">Невдалий таймінг</h3>
-        <p class="text-gray-600 text-sm">
-          Запускаєте проєкти та важливі події у не той час — втрачаєте прибутки,
-          можливості. Сварки на рівному місці, переслідують невдачі, чорна
-          полоса без кінця і краю.
-        </p>
-      </div>
-    </div>
-
-    <div class="mt-16">
-      <h3 class="text-3xl font-bold mb-6">Вихід є!</h3>
-      <p class="text-lg max-w-3xl mx-auto">
-        Календар <strong>СЮЦАЙ</strong> дозволяє жити в гармонії зі своїми
-        ритмами: плануйте важливі дії у вдалі періоди, уникайте фінансових та
-        особистих ризиків і використовуйте максимум енергії року.
-      </p>
-    </div>
-  </div>
-
-  <a
-    (click)="scrollDownload()"
-    class="inline-block bg-yellow-400 hover:bg-yellow-500 text-black font-semibold py-4 px-8 rounded-xl shadow-lg transition"
-  >
-    Отримати календар
-  </a>
-</section>
+/> -->
 
 <!-- BENEFITS -->
-<section id="benefits" class="py-20">
+<section id="benefits" class="pt-20">
   <div class="container mx-auto max-w-5xl px-4 text-center">
     <h2 class="text-4xl font-bold mb-12">Що дає календар</h2>
     <div class="grid gap-6 md:grid-cols-2 lg:grid-cols-3 text-left">
       <div class="p-6 bg-white rounded-xl shadow hover:shadow-lg transition">
-        <h3 class="font-semibold text-lg mb-2">Сприятливі дні</h3>
-        <p class="text-gray-600 text-sm">
+        <h3 class="font-semibold text-lg mb-2">Знання про сприятливі дні</h3>
+        <img
+          src="assets/img/calendar/2.jpg"
+          alt="Прогорнути до сьогодні"
+          class=""
+          style="height: 140px; width: 100%; object-fit: cover; object-position: center -100px;"
+        />
+        <p class="text-gray-600 text-sm text-center pt-3">
           Для підписання договорів, запуску бізнесу, покупок, відпусток,
           операцій.
         </p>
       </div>
       <div class="p-6 bg-white rounded-xl shadow hover:shadow-lg transition">
         <h3 class="font-semibold text-lg mb-2">Попередження ризиків</h3>
-        <p class="text-gray-600 text-sm">
+        <img
+          src="assets/img/calendar/1.jpg"
+          alt="Прогорнути до сьогодні"
+          class=""
+          style="
+            height: 140px;
+            width: 100%;
+            object-fit: cover;
+            object-position: center;
+          "
+        />
+        <p class="text-gray-600 text-sm text-center pt-3">
           Дні, коли варто бути обережним із фінансами та рішеннями.
         </p>
       </div>
 
       <div class="p-6 bg-white rounded-xl shadow hover:shadow-lg transition">
-        <h3 class="font-semibold text-lg mb-2">Місія року</h3>
-        <p class="text-gray-600 text-sm">
+        <h3 class="font-semibold text-lg mb-2">Ваша місія року</h3>
+        <img
+          src="assets/img/calendar/4.jpg"
+          alt="Прогорнути до сьогодні"
+          class=""
+          style="
+            height: 140px;
+            width: 100%;
+            object-fit: cover;
+            object-position: center;
+          "
+        />
+
+        <p class="text-gray-600 text-sm text-center pt-3">
           Розуміння головної теми та завдання цього року.
         </p>
+
       </div>
       <div class="p-6 bg-white rounded-xl shadow hover:shadow-lg transition">
         <h3 class="font-semibold text-lg mb-2">Прогноз по місяцях</h3>
-        <p class="text-gray-600 text-sm">
+        <img
+          src="assets/img/calendar/3.jpg"
+          alt="Прогорнути до сьогодні"
+          class=""
+          style="
+            height: 140px;
+            width: 100%;
+            object-fit: cover;
+            object-position: center;
+          "
+        />
+        <p class="text-gray-600 text-sm text-center pt-3">
           Плануйте роботу та відпочинок у найкращі періоди.
         </p>
       </div>
-      <div class="p-6 bg-white rounded-xl shadow hover:shadow-lg transition">
-        <h3 class="font-semibold text-lg mb-2">Аналіз імені</h3>
-        <p class="text-gray-600 text-sm">
-          Як ваше ім’я впливає на долю та вибір.
-        </p>
-      </div>
 
-      <h4>Бонус до календаря</h4>
+      <button
+        (click)="scrollDownload()"
+        class="w-full my-4 bg-yellow-400 hover:bg-yellow-500 text-black font-semibold py-4 px-8 rounded-xl shadow-lg transition"
+      >
+        Хочу отримати свій календар
+      </button>
+
+      <h4 class="mt-10">Бонус до календаря</h4>
 
       <div class="p-6 bg-white rounded-xl shadow hover:shadow-lg transition">
         <h3 class="font-semibold text-lg mb-2">Число свідомості</h3>
-        <p class="text-gray-600 text-sm">
+        <p class="text-gray-600 text-sm text-center pt-3">
           Визначає ваш характер, спосіб мислення та внутрішню енергію. Допомагає
           зрозуміти свої сильні сторони й те, що заряджає вас на досягнення
           цілей.
@@ -126,7 +126,7 @@
 
       <div class="p-6 bg-white rounded-xl shadow hover:shadow-lg transition">
         <h3 class="font-semibold text-lg mb-2">Число місії</h3>
-        <p class="text-gray-600 text-sm">
+        <p class="text-gray-600 text-sm text-center pt-3">
           Вказує на ваше головне призначення та шлях розвитку. Допомагає обрати
           правильний напрям у кар’єрі, бізнесі й особистому житті.
         </p>
@@ -134,7 +134,7 @@
 
       <div class="p-6 bg-white rounded-xl shadow hover:shadow-lg transition">
         <h3 class="font-semibold text-lg mb-2">Число вашого імені</h3>
-        <p class="text-gray-600 text-sm">
+        <p class="text-gray-600 text-sm text-center pt-3">
           Розкриває прихований вплив вашого імені на долю та важливі рішення.
           Пояснює, як ім’я підсилює або стримує ваші природні якості.
         </p>
@@ -142,51 +142,99 @@
     </div>
   </div>
 
-  <a
-      (click)="scrollDownload()"
-      class="inline-block bg-yellow-400 hover:bg-yellow-500 text-black font-semibold py-4 px-8 rounded-xl shadow-lg transition"
-    >
-      Отримати календар
-    </a>
+  <button
+    (click)="scrollDownload()"
+    class="w-full m-4 bg-yellow-400 hover:bg-yellow-500 text-black font-semibold py-4 px-8 rounded-xl shadow-lg transition"
+  >
+    Отримати календар
+  </button>
+</section>
+
+<!-- PAIN & SOLUTION -->
+<section id="pain" class="bg-gray-50 pt-20">
+  <div class="container mx-auto max-w-5xl px-4 text-center">
+    <h2 class="text-4xl font-bold mb-12">Що в тих хто не має календаря?</h2>
+    <div class="grid gap-8 md:grid-cols-3 text-left">
+      <div class="p-6 bg-white rounded-xl shadow hover:shadow-lg transition">
+        <h3 class="font-semibold text-lg mb-2">Втрачені можливості</h3>
+        <p class="text-gray-600 text-sm text-center pt-3">
+          Не використовують періоди високої енергії — час іде дарма. Знати
+          періоди місяця та дні коли сам Всесвіт йде вам на зустріч і спонукає
+          до благополучча це неймовірна сила.
+        </p>
+      </div>
+      <div class="p-6 bg-white rounded-xl shadow hover:shadow-lg transition">
+        <h3 class="font-semibold text-lg mb-2">Стрес і сумніви</h3>
+        <p class="text-gray-600 text-sm text-center pt-3">
+          Важливі рішення приймаються наосліп — страждають фінанси, здоров'я та стосунки.
+          Важливі дати можна і треба планувати!
+        </p>
+      </div>
+      <div class="p-6 bg-white rounded-xl shadow hover:shadow-lg transition">
+        <h3 class="font-semibold text-lg mb-2">Невдалі таймінги</h3>
+        <p class="text-gray-600 text-sm text-center pt-3">
+          Запускаєте проєкти та важливі події у не той час — втрачаєте прибутки,
+          можливості. Сварки на рівному місці, переслідують невдачі, чорна
+          полоса без кінця і краю.
+        </p>
+      </div>
+    </div>
+
+    <div class="mt-16">
+      <h3 class="text-3xl font-bold mb-6">Пора покращити життя!</h3>
+      <p class="text-lg max-w-3xl mx-auto">
+        Календар <strong>СЮЦАЙ</strong> дозволяє жити в гармонії зі своїми
+        ритмами: плануйте важливі дії у вдалі періоди, плануйте операції, угоди,
+        уникайте фінансових та особистих ризиків і використовуйте максимум
+        енергії року.
+      </p>
+    </div>
+  </div>
+
+  <button (click)="scrollDownload()" class="m-4 mt-6 primary-button">
+    Отримати календар
+  </button>
 </section>
 
 <!-- PREVIEW -->
-<section id="preview" class="bg-gray-50 py-20 text-center">
+<section id="preview" class="bg-gray-50 pt-20 text-center">
   <div class="container mx-auto max-w-4xl px-4">
     <h2 class="text-4xl font-bold mb-12">Так виглядає календар</h2>
     <img
-      src="assets/img/img_2.jpg"
+      src="assets/img/calendar/1.jpg"
       alt="Прев’ю календаря СЮЦАЙ"
       class="mx-auto rounded-xl shadow-2xl transition hover:scale-[1.02] duration-300"
     />
-    <p class="mt-6 text-lg text-gray-600">
-      PDF, який можна зручно зберегти або роздрукувати.
-    </p>
+    <ul class="mt-6 text-lg text-gray-600 p-4">
+      <li>Є кнопка яка гортає до поточного місяця</li>
+      <li>Можна зручно зберегти в PDF та роздрукувати.</li>
+    </ul>
   </div>
-  <a
-      (click)="scrollDownload()"
-      class="inline-block bg-yellow-400 hover:bg-yellow-500 text-black font-semibold py-4 px-8 rounded-xl shadow-lg transition"
-    >
-      Отримати календар
-    </a>
+  <button
+    (click)="scrollDownload()"
+    class="w-full m-4 bg-yellow-400 hover:bg-yellow-500 text-black font-semibold py-4 px-8 rounded-xl shadow-lg transition"
+  >
+    Отримати календар
+  </button>
 </section>
 
 <!-- PURCHASE -->
 <section
-  id="purchase"
+  id=""
   class="bg-gradient-to-r from-green-700 to-emerald-600 text-white py-20"
 >
   <div class="container dark mx-auto max-w-md px-4 text-center">
-    <h2 class="text-4xl font-bold mb-4">Замовте свій календар</h2>
+    <h2 class="text-4xl font-bold mb-4">Замовте свій <b class="text-yellow-300 ">календар</b></h2>
     <p class="mb-8 text-lg">
       Усього за <s class="font-bold_">$15 (~300 крон)</s>
-      <span class="font-bold ml-4">$0</span> ви отримуєте детальний прогноз на
+      <span class="font-bold ml-2">$0</span> ви отримуєте детальний прогноз на
       рік
     </p>
 
     <form
       [formGroup]="form"
       (ngSubmit)="goToDownload()"
+      id="download"
       class="space-y-7 text-left"
     >
       <div class="flex flex-col gap-2">
@@ -201,7 +249,7 @@
 
       <div class="flex flex-col gap-2 mb-10">
         <small>
-          Вкажіть ім’я та прізвище латиницею як в закордонному паспорті:</small
+          Iм’я та прізвище латиницею як в закордонному паспорті:</small
         >
         <input
           formControlName="name"
@@ -235,9 +283,8 @@
       </div>
 
       <div class="flex flex-col gap-2 mb-10">
-        <small>
-          Це може бути як Ваша дн так і дата заснування Вашого бізнесу - щоб
-          пораувати щасливі дні для нього.</small
+        <small> Ваша дата народження:
+          </small
         >
         <input
           formControlName="birthdate"
@@ -250,7 +297,8 @@
           "
           class="text-red-300 text-sm"
         >
-          Вкажіть дату народження
+          Це може бути як Ваша дн так і дата заснування Вашого бізнесу - щоб
+          пораувати щасливі дні для нього.
         </div>
       </div>
 
@@ -263,64 +311,39 @@
     </form>
 
     <p class="mt-4 text-sm text-green-100">
-      Календар надійде вам на email у форматі PDF одразу після оплати.
+      <!-- Календар надійде вам на email у форматі PDF одразу після оплати. -->
+       Натискаючи - Ви надаєте згоду на обробку Ваших данних.
     </p>
   </div>
 </section>
 
 <!-- REVIEWS -->
-<section id="reviews" class="py-20 bg-gray-50">
-  <div class="container mx-auto max-w-4xl px-4 text-center">
-    <h2 class="text-4xl font-bold mb-12">Відгуки клієнтів</h2>
-    <div class="grid gap-8 md:grid-cols-2">
-      <div class="p-6 bg-white rounded-xl shadow-md">
-        <p class="italic">
-          “Календар допоміг спланувати рік і уникнути ризиків у бізнесі.
-          Рекомендую кожному!”
-        </p>
-        <p class="mt-4 font-semibold">– Олена</p>
-      </div>
-      <div class="p-6 bg-white rounded-xl shadow-md">
-        <p class="italic">
-          “Я здивований, наскільки точні прогнози. Тепер відчуваю, що дію
-          вчасно.”
-        </p>
-        <p class="mt-4 font-semibold">– Іван</p>
-      </div>
-    </div>
-  </div>
+<section id="reviews" class="pt-20 bg-gray-50">
+  <app-calendar-reviews />
 
-  <section class="w-full flex items-center">
+  <section class="w-full px-4 flex items-center flex-col gap-4">
+    <a (click)="scrollDownload()" class="primary-button bg-yellow-400">
+      Отримати календар
+    </a>
     <a
-      class="primary-button"
+      class="secondary-button"
       href="https://docs.google.com/forms/d/e/1FAIpQLSee_7tGKTMW34LiBBvmq9yfS2V3ko-FI_dpwWs-DzUPLNDC_Q/viewform?usp=header"
-      >Залишити відгук \ скаргу \ пропозицію</a
+      >Залишити відгук \ пропозицію</a
     >
   </section>
 </section>
 
 <!-- FAQ -->
-<section id="faq" class="py-20 text-center">
-  <div class="container mx-auto max-w-3xl px-4">
-    <h2 class="text-4xl font-bold mb-12">Поширені питання</h2>
-    <ul class="space-y-6 text-left text-lg">
-      <li>
-        <strong>Як отримати календар?</strong> Після оплати PDF надходить на
-        вашу електронну пошту.
-      </li>
-      <li>
-        <strong>Чи можна друкувати?</strong> Так, PDF зручний для друку або
-        використання онлайн.
-      </li>
-      <li>
-        <strong>Чи індивідуальний прогноз?</strong> Так, календар створюється
-        персонально за датою народження.
-      </li>
-    </ul>
-  </div>
+<section class="w-full flex items-center flex-col gap-4 px-4">
+  <app-faq-accordion />
+
+  <a (click)="scrollDownload()" class="primary-button bg-yellow-400">
+    Отримати календар
+  </a>
 
   <a
+    class="secondary-button"
     href="https://docs.google.com/forms/d/e/1FAIpQLSee_7tGKTMW34LiBBvmq9yfS2V3ko-FI_dpwWs-DzUPLNDC_Q/viewform?usp=header"
-    >Залишити відгук \ скаргу \ пропозицію</a
+    >Запитати</a
   >
 </section>

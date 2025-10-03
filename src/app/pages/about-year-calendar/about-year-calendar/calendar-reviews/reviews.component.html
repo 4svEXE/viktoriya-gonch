@@ -1,0 +1,18 @@
+<section id="reviews" class="pt-20 bg-gray-50">
+  <div class="container mx-auto max-w-4xl px-4 text-center">
+    <h2 class="text-4xl font-bold mb-12">Відгуки клієнтів</h2>
+
+    <owl-carousel-o [options]="carouselOptions">
+      <ng-container *ngFor="let reviewGroup of groupedReviews">
+        <ng-template carouselSlide>
+          <div class="grid gap-6 md:grid-cols-1 lg:grid-cols-3">
+            <div *ngFor="let review of reviewGroup" class="p-6 bg-white rounded-xl shadow-md h-full flex flex-col justify-between">
+              <p class="italic mb-4">“{{ review.text }}”</p>
+              <p class="mt-auto font-semibold">– {{ review.author }}</p>
+            </div>
+          </div>
+        </ng-template>
+      </ng-container>
+    </owl-carousel-o>
+  </div>
+</section>
