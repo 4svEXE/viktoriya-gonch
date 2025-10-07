@@ -1,7 +1,7 @@
 require('dotenv').config();
 const ftp = require('basic-ftp');
 
-const localDirectory = './dist/static';
+const localDirectory = './dist/viktoriya-gonch'; // './dist/statik'
 const remoteDirectory = '/viktoriehonc.com.ua/www';
 
 async function deploy() {

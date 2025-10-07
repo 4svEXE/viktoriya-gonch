@@ -8,14 +8,11 @@ export const config: ScullyConfig = {
   outDir: './dist/static',
   defaultPostRenderers: [],
   puppeteerLaunchOptions: {
-    timeout: 9960000
+    timeout: 60000 // 60 секунд замість 30
   },
   routes: {
     '/bali': {
       type: 'ignored'
-    },
-    '/about-year-calendar': { type: 'default' },
-    '/presentations': { type: 'default' },
-    '/me': { type: 'default' }
+    }
   }
 };
