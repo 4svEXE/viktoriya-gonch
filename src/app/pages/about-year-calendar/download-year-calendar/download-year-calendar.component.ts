@@ -43,8 +43,8 @@ export class DownloadYearCalendarComponent implements OnInit {
 
   ngOnInit() {
     this.route.queryParams.subscribe(params => {
-      this.name = params['name'] || 'Ivan';
-      this.email = params['email'] || '4sv';
+      this.name = params['name'] || 'Null';
+      this.email = params['email'] || 'Null';
       this.birthdate = params['birthdate'] || '1997-01-24';
       this.year = +params['year'] || new Date().getFullYear();
 
@@ -106,6 +106,6 @@ export class DownloadYearCalendarComponent implements OnInit {
 
       html2pdf().from(element).set(opt).save();
       this.showToast('✅ Скачування почалось! за кілька секунд файл збережеться на Ваш пристрій')
-    }, 10000);
+    }, 20000);
   }
 }

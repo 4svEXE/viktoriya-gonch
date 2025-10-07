@@ -40,21 +40,43 @@ export class CalendarCalculatorService {
     return n;
   }
 
-  /** Визначає клас клітинки */
-  getCellClass(dayNumber: number, value: number, period?: any): string {
-    dayNumber-2;
-    if (dayNumber === 11 || dayNumber === 21 || dayNumber === 31) return 'bad';
+  /** Личний рік */
+  getPersonalYear(birthDay: number, birthMonth: number, year: number): number {
+    return this.reduceToOneDigit(
+      this.reduceToOneDigit(birthDay) +
+      this.reduceToOneDigit(birthMonth) +
+      this.reduceToOneDigit(year)
+    );
+  }
+
+  /** Личний місяць */
+  getPersonalMonth(personalYear: number, month: number): number {
+    return this.reduceToOneDigit(personalYear + month);
+  }
+
+  /** Личний день */
+  getPersonalDay(personalMonth: number, day: number): number {
+    return this.reduceToOneDigit(personalMonth + day);
+  }
+
+  /** Загальний день */
+  getGeneralDay(year: number, month: number, day: number): number {
+    return this.reduceToOneDigit(
+      this.reduceToOneDigit(year) + month + day
+    );
+  }
+
+  /** Класи для дня (загальний / особистий) */
+  getCellClass(value: number): string {
     if ([3, 6, 8].includes(value)) return 'good';
     return 'neutral';
   }
 
-
-  /** Визначає клас клітинки */
-  getMonthCellClass(dayNumber: number, value: number, period?: any): string {
-    dayNumber-=2;
+  /** Класи для дня за періодами місяця */
+  getMonthCellClass(dayNumber: number, period?: any): string {
     if (period) {
-      if (period.bad && dayNumber + 1 >= period.bad[0] && dayNumber + 1 <= period.bad[1]) return 'bad';
-      if (period.good && dayNumber + 1 >= period.good[0] && dayNumber + 1 <= period.good[1]) return 'good';
+      if (period.bad && dayNumber >= period.bad[0] && dayNumber <= period.bad[1]) return 'bad';
+      if (period.good && dayNumber >= period.good[0] && dayNumber <= period.good[1]) return 'good';
     }
     return 'neutral';
   }
@@ -62,6 +84,9 @@ export class CalendarCalculatorService {
   /** Генерує календар на рік */
   generateCalendar(birthDay: number, birthMonth: number, year: number) {
     const calendar: any[] = [];
+
+    // Рахуємо личний рік один раз
+    const personalYear = this.getPersonalYear(birthDay, birthMonth, year);
 
     this.months.forEach((monthName, mIndex) => {
       const monthNo = mIndex + 1;
@@ -72,36 +97,37 @@ export class CalendarCalculatorService {
 
       const weeks: any[][] = [];
       let week: any[] = new Array(offset).fill(null);
-      let monthInfo: any[] = []
+      let monthInfo: any[] = [];
 
-      for (let d = 1; d <= daysInMonth +1; d++) {
-        // --- Дні місяця (періоди)---
-        const clsDay = this.getMonthCellClass(d, d, period);
+      // Рахуємо личний місяць для кожного місяця
+      const personalMonth = this.getPersonalMonth(personalYear, monthNo);
 
-        // --- Загальний ---
-        const valGen = ((monthNo + d - 2) % 9) + 1;
-        const clsGen = this.getCellClass(d, valGen, period);
+      for (let d = 0; d <= daysInMonth; d++) {
 
-        // --- Особистий ---
-        const valPers = this.reduceToOneDigit(birthDay + monthNo + d);
-        const clsPers = this.getCellClass(d, valPers, period);
+        const personalDay = this.getPersonalDay(personalMonth, d);
+        const generalDay = this.getGeneralDay(year, monthNo, d);
 
-        if (d === 1) {
+        const clsDay = this.getMonthCellClass(d, period);
+        const clsGen = this.getCellClass(generalDay);
+        const clsPers = this.getCellClass(personalDay);
+
+        if (d === 0) {
+          // перший день — для заголовків місяця
           monthInfo.push({
             val: d,
             cls: clsDay,
-            general: valGen,
+            general: generalDay,
             generalCls: clsGen,
-            personal: valPers,
+            personal: personalDay,
             personalCls: clsPers
           });
         } else {
           week.push({
-            val: d - 1,
+            val: d,
             cls: clsDay,
-            general: valGen,
+            general: generalDay,
             generalCls: clsGen,
-            personal: valPers,
+            personal: personalDay,
             personalCls: clsPers
           });
 
@@ -128,5 +154,4 @@ export class CalendarCalculatorService {
 
     return calendar;
   }
-
 }
