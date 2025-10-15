@@ -1,4 +1,4 @@
-<div class="calculator mt-20" id="calendar-container">
+<div class="calculator mt-20">
   <h1 class="text-center">Ваш персональний каренар Сюцай на {{ year }} рік</h1>
 
   <h2 class="results-title text-center">Результати для {{ name }}</h2>
@@ -40,7 +40,7 @@
     <p><strong>Приклад:</strong> {{ finalDigit.example }}</p>
   </section>
 
-  <section *ngIf="calendar.length">
+  <section *ngIf="calendar.length"  id="calendar-container">
     <h2>Календар Сюцай на {{ year }} рік</h2>
 
     <app-week-legend-accordion />
@@ -132,13 +132,13 @@
         </thead>
         <tbody>
           <tr *ngFor="let week of month.weeks">
-            <td *ngFor="let day of week" [ngClass]="day?.cls + '-period'">
+            <td *ngFor="let day of week" [ngClass]="day?.cls + ' -period'">
               <div class="day-num">{{ day?.val || "" }}</div>
               <div class="day-info" *ngIf="day">
-                <small [className]="day.generalCls">З: {{ day.general }}</small
+                <small [className]="day.generalCls"> {{ day.general }} : загальний</small
                 ><br />
                 <small [className]="day.personalCls"
-                  >О: {{ day.personal }}</small
+                  >{{ day.personal }} : особистий</small
                 >
               </div>
             </td>

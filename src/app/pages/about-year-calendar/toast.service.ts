@@ -25,6 +25,7 @@ export class ToastService {
       zIndex: '9999',
       display: 'flex',
       alignItems: 'center',
+      justifyContent: 'space-between',
       gap: '12px',
       fontSize: '16px',
       width: '90%',
