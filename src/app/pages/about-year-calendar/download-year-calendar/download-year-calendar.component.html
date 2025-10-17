@@ -40,14 +40,14 @@
     <p><strong>Приклад:</strong> {{ finalDigit.example }}</p>
   </section>
 
-  <section *ngIf="calendar.length"  id="calendar-container">
+  <section *ngIf="calendar.length" id="calendar-container">
     <h2>Календар Сюцай на {{ year }} рік</h2>
 
-    <app-week-legend-accordion />
+    <!-- <app-week-legend-accordion />
 
-    <app-energy-accordion />
+    <app-energy-accordion /> -->
 
-    <div class="legend">
+    <!-- <div class="legend">
       <h6 class="month-title text-center">Позначення кольорів</h6>
       <table>
         <tr>
@@ -81,9 +81,9 @@
           <td class="neutral"></td>
         </tr>
       </table>
-    </div>
+    </div> -->
 
-    <div class="day-legend mt-10">
+    <!-- <div class="day-legend mt-10">
       <h6 class="month-title text-center">Пам’ятка по днях</h6>
       <table>
         <tr>
@@ -102,7 +102,14 @@
           </td>
         </tr>
       </table>
-    </div>
+    </div> -->
+
+    <img
+      *ngFor="let i of [].constructor(24); let idx = index"
+      [src]="'assets/img/calendar/info/' + (idx + 1) + '.png'"
+      alt="Month image"
+      loading="lazy"
+    />
 
     <div
       class="calendar month-page"
@@ -132,19 +139,33 @@
         </thead>
         <tbody>
           <tr *ngFor="let week of month.weeks">
-            <td *ngFor="let day of week" [ngClass]="day?.cls + ' -period'">
+            <td
+              *ngFor="let day of week"
+              [ngClass]="
+                day?.personalCls +
+                ' ' +
+                ([10, 20, 30].includes(day?.val) ? 'bad' : '')
+              "
+            >
               <div class="day-num">{{ day?.val || "" }}</div>
               <div class="day-info" *ngIf="day">
-                <small [className]="day.generalCls"> {{ day.general }} : загальний</small
+                <small [className]="day.generalCls"
+                  ><b> {{ day.general }}</b> : загальний </small
                 ><br />
                 <small [className]="day.personalCls"
-                  >{{ day.personal }} : особистий</small
-                >
+                  ><b> {{ day.personal }} </b> : особистий
+                </small>
               </div>
             </td>
           </tr>
         </tbody>
       </table>
+      <img
+        [src]="
+          'assets/img/calendar/months/' + month.monthInfo[0].personal + '.png'
+        "
+        alt=""
+      />
     </div>
   </section>
 </div>

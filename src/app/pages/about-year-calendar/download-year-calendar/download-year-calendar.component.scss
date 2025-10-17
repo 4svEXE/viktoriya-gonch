@@ -73,20 +73,22 @@ td.label {
   color: #ffffff; // темно-червоний для тексту
 }
 
+
+
+
+.neutral {
+  background: #f4ead7; // світло-сірий (нейтральний)
+  color: #424242; // темно-сірий текст
+}
 .good {
-  background: #4eff54; // ніжний зелений (успіх, позитив)
+  background: #c3e49f; // ніжний зелений (успіх, позитив)
   color: #256029; // темно-зелений для контрасту
 }
-
 .bad {
-  background: #f70019; // пастельний червоний (але не агресивний)
+  background: #df7449; // пастельний червоний (але не агресивний)
   color: #fff; // темно-червоний для тексту
 }
 
-.neutral {
-  background: #ffeded; // світло-сірий (нейтральний)
-  color: #424242; // темно-сірий текст
-}
 
 
 // Controls
@@ -130,6 +132,7 @@ td.label {
     .day-num {
       font-weight: bold;
       text-align: right;
+      font-size: 24px;
     }
 
     .day-info {
@@ -142,9 +145,10 @@ td.label {
       small {
         width: 100%;
         display: block;
-        border: 1px solid wheat;
+        // border: 1px solid wheat;
         padding: 12px;
         padding: 4px;
+        font-size: 13px;
       }
     }
   }
@@ -204,4 +208,8 @@ table tr {
 
 .month-page:last-child {
   page-break-after: auto;
+}
+
+.calculator, section{
+  background-color: #f4ebd8;
 }
