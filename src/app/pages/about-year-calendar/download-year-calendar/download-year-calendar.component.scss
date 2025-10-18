@@ -213,3 +213,15 @@ table tr {
 .calculator, section{
   background-color: #f4ebd8;
 }
+
+#calendar-container {
+  /* твої стандартні стилі тут */
+  margin: 20px auto; /* приклад звичайного відступу */
+}
+
+@media (max-width: 768px) {
+  #calendar-container {
+    margin: 0;
+    padding: 0;
+  }
+}
