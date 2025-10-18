@@ -80,10 +80,12 @@ td.label {
   background: #f4ead7; // світло-сірий (нейтральний)
   color: #424242; // темно-сірий текст
 }
+
 .good {
   background: #c3e49f; // ніжний зелений (успіх, позитив)
   color: #256029; // темно-зелений для контрасту
 }
+
 .bad {
   background: #df7449; // пастельний червоний (але не агресивний)
   color: #fff; // темно-червоний для тексту
@@ -142,13 +144,14 @@ td.label {
       flex-wrap: wrap;
       cursor: pointer;
 
-      small {
+      div {
         width: 100%;
-        display: block;
-        // border: 1px solid wheat;
-        padding: 12px;
-        padding: 4px;
+        padding: 2px;
         font-size: 13px;
+
+        b {
+          font-weight: light;
+        }
       }
     }
   }
@@ -210,18 +213,63 @@ table tr {
   page-break-after: auto;
 }
 
-.calculator, section{
+.calculator,
+section {
   background-color: #f4ebd8;
 }
 
 #calendar-container {
-  /* твої стандартні стилі тут */
-  margin: 20px auto; /* приклад звичайного відступу */
+  margin: 20px auto;
 }
 
 @media (max-width: 768px) {
   #calendar-container {
     margin: 0;
     padding: 0;
+  }
+}
+
+.printable {
+  * {
+    padding-bottom: 12px;
+  }
+  padding: 10px 60px;
+}
+
+
+
+// запобігти великим відступам зверху
+
+.printable .calendar table thead tr th {
+  vertical-align: top;
+}
+
+.printable .calendar table .day-info {
+  padding: 4px !important;
+  margin: 0 !important;
+  display: flex;
+  align-items: center;
+}
+
+.printable {
+  .day-info div {
+    padding: 0 !important;
+    margin: 0 !important;
+    line-height: 1.1;
+    display: flex;
+    align-items: center;
+  }
+}
+
+.printable .calendar table .day-num {
+  padding: 0 4px 0 0 !important;
+  /* Верх, право (для вирівнювання), низ, ліво */
+  margin: 0 !important;
+}
+
+
+.printable {
+  th {
+    padding-bottom: 12px !important;
   }
 }

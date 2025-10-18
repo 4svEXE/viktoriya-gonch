@@ -43,67 +43,6 @@
   <section *ngIf="calendar.length" id="calendar-container">
     <h2>Календар Сюцай на {{ year }} рік</h2>
 
-    <!-- <app-week-legend-accordion />
-
-    <app-energy-accordion /> -->
-
-    <!-- <div class="legend">
-      <h6 class="month-title text-center">Позначення кольорів</h6>
-      <table>
-        <tr>
-          <th>Тип</th>
-          <th>Значення</th>
-          <th>Колір</th>
-        </tr>
-        <tr>
-          <td>Період</td>
-          <td>Неблагополучний</td>
-          <td class="bad-period"></td>
-        </tr>
-        <tr>
-          <td>Період</td>
-          <td>Благополучний</td>
-          <td class="good-period"></td>
-        </tr>
-        <tr>
-          <td>День</td>
-          <td>Неблагополучний</td>
-          <td class="bad"></td>
-        </tr>
-        <tr>
-          <td>День</td>
-          <td>Благополучний</td>
-          <td class="good"></td>
-        </tr>
-        <tr>
-          <td>День</td>
-          <td>Нейтральний</td>
-          <td class="neutral"></td>
-        </tr>
-      </table>
-    </div> -->
-
-    <!-- <div class="day-legend mt-10">
-      <h6 class="month-title text-center">Пам’ятка по днях</h6>
-      <table>
-        <tr>
-          <th>Тип дня</th>
-          <th>Опис</th>
-        </tr>
-        <tr>
-          <td><strong>Загальний день</strong></td>
-          <td>Енергія дня впливає на всіх людей, проєкти, справи та події.</td>
-        </tr>
-        <tr>
-          <td><strong>Особистий день</strong></td>
-          <td>
-            Енергія дня показує, як ти почуватимешся цього дня, як будеш
-            спілкуватися. Важливо для розуміння себе.
-          </td>
-        </tr>
-      </table>
-    </div> -->
-
     <img
       *ngFor="let i of [].constructor(24); let idx = index"
       [src]="'assets/img/calendar/info/' + (idx + 1) + '.png'"
@@ -112,54 +51,58 @@
     />
 
     <div
-      class="calendar month-page"
+      class="calendar"
       *ngFor="let month of calendar; let i = index"
       [id]="'month-' + i"
     >
-      <h3 class="month-title- text-center">{{ month.name }}</h3>
-      <div class="day-info w-full text-center">
-        <small [className]="month.monthInfo[0].generalCls"
-          >Загальний: {{ month.monthInfo[0].general }}</small
-        ><br />
-        <small [className]="month.monthInfo[0].personalCls"
-          >Особистий: {{ month.monthInfo[0].personal }}</small
-        >
-      </div>
-      <table>
-        <thead>
-          <tr>
-            <th>Пн</th>
-            <th>Вт</th>
-            <th>Ср</th>
-            <th>Чт</th>
-            <th>Пт</th>
-            <th>Сб</th>
-            <th>Нд</th>
-          </tr>
-        </thead>
-        <tbody>
-          <tr *ngFor="let week of month.weeks">
-            <td
-              *ngFor="let day of week"
-              [ngClass]="
-                day?.personalCls +
-                ' ' +
-                ([10, 20, 30].includes(day?.val) ? 'bad' : '')
-              "
+      <div class="month-page">
+        <div class="flex items-center gap-2 pt-5 pl-10 p-5">
+          <h3>{{ month.name }}</h3>
+          <div class="day-info text-center">
+            <small [className]="month.monthInfo[0].generalCls"
+              >Загальний: {{ month.monthInfo[0].general }}</small
+            ><br />
+            <small [className]="month.monthInfo[0].personalCls"
+              >Особистий: {{ month.monthInfo[0].personal }}</small
             >
-              <div class="day-num">{{ day?.val || "" }}</div>
-              <div class="day-info" *ngIf="day">
-                <small [className]="day.generalCls"
-                  ><b> {{ day.general }}</b> : загальний </small
-                ><br />
-                <small [className]="day.personalCls"
-                  ><b> {{ day.personal }} </b> : особистий
-                </small>
-              </div>
-            </td>
-          </tr>
-        </tbody>
-      </table>
+          </div>
+        </div>
+        <table>
+          <thead>
+            <tr>
+              <th>Пн</th>
+              <th>Вт</th>
+              <th>Ср</th>
+              <th>Чт</th>
+              <th>Пт</th>
+              <th>Сб</th>
+              <th>Нд</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr *ngFor="let week of month.weeks">
+              <td
+                *ngFor="let day of week"
+                [ngClass]="
+                  day?.personalCls +
+                  ' ' +
+                  ([10, 20, 30].includes(day?.val) ? 'bad' : '')
+                "
+              >
+                <div class="day-num">{{ day?.val || "" }}</div>
+                <div class="day-info" *ngIf="day">
+                  <div [className]="day.generalCls"
+                    ><small> {{ day.general }} : загальний</small>  </div
+                  ><br />
+                  <div [className]="day.personalCls"
+                    ><small> {{ day.personal }} : особистий</small>
+                  </div>
+                </div>
+              </td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
       <img
         [src]="
           'assets/img/calendar/months/' + month.monthInfo[0].personal + '.png'
