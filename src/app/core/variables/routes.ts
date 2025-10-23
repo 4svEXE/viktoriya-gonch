@@ -16,6 +16,7 @@ export const Routes: Route[] = [
   {
     label: 'Сюцай',
     subMenu: [
+      { path: 'suicai', label: 'Про Сюцай' },
       { path: 'pifagor', label: 'Квадрат сюцай' },
       { path: 'about-year-calendar', label: 'Персональний календар на рік' },
     ],
@@ -25,6 +26,7 @@ export const Routes: Route[] = [
     subMenu: [
       { path: 'lila', label: 'Гра Ліла' },
       { path: 'nine-worlds', label: 'Гра 9 світів' },
+      { path: 'istina', label: 'Гра Істина' },
     ],
   },
   {

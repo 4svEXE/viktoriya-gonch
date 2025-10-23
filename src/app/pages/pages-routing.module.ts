@@ -51,6 +51,11 @@ const routes: Routes = [
     loadChildren: () => import('./about-year-calendar/about-year-calendar.module')
       .then(m => m.AboutYearCalendarModule)
   },
+  {
+    path: 'suicai',
+    loadChildren: () => import('./suicai/suicai.module')
+      .then(m => m.SuicaiModule)
+  },
   { path: '**', redirectTo: 'home' } // fallback
 ];
 

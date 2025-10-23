@@ -10,8 +10,8 @@ import { ContactsComponent } from '../../shared/components/contacts/contact-form
 import { CalendlyWidgetComponent } from './components/calendly-widget/calendly-widget.component';
 import { NewsPopupComponent } from "./components/news-popup/news-popup.component";
 import { AboutCalendarComponent } from './components/about-calendar/about-calendar.component';
-import { AboutIstinaComponent } from "./components/about-istina/about-istina.component";
-
+import { AboutIstinaComponent } from './components/about-istina/about-istina.component';
+import { AboutSuicaiComponent } from './components/about-suicai/about-suicai.component';
 
 
 @Component({
@@ -29,7 +29,8 @@ import { AboutIstinaComponent } from "./components/about-istina/about-istina.com
     CalendlyWidgetComponent,
     NewsPopupComponent,
     AboutCalendarComponent,
-    AboutIstinaComponent
+    AboutIstinaComponent,
+    AboutSuicaiComponent
 ],
   templateUrl: './home.component.html',
 })
