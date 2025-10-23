@@ -43,6 +43,10 @@ const routes: Routes = [
     loadChildren: () => import('./bali/bali.module').then(m => m.BaliModule)
   },
   {
+    path: 'istina',
+    loadChildren: () => import('./istina/istina.module').then(m => m.IstinaModule)
+  },
+  {
     path: 'about-year-calendar',
     loadChildren: () => import('./about-year-calendar/about-year-calendar.module')
       .then(m => m.AboutYearCalendarModule)

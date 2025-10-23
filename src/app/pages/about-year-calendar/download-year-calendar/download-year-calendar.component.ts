@@ -96,64 +96,105 @@ export class DownloadYearCalendarComponent implements OnInit {
       return;
     }
 
-    // Завантажуємо всі зображення місяців
-    await Promise.all(
-      months.map((month) =>
-        Promise.all(
-          Array.from(month.getElementsByTagName('img')).map(
-            (img) =>
-              new Promise<void>((resolve) => {
-                if (img.complete) resolve();
-                else {
-                  img.onload = () => resolve();
-                  img.onerror = () => resolve();
-                }
-              })
-          )
-        )
-      )
-    );
-
     const { jsPDF } = (window as any).jspdf;
     const pdf = new jsPDF('landscape', 'mm', 'a4');
 
     const pdfWidth = pdf.internal.pageSize.getWidth();
     const pdfHeight = pdf.internal.pageSize.getHeight();
+    const margin = 0; // мм
+
+    // 0️⃣ Додаємо 4 стартові зображення
+    for (let i = 1; i <= 4; i++) {
+      const imgPath = `assets/img/calendar/info/_min/${i}.png`;
+      await new Promise<void>((resolve) => {
+        const img = new Image();
+        img.src = imgPath;
+        img.crossOrigin = 'anonymous';
+        img.onload = () => {
+          if (i > 1) pdf.addPage();
+          pdf.addImage(img, 'PNG', margin, margin, pdfWidth - margin * 2, pdfHeight - margin * 2);
+          resolve();
+        };
+        img.onerror = () => resolve();
+      });
+    }
+
+    for (let i = 14; i <= 24; i++) {
+      const imgPath = `assets/img/calendar/info/_min/${i}.png`;
+      await new Promise<void>((resolve) => {
+        const img = new Image();
+        img.src = imgPath;
+        img.crossOrigin = 'anonymous';
+        img.onload = () => {
+          if (i > 1) pdf.addPage();
+          pdf.addImage(img, 'PNG', margin, margin, pdfWidth - margin * 2, pdfHeight - margin * 2);
+          resolve();
+        };
+        img.onerror = () => resolve();
+      });
+    }
+
+    // 5️⃣ Додаємо персональний рік
+    const personalYearNum = this.personalYear.num; // 1..9
+    const personalImgIndex = 4 + personalYearNum; // 5..13
+    const personalYearImg = `assets/img/calendar/info/_min/${personalImgIndex}.png`;
+
+    await new Promise<void>((resolve) => {
+      const img = new Image();
+      img.src = personalYearImg;
+      img.crossOrigin = 'anonymous';
+      img.onload = () => {
+        pdf.addPage();
+        pdf.addImage(img, 'PNG', margin, margin, pdfWidth - margin * 2, pdfHeight - margin * 2);
+        resolve();
+      };
+      img.onerror = () => resolve();
+    });
 
     this.showToast(`📄 Рендеримо ${months.length} місяців...`);
 
-    const margin = 0; // мм
-    for (let i = 0; i < months.length/12; i++) {
+    // 6️⃣ Додаємо місяці
+    for (let i = 0; i < months.length; i++) {
       const month = months[i];
       month.classList.add('printable');
 
       const canvas = await html2canvas(month, {
-        scale: 1.5,
+        scale: 1.9,
         useCORS: true,
         backgroundColor: '#f4ebd8',
         logging: false,
       });
-
       month.classList.remove('printable');
 
-      const imgData = canvas.toDataURL('image/jpeg', 0.8);
+      const imgData = canvas.toDataURL('image/jpeg', 0.9);
       const imgWidth = pdfWidth - margin * 2;
       const imgHeight = pdfHeight - margin * 2;
 
-      if (i > 0) pdf.addPage();
+      if (i > 0 || months.length > 0) pdf.addPage();
       pdf.addImage(imgData, 'JPEG', margin, margin, imgWidth, imgHeight);
 
-      this.showToast(`✅ Додано ${i + 1} з ${months.length}`);
-      // await new Promise((r) => setTimeout(r, 150));
-    }
+      const m = this.calendar[i];
+      const monthPersonalImg = `assets/img/calendar/months/${(m as any).monthInfo?.[0]?.personal}.png`;
 
+      if (monthPersonalImg) {
+        await new Promise<void>((resolve) => {
+          const img = new Image();
+          img.src = monthPersonalImg;
+          img.crossOrigin = 'anonymous';
+          img.onload = () => {
+            pdf.addPage();
+            pdf.addImage(img, 'JPEG', margin, margin, imgWidth, imgHeight);
+            resolve();
+          };
+          img.onerror = () => resolve();
+        });
+      }
+
+      this.showToast(`✅ Додано місяць ${i + 1} з ${months.length}`);
+    }
 
     pdf.save(`Сюцай-календар-${this.name}-${this.year}.pdf`);
     this.showToast('🎉 Календар збережено успішно!');
   }
-
-
-
-
 
 }

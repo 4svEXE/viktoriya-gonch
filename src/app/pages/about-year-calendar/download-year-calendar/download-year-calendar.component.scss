@@ -233,7 +233,8 @@ section {
   * {
     padding-bottom: 12px;
   }
-  padding: 10px 60px;
+
+  padding: 10px 16px;
 }
 
 
@@ -272,4 +273,8 @@ section {
   th {
     padding-bottom: 12px !important;
   }
+}
+
+.month-name {
+  width: auto;
 }

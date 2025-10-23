@@ -47,7 +47,17 @@
       <h4>Сюцай</h4>
       <app-my-services
         [services]="numerologyServices"
-        title="Нумерологія"
+        title="Сюцай"
+      ></app-my-services>
+    </ng-template>
+
+    <ng-template carouselSlide>
+      <h4>Трансформаційні ігри</h4>
+
+      <app-my-services
+        [services]="gamesServices"
+        title="Трансформаційні ігри"
+        imageSrc="assets/img/lila/1.jpg"
       ></app-my-services>
     </ng-template>
 
@@ -69,14 +79,6 @@
       ></app-my-services>
     </ng-template>
 
-    <ng-template carouselSlide>
-      <h4>Трансформаційні ігри</h4>
 
-      <app-my-services
-        [services]="gamesServices"
-        title="Трансформаційні ігри"
-        imageSrc="assets/img/lila/1.jpg"
-      ></app-my-services>
-    </ng-template>
   </owl-carousel-o>
 </section>
