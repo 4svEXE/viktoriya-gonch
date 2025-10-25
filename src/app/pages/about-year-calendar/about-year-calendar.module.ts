@@ -13,6 +13,7 @@ import { FaqAccordionComponent } from './about-year-calendar/faq-accordion/faq-a
 import { PhotoCarouselComponent } from './about-year-calendar/photo-carousel/photo-carousel.component';
 import { CarouselModule } from 'ngx-owl-carousel-o';
 import { ReviewsComponent } from './about-year-calendar/calendar-reviews/reviews.component';
+import { InfoCarouselComponent } from './download-year-calendar/info-carousel/info-carousel.component';
 
 const routes: Routes = [
   { path: '', component: AboutYearCalendarComponent },
@@ -23,7 +24,7 @@ const routes: Routes = [
   declarations: [
     AboutYearCalendarComponent, DownloadYearCalendarComponent,
     EnergyAccordionComponent, WeekLegendAccordionComponent,
-    FaqAccordionComponent, PhotoCarouselComponent, ReviewsComponent],
+    FaqAccordionComponent, PhotoCarouselComponent, ReviewsComponent, InfoCarouselComponent],
   imports: [
     CommonModule,
     RouterModule.forChild(routes),

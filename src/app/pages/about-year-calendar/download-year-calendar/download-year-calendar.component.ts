@@ -26,6 +26,8 @@ export class DownloadYearCalendarComponent implements OnInit {
   email = '';
   birthdate = '';
   year = new Date().getFullYear();
+  savedMonth = 0
+  showLoader = false
 
   conscious!: MeaningResult;
   mission!: MeaningResult;
@@ -88,7 +90,8 @@ export class DownloadYearCalendarComponent implements OnInit {
 
 
   async downloadPDF() {
-    this.showToast('⏳ Готуємо календар до збереження…');
+    this.showLoader = true
+    // this.showToast('⏳ Готуємо календар до збереження…');
 
     const months = Array.from(document.querySelectorAll('.month-page')) as HTMLElement[];
     if (!months.length) {
@@ -151,8 +154,6 @@ export class DownloadYearCalendarComponent implements OnInit {
       img.onerror = () => resolve();
     });
 
-    this.showToast(`📄 Рендеримо ${months.length} місяців...`);
-
     // 6️⃣ Додаємо місяці
     for (let i = 0; i < months.length; i++) {
       const month = months[i];
@@ -190,9 +191,11 @@ export class DownloadYearCalendarComponent implements OnInit {
         });
       }
 
-      this.showToast(`✅ Додано місяць ${i + 1} з ${months.length}`);
+      this.savedMonth++
+      // this.showToast(`✅ Додано місяць ${i + 1} з ${months.length}`);
     }
 
+    this.showLoader = false
     pdf.save(`Сюцай-календар-${this.name}-${this.year}.pdf`);
     this.showToast('🎉 Календар збережено успішно!');
   }

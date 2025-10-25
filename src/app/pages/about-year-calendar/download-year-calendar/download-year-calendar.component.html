@@ -138,3 +138,20 @@
     class="mx-auto rounded-xl shadow-2xl transition hover:scale-[1.02] duration-300"
   />
 </button>
+
+
+<div class="calendar-loader" *ngIf="showLoader">
+  <div class="loader-content text-center">
+    <p>
+      <small>Ваш календар завантажується: готово</small> {{ savedMonth }} / 12
+    </p>
+    <hr />
+    <!-- <p>Поки календар завантажується, пропонуємо переглянути відео:</p> -->
+    <p>Поки календар завантажується, пропонуємо прочитати рекомендації</p>
+    <!-- <app-energy-accordion></app-energy-accordion> -->
+    <app-info-carousel />
+  </div>
+</div>
+
+
+
