@@ -81,50 +81,46 @@ export class DownloadYearCalendarComponent implements OnInit {
     this.toast.show(msg, 10000);
   }
 
-downloadPDF() {
-  this.showLoader = true;
+  downloadPDF() {
+    this.showLoader = true;
 
-  setTimeout(() => {
-    const calendarElement = document.getElementById('calendar');
-    if (!calendarElement) {
-      this.showToast('❌ Не знайдено елемент календаря!');
-      this.showLoader = false;
-      return;
-    }
+    setTimeout(() => {
+      const calendarElement = document.getElementById('calendar');
+      if (!calendarElement) {
+        this.showToast('❌ Не знайдено елемент календаря!');
+        this.showLoader = false;
+        return;
+      }
 
-    const printWindow = window.open('', '_blank', 'width=1200,height=800');
-    if (!printWindow) {
-      this.showToast('❌ Не вдалося відкрити вікно для друку!');
-      this.showLoader = false;
-      return;
-    }
+      const printWindow = window.open('', '_blank', 'width=1200,height=800');
+      if (!printWindow) {
+        this.showToast('❌ Не вдалося відкрити вікно для друку!');
+        this.showLoader = false;
+        return;
+      }
 
-    const printStyles = `
+      const printStyles = `
       <style>
-        @page {
-          size: A4 landscape;
-          margin: 0;
-        }
+        @page { size: A4 landscape; margin: 0; }
         html, body {
           margin: 0 !important;
           padding: 16px !important;
           width: 100% !important;
           height: 100% !important;
           background: #f4ebd8;
+          font-family: Arial, sans-serif;
           -webkit-print-color-adjust: exact !important;
           print-color-adjust: exact !important;
-          font-family: Arial, sans-serif;
         }
 
         /* Info сторінка */
         .info-page {
-          width: calc(100% - 64px) !important;
+          width: calc(100% - 32px);
           display: flex;
           flex-wrap: wrap;
           gap: 12px;
           page-break-after: always;
         }
-
         .info-page .result-block, .info-page .user-info {
           flex: 1 1 calc(50% - 12px);
           border: 1px solid #999;
@@ -134,17 +130,14 @@ downloadPDF() {
           text-align: center;
           page-break-inside: avoid;
         }
-
-        .info-page .result-block h4,
-        .info-page .result-block h5,
-        .info-page .user-info p {
+        .info-page h4, .info-page h5, .info-page p {
           margin: 4px 0;
           text-align: center;
         }
 
         /* Місяці */
         .month-page {
-          width: calc(100% - 64px) !important;
+          width: calc(100% - 32px);
           height: calc(100vh - 32px);
           page-break-after: always;
           display: flex;
@@ -152,8 +145,6 @@ downloadPDF() {
           justify-content: flex-start;
         }
         .month-page:last-child { page-break-after: auto; }
-
-        /* Назва місяця */
         .month-name {
           text-align: center;
           font-size: 2rem;
@@ -162,10 +153,7 @@ downloadPDF() {
           width: 100%;
         }
 
-        /* Загальний та особистий блок всередині місяця */
-        .day-info {
-          text-align: center !important;
-        }
+        .day-info { text-align: center !important; }
 
         table {
           margin-top: 4px;
@@ -173,40 +161,67 @@ downloadPDF() {
           height: 100%;
           border-collapse: collapse;
         }
-
         th, td {
           border: 1px solid #999;
           padding: 5px;
           text-align: center;
           vertical-align: top;
         }
-
         th {
           background: #202020;
           color: white;
           font-weight: 600;
         }
 
-        /* Кольори періодів */
-        .good-period { background: #9aa348 !important; color: #000000 !important; }
-        .bad-period { background: #9508c0 !important; color: #ffffff !important; }
+        .good-period { background: #9aa348 !important; color: #000 !important; }
+        .bad-period { background: #9508c0 !important; color: #fff !important; }
         .neutral { background: #f4ead7 !important; color: #424242 !important; }
         .good { background: #c3e49f !important; color: #256029 !important; }
         .bad { background: #df7449 !important; color: #fff !important; }
+
+        /* картинки під місяцями */
+        .month-img-page {
+          page-break-after: always;
+          text-align: center;
+          margin: 10px 0;
+        }
+        .month-img-page img {
+          max-width: 100%;
+          height: auto;
+          display: block;
+          margin: 0 auto;
+        }
 
         * { -webkit-print-color-adjust: exact !important; print-color-adjust: exact !important; }
       </style>
     `;
 
-    // Відділяємо info-секцію як окрему сторінку
-    const infoElement = calendarElement.querySelector('.info');
-    const infoHTML = infoElement ? `<div class="info-page">${infoElement.innerHTML}</div>` : '';
+      // Info сторінка
+      const infoElement = calendarElement.querySelector('.info');
+      const infoHTML = infoElement ? `<div class="info-page">${infoElement.innerHTML}</div>` : '';
 
-    // Всі місяці
-    const monthsHTML = calendarElement.querySelector('#calendar-container')?.innerHTML || '';
+      // Місяці з картинками
+      const monthElements = calendarElement.querySelectorAll('.calendar');
+      let monthsHTML = '';
 
-    printWindow.document.open();
-    printWindow.document.write(`
+      monthElements.forEach((monthEl, index) => {
+        const monthTable = monthEl.querySelector('.month-page')?.outerHTML || '';
+
+        // Беремо src картинки місяця
+        const imgEl = monthEl.querySelector('img');
+        let imgHTML = '';
+        if (imgEl) {
+          const src = imgEl.getAttribute('src');
+          if (src) {
+            imgHTML = `<div class="month-img-page"><img src="${src}" /></div>`;
+          }
+        }
+
+        monthsHTML += monthTable + imgHTML;
+      });
+
+      printWindow.document.open();
+      printWindow.document.write(`
       <html>
         <head>
           <title></title>
@@ -218,16 +233,13 @@ downloadPDF() {
         </body>
       </html>
     `);
-    printWindow.document.close();
-    printWindow.focus();
-    printWindow.print();
-    printWindow.close();
+      printWindow.document.close();
+      printWindow.focus();
+      printWindow.print();
+      printWindow.close();
 
-    this.showLoader = false;
-    this.showToast('🎉 Календар готовий до друку!');
-  }, 500);
-}
-
-
-
+      this.showLoader = false;
+      this.showToast('🎉 Календар готовий до друку!');
+    }, 500);
+  }
 }
