@@ -234,7 +234,9 @@ section {
     padding-bottom: 12px;
   }
 
-  padding: 10px 16px;
+  padding: 4px 80px;
+  width: 1086px;
+  height: 768px;
 }
 
 
@@ -267,7 +269,6 @@ section {
   /* Верх, право (для вирівнювання), низ, ліво */
   margin: 0 !important;
 }
-
 
 .printable {
   th {
@@ -352,14 +353,4 @@ section {
   }
 }
 
-@keyframes progressLine {
-  0% {
-    width: 0%;
-  }
-  50% {
-    width: 100%;
-  }
-  100% {
-    width: 0%;
-  }
-}
+

@@ -8,7 +8,6 @@ import { OwlOptions } from 'ngx-owl-carousel-o';
 })
 export class InfoCarouselComponent {
   images = [
-    { src: 'assets/img/calendar/info/1.png', alt: 'Фото 1' },
     { src: 'assets/img/calendar/info/2.png', alt: 'Фото 2' },
     { src: 'assets/img/calendar/info/3.png', alt: 'Фото 3' },
     { src: 'assets/img/calendar/info/4.png', alt: 'Фото 4' },
@@ -32,8 +31,6 @@ export class InfoCarouselComponent {
     { src: 'assets/img/calendar/info/22.png', alt: 'Фото 5' },
     { src: 'assets/img/calendar/info/23.png', alt: 'Фото 5' },
     { src: 'assets/img/calendar/info/24.png', alt: 'Фото 5' },
-    { src: 'assets/img/calendar/info/25.png', alt: 'Фото 5' },
-
   ];
 
   carouselOptions: OwlOptions = {

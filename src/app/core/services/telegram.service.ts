@@ -7,11 +7,10 @@ import { Observable } from 'rxjs';
   providedIn: 'root',
 })
 export class TelegramService {
-  private readonly BOT_TOKEN = '8064054685:AAHkBHQCAQEMJm2F-Pp8HwJ0AWKuzBDkQO0';
-  // private readonly CHAT_ID = '-1002238918828';
-  private readonly CHAT_ID = '-1002372043803'; // дебаг чат
+  private readonly BOT_TOKEN = '8423501769:AAGtsKsQA2SDCS1FQI0a6VECYrfuq39Yj3o';
+  private readonly CHAT_ID = '-1003231044132'; // тг канал
   private readonly API_URL = `https://api.telegram.org/bot${this.BOT_TOKEN}/sendMessage`;
-  // private readonly API_URL = `https://api.telegram.org/bot8064054685:AAHkBHQCAQEMJm2F-Pp8HwJ0AWKuzBDkQO0/getUpdates`;
+  // https://api.telegram.org/bot8423501769:AAGtsKsQA2SDCS1FQI0a6VECYrfuq39Yj3o/getUpdates
 
 
   constructor(private http: HttpClient) {}
@@ -20,7 +19,7 @@ export class TelegramService {
 
     return this.http.post(this.API_URL, {
       chat_id: this.CHAT_ID,
-      msg,
+      text: msg,
     });
   }
 }

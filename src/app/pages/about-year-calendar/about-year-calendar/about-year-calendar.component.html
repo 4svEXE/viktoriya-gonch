@@ -20,21 +20,15 @@
         Ваш ключ до продуктивного року без хаосу: прогноз сприятливих днів,
         енергетичні рекомендації та поради для рішень.
       </p>
-      <a
+      <button
         (click)="scrollDownload()"
         class="inline-block bg-yellow-400 hover:bg-yellow-500 text-black font-semibold py-4 px-8 rounded-xl shadow-lg transition"
       >
         Отримати календар
-      </a>
+      </button>
     </div>
   </div>
 </section>
-
-<!-- <img
-  src="assets/img/calendar/1.jpg"
-  alt="Прогорнути до сьогодні"
-  class="mx-auto rounded-xl shadow-2xl transition hover:scale-[1.02] duration-300"
-/> -->
 
 <!-- BENEFITS -->
 <section id="benefits" class="pt-20">
@@ -47,11 +41,7 @@
           src="assets/img/calendar/1.jpg"
           alt="Прогорнути до сьогодні"
           class="h-[140px] md:h-[440px]"
-          style="
-            width: 100%;
-            object-fit: cover;
-            object-position: center -100px;
-          "
+          style="width: 100%; object-fit: cover; object-position: center -100px"
         />
         <p class="text-gray-600 text-sm text-center pt-3">
           Для підписання договорів, запуску бізнесу, покупок, відпусток,
@@ -64,11 +54,7 @@
           src="assets/img/calendar/2.jpg"
           alt="Прогорнути до сьогодні"
           class="h-[140px] md:h-[440px]"
-          style="
-            width: 100%;
-            object-fit: cover;
-            object-position: center;
-          "
+          style="width: 100%; object-fit: cover; object-position: center"
         />
         <p class="text-gray-600 text-sm text-center pt-3">
           Дні, коли варто бути обережним із фінансами та рішеннями.
@@ -81,11 +67,7 @@
           src="assets/img/calendar/4.jpg"
           alt="Прогорнути до сьогодні"
           class="h-[140px] md:h-[440px]"
-          style="
-            width: 100%;
-            object-fit: cover;
-            object-position: center;
-          "
+          style="width: 100%; object-fit: cover; object-position: center"
         />
 
         <p class="text-gray-600 text-sm text-center pt-3">
@@ -98,11 +80,7 @@
           src="assets/img/calendar/5.jpg"
           alt="Прогорнути до сьогодні"
           class="h-[140px] md:h-[440px]"
-          style="
-            width: 100%;
-            object-fit: cover;
-            object-position: center;
-          "
+          style="width: 100%; object-fit: cover; object-position: center"
         />
         <p class="text-gray-600 text-sm text-center pt-3">
           Плануйте роботу та відпочинок у найкращі періоди.
@@ -194,7 +172,10 @@
       </p>
     </div>
 
-    <button (click)="scrollDownload()" class="max-w-[240px]  m-4 mt-6 primary-button">
+    <button
+      (click)="scrollDownload()"
+      class="max-w-[240px] m-4 mt-6 primary-button"
+    >
       Отримати календар
     </button>
   </div>
@@ -203,7 +184,7 @@
 <!-- PREVIEW -->
 <section id="preview" class="bg-gray-50 pt-20 text-center">
   <div
-    class="container  mx-auto max-w-4xl px-4 flex flex-col items-center gap-5"
+    class="container mx-auto max-w-4xl px-4 flex flex-col items-center gap-5"
   >
     <h2 class="text-4xl font-bold mb-12">Так виглядає календар</h2>
     <img
@@ -218,7 +199,7 @@
 
     <button
       (click)="scrollDownload()"
-      class="w-full m-4 max-w-[240px]  bg-yellow-400 hover:bg-yellow-500 text-black font-semibold py-4 px-8 rounded-xl shadow-lg transition"
+      class="w-full m-4 max-w-[240px] bg-yellow-400 hover:bg-yellow-500 text-black font-semibold py-4 px-8 rounded-xl shadow-lg transition"
     >
       Отримати календар
     </button>
@@ -226,19 +207,41 @@
 </section>
 
 <!-- PURCHASE -->
-<section
-  id=""
-  class="bg-gradient-to-r from-green-700 to-emerald-600 text-white py-20"
->
-  <div class="container dark mx-auto max-w-md px-4 text-center">
+<section id="" class="bg-[#f4ecd9] text-white py-20">
+  <div
+    class="container dark mx-auto max-w-md px-4 text-center bg-gradient-to-r from-green-700 to-emerald-600"
+    style="border-radius: 24px; padding: 18px"
+  >
     <h2 class="text-4xl font-bold mb-4">
       Замовте свій <b class="text-yellow-300">календар</b>
     </h2>
-    <p class="mb-8 text-lg">
-      Усього за <s class="font-bold_">$15 (~300 крон)</s>
-      <span class="font-bold ml-2">$0</span> ви отримуєте детальний прогноз на
-      рік
-    </p>
+
+    <div
+      class="max-w-md mx-auto mb-4 bg-gradient-to-r from-[#d7bd34] to-[#d5af19] text- rounded-2xl shadow-xl p-8 text-center relative overflow-hidden"
+    >
+      <!-- badge -->
+      <div
+        class="absolute top-4 right-4 bg-yellow-400 text-blue-800 text-sm font-bold px-3 py-1 rounded-full shadow"
+      >
+        Акція!
+      </div>
+
+      <h3 class="text-3xl font-bold mb-2">Календар 2026</h3>
+      <p class="text-lg opacity-90 mb-4">Спеціальна ціна до 30 листопада</p>
+
+      <!-- price -->
+      <div class="flex justify-center items-baseline gap-3 mb-6">
+        <span class="text-5xl font-extrabold">$33</span>
+        <span class="text-xl line-through opacity-70">$51</span>
+      </div>
+
+      <hr class="my-8 border-white/30" />
+
+      <p class="text-base opacity-90">
+        Календар 2025 року —
+        <span class="font-semibold text-yellow-300">Безкоштовно</span>
+      </p>
+    </div>
 
     <form
       [formGroup]="form"
@@ -247,7 +250,7 @@
       class="space-y-7 text-left"
     >
       <div class="flex flex-col gap-2">
-        <small> На разі доступний лише 2025 рік</small>
+        <small> На разі безкоштовно доступний 2025 рік</small>
         <input
           type="text"
           [disabled]="true"
@@ -309,9 +312,16 @@
 
       <button
         type="submit"
-        class="w-full  bg-yellow-400 hover:bg-yellow-500 text-black font-bold py-3 px-6 rounded-lg text-lg shadow-lg transition"
+        class="w-full bg-yellow-400 hover:bg-yellow-500 text-black font-bold py-3 px-6 rounded-lg text-lg shadow-lg transition"
       >
         Отримати календар
+      </button>
+
+      <button
+        (click)="getCalendar($event); $event.preventDefault()"
+        class="w-full bg-yellow-400 hover:bg-yellow-500 text-black font-bold py-3 px-6 rounded-lg text-lg shadow-lg transition"
+      >
+        Замовити календар на 2026 рік
       </button>
     </form>
 
