@@ -4,10 +4,6 @@ import { CalendarCalculatorService } from './calendar-calculator.service';
 import { YearCalculatorService } from './year-calculator.service';
 import { ToastService } from '../toast.service';
 
-// 👇 додаємо глобальну змінну для html2pdf
-declare var html2pdf: any;
-declare var html2canvas: any;
-
 interface MeaningResult {
   num: number;
   name: string;
@@ -26,8 +22,8 @@ export class DownloadYearCalendarComponent implements OnInit {
   email = '';
   birthdate = '';
   year = new Date().getFullYear();
-  savedMonth = 0
-  showLoader = false
+  savedMonth = 0;
+  showLoader = false;
 
   conscious!: MeaningResult;
   mission!: MeaningResult;
@@ -73,130 +69,165 @@ export class DownloadYearCalendarComponent implements OnInit {
   }
 
   scrollToCurrentMonth() {
-
-
     const today = new Date();
     const currentMonthIndex = today.getMonth();
     const el = document.getElementById('month-' + currentMonthIndex);
     if (el) {
       el.scrollIntoView({ behavior: 'smooth', block: 'center' });
     }
-
   }
 
   showToast(msg: string) {
     this.toast.show(msg, 10000);
   }
 
+downloadPDF() {
+  this.showLoader = true;
 
-  async downloadPDF() {
-    this.showLoader = true
-    // this.showToast('⏳ Готуємо календар до збереження…');
-
-    const months = Array.from(document.querySelectorAll('.month-page')) as HTMLElement[];
-    if (!months.length) {
-      this.showToast('❌ Не знайдено жодного місяця!');
+  setTimeout(() => {
+    const calendarElement = document.getElementById('calendar');
+    if (!calendarElement) {
+      this.showToast('❌ Не знайдено елемент календаря!');
+      this.showLoader = false;
       return;
     }
 
-    const { jsPDF } = (window as any).jspdf;
-    const pdf = new jsPDF('landscape', 'mm', 'a4');
-
-    const pdfWidth = pdf.internal.pageSize.getWidth();
-    const pdfHeight = pdf.internal.pageSize.getHeight();
-    const margin = 0; // мм
-
-    // // 0️⃣ Додаємо 4 стартові зображення
-    for (let i = 1; i <= 4; i++) {
-      const imgPath = `assets/img/calendar/info/_min/${i}.png`;
-      await new Promise<void>((resolve) => {
-        const img = new Image();
-        img.src = imgPath;
-        img.crossOrigin = 'anonymous';
-        img.onload = () => {
-          if (i > 1) pdf.addPage();
-          pdf.addImage(img, 'PNG', margin, margin, pdfWidth - margin * 2, pdfHeight - margin * 2);
-          resolve();
-        };
-        img.onerror = () => resolve();
-      });
+    const printWindow = window.open('', '_blank', 'width=1200,height=800');
+    if (!printWindow) {
+      this.showToast('❌ Не вдалося відкрити вікно для друку!');
+      this.showLoader = false;
+      return;
     }
 
-    for (let i = 14; i <= 24; i++) {
-      const imgPath = `assets/img/calendar/info/_min/${i}.png`;
-      await new Promise<void>((resolve) => {
-        const img = new Image();
-        img.src = imgPath;
-        img.crossOrigin = 'anonymous';
-        img.onload = () => {
-          if (i > 1) pdf.addPage();
-          pdf.addImage(img, 'PNG', margin, margin, pdfWidth - margin * 2, pdfHeight - margin * 2);
-          resolve();
-        };
-        img.onerror = () => resolve();
-      });
-    }
+    const printStyles = `
+      <style>
+        @page {
+          size: A4 landscape;
+          margin: 0;
+        }
+        html, body {
+          margin: 0 !important;
+          padding: 16px !important;
+          width: 100% !important;
+          height: 100% !important;
+          background: #f4ebd8;
+          -webkit-print-color-adjust: exact !important;
+          print-color-adjust: exact !important;
+          font-family: Arial, sans-serif;
+        }
 
-    // 5️⃣ Додаємо персональний рік
-    const personalYearNum = this.personalYear.num; // 1..9
-    const personalImgIndex = 4 + personalYearNum; // 5..13
-    const personalYearImg = `assets/img/calendar/info/_min/${personalImgIndex}.png`;
+        /* Info сторінка */
+        .info-page {
+          width: calc(100% - 64px) !important;
+          display: flex;
+          flex-wrap: wrap;
+          gap: 12px;
+          page-break-after: always;
+        }
 
-    await new Promise<void>((resolve) => {
-      const img = new Image();
-      img.src = personalYearImg;
-      img.crossOrigin = 'anonymous';
-      img.onload = () => {
-        pdf.addPage();
-        pdf.addImage(img, 'PNG', margin, margin, pdfWidth - margin * 2, pdfHeight - margin * 2);
-        resolve();
-      };
-      img.onerror = () => resolve();
-    });
+        .info-page .result-block, .info-page .user-info {
+          flex: 1 1 calc(50% - 12px);
+          border: 1px solid #999;
+          background: transparent !important;
+          padding: 8px;
+          box-sizing: border-box;
+          text-align: center;
+          page-break-inside: avoid;
+        }
 
-    // 6️⃣ Додаємо місяці
-    for (let i = 0; i < months.length; i++) {
-      const month = months[i];
-      month.classList.add('printable');
+        .info-page .result-block h4,
+        .info-page .result-block h5,
+        .info-page .user-info p {
+          margin: 4px 0;
+          text-align: center;
+        }
 
-      const canvas = await html2canvas(month, {
-        scale: 1,
-        useCORS: true,
-        backgroundColor: '#f4ebd8',
-        logging: false,
-      });
-      month.classList.remove('printable');
+        /* Місяці */
+        .month-page {
+          width: calc(100% - 64px) !important;
+          height: calc(100vh - 32px);
+          page-break-after: always;
+          display: flex;
+          flex-direction: column;
+          justify-content: flex-start;
+        }
+        .month-page:last-child { page-break-after: auto; }
 
-      const imgData = canvas.toDataURL('image/jpeg', 0.9);
-      const imgWidth = pdfWidth - margin * 2;
-      const imgHeight = pdfHeight - margin * 2;
+        /* Назва місяця */
+        .month-name {
+          text-align: center;
+          font-size: 2rem;
+          font-weight: bold;
+          margin-bottom: 10px;
+          width: 100%;
+        }
 
-      if (i > 0 || months.length > 0) pdf.addPage();
-      pdf.addImage(imgData, 'JPEG', margin, margin, imgWidth, imgHeight);
+        /* Загальний та особистий блок всередині місяця */
+        .day-info {
+          text-align: center !important;
+        }
 
-      const m = this.calendar[i];
-      const monthPersonalImg = `assets/img/calendar/months/${(m as any).monthInfo?.[0]?.personal}.png`;
+        table {
+          margin-top: 4px;
+          width: 100% !important;
+          height: 100%;
+          border-collapse: collapse;
+        }
 
-      if (monthPersonalImg) {
-        await new Promise<void>((resolve) => {
-          const img = new Image();
-          img.src = monthPersonalImg;
-          img.crossOrigin = 'anonymous';
-          img.onload = () => {
-            pdf.addPage();
-            pdf.addImage(img, 'JPEG', margin, margin, imgWidth, imgHeight);
-            resolve();
-          };
-          img.onerror = () => resolve();
-        });
-      }
+        th, td {
+          border: 1px solid #999;
+          padding: 5px;
+          text-align: center;
+          vertical-align: top;
+        }
 
-      this.savedMonth++
-    }
+        th {
+          background: #202020;
+          color: white;
+          font-weight: 600;
+        }
 
-    this.showLoader = false
-    pdf.save(`Сюцай-календар-${this.name}-${this.year}.pdf`);
-    this.showToast('🎉 Календар збережено успішно!');
-  }
+        /* Кольори періодів */
+        .good-period { background: #9aa348 !important; color: #000000 !important; }
+        .bad-period { background: #9508c0 !important; color: #ffffff !important; }
+        .neutral { background: #f4ead7 !important; color: #424242 !important; }
+        .good { background: #c3e49f !important; color: #256029 !important; }
+        .bad { background: #df7449 !important; color: #fff !important; }
+
+        * { -webkit-print-color-adjust: exact !important; print-color-adjust: exact !important; }
+      </style>
+    `;
+
+    // Відділяємо info-секцію як окрему сторінку
+    const infoElement = calendarElement.querySelector('.info');
+    const infoHTML = infoElement ? `<div class="info-page">${infoElement.innerHTML}</div>` : '';
+
+    // Всі місяці
+    const monthsHTML = calendarElement.querySelector('#calendar-container')?.innerHTML || '';
+
+    printWindow.document.open();
+    printWindow.document.write(`
+      <html>
+        <head>
+          <title></title>
+          ${printStyles}
+        </head>
+        <body>
+          ${infoHTML}
+          ${monthsHTML}
+        </body>
+      </html>
+    `);
+    printWindow.document.close();
+    printWindow.focus();
+    printWindow.print();
+    printWindow.close();
+
+    this.showLoader = false;
+    this.showToast('🎉 Календар готовий до друку!');
+  }, 500);
+}
+
+
 
 }

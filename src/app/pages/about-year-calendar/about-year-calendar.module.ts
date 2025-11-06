@@ -5,8 +5,6 @@ import { AboutYearCalendarComponent } from './about-year-calendar/about-year-cal
 import { DownloadYearCalendarComponent } from './download-year-calendar/download-year-calendar.component';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { EnergyAccordionComponent } from './download-year-calendar/energy-accordion/energy-accordion.component';
-// import { MatSnackBarModule } from '@angular/material/snack-bar';
-// import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { MatExpansionModule } from '@angular/material/expansion';
 import { WeekLegendAccordionComponent } from './download-year-calendar/week-legend-accordion/week-legend-accordion.component';
 import { FaqAccordionComponent } from './about-year-calendar/faq-accordion/faq-accordion.component';
@@ -14,6 +12,7 @@ import { PhotoCarouselComponent } from './about-year-calendar/photo-carousel/pho
 import { CarouselModule } from 'ngx-owl-carousel-o';
 import { ReviewsComponent } from './about-year-calendar/calendar-reviews/reviews.component';
 import { InfoCarouselComponent } from './download-year-calendar/info-carousel/info-carousel.component';
+import { NgxPrintModule } from 'ngx-print';
 
 const routes: Routes = [
   { path: '', component: AboutYearCalendarComponent },
@@ -24,14 +23,16 @@ const routes: Routes = [
   declarations: [
     AboutYearCalendarComponent, DownloadYearCalendarComponent,
     EnergyAccordionComponent, WeekLegendAccordionComponent,
-    FaqAccordionComponent, PhotoCarouselComponent, ReviewsComponent, InfoCarouselComponent],
+    FaqAccordionComponent, PhotoCarouselComponent,
+    ReviewsComponent, InfoCarouselComponent],
   imports: [
     CommonModule,
     RouterModule.forChild(routes),
     FormsModule,
     ReactiveFormsModule,
     MatExpansionModule,
-    CarouselModule
+    CarouselModule,
+    NgxPrintModule
     // BrowserAnimationsModule,
     // MatSnackBarModule
   ]

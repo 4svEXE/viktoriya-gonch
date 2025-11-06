@@ -1,48 +1,50 @@
-<div class="calculator mt-20" id="calendar">
-  <h1 class="text-center">Ваш персональний каренар Сюцай на {{ year }} рік</h1>
+<div class="calculator mt-14 pt-20" id="calendar">
+  <div class="info flex flex-col gap-3">
+    <h1 class="text-center">
+      Ваш персональний <br> каренар Сюцай на {{ year }} рік
+    </h1>
 
-  <h2 class="results-title text-center">Результати для {{ name }}</h2>
+    <h2 class="results-title text-center">Результати для {{ name }}</h2>
 
-  <section class="user-info result-block">
-    <p><strong>Email:</strong> {{ email }}</p>
-    <p><strong>Дата народження:</strong> {{ birthdate }}</p>
-  </section>
+    <section class="user-info result-block">
+      <p><strong>Email:</strong> {{ email }}</p>
+      <p><strong>Дата народження:</strong> {{ birthdate }}</p>
+    </section>
 
-  <section class="result-block">
-    <h4>Число свідомості:</h4>
-    <h5>{{ conscious.num }} – {{ conscious.name }}</h5>
-    <p><strong>Пояснення:</strong> {{ conscious.explanation }}</p>
-    <p><strong>Порада:</strong> {{ conscious.advice }}</p>
-    <p><strong>Приклад:</strong> {{ conscious.example }}</p>
-  </section>
+    <section class="result-block">
+      <h4>Число свідомості:</h4>
+      <h5>{{ conscious.num }} – {{ conscious.name }}</h5>
+      <p><strong>Пояснення:</strong> {{ conscious.explanation }}</p>
+      <p><strong>Порада:</strong> {{ conscious.advice }}</p>
+      <p><strong>Приклад:</strong> {{ conscious.example }}</p>
+    </section>
 
-  <section class="result-block">
-    <h4>Місія:</h4>
-    <h5>{{ mission.num }} – {{ mission.name }}</h5>
-    <p><strong>Пояснення:</strong> {{ mission.explanation }}</p>
-    <p><strong>Порада:</strong> {{ mission.advice }}</p>
-    <p><strong>Приклад:</strong> {{ mission.example }}</p>
-  </section>
+    <section class="result-block">
+      <h4>Місія:</h4>
+      <h5>{{ mission.num }} – {{ mission.name }}</h5>
+      <p><strong>Пояснення:</strong> {{ mission.explanation }}</p>
+      <p><strong>Порада:</strong> {{ mission.advice }}</p>
+      <p><strong>Приклад:</strong> {{ mission.example }}</p>
+    </section>
 
-  <section class="result-block">
-    <h4>Особистий рік:</h4>
-    <h5>{{ personalYear.num }} – {{ personalYear.name }}</h5>
-    <p><strong>Пояснення:</strong> {{ personalYear.explanation }}</p>
-    <p><strong>Порада:</strong> {{ personalYear.advice }}</p>
-    <p><strong>Приклад:</strong> {{ personalYear.example }}</p>
-  </section>
+    <section class="result-block">
+      <h4>Особистий рік:</h4>
+      <h5>{{ personalYear.num }} – {{ personalYear.name }}</h5>
+      <p><strong>Пояснення:</strong> {{ personalYear.explanation }}</p>
+      <p><strong>Порада:</strong> {{ personalYear.advice }}</p>
+      <p><strong>Приклад:</strong> {{ personalYear.example }}</p>
+    </section>
 
-  <section class="result-block">
-    <h4>Число імені:</h4>
-    <h5>{{ finalDigit.num }} – {{ finalDigit.name }}</h5>
-    <p><strong>Пояснення:</strong> {{ finalDigit.explanation }}</p>
-    <p><strong>Порада:</strong> {{ finalDigit.advice }}</p>
-    <p><strong>Приклад:</strong> {{ finalDigit.example }}</p>
-  </section>
+    <section class="result-block">
+      <h4>Число імені:</h4>
+      <h5>{{ finalDigit.num }} – {{ finalDigit.name }}</h5>
+      <p><strong>Пояснення:</strong> {{ finalDigit.explanation }}</p>
+      <p><strong>Порада:</strong> {{ finalDigit.advice }}</p>
+      <p><strong>Приклад:</strong> {{ finalDigit.example }}</p>
+    </section>
+  </div>
 
   <section *ngIf="calendar.length" id="calendar-container">
-    <h2>Календар Сюцай на {{ year }} рік</h2>
-
     <img
       *ngFor="let i of [].constructor(24); let idx = index"
       [src]="'assets/img/calendar/info/' + (idx + 1) + '.png'"
@@ -91,11 +93,12 @@
               >
                 <div class="day-num">{{ day?.val || "" }}</div>
                 <div class="day-info" *ngIf="day">
-                  <div [className]="day.generalCls"
-                    ><small> {{ day.general }} : заг</small>  </div
-                  ><br />
-                  <div [className]="day.personalCls"
-                    ><small> {{ day.personal }} : особ</small>
+                  <div [className]="day.generalCls">
+                    <small> {{ day.general }} : заг</small>
+                  </div>
+                  <br />
+                  <div [className]="day.personalCls">
+                    <small> {{ day.personal }} : особ</small>
                   </div>
                 </div>
               </td>
@@ -139,7 +142,6 @@
   />
 </button>
 
-
 <div class="calendar-loader" *ngIf="showLoader">
   <div class="loader-content text-center">
     <p>
@@ -152,6 +154,3 @@
     <app-info-carousel />
   </div>
 </div>
-
-
-
