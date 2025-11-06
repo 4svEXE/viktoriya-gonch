@@ -81,165 +81,95 @@ export class DownloadYearCalendarComponent implements OnInit {
     this.toast.show(msg, 10000);
   }
 
-  downloadPDF() {
-    this.showLoader = true;
+downloadPDF() {
+  this.showLoader = true;
 
-    setTimeout(() => {
-      const calendarElement = document.getElementById('calendar');
-      if (!calendarElement) {
-        this.showToast('❌ Не знайдено елемент календаря!');
-        this.showLoader = false;
-        return;
-      }
+  setTimeout(() => {
+    const calendarElement = document.getElementById('calendar');
+    if (!calendarElement) {
+      this.showToast('❌ Не знайдено елемент календаря!');
+      this.showLoader = false;
+      return;
+    }
 
-      const printWindow = window.open('', '_blank', 'width=1200,height=800');
-      if (!printWindow) {
-        this.showToast('❌ Не вдалося відкрити вікно для друку!');
-        this.showLoader = false;
-        return;
-      }
+    const printWindow = window.open('', '_blank', 'width=1200,height=800');
+    if (!printWindow) {
+      this.showToast('❌ Не вдалося відкрити вікно для друку!');
+      this.showLoader = false;
+      return;
+    }
 
-      const printStyles = `
+    const printStyles = `
       <style>
         @page { size: A4 landscape; margin: 0; }
-        html, body {
-          margin: 0 !important;
-          padding: 16px !important;
-          width: 100% !important;
-          height: 100% !important;
-          background: #f4ebd8;
-          font-family: Arial, sans-serif;
-          -webkit-print-color-adjust: exact !important;
-          print-color-adjust: exact !important;
-        }
-
-        /* Info сторінка */
-        .info-page {
-          width: calc(100% - 32px);
-          display: flex;
-          flex-wrap: wrap;
-          gap: 12px;
-          page-break-after: always;
-        }
-        .info-page .result-block, .info-page .user-info {
-          flex: 1 1 calc(50% - 12px);
-          border: 1px solid #999;
-          background: transparent !important;
-          padding: 8px;
-          box-sizing: border-box;
-          text-align: center;
-          page-break-inside: avoid;
-        }
-        .info-page h4, .info-page h5, .info-page p {
-          margin: 4px 0;
-          text-align: center;
-        }
-
-        /* Місяці */
-        .month-page {
-          width: calc(100% - 32px);
-          height: calc(100vh - 32px);
-          page-break-after: always;
-          display: flex;
-          flex-direction: column;
-          justify-content: flex-start;
-        }
+        html, body { margin: 0 !important; padding: 16px !important; background: #f4ebd8; font-family: Arial, sans-serif; -webkit-print-color-adjust: exact !important; print-color-adjust: exact !important; }
+        .info-page { width: calc(100% - 32px); display: flex; flex-wrap: wrap; gap: 12px; page-break-after: always; }
+        .info-page .result-block, .info-page .user-info { flex: 1 1 calc(50% - 12px); border: 1px solid #999; background: transparent !important; padding: 8px; box-sizing: border-box; text-align: center; page-break-inside: avoid; }
+        .info-page h4, .info-page h5, .info-page p { margin: 4px 0; text-align: center; }
+        .month-page { width: calc(100% - 32px); height: calc(100vh - 32px); page-break-after: always; display: flex; flex-direction: column; justify-content: flex-start; }
         .month-page:last-child { page-break-after: auto; }
-        .month-name {
-          text-align: center;
-          font-size: 2rem;
-          font-weight: bold;
-          margin-bottom: 10px;
-          width: 100%;
-        }
-
+        .month-name { text-align: center; font-size: 2rem; font-weight: bold; margin-bottom: 10px; width: 100%; }
         .day-info { text-align: center !important; }
-
-        table {
-          margin-top: 4px;
-          width: 100% !important;
-          height: 100%;
-          border-collapse: collapse;
-        }
-        th, td {
-          border: 1px solid #999;
-          padding: 5px;
-          text-align: center;
-          vertical-align: top;
-        }
-        th {
-          background: #202020;
-          color: white;
-          font-weight: 600;
-        }
-
+        table { margin-top: 4px; width: 100% !important; height: 100%; border-collapse: collapse; }
+        th, td { border: 1px solid #999; padding: 5px; text-align: center; vertical-align: top; }
+        th { background: #202020; color: white; font-weight: 600; }
         .good-period { background: #9aa348 !important; color: #000 !important; }
         .bad-period { background: #9508c0 !important; color: #fff !important; }
         .neutral { background: #f4ead7 !important; color: #424242 !important; }
         .good { background: #c3e49f !important; color: #256029 !important; }
         .bad { background: #df7449 !important; color: #fff !important; }
-
-        /* картинки під місяцями */
-        .month-img-page {
-          page-break-after: always;
-          text-align: center;
-          margin: 10px 0;
-        }
-        .month-img-page img {
-          max-width: 100%;
-          height: auto;
-          display: block;
-          margin: 0 auto;
-        }
-
-        * { -webkit-print-color-adjust: exact !important; print-color-adjust: exact !important; }
+        .month-img-page { page-break-after: always; text-align: center; margin: 10px 0; }
+        .month-img-page img { max-width: 100%; height: auto; display: block; margin: 0 auto; }
       </style>
     `;
 
-      // Info сторінка
-      const infoElement = calendarElement.querySelector('.info');
-      const infoHTML = infoElement ? `<div class="info-page">${infoElement.innerHTML}</div>` : '';
+    // Info сторінка
+    const infoElement = calendarElement.querySelector('.info');
+    const infoHTML = infoElement ? `<div class="info-page">${infoElement.innerHTML}</div>` : '';
 
-      // Місяці з картинками
-      const monthElements = calendarElement.querySelectorAll('.calendar');
-      let monthsHTML = '';
+    // Всі 23 картинки після info
+    const infoImages = Array.from(calendarElement.querySelectorAll('.info ~ img')) as HTMLImageElement[];
+    const infoImagesHTML = infoImages
+      .map(img => `<div class="month-img-page"><img src="${img.src}" /></div>`)
+      .join('');
 
-      monthElements.forEach((monthEl, index) => {
-        const monthTable = monthEl.querySelector('.month-page')?.outerHTML || '';
+    // Місяці з таблицями та картинками
+    const monthElements = Array.from(calendarElement.querySelectorAll('.calendar'));
+    const monthsHTML = monthElements.map(monthEl => {
+      const monthTable = monthEl.querySelector('.month-page')?.outerHTML || '';
+      const imgEl = monthEl.querySelector('img') as HTMLImageElement | null;
+      const imgHTML = imgEl ? `<div class="month-img-page"><img src="${imgEl.src}" /></div>` : '';
+      return monthTable + imgHTML;
+    }).join('');
 
-        // Беремо src картинки місяця
-        const imgEl = monthEl.querySelector('img');
-        let imgHTML = '';
-        if (imgEl) {
-          const src = imgEl.getAttribute('src');
-          if (src) {
-            imgHTML = `<div class="month-img-page"><img src="${src}" /></div>`;
-          }
-        }
-
-        monthsHTML += monthTable + imgHTML;
-      });
-
-      printWindow.document.open();
-      printWindow.document.write(`
+    printWindow.document.open();
+    printWindow.document.write(`
       <html>
         <head>
-          <title></title>
+          <title>Календар Сюцай ${this.name} ${this.year}</title>
           ${printStyles}
         </head>
         <body>
           ${infoHTML}
+          ${infoImagesHTML}
           ${monthsHTML}
         </body>
       </html>
     `);
-      printWindow.document.close();
-      printWindow.focus();
+    printWindow.document.close();
+    printWindow.focus();
+
+    // Додаємо назву при збереженні через Ctrl+S (Firefox/Chrome поважає <title>)
+    setTimeout(() => {
       printWindow.print();
       printWindow.close();
-
-      this.showLoader = false;
-      this.showToast('🎉 Календар готовий до друку!');
     }, 500);
-  }
+
+    this.showLoader = false;
+    this.showToast(`🎉 Календар "${this.name} ${this.year}" готовий до друку!`);
+  }, 500);
+}
+
+
+
 }

@@ -1,7 +1,8 @@
 <div class="calculator mt-14 pt-20" id="calendar">
   <div class="info flex flex-col gap-3">
     <h1 class="text-center">
-      Ваш персональний <br> каренар Сюцай на {{ year }} рік
+      Ваш персональний <br />
+      каренар Сюцай на {{ year }} рік
     </h1>
 
     <h2 class="results-title text-center">Результати для {{ name }}</h2>
@@ -43,6 +44,13 @@
       <p><strong>Приклад:</strong> {{ finalDigit.example }}</p>
     </section>
   </div>
+
+  <img
+    *ngFor="let i of [].constructor(23); let idx = index"
+    [src]="'assets/img/calendar/info/' + (idx + 2) + '.png'"
+    alt="Month image"
+    loading="lazy"
+  />
 
   <section *ngIf="calendar.length" id="calendar-container">
     <div
@@ -102,7 +110,9 @@
 
       <!-- Картинка місяця без lazy-loading -->
       <img
-        [src]="'assets/img/calendar/months/' + month.monthInfo[0].personal + '.png'"
+        [src]="
+          'assets/img/calendar/months/' + month.monthInfo[0].personal + '.png'
+        "
         alt="Month image"
       />
     </div>
