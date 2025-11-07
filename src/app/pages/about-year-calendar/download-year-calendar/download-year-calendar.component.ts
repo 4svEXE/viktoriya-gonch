@@ -92,48 +92,100 @@ downloadPDF() {
       return;
     }
 
-    const printWindow = window.open('', '_blank', 'width=1200,height=800');
-    if (!printWindow) {
-      this.showToast('❌ Не вдалося відкрити вікно для друку!');
-      this.showLoader = false;
-      return;
-    }
-
     const printStyles = `
-      <style>
-        @page { size: A4 landscape; margin: 0; }
-        html, body { margin: 0 !important; padding: 16px !important; background: #f4ebd8; font-family: Arial, sans-serif; -webkit-print-color-adjust: exact !important; print-color-adjust: exact !important; }
-        .info-page { width: calc(100% - 32px); display: flex; flex-wrap: wrap; gap: 12px; page-break-after: always; }
-        .info-page .result-block, .info-page .user-info { flex: 1 1 calc(50% - 12px); border: 1px solid #999; background: transparent !important; padding: 8px; box-sizing: border-box; text-align: center; page-break-inside: avoid; }
-        .info-page h4, .info-page h5, .info-page p { margin: 4px 0; text-align: center; }
-        .month-page { width: calc(100% - 32px); height: calc(100vh - 32px); page-break-after: always; display: flex; flex-direction: column; justify-content: flex-start; }
-        .month-page:last-child { page-break-after: auto; }
-        .month-name { text-align: center; font-size: 2rem; font-weight: bold; margin-bottom: 10px; width: 100%; }
-        .day-info { text-align: center !important; }
-        table { margin-top: 4px; width: 100% !important; height: 100%; border-collapse: collapse; }
-        th, td { border: 1px solid #999; padding: 5px; text-align: center; vertical-align: top; }
-        th { background: #202020; color: white; font-weight: 600; }
-        .good-period { background: #9aa348 !important; color: #000 !important; }
-        .bad-period { background: #9508c0 !important; color: #fff !important; }
-        .neutral { background: #f4ead7 !important; color: #424242 !important; }
-        .good { background: #c3e49f !important; color: #256029 !important; }
-        .bad { background: #df7449 !important; color: #fff !important; }
-        .month-img-page { page-break-after: always; text-align: center; margin: 10px 0; }
-        .month-img-page img { max-width: 100%; height: auto; display: block; margin: 0 auto; }
-      </style>
+    <style>
+      @page {
+        size: A4 landscape !important;
+        margin: 0 !important;
+      }
+      html, body {
+        margin: 0 !important;
+        padding: 0 !important;
+        width: 100% !important;
+        height: 100% !important;
+        background: #f4ebd8 !important;
+        font-family: Arial, sans-serif !important;
+        -webkit-print-color-adjust: exact !important;
+        print-color-adjust: exact !important;
+        transform: rotate(0deg) !important;
+      }
+
+      .info-page {
+        width: calc(100% - 32px);
+        display: flex;
+        flex-wrap: wrap;
+        gap: 12px;
+        page-break-after: always;
+        padding: 16px;
+      }
+
+      .info-page .result-block, .info-page .user-info {
+        flex: 1 1 calc(50% - 12px);
+        border: 1px solid #999;
+        background: transparent !important;
+        padding: 8px;
+        box-sizing: border-box;
+        text-align: center;
+        page-break-inside: avoid;
+      }
+
+      .month-page {
+        width: calc(100% - 32px);
+        page-break-after: always;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        padding: 16px;
+      }
+
+      .month-page:last-child {
+        page-break-after: auto;
+      }
+
+      .month-name {
+        text-align: center;
+        font-size: 2rem;
+        font-weight: bold;
+        margin-bottom: 10px;
+        width: 100%;
+      }
+
+      .month-img-page {
+        text-align: center;
+        margin: 0 0 8px 0; /* 👈 Малий падінг знизу */
+      }
+
+      .month-img-page img {
+        max-width: 100%;
+        height: auto;
+        display: block;
+        margin: 0 auto;
+      }
+
+      th, td {
+        border: 1px solid #999;
+        padding: 5px;
+        text-align: center;
+        vertical-align: top;
+      }
+
+      th {
+        background: #202020;
+        color: white;
+        font-weight: 600;
+      }
+
+      .good-period { background: #9aa348 !important; color: #000 !important; }
+      .bad-period { background: #9508c0 !important; color: #fff !important; }
+      .neutral { background: #f4ead7 !important; color: #424242 !important; }
+      .good { background: #c3e49f !important; color: #256029 !important; }
+      .bad { background: #df7449 !important; color: #fff !important; }
+    </style>
     `;
 
-    // Info сторінка
     const infoElement = calendarElement.querySelector('.info');
     const infoHTML = infoElement ? `<div class="info-page">${infoElement.innerHTML}</div>` : '';
 
-    // Всі 23 картинки після info
-    const infoImages = Array.from(calendarElement.querySelectorAll('.info ~ img')) as HTMLImageElement[];
-    const infoImagesHTML = infoImages
-      .map(img => `<div class="month-img-page"><img src="${img.src}" /></div>`)
-      .join('');
-
-    // Місяці з таблицями та картинками
     const monthElements = Array.from(calendarElement.querySelectorAll('.calendar'));
     const monthsHTML = monthElements.map(monthEl => {
       const monthTable = monthEl.querySelector('.month-page')?.outerHTML || '';
@@ -142,32 +194,43 @@ downloadPDF() {
       return monthTable + imgHTML;
     }).join('');
 
-    printWindow.document.open();
-    printWindow.document.write(`
+    const fullHTML = `
       <html>
         <head>
-          <title>Календар Сюцай ${this.name} ${this.year}</title>
+          <meta charset="UTF-8">
           ${printStyles}
         </head>
-        <body>
-          ${infoHTML}
-          ${infoImagesHTML}
-          ${monthsHTML}
-        </body>
+        <body>${infoHTML}${monthsHTML}</body>
       </html>
-    `);
-    printWindow.document.close();
-    printWindow.focus();
+    `;
 
-    // Додаємо назву при збереженні через Ctrl+S (Firefox/Chrome поважає <title>)
-    setTimeout(() => {
-      printWindow.print();
-      printWindow.close();
-    }, 500);
+    const blob = new Blob([fullHTML], { type: 'text/html' });
+    const url = URL.createObjectURL(blob);
 
-    this.showLoader = false;
-    this.showToast(`🎉 Календар "${this.name} ${this.year}" готовий до друку!`);
-  }, 500);
+    // --- Завантаження через iframe (працює стабільно навіть на мобільних)
+    const iframe = document.createElement('iframe');
+    iframe.style.display = 'none';
+    iframe.src = url;
+    document.body.appendChild(iframe);
+
+    iframe.onload = () => {
+      setTimeout(() => {
+        iframe.contentWindow?.focus();
+        iframe.contentWindow?.print();
+
+        // Автозбереження через FileSaver
+        const a = document.createElement('a');
+        a.href = url;
+        a.download = 'Календар Сюцай.pdf';
+        a.click();
+
+        URL.revokeObjectURL(url);
+        document.body.removeChild(iframe);
+        this.showLoader = false;
+        this.showToast('🎉 Календар успішно збережено! можна закривати форму');
+      }, 800);
+    };
+  }, 400);
 }
 
 

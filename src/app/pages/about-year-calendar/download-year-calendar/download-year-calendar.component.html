@@ -1,11 +1,9 @@
-<div class="calculator mt-14 pt-20" id="calendar">
+<div class="calculator mt-12 pt-20" id="calendar">
   <div class="info flex flex-col gap-3">
     <h1 class="text-center">
-      Ваш персональний <br />
+      {{ name }}, це Ваш персональний <br />
       каренар Сюцай на {{ year }} рік
     </h1>
-
-    <h2 class="results-title text-center">Результати для {{ name }}</h2>
 
     <section class="user-info result-block">
       <p><strong>Email:</strong> {{ email }}</p>
@@ -145,7 +143,7 @@
   />
 </button>
 
-<div class="calendar-loader" *ngIf="showLoader">
+<!-- <div class="calendar-loader" *ngIf="showLoader">
   <div class="loader-content text-center">
     <p>
       <small>Ваш календар завантажується: готово</small> {{ savedMonth }} / 12
@@ -154,4 +152,4 @@
     <p>Поки календар завантажується, пропонуємо прочитати рекомендації</p>
     <app-info-carousel />
   </div>
-</div>
+</div> -->
