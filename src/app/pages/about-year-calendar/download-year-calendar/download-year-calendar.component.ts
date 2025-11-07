@@ -81,18 +81,7 @@ export class DownloadYearCalendarComponent implements OnInit {
     this.toast.show(msg, 10000);
   }
 
-downloadPDF() {
-  this.showLoader = true;
-
-  setTimeout(() => {
-    const calendarElement = document.getElementById('calendar');
-    if (!calendarElement) {
-      this.showToast('❌ Не знайдено елемент календаря!');
-      this.showLoader = false;
-      return;
-    }
-
-    const printStyles = `
+  printStyles = `
     <style>
       @page {
         size: A4 landscape !important;
@@ -183,6 +172,19 @@ downloadPDF() {
     </style>
     `;
 
+
+downloadPDF() {
+  this.showLoader = true;
+
+  setTimeout(() => {
+    const calendarElement = document.getElementById('calendar');
+    if (!calendarElement) {
+      this.showToast('❌ Не знайдено елемент календаря!');
+      this.showLoader = false;
+      return;
+    }
+
+    const printStyles = this.printStyles
     const infoElement = calendarElement.querySelector('.info');
     const infoHTML = infoElement ? `<div class="info-page">${infoElement.innerHTML}</div>` : '';
 
