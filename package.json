@@ -11,7 +11,9 @@
     "build:s": "npx scully --scanRoutes --project viktoriya-gonch",
     "deploy": "npx angular-cli-ghpages --dir=dist/static",
     "deploy:ftp": "node deploy.js",
-    "update:ftp": "npm run seo:build && npm run deploy:ftp"
+    "fast-deploy:ftp": "node fast-deploy.js",
+    "update:ftp": "npm run seo:build && npm run deploy:ftp",
+    "fast-update:ftp": "npm run seo:build && npm run fast-deploy:ftp"
   },
   "private": true,
   "dependencies": {

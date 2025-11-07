@@ -5,7 +5,7 @@
       каренар Сюцай на {{ year }} рік
     </h1>
 
-    <section class="user-info result-block">
+    <section class="user-info result-block_">
       <p><strong>Email:</strong> {{ email }}</p>
       <p><strong>Дата народження:</strong> {{ birthdate }}</p>
     </section>
@@ -45,6 +45,7 @@
 
   <section>
     <img
+    class="calendar-info-img"
     *ngFor="let i of [].constructor(23); let idx = index"
     [src]="'assets/img/calendar/info/' + (idx + 2) + '.png'"
     alt="Month image"
@@ -61,7 +62,7 @@
       <div class="month-page">
         <div class="flex items-center gap-2 pt-5 pl-10 p-5">
           <h3 class="month-name">{{ month.name }}</h3>
-          <div class="day-info text-center w-full">
+          <div class="day-info flex items-center gap-4 text-center w-full">
             <small [className]="month.monthInfo[0].generalCls"
               >Загальний: {{ month.monthInfo[0].general }}</small
             ><br />
