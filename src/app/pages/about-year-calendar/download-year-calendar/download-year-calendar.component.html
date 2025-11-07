@@ -3,12 +3,11 @@
     <h1 class="text-center">
       {{ name }}, це Ваш персональний <br />
       каренар Сюцай на {{ year }} рік
+      <small>
+        <p><strong>Email:</strong> {{ email }}</p>
+        <p><strong>Дата народження:</strong> {{ birthdate }}</p>
+      </small>
     </h1>
-
-    <section class="user-info result-block_">
-      <p><strong>Email:</strong> {{ email }}</p>
-      <p><strong>Дата народження:</strong> {{ birthdate }}</p>
-    </section>
 
     <section class="result-block">
       <h4>Число свідомості:</h4>
@@ -43,14 +42,13 @@
     </section>
   </div>
 
-  <section>
+  <section class="infoSection">
     <img
-    class="calendar-info-img"
-    *ngFor="let i of [].constructor(23); let idx = index"
-    [src]="'assets/img/calendar/info/' + (idx + 2) + '.png'"
-    alt="Month image"
-    loading="lazy"
-  />
+      class="calendar-info-img"
+      *ngFor="let i of [].constructor(23); let idx = index"
+      [src]="'assets/img/calendar/info/' + (idx + 2) + '.png'"
+      alt="Month image"
+    />
   </section>
 
   <section *ngIf="calendar.length" id="calendar-container">

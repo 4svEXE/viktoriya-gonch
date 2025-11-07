@@ -191,54 +191,78 @@ export class DownloadYearCalendarComponent implements OnInit {
     `;
 
 
-  downloadPDF() {
-    this.showLoader = true;
+downloadPDF() {
+  this.showLoader = true;
 
-    setTimeout(() => {
-      const calendarElement = document.getElementById('calendar');
-      if (!calendarElement) {
-        this.showToast('❌ Не знайдено елемент календаря!');
-        this.showLoader = false;
-        return;
-      }
+  setTimeout(() => {
+    const calendarElement = document.getElementById('calendar');
+    if (!calendarElement) {
+      this.showToast('❌ Не знайдено елемент календаря!');
+      this.showLoader = false;
+      return;
+    }
 
-      const printStyles = this.printStyles
-      const infoElement = calendarElement.querySelector('.info');
-      const infoHTML = infoElement ? `<div class="info-page">${infoElement.innerHTML}</div>` : '';
+    const printStyles = this.printStyles;
 
-      const monthElements = Array.from(calendarElement.querySelectorAll('.calendar'));
-      const monthsHTML = monthElements.map(monthEl => {
-        const monthTable = monthEl.querySelector('.month-page')?.outerHTML || '';
-        const imgEl = monthEl.querySelector('img') as HTMLImageElement | null;
-        const imgHTML = imgEl ? `<div class="month-img-page"><img src="${imgEl.src}" /></div>` : '';
-        return monthTable + imgHTML;
-      }).join('');
+    // Інформаційна секція
+    const infoElement = calendarElement.querySelector('.info');
+    const infoHTML = infoElement ? `<div class="info-page">${infoElement.innerHTML}</div>` : '';
 
-      const fullHTML = `
+    // Картинки info з HTML
+    const infoSection = calendarElement.querySelector('.infoSection');
+    const infoImgsHTML = infoSection
+      ? Array.from(infoSection.querySelectorAll('img'))
+          .map(img => `<div class="month-img-page"><img src="${img.src}" /></div>`)
+          .join('')
+      : '';
+
+    // Календарі
+    const monthElements = Array.from(calendarElement.querySelectorAll('.calendar'));
+    const monthsHTML = monthElements.map(monthEl => {
+      const monthTable = monthEl.querySelector('.month-page')?.outerHTML || '';
+      const imgEl = monthEl.querySelector('img') as HTMLImageElement | null;
+      const imgHTML = imgEl ? `<div class="month-img-page"><img src="${imgEl.src}" /></div>` : '';
+      return monthTable + imgHTML;
+    }).join('');
+
+    // Об’єднуємо все
+    const fullHTML = `
       <html>
         <head>
           <meta charset="UTF-8">
           ${printStyles}
         </head>
-        <body>${infoHTML}${monthsHTML}</body>
+        <body>
+          ${infoHTML}
+          ${infoImgsHTML} <!-- картинки info з HTML -->
+          ${monthsHTML}
+        </body>
       </html>
     `;
 
-      const blob = new Blob([fullHTML], { type: 'text/html' });
-      const url = URL.createObjectURL(blob);
+    const blob = new Blob([fullHTML], { type: 'text/html' });
+    const url = URL.createObjectURL(blob);
 
-      // --- Завантаження через iframe (працює стабільно навіть на мобільних)
-      const iframe = document.createElement('iframe');
-      iframe.style.display = 'none';
-      iframe.src = url;
-      document.body.appendChild(iframe);
+    const iframe = document.createElement('iframe');
+    iframe.style.display = 'none';
+    iframe.src = url;
+    document.body.appendChild(iframe);
 
-      iframe.onload = () => {
+    // Чекаємо завантаження iframe та всіх картинок
+    iframe.onload = () => {
+      const images = Array.from(iframe.contentDocument!.images);
+      const waitForImages = Promise.all(
+        images.map(img => new Promise<void>(resolve => {
+          if (img.complete) resolve();
+          else { img.onload = () => resolve(); img.onerror = () => resolve(); }
+        }))
+      );
+
+      waitForImages.then(() => {
         setTimeout(() => {
           iframe.contentWindow?.focus();
           iframe.contentWindow?.print();
 
-          // Автозбереження через FileSaver
           const a = document.createElement('a');
           a.href = url;
           a.download = 'Календар Сюцай.pdf';
@@ -248,8 +272,7 @@ export class DownloadYearCalendarComponent implements OnInit {
           document.body.removeChild(iframe);
           this.showLoader = false;
 
-
-          // Створюємо повноекранний попап
+          // Повноекранний попап
           const popup = document.createElement('div');
           popup.id = 'calendar-popup';
           popup.style.position = 'fixed';
@@ -257,7 +280,7 @@ export class DownloadYearCalendarComponent implements OnInit {
           popup.style.left = '0';
           popup.style.width = '100%';
           popup.style.height = '100%';
-          popup.style.backgroundColor = 'rgba(0,0,0,0.8)'; // затемнення
+          popup.style.backgroundColor = 'rgba(0,0,0,0.8)';
           popup.style.display = 'flex';
           popup.style.alignItems = 'center';
           popup.style.justifyContent = 'center';
@@ -270,7 +293,6 @@ export class DownloadYearCalendarComponent implements OnInit {
           popup.style.boxSizing = 'border-box';
           popup.innerText = '🎉 Дякуємо! Календар буде завантажений автоматично.';
 
-          // Додаємо кнопку закриття (необов’язково)
           const closeBtn = document.createElement('button');
           closeBtn.innerText = 'Закрити';
           closeBtn.style.marginTop = '20px';
@@ -284,9 +306,12 @@ export class DownloadYearCalendarComponent implements OnInit {
 
           document.body.appendChild(popup);
         }, 800);
-      };
-    }, 400);
-  }
+      });
+    };
+  }, 400);
+}
+
+
 
 
 
